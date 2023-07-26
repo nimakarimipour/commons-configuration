@@ -17,9 +17,7 @@
 package org.apache.commons.configuration2.builder;
 
 import java.util.Map;
-
 import javax.xml.parsers.DocumentBuilder;
-
 import org.xml.sax.EntityResolver;
 
 /**

@@ -17,7 +17,6 @@
 package org.apache.commons.configuration2.builder;
 
 import java.util.Map;
-
 import org.apache.commons.configuration2.FileBasedConfiguration;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.io.FileHandler;

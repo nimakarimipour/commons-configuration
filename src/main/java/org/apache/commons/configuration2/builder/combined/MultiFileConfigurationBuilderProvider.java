@@ -17,7 +17,6 @@
 package org.apache.commons.configuration2.builder.combined;
 
 import java.util.Arrays;
-
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.ConfigurationUtils;
 import org.apache.commons.configuration2.HierarchicalConfiguration;

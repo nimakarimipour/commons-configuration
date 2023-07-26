@@ -18,7 +18,6 @@ package org.apache.commons.configuration2.builder;
 
 import java.util.Collection;
 import java.util.Map;
-
 import org.apache.commons.configuration2.ConfigurationDecoder;
 import org.apache.commons.configuration2.beanutils.BeanHelper;
 import org.apache.commons.configuration2.convert.ConversionHandler;

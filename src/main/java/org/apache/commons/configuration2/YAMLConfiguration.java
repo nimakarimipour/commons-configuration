@@ -22,7 +22,6 @@ import java.io.InputStream;
 import java.io.Reader;
 import java.io.Writer;
 import java.util.Map;
-
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.io.InputStreamSupport;
 import org.apache.commons.configuration2.tree.ImmutableNode;

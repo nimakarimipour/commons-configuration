@@ -19,7 +19,6 @@ package org.apache.commons.configuration2.tree;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**

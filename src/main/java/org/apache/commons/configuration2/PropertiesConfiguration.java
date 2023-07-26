@@ -33,7 +33,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.apache.commons.configuration2.convert.ListDelimiterHandler;
 import org.apache.commons.configuration2.convert.ValueTransformer;
 import org.apache.commons.configuration2.event.ConfigurationEvent;

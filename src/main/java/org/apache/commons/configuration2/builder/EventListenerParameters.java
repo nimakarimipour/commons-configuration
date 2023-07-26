@@ -18,7 +18,6 @@ package org.apache.commons.configuration2.builder;
 
 import java.util.Collections;
 import java.util.Map;
-
 import org.apache.commons.configuration2.event.Event;
 import org.apache.commons.configuration2.event.EventListener;
 import org.apache.commons.configuration2.event.EventListenerList;

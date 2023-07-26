@@ -19,7 +19,6 @@ package org.apache.commons.configuration2.spring;
 
 import java.util.Properties;
 import java.util.stream.Stream;
-
 import org.apache.commons.configuration2.CompositeConfiguration;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.ConfigurationConverter;

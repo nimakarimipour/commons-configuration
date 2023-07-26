@@ -22,10 +22,8 @@ import java.io.Reader;
 import java.io.Writer;
 import java.util.Iterator;
 import java.util.List;
-
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
 import org.apache.commons.configuration2.convert.ListDelimiterHandler;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.io.FileLocator;

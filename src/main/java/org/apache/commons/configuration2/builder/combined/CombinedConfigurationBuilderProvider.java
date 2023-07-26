@@ -18,7 +18,6 @@ package org.apache.commons.configuration2.builder.combined;
 
 import java.util.Arrays;
 import java.util.Collection;
-
 import org.apache.commons.configuration2.CombinedConfiguration;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.builder.BasicBuilderParameters;

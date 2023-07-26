@@ -19,7 +19,6 @@ package org.apache.commons.configuration2.builder.combined;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Map;
-
 import org.apache.commons.configuration2.CombinedConfiguration;
 import org.apache.commons.configuration2.HierarchicalConfiguration;
 import org.apache.commons.configuration2.XMLConfiguration;

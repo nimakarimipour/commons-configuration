@@ -18,7 +18,6 @@ package org.apache.commons.configuration2.builder;
 
 import java.io.File;
 import java.net.URL;
-
 import org.apache.commons.configuration2.io.FileLocationStrategy;
 import org.apache.commons.configuration2.io.FileSystem;
 import org.apache.commons.configuration2.io.URLConnectionOptions;

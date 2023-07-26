@@ -17,7 +17,6 @@
 package org.apache.commons.configuration2.interpol;
 
 import java.util.Objects;
-
 import org.apache.commons.text.lookup.StringLookup;
 
 /**

@@ -17,7 +17,6 @@
 package org.apache.commons.configuration2.tree.xpath;
 
 import java.util.Locale;
-
 import org.apache.commons.configuration2.tree.NodeHandler;
 import org.apache.commons.jxpath.ri.QName;
 import org.apache.commons.jxpath.ri.model.NodePointer;

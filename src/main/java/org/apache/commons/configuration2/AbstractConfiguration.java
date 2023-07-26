@@ -31,7 +31,6 @@ import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
-
 import org.apache.commons.configuration2.convert.ConversionHandler;
 import org.apache.commons.configuration2.convert.DefaultConversionHandler;
 import org.apache.commons.configuration2.convert.DisabledListDelimiterHandler;

@@ -29,7 +29,6 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.Stack;
 import java.util.stream.Collectors;
-
 import org.apache.commons.configuration2.event.ConfigurationEvent;
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
 import org.apache.commons.configuration2.sync.NoOpSynchronizer;

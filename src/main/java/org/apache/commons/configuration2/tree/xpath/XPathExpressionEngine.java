@@ -21,7 +21,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
-
 import org.apache.commons.configuration2.tree.ExpressionEngine;
 import org.apache.commons.configuration2.tree.NodeAddData;
 import org.apache.commons.configuration2.tree.NodeHandler;

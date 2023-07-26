@@ -19,7 +19,6 @@ package org.apache.commons.configuration2.builder;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-
 import org.apache.commons.configuration2.ConfigurationUtils;
 import org.apache.commons.configuration2.ImmutableConfiguration;
 import org.apache.commons.configuration2.event.EventSource;

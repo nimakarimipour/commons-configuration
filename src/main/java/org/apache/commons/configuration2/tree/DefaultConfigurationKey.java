@@ -18,7 +18,6 @@ package org.apache.commons.configuration2.tree;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**

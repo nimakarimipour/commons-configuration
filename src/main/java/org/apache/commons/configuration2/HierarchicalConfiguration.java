@@ -18,7 +18,6 @@ package org.apache.commons.configuration2;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.apache.commons.configuration2.tree.ExpressionEngine;
 import org.apache.commons.configuration2.tree.NodeModelSupport;
 

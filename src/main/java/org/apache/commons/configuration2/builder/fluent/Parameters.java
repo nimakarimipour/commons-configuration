@@ -19,7 +19,6 @@ package org.apache.commons.configuration2.builder.fluent;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-
 import org.apache.commons.configuration2.builder.BasicBuilderParameters;
 import org.apache.commons.configuration2.builder.BuilderParameters;
 import org.apache.commons.configuration2.builder.DatabaseBuilderParametersImpl;

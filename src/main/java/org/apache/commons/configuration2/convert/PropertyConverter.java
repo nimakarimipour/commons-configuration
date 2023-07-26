@@ -17,7 +17,7 @@
 
 package org.apache.commons.configuration2.convert;
 
-import java.awt.Color;
+import java.awt.*;
 import java.io.File;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -40,7 +40,6 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
-
 import org.apache.commons.configuration2.ex.ConversionException;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;

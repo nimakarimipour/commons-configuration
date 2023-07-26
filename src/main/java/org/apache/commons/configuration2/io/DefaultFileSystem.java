@@ -26,7 +26,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-
 import org.apache.commons.configuration2.ex.ConfigurationException;
 
 /**

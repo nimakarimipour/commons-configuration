@@ -18,7 +18,6 @@ package org.apache.commons.configuration2.interpol;
 
 import java.util.ArrayList;
 import java.util.Objects;
-
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
 import org.apache.commons.configuration2.io.ConfigurationLogger;
 import org.apache.commons.jexl2.Expression;

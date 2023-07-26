@@ -20,7 +20,6 @@ package org.apache.commons.configuration2.web;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Iterator;
-
 import javax.servlet.FilterConfig;
 
 /**

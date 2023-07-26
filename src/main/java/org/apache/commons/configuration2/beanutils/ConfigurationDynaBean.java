@@ -21,7 +21,6 @@ import java.lang.reflect.Array;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
-
 import org.apache.commons.beanutils.DynaBean;
 import org.apache.commons.beanutils.DynaClass;
 import org.apache.commons.configuration2.Configuration;

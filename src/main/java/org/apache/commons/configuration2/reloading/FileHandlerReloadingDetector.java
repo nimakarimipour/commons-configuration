@@ -19,7 +19,6 @@ package org.apache.commons.configuration2.reloading;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-
 import org.apache.commons.configuration2.io.FileHandler;
 import org.apache.commons.configuration2.io.FileLocatorUtils;
 

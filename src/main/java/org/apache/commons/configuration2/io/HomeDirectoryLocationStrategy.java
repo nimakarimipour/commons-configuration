@@ -18,7 +18,6 @@ package org.apache.commons.configuration2.io;
 
 import java.io.File;
 import java.net.URL;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**

@@ -17,7 +17,6 @@
 package org.apache.commons.configuration2.builder.combined;
 
 import java.util.Collection;
-
 import org.apache.commons.configuration2.builder.BuilderParameters;
 import org.apache.commons.configuration2.builder.FileBasedBuilderParametersImpl;
 import org.apache.commons.configuration2.ex.ConfigurationException;

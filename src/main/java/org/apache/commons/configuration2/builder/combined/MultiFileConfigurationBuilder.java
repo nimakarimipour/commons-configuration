@@ -21,7 +21,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicReference;
-
 import org.apache.commons.configuration2.ConfigurationUtils;
 import org.apache.commons.configuration2.FileBasedConfiguration;
 import org.apache.commons.configuration2.builder.BasicBuilderParameters;

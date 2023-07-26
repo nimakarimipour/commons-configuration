@@ -17,7 +17,6 @@
 package org.apache.commons.configuration2.builder;
 
 import java.util.Map;
-
 import org.apache.commons.configuration2.tree.ExpressionEngine;
 
 /**

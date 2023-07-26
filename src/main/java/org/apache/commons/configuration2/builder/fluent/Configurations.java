@@ -18,7 +18,6 @@ package org.apache.commons.configuration2.builder.fluent;
 
 import java.io.File;
 import java.net.URL;
-
 import org.apache.commons.configuration2.CombinedConfiguration;
 import org.apache.commons.configuration2.FileBasedConfiguration;
 import org.apache.commons.configuration2.INIConfiguration;

@@ -17,7 +17,6 @@
 package org.apache.commons.configuration2.builder.combined;
 
 import java.util.Map;
-
 import org.apache.commons.configuration2.ConfigurationUtils;
 import org.apache.commons.configuration2.builder.BasicBuilderParameters;
 import org.apache.commons.configuration2.builder.BuilderParameters;

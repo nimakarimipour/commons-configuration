@@ -17,7 +17,6 @@
 package org.apache.commons.configuration2.web;
 
 import java.util.Collection;
-
 import org.apache.commons.configuration2.AbstractConfiguration;
 
 /**

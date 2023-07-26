@@ -18,7 +18,6 @@
 package org.apache.commons.configuration2;
 
 import java.io.IOException;
-
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.DTDHandler;

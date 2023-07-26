@@ -17,7 +17,7 @@
 
 package org.apache.commons.configuration2;
 
-import java.awt.Color;
+import java.awt.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.net.URI;
@@ -29,7 +29,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.NoSuchElementException;
-
 import org.apache.commons.configuration2.convert.ConversionHandler;
 import org.apache.commons.configuration2.convert.DefaultConversionHandler;
 import org.apache.commons.configuration2.ex.ConversionException;

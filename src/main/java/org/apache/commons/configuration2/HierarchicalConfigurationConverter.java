@@ -24,7 +24,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-
 import org.apache.commons.configuration2.tree.DefaultConfigurationKey;
 import org.apache.commons.configuration2.tree.DefaultExpressionEngine;
 

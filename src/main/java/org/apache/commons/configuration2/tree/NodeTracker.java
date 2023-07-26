@@ -22,7 +22,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.stream.Collectors;
-
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
 
 /**

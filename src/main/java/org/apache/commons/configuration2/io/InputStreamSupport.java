@@ -18,7 +18,6 @@ package org.apache.commons.configuration2.io;
 
 import java.io.IOException;
 import java.io.InputStream;
-
 import org.apache.commons.configuration2.ex.ConfigurationException;
 
 /**

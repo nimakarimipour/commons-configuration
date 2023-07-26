@@ -24,7 +24,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Properties;
-
 import org.apache.commons.configuration2.convert.PropertyConverter;
 import org.apache.commons.configuration2.ex.ConversionException;
 
