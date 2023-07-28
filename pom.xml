@@ -880,11 +880,11 @@
                 <arg>-Awarns</arg>
                 <arg>-AannotatedPackages=org.apache.commons.configuration2</arg>
                 <arg>-AenableCustomCheck</arg>
-                <arg>-AenableSerialization</arg>
+<!--                <arg>-AenableSerialization</arg>-->
                 <arg>-AserializationConfigPath=/tmp/ucr-tainting/configuration/taint.xml</arg>
                 <arg>-XDcompilePolicy=simple</arg>
                 <arg>-parameters</arg>
-                <arg>-Xplugin:ErrorProne -XepDisableAllChecks -Xep:AnnotatorScanner:ERROR -XepOpt:AnnotatorScanner:ConfigPath=/tmp/ucr-tainting/configuration/scanner.xml</arg>
+<!--                <arg>-Xplugin:ErrorProne -XepDisableAllChecks -Xep:AnnotatorScanner:ERROR -XepOpt:AnnotatorScanner:ConfigPath=/tmp/ucr-tainting/configuration/scanner.xml</arg>-->
               </compilerArgs>
             </configuration>
           </plugin>
