@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.function.Function;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -69,7 +70,7 @@ public class CombinedBeanDeclaration implements BeanDeclaration {
         return findFirst(BeanDeclaration::getBeanFactoryName);
     }
 
-    private <T> T findFirst(final Function<? super BeanDeclaration, ? extends T> mapper) {
+    private <T> T findFirst(final @RUntainted Function<? super BeanDeclaration, ? extends T> mapper) {
         return childDeclarations.stream().map(mapper).filter(Objects::nonNull).findFirst().orElse(null);
     }
 
@@ -103,7 +104,7 @@ public class CombinedBeanDeclaration implements BeanDeclaration {
         return get(BeanDeclaration::getBeanProperties);
     }
 
-    private Map<String, Object> get(final Function<? super BeanDeclaration, ? extends Map<String, Object>> mapper) {
+    private Map<String, Object> get(final @RUntainted Function<? super BeanDeclaration, ? extends Map<String, Object>> mapper) {
         @SuppressWarnings("unchecked")
         final ArrayList<BeanDeclaration> temp = (ArrayList<BeanDeclaration>) childDeclarations.clone();
         Collections.reverse(temp);
