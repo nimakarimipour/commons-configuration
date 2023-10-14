@@ -35,6 +35,7 @@ import org.apache.commons.configuration2.event.ConfigurationEvent;
 import org.apache.commons.configuration2.event.EventType;
 import org.apache.commons.configuration2.io.ConfigurationLogger;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Configuration stored in a database. The properties are retrieved from a table containing at least one column for the
@@ -642,10 +643,10 @@ public class DatabaseConfiguration extends AbstractConfiguration {
          * @return the prepared statement object
          * @throws SQLException if an SQL error occurs
          */
-        protected PreparedStatement createStatement(final String sql, final boolean nameCol) throws SQLException {
-            final String statement;
+        protected PreparedStatement createStatement(final @RUntainted String sql, final boolean nameCol) throws SQLException {
+            final @RUntainted String statement;
             if (nameCol && configurationNameColumn != null) {
-                final StringBuilder buf = new StringBuilder(sql);
+                final @RUntainted StringBuilder buf = new StringBuilder(sql);
                 buf.append(" AND ").append(configurationNameColumn).append("=?");
                 statement = buf.toString();
             } else {
