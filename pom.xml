@@ -854,7 +854,7 @@
                 </path>
                 <path>
                   <groupId>edu.ucr.cs.riple.taint</groupId>
-                  <artifactId>ucrtainting-checker</artifactId>
+                  <artifactId>ucrtainting-checker-off</artifactId>
                   <version>0.1</version>
                 </path>
                 <path>
