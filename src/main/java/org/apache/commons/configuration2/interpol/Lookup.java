@@ -48,5 +48,5 @@ public interface Lookup {
      * @param variable the name of the variable to be resolved
      * @return the value of this variable or <b>null</b>
      */
-    Object lookup(String variable);
+    Object lookup(@RUntainted String variable);
 }
