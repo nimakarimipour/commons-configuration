@@ -289,7 +289,7 @@
     <dependency>
       <groupId>org.checkerframework</groupId>
       <artifactId>checker-qual</artifactId>
-      <version>3.35.0</version>
+      <version>3.42.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.errorprone</groupId>
@@ -852,21 +852,20 @@
                   <artifactId>error_prone_core</artifactId>
                   <version>2.20.0</version>
                 </path>
-                <path>
+                <!-- <path>
                   <groupId>edu.ucr.cs.riple.taint</groupId>
                   <artifactId>ucrtainting-checker</artifactId>
                   <version>0.1</version>
-                </path>
+                </path> -->
                 <path>
                   <groupId>edu.ucr.cs.riple.annotator</groupId>
                   <artifactId>annotator-scanner</artifactId>
-                  <version>1.3.8-SNAPSHOT</version>
+                  <version>1.3.9-TAINT-SNAPSHOT</version>
                 </path>
               </annotationProcessorPaths>
-              <annotationProcessors>
-                <!-- Add all the checkers you want to enable here -->
+              <!-- <annotationProcessors>
                 <annotationProcessor>edu.ucr.cs.riple.taint.ucrtainting.UCRTaintingChecker</annotationProcessor>
-              </annotationProcessors>
+              </annotationProcessors> -->
               <compilerArgs>
                 <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
                 <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
@@ -877,9 +876,10 @@
                 <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
                 <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
                 <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
-                <arg>-Awarns</arg>
                 <arg>-AannotatedPackages=org.apache.commons.configuration2</arg>
-                <arg>-AenableLibraryCheck</arg>
+                <arg>-AenableLibraryCheck=${env.ANNOTATOR_LIBRARY}</arg>
+                <arg>-AenablePolyTaintInference=${env.ANNOTATOR_POLY}</arg>
+                <arg>-AenableTypeArgumentInference=${env.ANNOTATOR_TYPE_ARG}</arg>
                 <arg>-AenableSerialization</arg>
                 <arg>-AserializationConfigPath=/home/nima/Developer/taint-benchmarks/commons-configuration/annotator-out/checker.xml</arg>
                 <arg>-XDcompilePolicy=simple</arg>
@@ -894,7 +894,7 @@
         <dependency>
           <groupId>org.checkerframework</groupId>
           <artifactId>checker</artifactId>
-          <version>3.35.0</version>
+          <version>3.42.0</version>
         </dependency>
       </dependencies>
     </profile>
