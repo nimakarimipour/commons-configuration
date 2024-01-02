@@ -1,0 +1,112 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------< org.apache.commons:commons-configuration2 >--------------
+[INFO] Building Apache Commons Configuration 2.9.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact org.slf4j:slf4j-log4j12:jar:2.0.7 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.7
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven-version) @ commons-configuration2 ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-java-version) @ commons-configuration2 ---
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven-3) @ commons-configuration2 ---
+[INFO] 
+[INFO] --- apache-rat:0.15:check (rat-check) @ commons-configuration2 ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- build-helper:3.4.0:parse-version (parse-version) @ commons-configuration2 ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (javadoc.resources) @ commons-configuration2 ---
+[INFO] Executing tasks
+[INFO]      [copy] Copying 2 files to /home/nima/Developer/taint-benchmarks/commons-configuration/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- javacc:2.6:javacc (javacc) @ commons-configuration2 ---
+Java Compiler Compiler Version 5.0 (Parser Generator)
+(type "javacc" with no arguments for help)
+Reading from file /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/javacc/PropertyListParser.jj . . .
+File "TokenMgrError.java" does not exist.  Will create one.
+File "ParseException.java" does not exist.  Will create one.
+File "Token.java" does not exist.  Will create one.
+File "SimpleCharStream.java" does not exist.  Will create one.
+Parser generated successfully.
+[INFO] Processed 1 grammar
+[INFO] 
+[INFO] --- remote-resources:1.7.0:process (process-resource-bundles) @ commons-configuration2 ---
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- buildnumber:3.1.0:create (default) @ commons-configuration2 ---
+[INFO] Executing: /bin/sh -c cd '/home/nima/Developer/taint-benchmarks/commons-configuration' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /home/nima/Developer/taint-benchmarks/commons-configuration
+[INFO] Storing buildNumber: null at timestamp: 1704167912953
+[INFO] Storing scmBranch: nimak/annotator
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ commons-configuration2 ---
+[INFO] Copying 2 resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ commons-configuration2 ---
+[WARNING] Parameter 'compilerArguments' is deprecated: use compilerArgs instead.
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 268 source files with javac [forked debug release 8] to target/classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] unknown enum constant When.MAYBE
+[INFO] 1 warning
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR]  Library: true, Poly: true, Type Argument: true, Validation: false, Side Effect: false
+warning: stubs/httpservletreq.astub:(line 27,col 5): Wildcard type </*INFERENCE FAILED for:*/ ? extends Object> does not match type in stubs filestubs/httpservletreq.astub: <java.lang.String> while parsing javax.servlet.http.HttpServletRequest
+/home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/AbstractConfiguration.java:[1112,30] error: [return] incompatible types in return.
+  type of expression: @RTainted String
+  method return type: @RUntainted String, index: 1
+[ERROR]   reason: class file for javax.annotation.meta.When not found
+/home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ConstantLookup.java:[64,50] error: [override.param] Incompatible parameter type for var.
+  found   : @RUntainted String
+  required: @RTainted String
+  Consequence: method in @RTainted ConstantLookup
+    @RTainted Object lookup(@RTainted ConstantLookup this, @RUntainted String p0)
+  cannot override method in @RTainted Lookup
+    @RTainted Object lookup(@RTainted Lookup this, @RTainted String p0), index: 2
+[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/beanutils/CombinedBeanDeclaration.java:[94,24] error: [return] incompatible types in return.
+  type of expression: @RTainted String
+  method return type: @RUntainted String, index: 3
+[INFO] 3 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.714 s
+[INFO] Finished at: 2024-01-01T19:58:44-08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project commons-configuration2: Compilation failure: Compilation failure: 
+[ERROR]  Library: true, Poly: true, Type Argument: true, Validation: false, Side Effect: false
+[ERROR] warning: stubs/httpservletreq.astub:(line 27,col 5): Wildcard type </*INFERENCE FAILED for:*/ ? extends Object> does not match type in stubs filestubs/httpservletreq.astub: <java.lang.String> while parsing javax.servlet.http.HttpServletRequest
+[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/AbstractConfiguration.java:[1112,30] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted String
+[ERROR]   method return type: @RUntainted String, index: 1
+[ERROR]   reason: class file for javax.annotation.meta.When not found
+[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ConstantLookup.java:[64,50] error: [override.param] Incompatible parameter type for var.
+[ERROR]   found   : @RUntainted String
+[ERROR]   required: @RTainted String
+[ERROR]   Consequence: method in @RTainted ConstantLookup
+[ERROR]     @RTainted Object lookup(@RTainted ConstantLookup this, @RUntainted String p0)
+[ERROR]   cannot override method in @RTainted Lookup
+[ERROR]     @RTainted Object lookup(@RTainted Lookup this, @RTainted String p0), index: 2
+[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/beanutils/CombinedBeanDeclaration.java:[94,24] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted String
+[ERROR]   method return type: @RUntainted String, index: 3
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

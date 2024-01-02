@@ -18,6 +18,7 @@ package org.apache.commons.configuration2.beanutils;
 
 import java.util.Collection;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -64,7 +65,7 @@ public interface BeanDeclaration {
      *
      * @return the name of the bean class
      */
-    String getBeanClassName();
+    @RUntainted String getBeanClassName();
 
     /**
      * Gets a map with properties that should be initialized on the newly created bean. The map's keys are the names of

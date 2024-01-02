@@ -28,6 +28,7 @@ import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.text.StringSubstitutor;
 import org.apache.commons.text.lookup.StringLookup;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Lookup that allows expressions to be evaluated.
@@ -305,7 +306,7 @@ public class ExprLookup implements Lookup {
         public Variable() {
         }
 
-        public Variable(final String name, final Object value) {
+        public Variable(final String name, final @RUntainted Object value) {
             setName(name);
             setValue(value);
         }
@@ -322,14 +323,14 @@ public class ExprLookup implements Lookup {
             return value;
         }
 
-        public void setValue(final Object value) throws ConfigurationRuntimeException {
+        public void setValue(final @RUntainted Object value) throws ConfigurationRuntimeException {
             try {
                 if (!(value instanceof String)) {
                     this.value = value;
                     return;
                 }
-                final String val = (String) value;
-                final String name = StringUtils.removeStartIgnoreCase(val, CLASS);
+                final @RUntainted String val = (String) value;
+                final @RUntainted String name = StringUtils.removeStartIgnoreCase(val, CLASS);
                 final Class<?> clazz = ClassUtils.getClass(name);
                 if (name.length() == val.length()) {
                     this.value = clazz.newInstance();

@@ -17,6 +17,7 @@
 package org.apache.commons.configuration2;
 
 import org.apache.commons.configuration2.interpol.Lookup;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

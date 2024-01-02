@@ -31,6 +31,7 @@ import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
 import org.apache.commons.configuration2.interpol.ConfigurationInterpolator;
 import org.apache.commons.configuration2.tree.NodeHandler;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -280,7 +281,7 @@ public class XMLBeanDeclaration implements BeanDeclaration {
      * @return the name of the bean's class
      */
     @Override
-    public String getBeanClassName() {
+    public @RUntainted String getBeanClassName() {
         return getConfiguration().getString(ATTR_BEAN_CLASS, getDefaultBeanClassName());
     }
 

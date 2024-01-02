@@ -50,6 +50,7 @@ import org.apache.commons.text.translate.CharSequenceTranslator;
 import org.apache.commons.text.translate.EntityArrays;
 import org.apache.commons.text.translate.LookupTranslator;
 import org.apache.commons.text.translate.UnicodeEscaper;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This is the "classic" Properties loader which loads the values from a single or multiple files (which can be chained

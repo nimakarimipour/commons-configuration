@@ -17,6 +17,7 @@
 package org.apache.commons.configuration2.beanutils;
 
 import java.util.Objects;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

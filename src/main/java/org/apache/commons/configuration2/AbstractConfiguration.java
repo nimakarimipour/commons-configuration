@@ -51,6 +51,8 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>
@@ -1105,7 +1107,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public String getString(final String key, final String defaultValue) {
+    public @RUntainted String getString(final String key, final String defaultValue) {
         final String result = convert(String.class, key, null, false);
         return result != null ? result : interpolate(defaultValue);
     }

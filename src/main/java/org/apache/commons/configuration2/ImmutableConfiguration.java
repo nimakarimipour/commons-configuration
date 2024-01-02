@@ -26,6 +26,7 @@ import java.util.NoSuchElementException;
 import java.util.Properties;
 import org.apache.commons.configuration2.convert.PropertyConverter;
 import org.apache.commons.configuration2.ex.ConversionException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -694,7 +695,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         String.
      */
-    String getString(String key, String defaultValue);
+    @RUntainted String getString(String key, String defaultValue);
 
     /**
      * Gets an array of strings associated with the given configuration key. If the key doesn't map to an existing object an

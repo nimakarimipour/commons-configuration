@@ -35,6 +35,7 @@ import org.apache.commons.configuration2.event.EventType;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
 import org.apache.commons.configuration2.reloading.ReloadingController;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -457,7 +458,7 @@ public class BasicConfigurationBuilder<T extends ImmutableConfiguration> impleme
             }
 
             @Override
-            public String getBeanClassName() {
+            public @RUntainted String getBeanClassName() {
                 return getResultClass().getName();
             }
         };
