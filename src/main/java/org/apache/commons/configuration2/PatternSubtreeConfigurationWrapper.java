@@ -34,6 +34,7 @@ import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.io.FileBased;
 import org.apache.commons.configuration2.tree.ExpressionEngine;
 import org.apache.commons.configuration2.tree.ImmutableNode;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Wraps a BaseHierarchicalConfiguration and allows subtrees to be accessed via a configured path with replaceable
@@ -354,7 +355,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public void read(final Reader reader) throws ConfigurationException, IOException {
+    public void read(final @RUntainted Reader reader) throws ConfigurationException, IOException {
         fetchFileBased().read(reader);
     }
 

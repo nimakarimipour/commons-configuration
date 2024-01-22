@@ -20,6 +20,7 @@ import java.util.Collection;
 import org.apache.commons.configuration2.builder.BuilderParameters;
 import org.apache.commons.configuration2.builder.FileBasedBuilderParametersImpl;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -87,7 +88,7 @@ public class FileExtensionConfigurationBuilderProvider extends BaseConfiguration
      *
      * @return the matching configuration class
      */
-    public String getMatchingConfigurationClass() {
+    public @RUntainted String getMatchingConfigurationClass() {
         return matchingConfigurationClass;
     }
 
@@ -106,7 +107,7 @@ public class FileExtensionConfigurationBuilderProvider extends BaseConfiguration
      * In case of a match, the matching configuration class is selected, otherwise the default one.
      */
     @Override
-    protected String determineConfigurationClass(final ConfigurationDeclaration decl, final Collection<BuilderParameters> params)
+    protected @RUntainted String determineConfigurationClass(final ConfigurationDeclaration decl, final Collection<BuilderParameters> params)
         throws ConfigurationException {
         final String currentExt = extractExtension(fetchCurrentFileName(params));
         return getExtension().equalsIgnoreCase(currentExt) ? getMatchingConfigurationClass() : getConfigurationClass();

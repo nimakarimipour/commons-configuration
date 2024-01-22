@@ -35,6 +35,7 @@ import org.apache.commons.configuration2.event.ConfigurationEvent;
 import org.apache.commons.configuration2.event.EventType;
 import org.apache.commons.configuration2.io.ConfigurationLogger;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Configuration stored in a database. The properties are retrieved from a table containing at least one column for the

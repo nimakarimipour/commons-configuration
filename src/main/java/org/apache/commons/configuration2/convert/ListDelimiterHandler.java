@@ -21,6 +21,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -68,7 +69,7 @@ public interface ListDelimiterHandler {
      * @param transformer a {@code ValueTransformer} for an additional encoding (must not be <b>null</b>)
      * @return the escaped value
      */
-    Object escape(Object value, ValueTransformer transformer);
+    @RUntainted Object escape(Object value, ValueTransformer transformer);
 
     /**
      * Escapes all values in the given list and concatenates them to a single string. This operation is required by
@@ -79,7 +80,7 @@ public interface ListDelimiterHandler {
      * @param transformer a {@code ValueTransformer} for an additional encoding (must not be <b>null</b>)
      * @return the resulting escaped value
      */
-    Object escapeList(List<?> values, ValueTransformer transformer);
+    @RUntainted Object escapeList(List<?> values, ValueTransformer transformer);
 
     /**
      * Parses the specified value for list delimiters and splits it if necessary. The passed in object can be either a

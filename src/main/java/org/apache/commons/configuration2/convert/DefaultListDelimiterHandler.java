@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -81,13 +82,13 @@ public class DefaultListDelimiterHandler extends AbstractListDelimiterHandler {
      *
      * @return the list delimiter character
      */
-    public char getDelimiter() {
+    public @RUntainted char getDelimiter() {
         return delimiter;
     }
 
     @Override
-    public Object escapeList(final List<?> values, final ValueTransformer transformer) {
-        final Object[] escapedValues = new Object[values.size()];
+    public @RUntainted Object escapeList(final List<?> values, final ValueTransformer transformer) {
+        final @RUntainted Object[] escapedValues = new Object[values.size()];
         int idx = 0;
         for (final Object v : values) {
             escapedValues[idx++] = escape(v, transformer);

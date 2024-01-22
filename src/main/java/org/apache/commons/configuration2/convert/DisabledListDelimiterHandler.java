@@ -19,6 +19,7 @@ package org.apache.commons.configuration2.convert;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -48,7 +49,7 @@ public class DisabledListDelimiterHandler extends AbstractListDelimiterHandler {
      * {@inheritDoc} This implementation always throws an {@code UnsupportedOperationException} exception.
      */
     @Override
-    public Object escapeList(final List<?> values, final ValueTransformer transformer) {
+    public @RUntainted Object escapeList(final List<?> values, final ValueTransformer transformer) {
         throw new UnsupportedOperationException("Escaping lists is not supported!");
     }
 

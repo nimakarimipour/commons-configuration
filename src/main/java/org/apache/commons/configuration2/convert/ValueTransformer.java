@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 package org.apache.commons.configuration2.convert;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -44,5 +45,5 @@ public interface ValueTransformer {
      * @param value the property value to be transformed
      * @return the transformed property value
      */
-    Object transformValue(Object value);
+    @RUntainted Object transformValue(Object value);
 }

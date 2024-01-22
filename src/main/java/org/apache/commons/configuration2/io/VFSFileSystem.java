@@ -39,6 +39,8 @@ import org.apache.commons.vfs2.FileSystemManager;
 import org.apache.commons.vfs2.FileSystemOptions;
 import org.apache.commons.vfs2.VFS;
 import org.apache.commons.vfs2.provider.UriParser;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * FileSystem that uses <a href="https://commons.apache.org/proper/commons-vfs/">Apache Commons VFS</a>.
@@ -185,7 +187,7 @@ public class VFSFileSystem extends DefaultFileSystem {
     }
 
     @Override
-    public String getPath(final File file, final URL url, final String basePath, final String fileName) {
+    public String getPath(final File file, final URL url, final @RUntainted String basePath, final String fileName) {
         if (file != null) {
             return super.getPath(file, url, basePath, fileName);
         }
@@ -214,7 +216,7 @@ public class VFSFileSystem extends DefaultFileSystem {
     }
 
     @Override
-    public URL getURL(final String basePath, final String file) throws MalformedURLException {
+    public URL getURL(final @RUntainted String basePath, final String file) throws MalformedURLException {
         if (basePath != null && UriParser.extractScheme(basePath) == null || basePath == null && UriParser.extractScheme(file) == null) {
             return super.getURL(basePath, file);
         }

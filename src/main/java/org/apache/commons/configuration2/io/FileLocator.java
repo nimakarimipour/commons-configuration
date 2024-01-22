@@ -18,6 +18,7 @@ package org.apache.commons.configuration2.io;
 
 import java.net.URL;
 import java.util.Objects;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -189,7 +190,7 @@ public final class FileLocator {
     }
 
     /** The base path. */
-    private final String basePath;
+    private final @RUntainted String basePath;
 
     /** The encoding. */
     private final String encoding;
@@ -250,7 +251,7 @@ public final class FileLocator {
      *
      * @return the base path
      */
-    public String getBasePath() {
+    public @RUntainted String getBasePath() {
         return basePath;
     }
 

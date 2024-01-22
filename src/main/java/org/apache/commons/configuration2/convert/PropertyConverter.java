@@ -43,6 +43,7 @@ import java.util.regex.PatternSyntaxException;
 import org.apache.commons.configuration2.ex.ConversionException;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A utility class to convert the configuration properties into any type.

@@ -27,6 +27,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * FileSystem that uses java.io.File or HttpClient.
@@ -99,7 +100,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public String getPath(final File file, final URL url, final String basePath, final String fileName) {
+    public String getPath(final File file, final URL url, final @RUntainted String basePath, final String fileName) {
         String path = null;
         // if resource was loaded from jar file may be null
         if (file != null) {
@@ -148,7 +149,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public URL getURL(final String basePath, final String file) throws MalformedURLException {
+    public URL getURL(final @RUntainted String basePath, final String file) throws MalformedURLException {
         final File f = new File(file);
         // already absolute?
         if (f.isAbsolute()) {

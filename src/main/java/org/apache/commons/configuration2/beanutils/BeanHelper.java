@@ -35,6 +35,7 @@ import org.apache.commons.beanutils.WrapDynaBean;
 import org.apache.commons.beanutils.WrapDynaClass;
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
 import org.apache.commons.lang3.ClassUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

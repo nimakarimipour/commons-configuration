@@ -59,6 +59,7 @@ import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Property list file (plist) in XML FORMAT as used by Mac OS X (http://www.apple.com/DTDs/PropertyList-1.0.dtd). This

@@ -39,6 +39,7 @@ import org.apache.commons.configuration2.sync.NoOpSynchronizer;
 import org.apache.commons.configuration2.sync.Synchronizer;
 import org.apache.commons.configuration2.sync.SynchronizerSupport;
 import org.apache.commons.logging.LogFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -405,7 +406,7 @@ public class FileHandler {
      *
      * @return the base path
      */
-    public String getBasePath() {
+    public @RUntainted String getBasePath() {
         final FileLocator locator = getFileLocator();
         if (locator.getBasePath() != null) {
             return locator.getBasePath();
@@ -705,7 +706,7 @@ public class FileHandler {
      * @param in the reader
      * @throws ConfigurationException if an error occurs
      */
-    private void loadFromReader(final Reader in) throws ConfigurationException {
+    private void loadFromReader(final @RUntainted Reader in) throws ConfigurationException {
         fireLoadingEvent();
         try {
             getContent().read(in);
@@ -748,7 +749,7 @@ public class FileHandler {
      * @param in the input stream
      * @throws ConfigurationException if an error occurs
      */
-    private void loadFromStreamDirectly(final InputStream in) throws ConfigurationException {
+    private void loadFromStreamDirectly(final @RUntainted InputStream in) throws ConfigurationException {
         try {
             ((InputStreamSupport) getContent()).read(in);
         } catch (final IOException e) {

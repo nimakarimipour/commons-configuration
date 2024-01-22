@@ -35,6 +35,7 @@ import org.apache.commons.configuration2.sync.Synchronizer;
 import org.apache.commons.configuration2.tree.ExpressionEngine;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Miscellaneous utility methods for configurations.
@@ -417,7 +418,7 @@ public final class ConfigurationUtils {
      * @throws ClassNotFoundException if the class cannot be resolved
      * @since 2.0
      */
-    public static Class<?> loadClass(final String clsName) throws ClassNotFoundException {
+    public static Class<?> loadClass(final @RUntainted String clsName) throws ClassNotFoundException {
         if (LOG.isDebugEnabled()) {
             LOG.debug("Loading class " + clsName);
         }
@@ -444,7 +445,7 @@ public final class ConfigurationUtils {
      * @throws ConfigurationRuntimeException if the class cannot be resolved
      * @since 2.0
      */
-    public static Class<?> loadClassNoEx(final String clsName) {
+    public static Class<?> loadClassNoEx(final @RUntainted String clsName) {
         try {
             return loadClass(clsName);
         } catch (final ClassNotFoundException cnfex) {

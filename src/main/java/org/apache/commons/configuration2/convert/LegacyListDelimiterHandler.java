@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -80,7 +81,7 @@ public class LegacyListDelimiterHandler extends AbstractListDelimiterHandler {
      * {@inheritDoc} This implementation performs delimiter escaping for a single value (which is not part of a list).
      */
     @Override
-    public Object escape(final Object value, final ValueTransformer transformer) {
+    public @RUntainted Object escape(final Object value, final ValueTransformer transformer) {
         return escapeValue(value, false, transformer);
     }
 
@@ -89,11 +90,11 @@ public class LegacyListDelimiterHandler extends AbstractListDelimiterHandler {
      * not interpreted as escape character for a following list delimiter.
      */
     @Override
-    public Object escapeList(final List<?> values, final ValueTransformer transformer) {
+    public @RUntainted Object escapeList(final List<?> values, final ValueTransformer transformer) {
         if (!values.isEmpty()) {
             final Iterator<?> it = values.iterator();
             String lastValue = escapeValue(it.next(), true, transformer);
-            final StringBuilder buf = new StringBuilder(lastValue);
+            final @RUntainted StringBuilder buf = new StringBuilder(lastValue);
             while (it.hasNext()) {
                 // if the last value ended with an escape character, it has
                 // to be escaped itself; otherwise the list delimiter will

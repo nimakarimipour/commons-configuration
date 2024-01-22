@@ -19,6 +19,7 @@ package org.apache.commons.configuration2.convert;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -57,7 +58,7 @@ public abstract class AbstractListDelimiterHandler implements ListDelimiterHandl
      * so that additional encoding can be performed.
      */
     @Override
-    public Object escape(final Object value, final ValueTransformer transformer) {
+    public @RUntainted Object escape(final Object value, final ValueTransformer transformer) {
         return transformer.transformValue(value instanceof String ? escapeString((String) value) : value);
     }
 

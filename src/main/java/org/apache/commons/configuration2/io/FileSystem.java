@@ -22,6 +22,7 @@ import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Abstract layer to allow various types of file systems.
@@ -76,9 +77,9 @@ public abstract class FileSystem {
 
     public abstract OutputStream getOutputStream(URL url) throws ConfigurationException;
 
-    public abstract String getPath(File file, URL url, String basePath, String fileName);
+    public abstract String getPath(File file, URL url, @RUntainted String basePath, String fileName);
 
-    public abstract URL getURL(String basePath, String fileName) throws MalformedURLException;
+    public abstract URL getURL(@RUntainted String basePath, String fileName) throws MalformedURLException;
 
     public abstract URL locateFromURL(String basePath, String fileName);
 
