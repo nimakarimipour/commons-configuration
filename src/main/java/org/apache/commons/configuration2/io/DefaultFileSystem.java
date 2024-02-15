@@ -27,6 +27,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * FileSystem that uses java.io.File or HttpClient.
@@ -36,12 +37,12 @@ import org.apache.commons.configuration2.ex.ConfigurationException;
 public class DefaultFileSystem extends FileSystem {
 
     @Override
-    public InputStream getInputStream(final URL url) throws ConfigurationException {
+    public InputStream getInputStream(final @RUntainted URL url) throws ConfigurationException {
         return getInputStream(url, null);
     }
 
     @Override
-    public InputStream getInputStream(final URL url, final URLConnectionOptions urlConnectionOptions) throws ConfigurationException {
+    public InputStream getInputStream(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) throws ConfigurationException {
         // throw an exception if the target URL is a directory
         final File file = FileLocatorUtils.fileFromURL(url);
         if (file != null && file.isDirectory()) {
@@ -56,7 +57,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public OutputStream getOutputStream(final URL url) throws ConfigurationException {
+    public OutputStream getOutputStream(final @RUntainted URL url) throws ConfigurationException {
         // file URLs have to be converted to Files since FileURLConnection is
         // read only (http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4191800)
         final File file = FileLocatorUtils.fileFromURL(url);
@@ -99,7 +100,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public String getPath(final File file, final URL url, final String basePath, final String fileName) {
+    public String getPath(final File file, final URL url, final @RUntainted String basePath, final @RUntainted String fileName) {
         String path = null;
         // if resource was loaded from jar file may be null
         if (file != null) {
@@ -126,7 +127,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public String getBasePath(final String path) {
+    public String getBasePath(final @RUntainted String path) {
         final URL url;
         try {
             url = getURL(null, path);
@@ -137,7 +138,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public String getFileName(final String path) {
+    public String getFileName(final @RUntainted String path) {
         final URL url;
         try {
             url = getURL(null, path);
@@ -148,7 +149,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public URL getURL(final String basePath, final String file) throws MalformedURLException {
+    public @RUntainted URL getURL(final @RUntainted String basePath, final @RUntainted String file) throws MalformedURLException {
         final File f = new File(file);
         // already absolute?
         if (f.isAbsolute()) {
@@ -167,7 +168,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public URL locateFromURL(final String basePath, final String fileName) {
+    public @RUntainted URL locateFromURL(final @RUntainted String basePath, final @RUntainted String fileName) {
         try {
             final URL url;
             if (basePath == null) {

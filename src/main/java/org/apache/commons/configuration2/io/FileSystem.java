@@ -22,6 +22,7 @@ import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Abstract layer to allow various types of file systems.
@@ -38,15 +39,15 @@ public abstract class FileSystem {
     /** FileSystem options provider */
     private volatile FileOptionsProvider optionsProvider;
 
-    public abstract String getBasePath(String path);
+    public abstract String getBasePath(@RUntainted String path);
 
-    public abstract String getFileName(String path);
+    public abstract String getFileName(@RUntainted String path);
 
     public FileOptionsProvider getFileOptionsProvider() {
         return this.optionsProvider;
     }
 
-    public abstract InputStream getInputStream(URL url) throws ConfigurationException;
+    public abstract InputStream getInputStream(@RUntainted URL url) throws ConfigurationException;
 
     /**
      * Not abstract for binary compatibility.
@@ -58,7 +59,7 @@ public abstract class FileSystem {
      *
      * @since 2.8.0
      */
-    public InputStream getInputStream(final URL url, final URLConnectionOptions urlConnectionOptions) throws ConfigurationException {
+    public InputStream getInputStream(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) throws ConfigurationException {
         return getInputStream(url);
     }
 
@@ -74,13 +75,13 @@ public abstract class FileSystem {
 
     public abstract OutputStream getOutputStream(File file) throws ConfigurationException;
 
-    public abstract OutputStream getOutputStream(URL url) throws ConfigurationException;
+    public abstract OutputStream getOutputStream(@RUntainted URL url) throws ConfigurationException;
 
-    public abstract String getPath(File file, URL url, String basePath, String fileName);
+    public abstract String getPath(File file, URL url, @RUntainted String basePath, @RUntainted String fileName);
 
-    public abstract URL getURL(String basePath, String fileName) throws MalformedURLException;
+    public abstract @RUntainted URL getURL(@RUntainted String basePath, @RUntainted String fileName) throws MalformedURLException;
 
-    public abstract URL locateFromURL(String basePath, String fileName);
+    public abstract @RUntainted URL locateFromURL(@RUntainted String basePath, @RUntainted String fileName);
 
     /**
      * Set the FileOptionsProvider

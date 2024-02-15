@@ -19,6 +19,7 @@ package org.apache.commons.configuration2.convert;
 import java.util.Collection;
 import org.apache.commons.configuration2.ex.ConversionException;
 import org.apache.commons.configuration2.interpol.ConfigurationInterpolator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
