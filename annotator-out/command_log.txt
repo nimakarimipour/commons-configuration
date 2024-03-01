@@ -1,900 +1,900 @@
-2023-10-13T15:11:41.966817:cd /home/kdas006/annotation_dataset/commons-configuration && mvn clean compile -Drat.skip=true
+2023-10-13T15:11:41.966817:cd /Users/nima/Developer/commons-configuration && mvn clean compile -Drat.skip=true
 
-2023-10-13T15:11:55.950664:cd /home/kdas006/annotation_dataset/commons-configuration && mvn clean compile -Drat.skip=true
+2023-10-13T15:11:55.950664:cd /Users/nima/Developer/commons-configuration && mvn clean compile -Drat.skip=true
 
-2023-10-13T15:12:10.643238:cd /home/kdas006/annotation_dataset/commons-configuration && mvn clean compile -Drat.skip=true
+2023-10-13T15:12:10.643238:cd /Users/nima/Developer/commons-configuration && mvn clean compile -Drat.skip=true
 
-2023-10-13T15:12:24.286859:cd /home/kdas006/annotation_dataset/commons-configuration && mvn clean compile -Drat.skip=true
+2023-10-13T15:12:24.286859:cd /Users/nima/Developer/commons-configuration && mvn clean compile -Drat.skip=true
 
-2024-02-15T00:02:30.246825:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:02:30.246825:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:03:33.277229:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:03:33.277229:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:04:31.892599:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:04:31.892599:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:05:30.655288:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:05:30.655288:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:06:31.779008:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:06:31.779008:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:07:33.748931:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:07:33.748931:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:08:27.522275:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:08:27.522275:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:09:28.092398:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:09:28.092398:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:10:22.916304:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:10:22.916304:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:11:26.847701:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:11:26.847701:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:12:45.505998:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:12:45.505998:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:13:58.727939:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:13:58.727939:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:15:15.598733:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:15:15.598733:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:16:23.292078:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:16:23.292078:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:17:32.259159:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:17:32.259159:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:18:46.179532:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:18:46.179532:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:20:02.207697:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:20:02.207697:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:21:15.942490:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:21:15.942490:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:22:19.592597:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:22:19.592597:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:23:16.030117:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:23:16.030117:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:24:18.936703:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:24:18.936703:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:25:17.836445:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:25:17.836445:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:26:15.127916:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:26:15.127916:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:27:13.245916:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:27:13.245916:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:28:09.968974:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:28:09.968974:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:29:23.736179:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:29:23.736179:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:30:29.380099:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:30:29.380099:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:31:55.835248:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:31:55.835248:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:33:08.140954:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:33:08.140954:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:34:19.110066:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:34:19.110066:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:35:48.799897:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:35:48.799897:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:37:07.838172:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:37:07.838172:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:38:20.820453:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:38:20.820453:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:39:25.816797:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:39:25.816797:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:40:32.644779:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:40:32.644779:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:41:40.049410:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:41:40.049410:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:42:57.106189:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:42:57.106189:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:44:08.603826:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:44:08.603826:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:45:16.083046:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:45:16.083046:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:46:19.412034:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:46:19.412034:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:47:30.187138:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:47:30.187138:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:48:44.380754:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:48:44.380754:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:49:47.230421:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:49:47.230421:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:50:58.786917:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:50:58.786917:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:51:58.904377:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:51:58.904377:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:53:10.827856:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:53:10.827856:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:54:23.102966:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:54:23.102966:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:55:31.175265:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:55:31.175265:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:56:42.223083:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:56:42.223083:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:57:43.906017:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:57:43.906017:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T00:58:58.819033:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T00:58:58.819033:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:00:07.421477:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:00:07.421477:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:01:16.707919:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:01:16.707919:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:02:27.799257:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:02:27.799257:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:03:34.054751:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:03:34.054751:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:04:44.731520:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:04:44.731520:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:05:56.419369:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:05:56.419369:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:07:03.346807:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:07:03.346807:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:08:10.464190:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:08:10.464190:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:09:23.781837:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:09:23.781837:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:10:28.569648:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:10:28.569648:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:11:44.156297:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:11:44.156297:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:12:51.967368:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:12:51.967368:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:13:58.405088:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:13:58.405088:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:15:09.169696:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:15:09.169696:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:16:14.166544:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:16:14.166544:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:17:29.516744:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:17:29.516744:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:18:29.801810:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:18:29.801810:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:19:44.693627:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:19:44.693627:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:21:00.076367:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:21:00.076367:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:22:11.533601:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:22:11.533601:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:23:27.866851:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:23:27.866851:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:24:36.938456:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:24:36.938456:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:25:44.427194:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:25:44.427194:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:26:54.847855:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:26:54.847855:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:28:05.897173:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:28:05.897173:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:29:16.858382:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:29:16.858382:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:30:26.221610:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:30:26.221610:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:31:37.646307:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:31:37.646307:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:32:51.025573:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:32:51.025573:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:34:04.365911:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:34:04.365911:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:35:06.498741:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:35:06.498741:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:36:23.948638:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:36:23.948638:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:37:28.175944:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:37:28.175944:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:38:39.274222:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:38:39.274222:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:39:39.590159:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:39:39.590159:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:40:33.039:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:40:33.039:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:41:32.465832:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:41:32.465832:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:42:22.317914:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:42:22.317914:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:43:23.851852:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:43:23.851852:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:44:14.293537:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:44:14.293537:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:45:16.980344:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:45:16.980344:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:46:12.778586:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:46:12.778586:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:47:08.234377:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:47:08.234377:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:48:06.133199:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:48:06.133199:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:48:58.633752:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:48:58.633752:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:49:58.704737:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:49:58.704737:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:50:53.072261:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:50:53.072261:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:51:48.562218:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:51:48.562218:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:52:43.031273:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:52:43.031273:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:53:37.028532:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:53:37.028532:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:54:33.086813:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:54:33.086813:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:55:32.540012:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:55:32.540012:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:56:25.401013:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:56:25.401013:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:57:26.136965:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:57:26.136965:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:58:18.486974:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:58:18.486974:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T01:59:17.968619:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T01:59:17.968619:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:00:16.053591:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:00:16.053591:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:01:10.556478:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:01:10.556478:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:02:10.541342:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:02:10.541342:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:02:59.404469:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:02:59.404469:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:04:03.346275:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:04:03.346275:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:04:58.218659:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:04:58.218659:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:05:48.241516:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:05:48.241516:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:06:39.029602:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:06:39.029602:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:07:26.446493:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:07:26.446493:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:08:20.813179:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:08:20.813179:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:09:11.220441:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:09:11.220441:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:10:00.645824:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:10:00.645824:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:10:51.777082:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:10:51.777082:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:11:41.282940:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:11:41.282940:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:12:36.416545:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:12:36.416545:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:13:26.211467:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:13:26.211467:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:14:15.632944:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:14:15.632944:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:15:04.790334:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:15:04.790334:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:15:51.992043:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:15:51.992043:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:16:48.489655:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:16:48.489655:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:17:40.036225:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:17:40.036225:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:18:28.990261:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:18:28.990261:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:19:19.583063:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:19:19.583063:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:20:06.994337:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:20:06.994337:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:21:02.613013:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:21:02.613013:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:21:57.067632:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:21:57.067632:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:22:47.551769:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:22:47.551769:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:23:40.213604:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:23:40.213604:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:24:28.148316:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:24:28.148316:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:25:23.836604:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:25:23.836604:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:26:14.889827:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:26:14.889827:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:27:05.758605:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:27:05.758605:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:27:56.072076:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:27:56.072076:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:28:44.805985:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:28:44.805985:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:29:40.860119:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:29:40.860119:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:30:34.865714:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:30:34.865714:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:31:25.092507:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:31:25.092507:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:32:16.456998:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:32:16.456998:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:33:05.399783:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:33:05.399783:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:34:01.421111:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:34:01.421111:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:34:53.119031:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:34:53.119031:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:35:44.189076:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:35:44.189076:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:36:35.507035:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:36:35.507035:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:37:23.780705:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:37:23.780705:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:38:17.099421:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:38:17.099421:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:39:06.450391:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:39:06.450391:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:39:57.704328:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:39:57.704328:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:40:48.306687:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:40:48.306687:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:41:36.254455:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:41:36.254455:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:42:27.768423:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:42:27.768423:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:43:15.097629:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:43:15.097629:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:44:08.089869:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:44:08.089869:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:44:58.202108:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:44:58.202108:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:45:47.149577:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:45:47.149577:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:46:39.808740:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:46:39.808740:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:47:28.103673:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:47:28.103673:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:48:20.398599:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:48:20.398599:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:49:10.077566:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:49:10.077566:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:49:59.546115:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:49:59.546115:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:50:52.484661:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:50:52.484661:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:51:40.904927:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:51:40.904927:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:52:34.546305:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:52:34.546305:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:53:23.889862:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:53:23.889862:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:54:12.511449:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:54:12.511449:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:55:03.907124:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:55:03.907124:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:55:52.378457:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:55:52.378457:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:56:47.474247:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:56:47.474247:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:57:38.670242:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:57:38.670242:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:58:26.406214:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:58:26.406214:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T02:59:18.744834:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T02:59:18.744834:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:00:07.116480:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:00:07.116480:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:01:01.248841:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:01:01.248841:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:01:51.601374:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:01:51.601374:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:02:41.447686:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:02:41.447686:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:03:31.931020:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:03:31.931020:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:04:20.545090:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:04:20.545090:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:05:13.661528:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:05:13.661528:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:06:05.881543:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:06:05.881543:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:06:57.061765:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:06:57.061765:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:07:49.592064:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:07:49.592064:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:08:37.737501:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:08:37.737501:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:09:32.563562:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:09:32.563562:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:10:23.440144:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:10:23.440144:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:11:11.287648:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:11:11.287648:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:12:02.896608:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:12:02.896608:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:12:49.353287:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:12:49.353287:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:13:43.258448:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:13:43.258448:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:14:34.720734:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:14:34.720734:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:15:24.101613:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:15:24.101613:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:16:14.697311:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:16:14.697311:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:17:01.000604:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:17:01.000604:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:17:54.370460:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:17:54.370460:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:18:43.116721:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:18:43.116721:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:19:34.861328:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:19:34.861328:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:20:24.956229:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:20:24.956229:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:21:12.116932:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:21:12.116932:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:22:02.041116:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:22:02.041116:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:22:48.309878:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:22:48.309878:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:23:42.752817:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:23:42.752817:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:24:32.079875:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:24:32.079875:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:25:21.575097:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:25:21.575097:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:26:11.997043:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:26:11.997043:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:26:59.775637:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:26:59.775637:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:27:53.369156:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:27:53.369156:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:28:42.636664:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:28:42.636664:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:29:34.078752:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:29:34.078752:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:30:25.333747:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:30:25.333747:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:31:13.761517:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:31:13.761517:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:32:08.668970:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:32:08.668970:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:32:57.778822:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:32:57.778822:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:33:49.989608:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:33:49.989608:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:34:42.076655:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:34:42.076655:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:35:30.250937:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:35:30.250937:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:36:23.084493:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:36:23.084493:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:37:11.701396:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:37:11.701396:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:38:04.442819:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:38:04.442819:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:38:54.230509:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:38:54.230509:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:39:44.540516:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:39:44.540516:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:40:37.215380:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:40:37.215380:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:41:24.830153:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:41:24.830153:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:42:19.009780:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:42:19.009780:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:43:10.190235:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:43:10.190235:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:44:00.802160:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:44:00.802160:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:44:53.834358:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:44:53.834358:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:45:42.030730:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:45:42.030730:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:46:36.192287:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:46:36.192287:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:47:27.768520:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:47:27.768520:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:48:16.515654:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:48:16.515654:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:49:07.556370:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:49:07.556370:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:49:54.974150:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:49:54.974150:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:50:50.702140:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:50:50.702140:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:51:40.980682:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:51:40.980682:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:52:28.987687:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:52:28.987687:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:53:19.551184:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:53:19.551184:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:54:05.308228:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:54:05.308228:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:54:59.235083:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:54:59.235083:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:55:50.178504:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:55:50.178504:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:56:39.724352:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:56:39.724352:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:57:30.772069:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:57:30.772069:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:58:18.762473:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:58:18.762473:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T03:59:13.085112:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T03:59:13.085112:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:00:03.689415:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:00:03.689415:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:00:54.358720:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:00:54.358720:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:01:45.478817:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:01:45.478817:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:02:31.928252:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:02:31.928252:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:03:26.207970:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:03:26.207970:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:04:15.688314:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:04:15.688314:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:05:07.557510:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:05:07.557510:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:06:00.437030:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:06:00.437030:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:06:47.859267:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:06:47.859267:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:07:43.043847:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:07:43.043847:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:08:32.272488:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:08:32.272488:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:09:26.147137:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:09:26.147137:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:10:17.060953:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:10:17.060953:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:11:04.614529:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:11:04.614529:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:11:57.590061:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:11:57.590061:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:12:46.117977:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:12:46.117977:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:13:39.444604:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:13:39.444604:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:14:30.388234:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:14:30.388234:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:15:17.793025:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:15:17.793025:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:16:09.990464:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:16:09.990464:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:16:58.476077:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:16:58.476077:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:17:52.621148:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:17:52.621148:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:18:47.439307:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:18:47.439307:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:19:37.522703:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:19:37.522703:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:20:33.528184:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:20:33.528184:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:21:26.152848:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:21:26.152848:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:22:19.843935:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:22:19.843935:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:23:12.494557:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:23:12.494557:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:24:04.082101:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:24:04.082101:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:25:00.344119:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:25:00.344119:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:25:52.311143:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:25:52.311143:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:26:49.270884:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:26:49.270884:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:27:46.423208:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:27:46.423208:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:28:40.760705:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:28:40.760705:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:29:43.508800:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:29:43.508800:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:30:42.842660:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:30:42.842660:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:31:40.159708:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:31:40.159708:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:32:38.982009:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:32:38.982009:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:33:31.233163:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:33:31.233163:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:34:33.276027:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:34:33.276027:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:35:33.108544:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:35:33.108544:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:36:32.322140:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:36:32.322140:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:37:31.233204:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:37:31.233204:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:38:25.131704:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:38:25.131704:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:39:26.935420:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:39:26.935420:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:40:25.096051:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:40:25.096051:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:41:19.492614:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:41:19.492614:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:42:16.777565:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:42:16.777565:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:43:06.977308:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:43:06.977308:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:44:05.264152:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:44:05.264152:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:45:00.207004:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:45:00.207004:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:45:52.986170:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:45:52.986170:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:46:51.285492:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:46:51.285492:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:47:42.377101:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:47:42.377101:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:48:41.585596:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:48:41.585596:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:49:35.266859:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:49:35.266859:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:50:27.737610:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:50:27.737610:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:51:24.000048:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:51:24.000048:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:52:14.734010:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:52:14.734010:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:53:13.436188:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:53:13.436188:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:54:08.481021:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:54:08.481021:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:55:00.667711:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:55:00.667711:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:55:56.853874:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:55:56.853874:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:56:48.183165:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:56:48.183165:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:57:46.514698:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:57:46.514698:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:58:41.864828:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:58:41.864828:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T04:59:34.782579:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T04:59:34.782579:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:00:31.269239:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:00:31.269239:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:01:22.132564:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:01:22.132564:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:02:21.595660:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:02:21.595660:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:03:16.641329:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:03:16.641329:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:04:08.236663:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:04:08.236663:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:05:03.243611:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:05:03.243611:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:05:53.182295:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:05:53.182295:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:06:51.720123:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:06:51.720123:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:07:47.254463:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:07:47.254463:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:08:37.309522:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:08:37.309522:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:09:29.662129:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:09:29.662129:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:10:18.097121:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:10:18.097121:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:11:12.941088:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:11:12.941088:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:12:04.287734:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:12:04.287734:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:12:54.974289:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:12:54.974289:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:13:46.451182:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:13:46.451182:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:14:35.257022:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:14:35.257022:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:15:30.376692:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:15:30.376692:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:16:21.026498:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:16:21.026498:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:17:12.575131:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:17:12.575131:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:18:04.418011:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:18:04.418011:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:18:51.596103:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:18:51.596103:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:19:45.209721:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:19:45.209721:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:20:34.441935:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:20:34.441935:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:21:24.738124:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:21:24.738124:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:22:17.156444:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:22:17.156444:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:23:06.137634:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:23:06.137634:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:24:01.585754:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:24:01.585754:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:24:52.464756:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:24:52.464756:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:25:42.273448:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:25:42.273448:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:26:31.857113:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:26:31.857113:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:27:17.715629:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:27:17.715629:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:28:11.285229:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:28:11.285229:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:29:00.209157:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:29:00.209157:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:29:52.840620:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:29:52.840620:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:30:43.315912:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:30:43.315912:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:31:31.593426:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:31:31.593426:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:32:22.634506:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:32:22.634506:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:33:09.425373:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:33:09.425373:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:34:04.054283:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:34:04.054283:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:34:54.066722:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:34:54.066722:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:35:43.624509:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:35:43.624509:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:36:35.260250:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:36:35.260250:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:37:22.794105:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:37:22.794105:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:38:17.197034:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:38:17.197034:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:39:06.080478:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:39:06.080478:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:39:57.685287:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:39:57.685287:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:40:50.443923:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:40:50.443923:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:41:38.903060:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:41:38.903060:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:42:32.172203:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:42:32.172203:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:43:21.461288:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:43:21.461288:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:44:14.167209:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:44:14.167209:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:45:04.430474:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:45:04.430474:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:45:52.334715:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:45:52.334715:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:46:44.552192:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:46:44.552192:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:47:31.825097:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:47:31.825097:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:48:27.884610:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:48:27.884610:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:49:20.395671:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:49:20.395671:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:50:09.861918:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:50:09.861918:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:51:02.393753:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:51:02.393753:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:51:50.079520:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:51:50.079520:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:52:45.751058:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:52:45.751058:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:53:36.822803:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:53:36.822803:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:54:28.651511:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:54:28.651511:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:55:20.282413:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:55:20.282413:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:56:10.976199:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:56:10.976199:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:57:05.856270:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:57:05.856270:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:57:55.207601:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:57:55.207601:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:58:46.796691:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:58:46.796691:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T05:59:40.061076:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T05:59:40.061076:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:00:29.736409:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:00:29.736409:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:01:28.128065:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:01:28.128065:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:02:20.722121:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:02:20.722121:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:03:12.225366:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:03:12.225366:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:04:04.685444:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:04:04.685444:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:04:55.114181:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:04:55.114181:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:05:52.632662:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:05:52.632662:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:06:46.811092:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:06:46.811092:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:07:35.782242:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:07:35.782242:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:08:27.718003:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:08:27.718003:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:09:15.414832:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:09:15.414832:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:10:10.142590:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:10:10.142590:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:10:58.381346:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:10:58.381346:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:11:50.558015:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:11:50.558015:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:12:40.819297:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:12:40.819297:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:13:29.196459:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:13:29.196459:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:14:21.047082:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:14:21.047082:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:15:09.045450:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:15:09.045450:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:16:02.858694:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:16:02.858694:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:16:51.818244:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:16:51.818244:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:17:39.363838:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:17:39.363838:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:18:30.927336:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:18:30.927336:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:19:18.922595:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:19:18.922595:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:20:13.361592:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:20:13.361592:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:21:04.892747:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:21:04.892747:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:21:54.543606:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:21:54.543606:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:22:45.728721:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:22:45.728721:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:23:33.082197:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:23:33.082197:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:24:27.847592:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:24:27.847592:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:25:19.249332:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:25:19.249332:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:26:08.336412:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:26:08.336412:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:26:59.058337:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:26:59.058337:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:27:45.393323:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:27:45.393323:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:28:38.771373:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:28:38.771373:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:29:30.332401:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:29:30.332401:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:30:19.107889:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:30:19.107889:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:31:09.681127:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:31:09.681127:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:31:57.030682:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:31:57.030682:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:32:50.739118:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:32:50.739118:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:33:40.658264:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:33:40.658264:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:34:30.753653:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:34:30.753653:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:35:23.094407:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:35:23.094407:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:36:11.249317:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:36:11.249317:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:37:04.941091:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:37:04.941091:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:37:55.643786:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:37:55.643786:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:38:42.596610:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:38:42.596610:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:39:35.402990:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:39:35.402990:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:40:23.739307:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:40:23.739307:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:41:16.593659:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:41:16.593659:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:42:07.600960:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:42:07.600960:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:42:54.640048:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:42:54.640048:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:43:47.979196:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:43:47.979196:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:44:36.872015:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:44:36.872015:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:45:29.860062:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:45:29.860062:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:46:21.610902:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:46:21.610902:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:47:09.603894:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:47:09.603894:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:48:02.738678:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:48:02.738678:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:48:50.822915:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:48:50.822915:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:49:42.936098:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:49:42.936098:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:50:36.304507:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:50:36.304507:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 
-2024-02-15T06:51:22.021370:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+2024-02-15T06:51:22.021370:cd /Users/nima/Developer/commons-configuration && ./annotator-command.sh
 

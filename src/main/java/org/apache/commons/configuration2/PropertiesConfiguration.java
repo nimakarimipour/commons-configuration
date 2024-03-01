@@ -324,7 +324,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
 
         @Override
         protected void parseProperty(final @RUntainted String line) {
-            final String[] property = doParseProperty(line, false);
+            final @RUntainted String[] property = doParseProperty(line, false);
             initPropertyName(property[0]);
             initPropertyValue(property[1]);
             initPropertySeparator(property[2]);
@@ -512,7 +512,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
         static @RPolyTainted String[] doParseProperty(final @RPolyTainted String line, final boolean trimValue) {
             final Matcher matcher = PROPERTY_PATTERN.matcher(line);
 
-            final String[] result = {"", "", ""};
+            final @RUntainted String[] result = {"", "", ""};
 
             if (matcher.matches()) {
                 result[0] = matcher.group(IDX_KEY).trim();
@@ -636,7 +636,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @since 1.7
          */
         protected void parseProperty(final @RUntainted String line) {
-            final String[] property = doParseProperty(line, true);
+            final @RUntainted String[] property = doParseProperty(line, true);
             initPropertyName(property[0]);
             initPropertyValue(property[1]);
             initPropertySeparator(property[2]);
@@ -1390,7 +1390,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @param seenStack Stack of seen include URLs
      * @throws ConfigurationException if loading fails
      */
-    private void loadIncludeFile(final String fileName, final boolean optional, final Deque<URL> seenStack) throws ConfigurationException {
+    private void loadIncludeFile(final @RUntainted String fileName, final boolean optional, final Deque<URL> seenStack) throws ConfigurationException {
         if (locator == null) {
             throw new ConfigurationException(
                 "Load operation not properly " + "initialized! Do not call read(InputStream) directly," + " but use a FileHandler to load a configuration.");
@@ -1442,7 +1442,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @param fileName the file name
      * @return the URL of the include file or <b>null</b> if it cannot be resolved
      */
-    private @RUntainted URL locateIncludeFile(final @RUntainted String basePath, final String fileName) {
+    private @RUntainted URL locateIncludeFile(final @RUntainted String basePath, final @RUntainted String fileName) {
         final FileLocator includeLocator = FileLocatorUtils.fileLocator(locator).sourceURL(null).basePath(basePath).fileName(fileName).create();
         return FileLocatorUtils.locate(includeLocator);
     }

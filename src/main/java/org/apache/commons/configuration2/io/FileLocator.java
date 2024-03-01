@@ -123,7 +123,7 @@ public final class FileLocator {
          * @param name the file name
          * @return a reference to this builder for method chaining
          */
-        public FileLocatorBuilder fileName(final String name) {
+        public FileLocatorBuilder fileName(final @RUntainted String name) {
             fileName = name;
             return this;
         }

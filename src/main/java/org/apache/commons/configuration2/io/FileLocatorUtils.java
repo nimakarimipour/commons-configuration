@@ -256,7 +256,7 @@ public final class FileLocatorUtils {
      * @return the new {@code FileLocator}
      * @throws ClassCastException if the map contains invalid data
      */
-    public static FileLocator fromMap(final Map<String, ?> map) {
+    public static FileLocator fromMap(final Map<String, @RUntainted ?> map) {
         final FileLocator.FileLocatorBuilder builder = fileLocator();
         if (map != null) {
             builder.basePath((String) map.get(PROP_BASE_PATH)).encoding((String) map.get(PROP_ENCODING)).fileName((String) map.get(PROP_FILE_NAME))

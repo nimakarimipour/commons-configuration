@@ -2,7 +2,7 @@
 <scanner>
     <serialization active="false" />
     <uuid>6e151714-61d0-4696-b9c7-f2d1bd7f735a</uuid>
-    <path>/home/kdas006/annotation_dataset/commons-configuration/annotator-out/0</path>
+    <path>/Users/nima/Developer/commons-configuration/annotator-out/0</path>
     <processor>
         <LOMBOK active="true" />
     </processor>

@@ -231,7 +231,7 @@ public class CatalogResolver implements EntityResolver {
      * @param name the file name
      * @return the URL pointing to the file
      */
-    private static @RUntainted URL locate(final FileSystem fs, final @RUntainted String basePath, final String name) {
+    private static @RUntainted URL locate(final FileSystem fs, final @RUntainted String basePath, final @RUntainted String name) {
         return FileLocatorUtils.locate(FileLocatorUtils.fileLocator().fileSystem(fs).basePath(basePath).fileName(name).create());
     }
 

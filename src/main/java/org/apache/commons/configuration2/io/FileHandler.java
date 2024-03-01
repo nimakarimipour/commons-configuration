@@ -275,7 +275,7 @@ public class FileHandler {
      * @return the newly created {@code FileHandler}
      * @see FileLocatorUtils#fromMap(Map)
      */
-    public static FileHandler fromMap(final Map<String, ?> map) {
+    public static FileHandler fromMap(final Map<String, @RUntainted ?> map) {
         return new FileHandler(null, FileLocatorUtils.fromMap(map));
     }
 
@@ -349,7 +349,7 @@ public class FileHandler {
      * @param locator the {@code FileLocator} to copy
      * @return the manipulated {@code FileLocator} with the file name
      */
-    private FileLocator createLocatorWithFileName(final String fileName, final FileLocator locator) {
+    private FileLocator createLocatorWithFileName(final @RUntainted String fileName, final FileLocator locator) {
         return FileLocatorUtils.fileLocator(locator).sourceURL(null).fileName(fileName).create();
     }
 
@@ -650,7 +650,7 @@ public class FileHandler {
      * @param fileName the name of the file to be loaded
      * @throws ConfigurationException if an error occurs
      */
-    public void load(final String fileName) throws ConfigurationException {
+    public void load(final @RUntainted String fileName) throws ConfigurationException {
         load(fileName, checkContentAndGetLocator());
     }
 
@@ -661,7 +661,7 @@ public class FileHandler {
      * @param locator the current {@code FileLocator}
      * @throws ConfigurationException if an error occurs
      */
-    private void load(final String fileName, final FileLocator locator) throws ConfigurationException {
+    private void load(final @RUntainted String fileName, final FileLocator locator) throws ConfigurationException {
         final FileLocator locFileName = createLocatorWithFileName(fileName, locator);
         final URL url = FileLocatorUtils.locateOrThrow(locFileName);
         load(url, locator);
@@ -1140,7 +1140,7 @@ public class FileHandler {
      *
      * @param fileName the name of the file
      */
-    public void setFileName(final String fileName) {
+    public void setFileName(final @RUntainted String fileName) {
         final String name = normalizeFileURL(fileName);
         new Updater() {
             @Override

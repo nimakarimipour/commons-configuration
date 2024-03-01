@@ -93,7 +93,7 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
      * @return the newly created instance
      * @throws ClassCastException if the map contains invalid data
      */
-    public static FileBasedBuilderParametersImpl fromMap(final Map<String, ?> map) {
+    public static FileBasedBuilderParametersImpl fromMap(final Map<String, @RUntainted ?> map) {
         final FileBasedBuilderParametersImpl params = new FileBasedBuilderParametersImpl(FileHandler.fromMap(map));
         if (map != null) {
             params.setReloadingRefreshDelay((Long) map.get(PROP_REFRESH_DELAY));
@@ -230,7 +230,7 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setFileName(final String name) {
+    public FileBasedBuilderParametersImpl setFileName(final @RUntainted String name) {
         getFileHandler().setFileName(name);
         return this;
     }
