@@ -20,6 +20,7 @@ package org.apache.commons.configuration2.web;
 import java.applet.Applet;
 import java.util.Arrays;
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A configuration wrapper to read applet parameters. This configuration is read only, adding or removing a property

@@ -881,7 +881,7 @@
                 <arg>-AenablePolyTaintInference=${env.ANNOTATOR_POLY}</arg>
                 <arg>-AenableTypeArgumentInference=${env.ANNOTATOR_TYPE_ARG}</arg>
                 <arg>-AenableSerialization</arg>
-                <arg>-AserializationConfigPath=/Users/nima/Developer/commons-configuration/annotator-out/checker.xml</arg>
+                <arg>-AserializationConfigPath=/home/nima/Developer/taint-benchmarks/commons-configuration/annotator-out/checker.xml</arg>
                 <arg>-XDcompilePolicy=simple</arg>
                 <arg>-parameters</arg>
                 <!-- <arg>-Xplugin:ErrorProne -XepDisableAllChecks -Xep:AnnotatorScanner:ERROR -XepOpt:AnnotatorScanner:ConfigPath=/home/nima/Developer/taint-benchmarks/commons-configuration/annotator-out/scanner.xml</arg> -->

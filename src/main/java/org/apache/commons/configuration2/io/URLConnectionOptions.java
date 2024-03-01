@@ -21,6 +21,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Objects;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * Carries options and operates on {@link URLConnection}.

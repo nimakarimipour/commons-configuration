@@ -19,6 +19,8 @@ package org.apache.commons.configuration2.tree;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>

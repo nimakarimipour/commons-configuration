@@ -18,6 +18,8 @@ package org.apache.commons.configuration2.web;
 
 import java.util.Collection;
 import org.apache.commons.configuration2.AbstractConfiguration;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>

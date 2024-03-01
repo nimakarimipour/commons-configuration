@@ -1,0 +1,18 @@
+The enclosing method is: JupPropertiesWriter(java.io.Writer,org.apache.commons.configuration2.convert.ListDelimiterHandler,boolean) false
+The enclosing method is: <clinit>() true
+The enclosing method is: getBasePath(java.net.URL) false
+The enclosing method is: getBasePath(java.net.URL) false
+The enclosing method is: getBasePath(java.net.URL) false
+The enclosing method is: getBasePath(java.net.URL) false
+The enclosing method is: loadFromTransformedStream(java.io.InputStream,java.lang.String) false
+The enclosing method is: recursiveGetKeys(java.util.Set<java.lang.String>,javax.naming.Context,java.lang.String,java.util.Set<javax.naming.Context>) false
+The enclosing method is: getContext(java.util.List<java.lang.String>,javax.naming.Context) false
+The enclosing method is: escapeValue(java.lang.Object,boolean,org.apache.commons.configuration2.convert.ValueTransformer) false
+The enclosing method is: escapeList(java.util.List<?>,org.apache.commons.configuration2.convert.ValueTransformer) false
+The enclosing method is: toFile(java.net.URL) false
+The enclosing method is: fileFromURL(java.net.URL) false
+The enclosing method is: fileFromURL(java.net.URL) false
+The enclosing method is: createStatement(java.lang.String,boolean) false
+The enclosing method is: getURL(@edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted java.lang.String,java.lang.String) false
+The enclosing method is: locateFromURL(java.lang.String,java.lang.String) false
+The enclosing method is: setValue(java.lang.Object) false
