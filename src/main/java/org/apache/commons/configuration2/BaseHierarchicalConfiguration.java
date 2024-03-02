@@ -42,6 +42,7 @@ import org.apache.commons.configuration2.tree.ReferenceNodeHandler;
 import org.apache.commons.configuration2.tree.TrackedNodeModel;
 import org.apache.commons.lang3.ObjectUtils;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>
@@ -118,7 +119,7 @@ public class BaseHierarchicalConfiguration extends AbstractHierarchicalConfigura
             final BaseHierarchicalConfiguration result = new BaseHierarchicalConfiguration() {
                 // Override interpolate to always interpolate on the parent
                 @Override
-                protected Object interpolate(final Object value) {
+                protected @RPolyTainted Object interpolate(final @RPolyTainted Object value) {
                     return parent.interpolate(value);
                 }
 

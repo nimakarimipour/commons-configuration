@@ -609,7 +609,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      *
      * @return returns the key name with the ${key} substituted
      */
-    protected String interpolate(final String base) {
+    protected @RPolyTainted String interpolate(final @RPolyTainted String base) {
         final Object result = interpolate((Object) base);
         return result == null ? null : result.toString();
     }
@@ -621,7 +621,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @param value the value to interpolate
      * @return the value with variables substituted
      */
-    protected Object interpolate(final Object value) {
+    protected @RPolyTainted Object interpolate(final @RPolyTainted Object value) {
         final ConfigurationInterpolator ci = getInterpolator();
         return ci != null ? ci.interpolate(value) : value;
     }
@@ -1102,7 +1102,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @see #setThrowExceptionOnMissing(boolean)
      */
     @Override
-    public String getString(final String key) {
+    public @RUntainted String getString(final String key) {
         return convert(String.class, key, null, true);
     }
 

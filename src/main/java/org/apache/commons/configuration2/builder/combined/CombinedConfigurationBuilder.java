@@ -724,7 +724,7 @@ public class CombinedConfigurationBuilder extends BasicConfigurationBuilder<Comb
      * @throws ConfigurationException if an error occurs.
      */
     protected void initSystemProperties(final HierarchicalConfiguration<?> config, final @RUntainted String basePath) throws ConfigurationException {
-        final String fileName = config.getString(KEY_SYSTEM_PROPS);
+        final @RUntainted String fileName = config.getString(KEY_SYSTEM_PROPS);
         if (fileName != null) {
             try {
                 SystemConfiguration.setSystemProperties(basePath, fileName);

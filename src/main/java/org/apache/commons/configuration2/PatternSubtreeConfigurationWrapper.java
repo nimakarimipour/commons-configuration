@@ -251,7 +251,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public String getString(final String key) {
+    public @RUntainted String getString(final String key) {
         return config.getString(makePath(key));
     }
 

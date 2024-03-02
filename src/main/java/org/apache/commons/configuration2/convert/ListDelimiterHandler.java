@@ -103,7 +103,7 @@ public interface ListDelimiterHandler {
      * @param trim a flag whether each component of the string is to be trimmed
      * @return a collection with all components extracted from the string
      */
-    Collection<String> split(String s, boolean trim);
+    Collection<@RUntainted String> split(String s, boolean trim);
 
     /**
      * Extracts all values contained in the specified object up to the given limit. The passed in object is evaluated (if

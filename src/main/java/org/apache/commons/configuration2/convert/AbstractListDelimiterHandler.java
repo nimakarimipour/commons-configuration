@@ -106,7 +106,7 @@ public abstract class AbstractListDelimiterHandler implements ListDelimiterHandl
      * collection is returned. Otherwise, this method delegates to {@link #splitString(String, boolean)}.
      */
     @Override
-    public Collection<String> split(final String s, final boolean trim) {
+    public Collection<@RUntainted String> split(final String s, final boolean trim) {
         return s == null ? new ArrayList<>(0) : splitString(s, trim);
     }
 

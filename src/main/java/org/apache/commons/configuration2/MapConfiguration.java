@@ -137,7 +137,7 @@ public class MapConfiguration extends AbstractConfiguration implements Cloneable
     protected Object getPropertyInternal(final String key) {
         final Object value = map.get(key);
         if (value instanceof String) {
-            final Collection<String> list = getListDelimiterHandler().split((String) value, !isTrimmingDisabled());
+            final Collection<@RUntainted String> list = getListDelimiterHandler().split((String) value, !isTrimmingDisabled());
             return list.size() > 1 ? list : list.iterator().next();
         }
         return value;

@@ -230,7 +230,7 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setFileName(final String name) {
+    public FileBasedBuilderParametersImpl setFileName(final @RUntainted String name) {
         getFileHandler().setFileName(name);
         return this;
     }

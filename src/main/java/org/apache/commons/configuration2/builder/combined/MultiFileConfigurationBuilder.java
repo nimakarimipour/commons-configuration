@@ -163,7 +163,7 @@ public class MultiFileConfigurationBuilder<T extends FileBasedConfiguration> ext
         if (multiParams.getFilePattern() == null) {
             throw new ConfigurationException("No file name pattern is set!");
         }
-        final String fileName = fetchFileName(multiParams);
+        final @RUntainted String fileName = fetchFileName(multiParams);
 
         FileBasedConfigurationBuilder<T> builder = getManagedBuilders().get(fileName);
         if (builder == null) {
@@ -295,7 +295,7 @@ public class MultiFileConfigurationBuilder<T extends FileBasedConfiguration> ext
      * @return the newly created and initialized builder instance
      * @throws ConfigurationException if an error occurs
      */
-    protected FileBasedConfigurationBuilder<T> createInitializedManagedBuilder(final String fileName, final Map<String, Object> params)
+    protected FileBasedConfigurationBuilder<T> createInitializedManagedBuilder(final @RUntainted String fileName, final Map<String, Object> params)
         throws ConfigurationException {
         final FileBasedConfigurationBuilder<T> managedBuilder = createManagedBuilder(fileName, params);
         managedBuilder.getFileHandler().setFileName(fileName);
@@ -333,8 +333,8 @@ public class MultiFileConfigurationBuilder<T extends FileBasedConfiguration> ext
      * @param multiParams the current builder parameters
      * @return the file name for a managed builder
      */
-    private String fetchFileName(final MultiFileBuilderParametersImpl multiParams) {
-        String fileName;
+    private @RUntainted String fetchFileName(final MultiFileBuilderParametersImpl multiParams) {
+        @RUntainted String fileName;
         final Boolean reentrant = inInterpolation.get();
         if (reentrant != null && reentrant.booleanValue()) {
             fileName = multiParams.getFilePattern();

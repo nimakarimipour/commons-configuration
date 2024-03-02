@@ -682,7 +682,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         String.
      */
-    String getString(String key);
+    @RUntainted String getString(String key);
 
     /**
      * Gets a string associated with the given configuration key. If the key doesn't map to an existing object, the default

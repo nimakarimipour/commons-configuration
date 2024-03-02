@@ -1390,7 +1390,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @param seenStack Stack of seen include URLs
      * @throws ConfigurationException if loading fails
      */
-    private void loadIncludeFile(final String fileName, final boolean optional, final Deque<URL> seenStack) throws ConfigurationException {
+    private void loadIncludeFile(final @RUntainted String fileName, final boolean optional, final Deque<URL> seenStack) throws ConfigurationException {
         if (locator == null) {
             throw new ConfigurationException(
                 "Load operation not properly " + "initialized! Do not call read(InputStream) directly," + " but use a FileHandler to load a configuration.");
@@ -1442,7 +1442,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @param fileName the file name
      * @return the URL of the include file or <b>null</b> if it cannot be resolved
      */
-    private @RUntainted URL locateIncludeFile(final @RUntainted String basePath, final String fileName) {
+    private @RUntainted URL locateIncludeFile(final @RUntainted String basePath, final @RUntainted String fileName) {
         final FileLocator includeLocator = FileLocatorUtils.fileLocator(locator).sourceURL(null).basePath(basePath).fileName(fileName).create();
         return FileLocatorUtils.locate(includeLocator);
     }
@@ -1466,8 +1466,8 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
 
         if (StringUtils.isNotEmpty(getInclude()) && key.equalsIgnoreCase(getInclude())) {
             if (isIncludesAllowed()) {
-                final Collection<String> files = getListDelimiterHandler().split(value, true);
-                for (final String f : files) {
+                final Collection<@RUntainted String> files = getListDelimiterHandler().split(value, true);
+                for (final @RUntainted String f : files) {
                     loadIncludeFile(interpolate(f), false, seenStack);
                 }
             }

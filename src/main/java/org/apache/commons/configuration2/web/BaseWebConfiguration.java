@@ -89,7 +89,7 @@ abstract class BaseWebConfiguration extends AbstractConfiguration {
      */
     protected Object handleDelimiters(Object value) {
         if (value instanceof String) {
-            final Collection<String> values = getListDelimiterHandler().split((String) value, true);
+            final Collection<@RUntainted String> values = getListDelimiterHandler().split((String) value, true);
             value = values.size() > 1 ? values : values.iterator().next();
         }
 

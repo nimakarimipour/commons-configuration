@@ -24,6 +24,7 @@ import org.apache.commons.configuration2.ex.ConversionException;
 import org.apache.commons.configuration2.interpol.ConfigurationInterpolator;
 import org.apache.commons.lang3.ClassUtils;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>
@@ -60,7 +61,7 @@ public class DefaultConversionHandler implements ConversionHandler {
      */
     private static final ConfigurationInterpolator NULL_INTERPOLATOR = new ConfigurationInterpolator() {
         @Override
-        public Object interpolate(final Object value) {
+        public @RPolyTainted Object interpolate(final @RPolyTainted Object value) {
             return value;
         }
     };

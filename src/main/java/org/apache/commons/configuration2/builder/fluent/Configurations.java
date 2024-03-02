@@ -134,7 +134,7 @@ public class Configurations {
      * @param <T> the type of the configuration to be constructed
      * @return the new {@code FileBasedConfigurationBuilder}
      */
-    public <T extends FileBasedConfiguration> FileBasedConfigurationBuilder<T> fileBasedBuilder(final Class<T> configClass, final String path) {
+    public <T extends FileBasedConfiguration> FileBasedConfigurationBuilder<T> fileBasedBuilder(final Class<T> configClass, final @RUntainted String path) {
         return createFileBasedBuilder(configClass, fileParams(path));
     }
 
@@ -439,7 +439,7 @@ public class Configurations {
      * @param path the path to the file to be loaded
      * @return the newly created {@code CombinedConfigurationBuilder}
      */
-    public CombinedConfigurationBuilder combinedBuilder(final String path) {
+    public CombinedConfigurationBuilder combinedBuilder(final @RUntainted String path) {
         return new CombinedConfigurationBuilder().configure(fileParams(path));
     }
 
@@ -542,7 +542,7 @@ public class Configurations {
      * @param path the path to the file to be loaded
      * @return the initialized parameters object
      */
-    private FileBasedBuilderParameters fileParams(final String path) {
+    private FileBasedBuilderParameters fileParams(final @RUntainted String path) {
         return fileParams().setFileName(path);
     }
 
