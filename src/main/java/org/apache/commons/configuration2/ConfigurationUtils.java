@@ -36,6 +36,7 @@ import org.apache.commons.configuration2.tree.ExpressionEngine;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * Miscellaneous utility methods for configurations.
