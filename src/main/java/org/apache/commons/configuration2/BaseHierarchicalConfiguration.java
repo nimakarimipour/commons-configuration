@@ -42,6 +42,7 @@ import org.apache.commons.configuration2.tree.ReferenceNodeHandler;
 import org.apache.commons.configuration2.tree.TrackedNodeModel;
 import org.apache.commons.lang3.ObjectUtils;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>

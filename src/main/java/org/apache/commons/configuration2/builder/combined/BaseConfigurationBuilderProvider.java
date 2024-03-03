@@ -174,7 +174,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      */
     protected Collection<BuilderParameters> createParameterObjects() throws Exception {
         final Collection<BuilderParameters> params = new ArrayList<>(getParameterClasses().size());
-        for (final String paramcls : getParameterClasses()) {
+        for (final @RUntainted String paramcls : getParameterClasses()) {
             params.add(createParameterObject(paramcls));
         }
         return params;

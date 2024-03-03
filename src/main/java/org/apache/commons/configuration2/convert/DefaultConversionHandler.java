@@ -24,6 +24,7 @@ import org.apache.commons.configuration2.ex.ConversionException;
 import org.apache.commons.configuration2.interpol.ConfigurationInterpolator;
 import org.apache.commons.lang3.ClassUtils;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>

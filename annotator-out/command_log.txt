@@ -688,3 +688,345 @@
 
 2024-02-29T19:31:58.199570291:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
 
+2024-03-02T18:08:19.606870732:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:08:34.162291616:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:08:47.822656550:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:09:01.475831148:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:09:15.438153636:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:09:30.097006784:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:09:44.851019922:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:09:59.765649574:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:10:14.480372484:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:10:29.658738489:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:10:44.532480710:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:10:59.211498845:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:11:13.991729938:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:11:28.677480994:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:11:43.255109565:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:11:57.869052976:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:12:12.888909966:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:12:27.691456998:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:12:42.273917491:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:12:57.243542086:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:13:11.994906714:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:13:26.714645847:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:13:41.336055262:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:13:56.052668655:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:14:11.038046127:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:14:26.198665557:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:14:40.850142912:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:14:55.517530750:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:15:10.259218544:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:15:25.164611192:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:15:39.885520391:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:15:54.434276947:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:16:08.676807113:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:16:22.620075090:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:16:36.831157661:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:16:51.457576334:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:17:06.271930687:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:17:20.213390609:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:17:34.004864879:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:17:47.913372366:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:18:02.512376425:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:18:17.466245196:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:18:32.334729743:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:18:47.097177908:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:19:01.864915516:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:19:16.223229114:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:19:30.944839668:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:19:45.358602830:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:20:00.018002346:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:20:14.596965081:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:20:29.092896914:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:20:43.222750295:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:20:57.158631182:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:21:11.267262541:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:21:25.607221856:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:21:40.251956082:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:21:54.667470193:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:22:09.093579600:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:22:23.707133063:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:22:38.588698350:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:22:52.643783856:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:23:06.348508698:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:23:20.267267119:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:23:34.615575882:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:23:49.387791401:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:24:04.125536566:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:24:19.287778848:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:24:33.832719022:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:24:48.594813043:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:25:03.267615489:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:25:18.054458477:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:25:32.499674800:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:25:47.184774598:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:26:01.711740398:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:26:16.888906640:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:26:32.162658488:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:26:47.124720588:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:27:01.859975026:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:27:16.605629184:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:27:31.382758353:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:27:46.537563499:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:28:01.472045795:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:28:16.147534331:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:28:30.677324334:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:28:45.781754740:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:29:00.845146501:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:29:15.316019462:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:29:30.028503513:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:29:44.717613687:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:29:58.723074009:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:30:12.456574626:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:30:26.280735082:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:30:40.536614339:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:30:55.189195701:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:31:09.423079270:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:31:23.763776692:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:31:38.171120760:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:31:52.400758659:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:32:07.041947718:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:32:21.487931736:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:32:35.791696954:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:32:49.988350909:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:33:04.835071212:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:33:19.120393078:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:33:33.035767782:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:33:47.468118191:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:34:02.201306715:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:34:16.589886248:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:34:30.599427589:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:34:45.006716424:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:34:59.751775328:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:35:14.480227124:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:35:29.386245400:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:35:43.928989411:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:35:58.688644681:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:36:13.354338501:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:36:28.252331550:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:36:43.197979842:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:36:57.864211280:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:37:12.375762517:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:37:27.093611331:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:37:42.025797660:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:37:56.497152051:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:38:11.221936688:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:38:25.746629745:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:38:40.444498369:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:38:55.263426449:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:39:09.834326903:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:39:24.646600856:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:39:39.306426229:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:39:53.890151981:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:40:08.657570098:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:40:23.644072835:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:40:38.322932897:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:40:53.268024968:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:41:07.960637606:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:41:22.710095208:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:41:37.482373420:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:41:52.085714786:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:42:06.435175278:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:42:20.885855393:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:42:35.295432968:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:42:49.801854801:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:43:04.396584409:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:43:18.765303771:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:43:33.302095259:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:43:47.579319332:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:44:02.207320977:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:44:16.828464179:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:44:31.403729727:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:44:45.943890815:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:45:00.398928206:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:45:15.097366205:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:45:29.770392738:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:45:44.579091693:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:45:58.708168682:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:46:11.920084215:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:46:25.379650608:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:46:39.727420852:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:46:54.442447637:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:47:09.339531475:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:47:24.079318413:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:47:38.385956037:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:47:52.747580324:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:48:07.285256417:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:48:21.970982798:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:48:36.842135123:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:48:51.761473242:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:49:06.294212847:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:49:20.818486491:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-02T18:49:35.670981432:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
