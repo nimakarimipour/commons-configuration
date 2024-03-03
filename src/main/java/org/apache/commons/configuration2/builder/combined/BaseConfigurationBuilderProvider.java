@@ -71,7 +71,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
     private final @RUntainted String configurationClass;
 
     /** A collection with the names of parameter classes. */
-    private final @RUntainted Collection<String> parameterClasses;
+    private final Collection<String> parameterClasses;
 
     /**
      * Creates a new instance of {@code BaseConfigurationBuilderProvider} and initializes all its properties.
@@ -130,7 +130,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      *
      * @return the parameter classes
      */
-    public @RUntainted Collection<String> getParameterClasses() {
+    public Collection<String> getParameterClasses() {
         return parameterClasses;
     }
 
@@ -298,7 +298,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      * @param paramCls the collection with parameter classes passed to the constructor
      * @return the collection to be stored
      */
-    private static @RUntainted Collection<String> initParameterClasses(final Collection<String> paramCls) {
+    private static Collection<String> initParameterClasses(final Collection<String> paramCls) {
         if (paramCls == null) {
             return Collections.emptySet();
         }
