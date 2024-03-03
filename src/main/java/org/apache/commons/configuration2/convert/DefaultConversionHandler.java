@@ -24,6 +24,7 @@ import org.apache.commons.configuration2.ex.ConversionException;
 import org.apache.commons.configuration2.interpol.ConfigurationInterpolator;
 import org.apache.commons.lang3.ClassUtils;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>
@@ -60,7 +61,7 @@ public class DefaultConversionHandler implements ConversionHandler {
      */
     private static final ConfigurationInterpolator NULL_INTERPOLATOR = new ConfigurationInterpolator() {
         @Override
-        public Object interpolate(final Object value) {
+        public @RPolyTainted Object interpolate(final @RPolyTainted Object value) {
             return value;
         }
     };
@@ -102,7 +103,7 @@ public class DefaultConversionHandler implements ConversionHandler {
      * @return the converted value
      * @throws ConversionException if conversion is not possible
      */
-    protected <T> T convert(final Object src, final Class<T> targetCls, final ConfigurationInterpolator ci) {
+    protected <T> T convert(final @RUntainted Object src, final Class<T> targetCls, final ConfigurationInterpolator ci) {
         final Object conversionSrc = isComplexObject(src) ? extractConversionValue(src, targetCls, ci) : src;
         return convertValue(ci.interpolate(conversionSrc), targetCls, ci);
     }
@@ -133,7 +134,7 @@ public class DefaultConversionHandler implements ConversionHandler {
      * @return the converted value
      * @throws ConversionException if conversion is not possible
      */
-    protected <T> T convertValue(final Object src, final Class<T> targetCls, final ConfigurationInterpolator ci) {
+    protected <T> T convertValue(final @RUntainted Object src, final Class<T> targetCls, final ConfigurationInterpolator ci) {
         if (src == null) {
             return null;
         }
@@ -154,8 +155,8 @@ public class DefaultConversionHandler implements ConversionHandler {
      * @param ci the {@code ConfigurationInterpolator} (not <b>null</b>)
      * @return the value to be converted (may be <b>null</b> if no values are found)
      */
-    protected Object extractConversionValue(final Object container, final Class<?> targetCls, final ConfigurationInterpolator ci) {
-        final Collection<?> values = extractValues(container, 1);
+    protected @RUntainted Object extractConversionValue(final @RUntainted Object container, final Class<?> targetCls, final ConfigurationInterpolator ci) {
+        final Collection<@RUntainted ?> values = extractValues(container, 1);
         return values.isEmpty() ? null : ci.interpolate(values.iterator().next());
     }
 
@@ -165,7 +166,7 @@ public class DefaultConversionHandler implements ConversionHandler {
      * @param source the source object (may be a single value or a complex object)
      * @return a collection with all extracted values
      */
-    protected Collection<?> extractValues(final Object source) {
+    protected Collection<@RUntainted ?> extractValues(final @RUntainted Object source) {
         return extractValues(source, Integer.MAX_VALUE);
     }
 
@@ -177,7 +178,7 @@ public class DefaultConversionHandler implements ConversionHandler {
      * @param limit the number of elements to extract
      * @return a collection with all extracted values
      */
-    protected Collection<?> extractValues(final Object source, final int limit) {
+    protected Collection<@RUntainted ?> extractValues(final @RUntainted Object source, final int limit) {
         return listDelimiterHandler.flatten(source, limit);
     }
 
@@ -255,7 +256,7 @@ public class DefaultConversionHandler implements ConversionHandler {
     }
 
     @Override
-    public <T> T to(final Object src, final Class<T> targetCls, final ConfigurationInterpolator ci) {
+    public <T> T to(final @RUntainted Object src, final Class<T> targetCls, final ConfigurationInterpolator ci) {
         final ConfigurationInterpolator interpolator = fetchInterpolator(ci);
         return convert(interpolator.interpolate(src), targetCls, interpolator);
     }
@@ -344,7 +345,7 @@ public class DefaultConversionHandler implements ConversionHandler {
             }
         }
 
-        final Collection<?> values = extractValues(src);
+        final Collection<@RUntainted ?> values = extractValues(src);
         final Class<?> targetClass = ClassUtils.primitiveToWrapper(elemClass);
         final Object array = Array.newInstance(elemClass, values.size());
         int idx = 0;

@@ -63,7 +63,7 @@ public class ConfigurationDeclaration extends XMLBeanDeclaration {
      *
      * @return the value of the {@code at} attribute (can be <b>null</b>)
      */
-    public String getAt() {
+    public @RUntainted String getAt() {
         final String result = this.getConfiguration().getString(CombinedConfigurationBuilder.ATTR_AT_RES);
         return result == null ? this.getConfiguration().getString(CombinedConfigurationBuilder.ATTR_AT) : result;
     }
@@ -130,7 +130,7 @@ public class ConfigurationDeclaration extends XMLBeanDeclaration {
      * @return the name of the bean's class
      */
     @Override
-    public String getBeanClassName() {
+    public @RUntainted String getBeanClassName() {
         return null;
     }
 

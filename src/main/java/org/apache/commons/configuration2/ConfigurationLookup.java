@@ -63,7 +63,7 @@ public class ConfigurationLookup implements Lookup {
      * directly returned. Note that this may be a complex object, e.g. a collection or an array.
      */
     @Override
-    public Object lookup(final String variable) {
+    public @RUntainted Object lookup(final @RUntainted String variable) {
         return getConfiguration().getProperty(variable);
     }
 }

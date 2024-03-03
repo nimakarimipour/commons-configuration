@@ -218,7 +218,7 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setEncoding(final String enc) {
+    public FileBasedBuilderParametersImpl setEncoding(final @RUntainted String enc) {
         getFileHandler().setEncoding(enc);
         return this;
     }
@@ -230,7 +230,7 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setFileName(final String name) {
+    public FileBasedBuilderParametersImpl setFileName(final @RUntainted String name) {
         getFileHandler().setFileName(name);
         return this;
     }

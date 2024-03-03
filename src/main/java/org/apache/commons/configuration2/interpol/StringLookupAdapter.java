@@ -30,14 +30,14 @@ class StringLookupAdapter implements Lookup {
     /**
      * The StringLookup delegate.
      */
-    private final StringLookup stringLookup;
+    private final @RUntainted StringLookup stringLookup;
 
-    StringLookupAdapter(final StringLookup stringLookup) {
+    StringLookupAdapter(final @RUntainted StringLookup stringLookup) {
         this.stringLookup = Objects.requireNonNull(stringLookup, "stringLookup");
     }
 
     @Override
-    public Object lookup(final String key) {
+    public @RUntainted Object lookup(final @RUntainted String key) {
         return stringLookup.lookup(key);
     }
 

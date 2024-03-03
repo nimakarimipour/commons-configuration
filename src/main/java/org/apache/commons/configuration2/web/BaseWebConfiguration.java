@@ -51,7 +51,7 @@ abstract class BaseWebConfiguration extends AbstractConfiguration {
      * @return a flag whether this key exists in this configuration
      */
     @Override
-    protected boolean containsKeyInternal(final String key) {
+    protected boolean containsKeyInternal(final @RUntainted String key) {
         return getPropertyInternal(key) != null;
     }
 
@@ -87,9 +87,9 @@ abstract class BaseWebConfiguration extends AbstractConfiguration {
      * @param value the property value to be examined
      * @return the processed value
      */
-    protected Object handleDelimiters(Object value) {
+    protected @RPolyTainted Object handleDelimiters(@RPolyTainted Object value) {
         if (value instanceof String) {
-            final Collection<String> values = getListDelimiterHandler().split((String) value, true);
+            final Collection<@RUntainted String> values = getListDelimiterHandler().split((String) value, true);
             value = values.size() > 1 ? values : values.iterator().next();
         }
 

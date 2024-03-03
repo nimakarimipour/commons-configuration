@@ -263,7 +263,7 @@ public class MultiFileConfigurationBuilder<T extends FileBasedConfiguration> ext
      * @param multiParams the parameters object for this builder
      * @return the name of the configuration file to be loaded
      */
-    protected String constructFileName(final MultiFileBuilderParametersImpl multiParams) {
+    protected @RUntainted String constructFileName(final MultiFileBuilderParametersImpl multiParams) {
         final ConfigurationInterpolator ci = getInterpolator();
         return String.valueOf(ci.interpolate(multiParams.getFilePattern()));
     }
@@ -295,7 +295,7 @@ public class MultiFileConfigurationBuilder<T extends FileBasedConfiguration> ext
      * @return the newly created and initialized builder instance
      * @throws ConfigurationException if an error occurs
      */
-    protected FileBasedConfigurationBuilder<T> createInitializedManagedBuilder(final String fileName, final Map<String, Object> params)
+    protected FileBasedConfigurationBuilder<T> createInitializedManagedBuilder(final @RUntainted String fileName, final Map<String, Object> params)
         throws ConfigurationException {
         final FileBasedConfigurationBuilder<T> managedBuilder = createManagedBuilder(fileName, params);
         managedBuilder.getFileHandler().setFileName(fileName);
@@ -333,7 +333,7 @@ public class MultiFileConfigurationBuilder<T extends FileBasedConfiguration> ext
      * @param multiParams the current builder parameters
      * @return the file name for a managed builder
      */
-    private String fetchFileName(final MultiFileBuilderParametersImpl multiParams) {
+    private @RUntainted String fetchFileName(final MultiFileBuilderParametersImpl multiParams) {
         String fileName;
         final Boolean reentrant = inInterpolation.get();
         if (reentrant != null && reentrant.booleanValue()) {

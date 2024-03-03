@@ -205,7 +205,7 @@ public class XPathExpressionEngine implements ExpressionEngine {
     }
 
     @Override
-    public String attributeKey(final String parentKey, final String attributeName) {
+    public @RUntainted String attributeKey(final String parentKey, final String attributeName) {
         final StringBuilder buf = new StringBuilder(
             StringUtils.length(parentKey) + StringUtils.length(attributeName) + PATH_DELIMITER.length() + ATTR_DELIMITER.length());
         if (StringUtils.isNotEmpty(parentKey)) {

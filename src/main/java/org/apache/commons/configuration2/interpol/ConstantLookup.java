@@ -47,7 +47,7 @@ public class ConstantLookup implements Lookup {
     private static final char FIELD_SEPRATOR = '.';
 
     /** Cache of field values. */
-    private static final Map<String, Object> CACHE = new ConcurrentHashMap<>();
+    private static final Map<String, @RUntainted Object> CACHE = new ConcurrentHashMap<>();
 
     /** The logger. */
     private final Log log = LogFactory.getLog(getClass());
@@ -61,7 +61,7 @@ public class ConstantLookup implements Lookup {
      * @return the value of this variable or <b>null</b> if it cannot be resolved
      */
     @Override
-    public Object lookup(final @RUntainted String var) {
+    public @RUntainted Object lookup(final @RUntainted String var) {
         if (var == null) {
             return null;
         }
@@ -95,7 +95,7 @@ public class ConstantLookup implements Lookup {
      * @return the field's value
      * @throws Exception if an error occurs
      */
-    protected Object resolveField(final @RUntainted String className, final String fieldName) throws Exception {
+    protected @RPolyTainted Object resolveField(final @RUntainted String className, final @RPolyTainted String fieldName) throws Exception {
         return fetchClass(className).getField(fieldName).get(null);
     }
 
@@ -109,7 +109,7 @@ public class ConstantLookup implements Lookup {
      * @return the corresponding class object
      * @throws ClassNotFoundException if the class cannot be loaded
      */
-    protected Class<?> fetchClass(final @RUntainted String className) throws ClassNotFoundException {
+    protected @RUntainted Class<?> fetchClass(final @RUntainted String className) throws ClassNotFoundException {
         return ClassUtils.getClass(className);
     }
 }

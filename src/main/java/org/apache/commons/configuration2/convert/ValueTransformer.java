@@ -45,5 +45,5 @@ public interface ValueTransformer {
      * @param value the property value to be transformed
      * @return the transformed property value
      */
-    Object transformValue(Object value);
+    @RUntainted Object transformValue(@RUntainted Object value);
 }

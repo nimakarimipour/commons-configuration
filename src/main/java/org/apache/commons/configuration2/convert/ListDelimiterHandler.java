@@ -69,7 +69,7 @@ public interface ListDelimiterHandler {
      * @param transformer a {@code ValueTransformer} for an additional encoding (must not be <b>null</b>)
      * @return the escaped value
      */
-    Object escape(Object value, ValueTransformer transformer);
+    @RUntainted Object escape(@RUntainted Object value, ValueTransformer transformer);
 
     /**
      * Escapes all values in the given list and concatenates them to a single string. This operation is required by
@@ -80,7 +80,7 @@ public interface ListDelimiterHandler {
      * @param transformer a {@code ValueTransformer} for an additional encoding (must not be <b>null</b>)
      * @return the resulting escaped value
      */
-    Object escapeList(List<?> values, ValueTransformer transformer);
+    @RUntainted Object escapeList(@RUntainted List<?> values, ValueTransformer transformer);
 
     /**
      * Parses the specified value for list delimiters and splits it if necessary. The passed in object can be either a
@@ -103,7 +103,7 @@ public interface ListDelimiterHandler {
      * @param trim a flag whether each component of the string is to be trimmed
      * @return a collection with all components extracted from the string
      */
-    Collection<String> split(String s, boolean trim);
+    @RUntainted Collection<@RUntainted String> split(String s, boolean trim);
 
     /**
      * Extracts all values contained in the specified object up to the given limit. The passed in object is evaluated (if
@@ -117,11 +117,11 @@ public interface ListDelimiterHandler {
      * @return a &quot;flat&quot; collection containing all primitive values of the passed in object
      * @since 2.9.0
      */
-    default Collection<?> flatten(final Object value, final int limit) {
+    default Collection<@RUntainted ?> flatten(final @RUntainted Object value, final int limit) {
         if (value instanceof String) {
             return split((String) value, true);
         }
-        final Collection<Object> result = new LinkedList<>();
+        final Collection<@RUntainted Object> result = new LinkedList<>();
         if (value instanceof Iterable) {
             AbstractListDelimiterHandler.flattenIterator(this, result, ((Iterable<?>) value).iterator(), limit);
         } else if (value instanceof Iterator) {

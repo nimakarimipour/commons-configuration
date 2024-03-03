@@ -60,7 +60,7 @@ public interface ConversionHandler {
      * @return the converted object
      * @throws ConversionException if the requested conversion is not possible
      */
-    <T> T to(Object src, Class<T> targetCls, ConfigurationInterpolator ci);
+    <T> T to(@RUntainted Object src, Class<T> targetCls, ConfigurationInterpolator ci);
 
     /**
      * Converts the given object to an array of the specified element type. The object can be a single value (e.g. a String,

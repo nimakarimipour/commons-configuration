@@ -76,7 +76,7 @@ public class ExprLookup implements Lookup {
     private ConfigurationInterpolator interpolator;
 
     /** The StringSubstitutor for performing replace operations. */
-    private StringSubstitutor substitutor;
+    private @RUntainted StringSubstitutor substitutor;
 
     /** The logger used by this instance. */
     private ConfigurationLogger logger;
@@ -88,10 +88,10 @@ public class ExprLookup implements Lookup {
     private Variables variables;
 
     /** The String to use to start subordinate lookup expressions */
-    private String prefixMatcher = DEFAULT_PREFIX;
+    private @RUntainted String prefixMatcher = DEFAULT_PREFIX;
 
     /** The String to use to terminate subordinate lookup expressions */
-    private String suffixMatcher = DEFAULT_SUFFIX;
+    private @RUntainted String suffixMatcher = DEFAULT_SUFFIX;
 
     /**
      * The default constructor. Will get used when the Lookup is constructed via configuration.
@@ -127,7 +127,7 @@ public class ExprLookup implements Lookup {
      *
      * @param prefix The String identifying the beginning of the expression.
      */
-    public void setVariablePrefixMatcher(final String prefix) {
+    public void setVariablePrefixMatcher(final @RUntainted String prefix) {
         prefixMatcher = prefix;
     }
 
@@ -137,7 +137,7 @@ public class ExprLookup implements Lookup {
      *
      * @param suffix The String identifying the end of the expression.
      */
-    public void setVariableSuffixMatcher(final String suffix) {
+    public void setVariableSuffixMatcher(final @RUntainted String suffix) {
         suffixMatcher = suffix;
     }
 
@@ -208,7 +208,7 @@ public class ExprLookup implements Lookup {
      * @return The String result of the expression.
      */
     @Override
-    public String lookup(final String var) {
+    public @RUntainted String lookup(final @RUntainted String var) {
         if (substitutor == null) {
             return var;
         }

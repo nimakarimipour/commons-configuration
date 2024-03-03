@@ -153,7 +153,7 @@ public class DefaultExpressionEngine implements ExpressionEngine {
      * {@inheritDoc} This method supports the syntax as described in the class comment.
      */
     @Override
-    public <T> List<QueryResult<T>> query(final T root, final String key, final NodeHandler<T> handler) {
+    public <T> List<QueryResult<T>> query(final T root, final @RUntainted String key, final NodeHandler<T> handler) {
         final List<QueryResult<T>> results = new LinkedList<>();
         findNodesForKey(new DefaultConfigurationKey(this, key).iterator(), root, results, handler);
         return results;
@@ -164,7 +164,7 @@ public class DefaultExpressionEngine implements ExpressionEngine {
      * name. The name of the root node is a blank string. Note that no indices are returned.
      */
     @Override
-    public <T> String nodeKey(final T node, final String parentKey, final NodeHandler<T> handler) {
+    public <T> String nodeKey(final T node, final @RUntainted String parentKey, final NodeHandler<T> handler) {
         if (parentKey == null) {
             // this is the root node
             return StringUtils.EMPTY;
@@ -175,7 +175,7 @@ public class DefaultExpressionEngine implements ExpressionEngine {
     }
 
     @Override
-    public String attributeKey(final String parentKey, final String attributeName) {
+    public @RUntainted String attributeKey(final @RUntainted String parentKey, final String attributeName) {
         final DefaultConfigurationKey key = new DefaultConfigurationKey(this, parentKey);
         key.appendAttribute(attributeName);
         return key.toString();
@@ -187,7 +187,7 @@ public class DefaultExpressionEngine implements ExpressionEngine {
      * without further checks. If it is <b>null</b>, only the name of the current node with its index is returned.
      */
     @Override
-    public <T> String canonicalKey(final T node, final String parentKey, final NodeHandler<T> handler) {
+    public <T> String canonicalKey(final T node, final @RUntainted String parentKey, final NodeHandler<T> handler) {
         final String nodeName = handler.nodeName(node);
         final T parent = handler.getParent(node);
         final DefaultConfigurationKey key = new DefaultConfigurationKey(this, parentKey);
@@ -273,7 +273,7 @@ public class DefaultExpressionEngine implements ExpressionEngine {
      * @return a data object with information needed for the add operation
      */
     @Override
-    public <T> NodeAddData<T> prepareAdd(final T root, final String key, final NodeHandler<T> handler) {
+    public <T> NodeAddData<T> prepareAdd(final T root, final @RUntainted String key, final NodeHandler<T> handler) {
         final DefaultConfigurationKey.KeyIterator it = new DefaultConfigurationKey(this, key).iterator();
         if (!it.hasNext()) {
             throw new IllegalArgumentException("Key for add operation must be defined!");

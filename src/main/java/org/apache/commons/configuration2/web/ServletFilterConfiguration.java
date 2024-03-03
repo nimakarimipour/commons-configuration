@@ -31,7 +31,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  */
 public class ServletFilterConfiguration extends BaseWebConfiguration {
     /** Stores the wrapped filter config. */
-    protected FilterConfig config;
+    protected @RUntainted FilterConfig config;
 
     /**
      * Create a ServletFilterConfiguration using the filter initialization parameters.
@@ -43,12 +43,12 @@ public class ServletFilterConfiguration extends BaseWebConfiguration {
     }
 
     @Override
-    protected Object getPropertyInternal(final String key) {
+    protected @RUntainted Object getPropertyInternal(final @RUntainted String key) {
         return handleDelimiters(config.getInitParameter(key));
     }
 
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         // According to the documentation of getInitParameterNames() the
         // enumeration is of type String.
         final Enumeration<String> en = config.getInitParameterNames();

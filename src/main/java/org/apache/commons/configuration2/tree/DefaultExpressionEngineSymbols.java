@@ -61,7 +61,7 @@ public final class DefaultExpressionEngineSymbols {
     public static final DefaultExpressionEngineSymbols DEFAULT_SYMBOLS = createDefaultSmybols();
 
     /** Stores the property delimiter. */
-    private final String propertyDelimiter;
+    private final @RUntainted String propertyDelimiter;
 
     /** Stores the escaped property delimiter. */
     private final String escapedDelimiter;
@@ -97,7 +97,7 @@ public final class DefaultExpressionEngineSymbols {
      *
      * @return the property delimiter
      */
-    public String getPropertyDelimiter() {
+    public @RUntainted String getPropertyDelimiter() {
         return propertyDelimiter;
     }
 
@@ -206,7 +206,7 @@ public final class DefaultExpressionEngineSymbols {
      */
     public static class Builder {
         /** Stores the property delimiter. */
-        private String propertyDelimiter;
+        private @RUntainted String propertyDelimiter;
 
         /** Stores the escaped property delimiter. */
         private String escapedDelimiter;
@@ -251,7 +251,7 @@ public final class DefaultExpressionEngineSymbols {
          * @param d the property delimiter
          * @return a reference to this object for method chaining
          */
-        public Builder setPropertyDelimiter(final String d) {
+        public Builder setPropertyDelimiter(final @RUntainted String d) {
             propertyDelimiter = d;
             return this;
         }

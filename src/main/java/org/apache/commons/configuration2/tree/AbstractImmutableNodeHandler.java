@@ -41,7 +41,7 @@ abstract class AbstractImmutableNodeHandler implements NodeHandler<ImmutableNode
     }
 
     @Override
-    public Object getValue(final ImmutableNode node) {
+    public @RUntainted Object getValue(final ImmutableNode node) {
         return node.getValue();
     }
 

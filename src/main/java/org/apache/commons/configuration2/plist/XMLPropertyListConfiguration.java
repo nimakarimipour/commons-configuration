@@ -187,7 +187,7 @@ public class XMLPropertyListConfiguration extends BaseHierarchicalConfiguration 
     }
 
     @Override
-    protected void addPropertyInternal(final String key, final Object value) {
+    protected void addPropertyInternal(final @RUntainted String key, final Object value) {
         if (value instanceof byte[] || value instanceof List) {
             addPropertyDirect(key, value);
         } else if (value instanceof Object[]) {
@@ -323,7 +323,7 @@ public class XMLPropertyListConfiguration extends BaseHierarchicalConfiguration 
             out.println(padding + "<dict>");
 
             final ImmutableConfiguration config = (ImmutableConfiguration) value;
-            final Iterator<String> it = config.getKeys();
+            final Iterator<@RUntainted String> it = config.getKeys();
             while (it.hasNext()) {
                 // create a node for each property
                 final String key = it.next();
@@ -339,7 +339,7 @@ public class XMLPropertyListConfiguration extends BaseHierarchicalConfiguration 
             out.println(padding + "</dict>");
         } else if (value instanceof Map) {
             // display a Map as a dictionary
-            final Map<String, Object> map = transformMap((Map<?, ?>) value);
+            final Map<@RUntainted String, Object> map = transformMap((Map<?, ?>) value);
             printValue(out, indentLevel, new MapConfiguration(map));
         } else if (value instanceof byte[]) {
             final String base64 = new String(Base64.encodeBase64((byte[]) value), DATA_ENCODING);
@@ -358,7 +358,7 @@ public class XMLPropertyListConfiguration extends BaseHierarchicalConfiguration 
      * @param src the map to be converted
      * @return the resulting map
      */
-    private static Map<String, Object> transformMap(final Map<?, ?> src) {
+    private static Map<@RUntainted String, Object> transformMap(final Map<?, ?> src) {
         final Map<String, Object> dest = new HashMap<>();
         for (final Map.Entry<?, ?> e : src.entrySet()) {
             if (e.getKey() instanceof String) {

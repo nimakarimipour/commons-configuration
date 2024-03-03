@@ -70,7 +70,7 @@ public final class ConfigurationConverter {
             useDelimiterHandler = false;
         }
 
-        for (final Iterator<String> keys = config.getKeys(); keys.hasNext();) {
+        for (final Iterator<@RUntainted String> keys = config.getKeys(); keys.hasNext();) {
             final String key = keys.next();
             final List<Object> list = config.getList(key);
 

@@ -45,8 +45,8 @@ public class ServletRequestConfiguration extends BaseWebConfiguration {
     }
 
     @Override
-    protected Object getPropertyInternal(final String key) {
-        final String[] values = request.getParameterValues(key);
+    protected @RUntainted Object getPropertyInternal(final String key) {
+        final @RUntainted String[] values = request.getParameterValues(key);
 
         if (values == null || values.length == 0) {
             return null;
@@ -68,9 +68,9 @@ public class ServletRequestConfiguration extends BaseWebConfiguration {
     }
 
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         // According to the documentation of getParameterMap(), keys are Strings.
-        final Map<String, ?> parameterMap = request.getParameterMap();
+        final Map<@RUntainted String, ?> parameterMap = request.getParameterMap();
         return parameterMap.keySet().iterator();
     }
 }

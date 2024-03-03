@@ -60,7 +60,7 @@ abstract class HierarchicalConfigurationConverter {
             DefaultConfigurationKey keyLast = keyEmpty;
             final Set<String> keySet = new HashSet<>();
 
-            for (final Iterator<String> it = config.getKeys(); it.hasNext();) {
+            for (final Iterator<@RUntainted String> it = config.getKeys(); it.hasNext();) {
                 final String key = it.next();
                 if (keySet.contains(key)) {
                     // this key has already been processed by openElements

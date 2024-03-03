@@ -37,6 +37,8 @@ import org.apache.commons.configuration2.tree.NodeHandler;
 import org.apache.commons.configuration2.tree.NodeHandlerDecorator;
 import org.apache.commons.configuration2.tree.NodeSelector;
 import org.apache.commons.configuration2.tree.TrackedNodeModel;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>
@@ -522,7 +524,7 @@ public class INIConfiguration extends BaseHierarchicalConfiguration implements F
      * @param key the key
      * @param value the value
      */
-    private void writeProperty(final PrintWriter out, final String key, final Object value, final String separator) {
+    private void writeProperty(final PrintWriter out, final String key, final @RUntainted Object value, final String separator) {
         out.print(key);
         out.print(separator);
         out.print(escapeValue(value.toString()));
@@ -728,7 +730,7 @@ public class INIConfiguration extends BaseHierarchicalConfiguration implements F
      *
      * @param value the string to be escaped
      */
-    private String escapeValue(final String value) {
+    private String escapeValue(final @RUntainted String value) {
         return String.valueOf(getListDelimiterHandler().escape(escapeComments(value), ListDelimiterHandler.NOOP_TRANSFORMER));
     }
 
@@ -738,7 +740,7 @@ public class INIConfiguration extends BaseHierarchicalConfiguration implements F
      * @param value the value to be escaped
      * @return the value with comment characters escaped
      */
-    private String escapeComments(final String value) {
+    private @RPolyTainted String escapeComments(final @RPolyTainted String value) {
         final String commentChars = getCommentLeadingCharsUsedInInput();
         boolean quoted = false;
 

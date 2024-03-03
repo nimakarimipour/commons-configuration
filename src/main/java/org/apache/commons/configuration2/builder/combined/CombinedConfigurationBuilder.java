@@ -384,10 +384,10 @@ public class CombinedConfigurationBuilder extends BasicConfigurationBuilder<Comb
     private static final Map<String, ConfigurationBuilderProvider> DEFAULT_PROVIDERS_MAP;
 
     /** The builder for the definition configuration. */
-    private ConfigurationBuilder<? extends HierarchicalConfiguration<?>> definitionBuilder;
+    private ConfigurationBuilder<? extends @RUntainted @RUntainted HierarchicalConfiguration<?>> definitionBuilder;
 
     /** Stores temporarily the configuration with the builder definitions. */
-    private HierarchicalConfiguration<?> definitionConfiguration;
+    private @RUntainted HierarchicalConfiguration<?> definitionConfiguration;
 
     /** The object with data about configuration sources. */
     private ConfigurationSourceData sourceData;
@@ -442,7 +442,7 @@ public class CombinedConfigurationBuilder extends BasicConfigurationBuilder<Comb
      * @return the builder for the definition configuration
      * @throws ConfigurationException if an error occurs
      */
-    public synchronized ConfigurationBuilder<? extends HierarchicalConfiguration<?>> getDefinitionBuilder() throws ConfigurationException {
+    public synchronized ConfigurationBuilder<? extends @RUntainted @RUntainted @RUntainted HierarchicalConfiguration<?>> getDefinitionBuilder() throws ConfigurationException {
         if (definitionBuilder == null) {
             definitionBuilder = setupDefinitionBuilder(getParameters());
             addDefinitionBuilderChangeListener(definitionBuilder);
@@ -580,7 +580,7 @@ public class CombinedConfigurationBuilder extends BasicConfigurationBuilder<Comb
      * @return the definition configuration
      * @throws ConfigurationException if an error occurs
      */
-    protected HierarchicalConfiguration<?> getDefinitionConfiguration() throws ConfigurationException {
+    protected @RUntainted HierarchicalConfiguration<?> getDefinitionConfiguration() throws ConfigurationException {
         if (definitionConfiguration == null) {
             definitionConfiguration = getDefinitionBuilder().getConfiguration();
         }
@@ -1049,7 +1049,7 @@ public class CombinedConfigurationBuilder extends BasicConfigurationBuilder<Comb
      * @param defConfig the definition configuration
      * @param key the key for the list nodes
      */
-    private static void initNodeCombinerListNodes(final CombinedConfiguration cc, final HierarchicalConfiguration<?> defConfig, final String key) {
+    private static void initNodeCombinerListNodes(final CombinedConfiguration cc, final HierarchicalConfiguration<?> defConfig, final @RUntainted String key) {
         defConfig.getList(key).forEach(listNode -> cc.getNodeCombiner().addListNode((String) listNode));
     }
 

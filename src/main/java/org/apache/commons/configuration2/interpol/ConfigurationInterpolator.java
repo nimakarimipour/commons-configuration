@@ -123,7 +123,7 @@ public class ConfigurationInterpolator {
     private final List<Lookup> defaultLookups;
 
     /** The helper object performing variable substitution. */
-    private final StringSubstitutor substitutor;
+    private final @RUntainted StringSubstitutor substitutor;
 
     /** Stores a parent interpolator objects if the interpolator is nested hierarchically. */
     private volatile ConfigurationInterpolator parentInterpolator;
@@ -161,7 +161,7 @@ public class ConfigurationInterpolator {
      * @param strValue the value
      * @return the extracted variable name
      */
-    private static String extractVariableName(final String strValue) {
+    private static @RPolyTainted String extractVariableName(final @RPolyTainted String strValue) {
         return strValue.substring(VAR_START_LENGTH, strValue.length() - VAR_END_LENGTH);
     }
 
@@ -392,7 +392,7 @@ public class ConfigurationInterpolator {
      *
      * @return the {@code StringSubstitutor} used by this object
      */
-    private StringSubstitutor initSubstitutor() {
+    private @RUntainted StringSubstitutor initSubstitutor() {
         return new StringSubstitutor(key -> {
             final Object value = resolve(key);
             return value != null
@@ -425,7 +425,7 @@ public class ConfigurationInterpolator {
      * @param value the value to be interpolated
      * @return the interpolated value
      */
-    public Object interpolate(final Object value) {
+    public @RPolyTainted Object interpolate(final @RPolyTainted Object value) {
         if (value instanceof String) {
             final String strValue = (String) value;
             if (isSingleVariable(strValue)) {
@@ -546,7 +546,7 @@ public class ConfigurationInterpolator {
      * @param var the name of the variable whose value is to be looked up which may contain a prefix.
      * @return the value of this variable or <b>null</b> if it cannot be resolved
      */
-    public Object resolve(final String var) {
+    public @RUntainted Object resolve(final @RUntainted String var) {
         if (var == null) {
             return null;
         }
@@ -581,7 +581,7 @@ public class ConfigurationInterpolator {
      * @param strValue the string to be interpolated
      * @return the resolved value or <b>null</b> if resolving failed
      */
-    private Object resolveSingleVariable(final String strValue) {
+    private @RUntainted Object resolveSingleVariable(final @RUntainted String strValue) {
         return resolve(extractVariableName(strValue));
     }
 

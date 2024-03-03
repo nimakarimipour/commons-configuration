@@ -64,7 +64,7 @@ public interface FileBasedBuilderProperties<T> {
      * @param name the file name
      * @return a reference to this object for method chaining
      */
-    T setFileName(String name);
+    T setFileName(@RUntainted String name);
 
     /**
      * Sets the {@code FileSystem} of the associated {@code FileHandler}.

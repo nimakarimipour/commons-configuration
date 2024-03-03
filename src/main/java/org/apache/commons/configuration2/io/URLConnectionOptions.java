@@ -81,7 +81,7 @@ public final class URLConnectionOptions {
      * @param urlConnection the target connection.
      * @return the given connection.
      */
-    public URLConnection apply(final URLConnection urlConnection) {
+    public @RPolyTainted URLConnection apply(final @RPolyTainted URLConnection urlConnection) {
         urlConnection.setUseCaches(useCaches);
         urlConnection.setConnectTimeout(connectTimeoutMillis);
         urlConnection.setReadTimeout(readTimeoutMillis);
@@ -149,7 +149,7 @@ public final class URLConnectionOptions {
      * @return A new connection
      * @throws IOException if an I/O exception occurs.
      */
-    public URLConnection openConnection(final URL url) throws IOException {
+    public @RUntainted URLConnection openConnection(final URL url) throws IOException {
         return apply(url.openConnection());
     }
 

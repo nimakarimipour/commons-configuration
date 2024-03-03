@@ -82,7 +82,7 @@ public interface Configuration extends ImmutableConfiguration, SynchronizerSuppo
      *
      * @see SubsetConfiguration
      */
-    Configuration subset(String prefix);
+    Configuration subset(@RUntainted String prefix);
 
     /**
      * Add a property to the configuration. If it already exists then the value stated here will be added to the
@@ -107,7 +107,7 @@ public interface Configuration extends ImmutableConfiguration, SynchronizerSuppo
      * @param key The key to add the property to.
      * @param value The value to add.
      */
-    void addProperty(String key, Object value);
+    void addProperty(@RUntainted String key, Object value);
 
     /**
      * Set a property, this will replace any previously set values. Set values is implicitly a call to clearProperty(key),
@@ -116,7 +116,7 @@ public interface Configuration extends ImmutableConfiguration, SynchronizerSuppo
      * @param key The key of the property to change
      * @param value The new value
      */
-    void setProperty(String key, Object value);
+    void setProperty(@RUntainted String key, Object value);
 
     /**
      * Remove a property from the configuration.

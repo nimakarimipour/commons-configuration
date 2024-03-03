@@ -100,7 +100,7 @@ public class VFSFileSystem extends DefaultFileSystem {
     }
 
     @Override
-    public InputStream getInputStream(final URL url) throws ConfigurationException {
+    public @RUntainted InputStream getInputStream(final URL url) throws ConfigurationException {
         final FileObject file;
         try {
             final FileSystemOptions opts = getOptions(url.getProtocol());

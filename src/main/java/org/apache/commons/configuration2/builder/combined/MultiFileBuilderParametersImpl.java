@@ -54,7 +54,7 @@ public class MultiFileBuilderParametersImpl extends BasicBuilderParameters imple
     private BuilderParameters managedBuilderParameters;
 
     /** The file pattern. */
-    private String filePattern;
+    private @RUntainted String filePattern;
 
     /**
      * Obtains an instance of this class from the given map with parameters. If this map does not contain an instance,
@@ -92,12 +92,12 @@ public class MultiFileBuilderParametersImpl extends BasicBuilderParameters imple
      *
      * @return the file pattern
      */
-    public String getFilePattern() {
+    public @RUntainted String getFilePattern() {
         return filePattern;
     }
 
     @Override
-    public MultiFileBuilderParametersImpl setFilePattern(final String p) {
+    public MultiFileBuilderParametersImpl setFilePattern(final @RUntainted String p) {
         filePattern = p;
         return this;
     }

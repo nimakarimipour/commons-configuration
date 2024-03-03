@@ -55,7 +55,7 @@ public class ConfigurationDynaClass implements DynaClass {
     }
 
     @Override
-    public DynaProperty getDynaProperty(final String name) {
+    public DynaProperty getDynaProperty(final @RUntainted String name) {
         if (LOG.isTraceEnabled()) {
             LOG.trace("getDynaProperty(" + name + ")");
         }
@@ -98,7 +98,7 @@ public class ConfigurationDynaClass implements DynaClass {
             LOG.trace("getDynaProperties()");
         }
 
-        final Iterator<String> keys = configuration.getKeys();
+        final Iterator<@RUntainted String> keys = configuration.getKeys();
         final List<DynaProperty> properties = new ArrayList<>();
         while (keys.hasNext()) {
             final String key = keys.next();

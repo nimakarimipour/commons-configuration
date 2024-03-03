@@ -57,7 +57,7 @@ public interface ExpressionEngine {
      * @param handler the {@code NodeHandler} for accessing the node
      * @return a list with the results that are matched by the key (should never be <b>null</b>)
      */
-    <T> List<QueryResult<T>> query(T root, String key, NodeHandler<T> handler);
+    <T> List<QueryResult<T>> query(T root, @RUntainted String key, NodeHandler<T> handler);
 
     /**
      * Returns the key for the specified node in the expression language supported by an implementation. This method is
@@ -70,7 +70,7 @@ public interface ExpressionEngine {
      * @param handler the {@code NodeHandler} for accessing the node
      * @return this node's key
      */
-    <T> String nodeKey(T node, String parentKey, NodeHandler<T> handler);
+    <T> @RUntainted String nodeKey(T node, @RUntainted String parentKey, NodeHandler<T> handler);
 
     /**
      * Returns the key of an attribute. The passed in {@code parentKey} must reference the parent node of the attribute. A
@@ -80,7 +80,7 @@ public interface ExpressionEngine {
      * @param attributeName the name of the attribute in question
      * @return the resulting key referencing this attribute
      */
-    String attributeKey(String parentKey, String attributeName);
+    @RUntainted String attributeKey(@RUntainted String parentKey, String attributeName);
 
     /**
      * Determines a &quot;canonical&quot; key for the specified node in the expression language supported by this
@@ -94,7 +94,7 @@ public interface ExpressionEngine {
      * @param handler the {@code NodeHandler} for accessing the node
      * @return the canonical key of this node
      */
-    <T> String canonicalKey(T node, String parentKey, NodeHandler<T> handler);
+    <T> String canonicalKey(T node, @RUntainted String parentKey, NodeHandler<T> handler);
 
     /**
      * Returns information needed for an add operation. This method gets called when new properties are to be added to a
@@ -107,5 +107,5 @@ public interface ExpressionEngine {
      * @param handler the {@code NodeHandler} for accessing the node
      * @return an object with all information needed for the add operation
      */
-    <T> NodeAddData<T> prepareAdd(T root, String key, NodeHandler<T> handler);
+    <T> NodeAddData<T> prepareAdd(T root, @RUntainted String key, NodeHandler<T> handler);
 }

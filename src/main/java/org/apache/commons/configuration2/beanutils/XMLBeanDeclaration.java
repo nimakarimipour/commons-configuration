@@ -139,7 +139,7 @@ public class XMLBeanDeclaration implements BeanDeclaration {
     private final NodeData<?> nodeData;
 
     /** The name of the default bean class. */
-    private final String defaultBeanClassName;
+    private final @RUntainted String defaultBeanClassName;
 
     /**
      * Constructs a new instance of {@code XMLBeanDeclaration} and initializes it from the given configuration. The passed in
@@ -188,7 +188,7 @@ public class XMLBeanDeclaration implements BeanDeclaration {
      * @throws IllegalArgumentException if required information is missing to construct the bean declaration
      * @since 2.0
      */
-    public <T> XMLBeanDeclaration(final HierarchicalConfiguration<T> config, final String key, final boolean optional, final String defBeanClsName) {
+    public <T> XMLBeanDeclaration(final HierarchicalConfiguration<T> config, final String key, final boolean optional, final @RUntainted String defBeanClsName) {
         if (config == null) {
             throw new IllegalArgumentException("Configuration must not be null!");
         }
@@ -250,7 +250,7 @@ public class XMLBeanDeclaration implements BeanDeclaration {
      * @return the default bean class name
      * @since 2.0
      */
-    public String getDefaultBeanClassName() {
+    public @RUntainted String getDefaultBeanClassName() {
         return defaultBeanClassName;
     }
 
@@ -281,7 +281,7 @@ public class XMLBeanDeclaration implements BeanDeclaration {
      * @return the name of the bean's class
      */
     @Override
-    public String getBeanClassName() {
+    public @RUntainted String getBeanClassName() {
         return getConfiguration().getString(ATTR_BEAN_CLASS, getDefaultBeanClassName());
     }
 

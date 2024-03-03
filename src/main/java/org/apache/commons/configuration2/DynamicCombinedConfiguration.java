@@ -302,7 +302,7 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    protected void addPropertyInternal(final String key, final Object value) {
+    protected void addPropertyInternal(final @RUntainted String key, final Object value) {
         this.getCurrentConfig().addProperty(key, value);
     }
 
@@ -317,177 +317,177 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    protected boolean containsKeyInternal(final String key) {
+    protected boolean containsKeyInternal(final @RUntainted String key) {
         return this.getCurrentConfig().containsKey(key);
     }
 
     @Override
-    public BigDecimal getBigDecimal(final String key, final BigDecimal defaultValue) {
+    public BigDecimal getBigDecimal(final @RUntainted String key, final BigDecimal defaultValue) {
         return this.getCurrentConfig().getBigDecimal(key, defaultValue);
     }
 
     @Override
-    public BigDecimal getBigDecimal(final String key) {
+    public BigDecimal getBigDecimal(final @RUntainted String key) {
         return this.getCurrentConfig().getBigDecimal(key);
     }
 
     @Override
-    public BigInteger getBigInteger(final String key, final BigInteger defaultValue) {
+    public BigInteger getBigInteger(final @RUntainted String key, final BigInteger defaultValue) {
         return this.getCurrentConfig().getBigInteger(key, defaultValue);
     }
 
     @Override
-    public BigInteger getBigInteger(final String key) {
+    public BigInteger getBigInteger(final @RUntainted String key) {
         return this.getCurrentConfig().getBigInteger(key);
     }
 
     @Override
-    public boolean getBoolean(final String key, final boolean defaultValue) {
+    public boolean getBoolean(final @RUntainted String key, final boolean defaultValue) {
         return this.getCurrentConfig().getBoolean(key, defaultValue);
     }
 
     @Override
-    public Boolean getBoolean(final String key, final Boolean defaultValue) {
+    public Boolean getBoolean(final @RUntainted String key, final Boolean defaultValue) {
         return this.getCurrentConfig().getBoolean(key, defaultValue);
     }
 
     @Override
-    public boolean getBoolean(final String key) {
+    public boolean getBoolean(final @RUntainted String key) {
         return this.getCurrentConfig().getBoolean(key);
     }
 
     @Override
-    public byte getByte(final String key, final byte defaultValue) {
+    public byte getByte(final @RUntainted String key, final byte defaultValue) {
         return this.getCurrentConfig().getByte(key, defaultValue);
     }
 
     @Override
-    public Byte getByte(final String key, final Byte defaultValue) {
+    public Byte getByte(final @RUntainted String key, final Byte defaultValue) {
         return this.getCurrentConfig().getByte(key, defaultValue);
     }
 
     @Override
-    public byte getByte(final String key) {
+    public byte getByte(final @RUntainted String key) {
         return this.getCurrentConfig().getByte(key);
     }
 
     @Override
-    public double getDouble(final String key, final double defaultValue) {
+    public double getDouble(final @RUntainted String key, final double defaultValue) {
         return this.getCurrentConfig().getDouble(key, defaultValue);
     }
 
     @Override
-    public Double getDouble(final String key, final Double defaultValue) {
+    public Double getDouble(final @RUntainted String key, final Double defaultValue) {
         return this.getCurrentConfig().getDouble(key, defaultValue);
     }
 
     @Override
-    public double getDouble(final String key) {
+    public double getDouble(final @RUntainted String key) {
         return this.getCurrentConfig().getDouble(key);
     }
 
     @Override
-    public float getFloat(final String key, final float defaultValue) {
+    public float getFloat(final @RUntainted String key, final float defaultValue) {
         return this.getCurrentConfig().getFloat(key, defaultValue);
     }
 
     @Override
-    public Float getFloat(final String key, final Float defaultValue) {
+    public Float getFloat(final @RUntainted String key, final Float defaultValue) {
         return this.getCurrentConfig().getFloat(key, defaultValue);
     }
 
     @Override
-    public float getFloat(final String key) {
+    public float getFloat(final @RUntainted String key) {
         return this.getCurrentConfig().getFloat(key);
     }
 
     @Override
-    public int getInt(final String key, final int defaultValue) {
+    public int getInt(final @RUntainted String key, final int defaultValue) {
         return this.getCurrentConfig().getInt(key, defaultValue);
     }
 
     @Override
-    public int getInt(final String key) {
+    public int getInt(final @RUntainted String key) {
         return this.getCurrentConfig().getInt(key);
     }
 
     @Override
-    public Integer getInteger(final String key, final Integer defaultValue) {
+    public Integer getInteger(final @RUntainted String key, final Integer defaultValue) {
         return this.getCurrentConfig().getInteger(key, defaultValue);
     }
 
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         return this.getCurrentConfig().getKeys();
     }
 
     @Override
-    protected Iterator<String> getKeysInternal(final String prefix) {
+    protected Iterator<String> getKeysInternal(final @RUntainted String prefix) {
         return this.getCurrentConfig().getKeys(prefix);
     }
 
     @Override
-    public List<Object> getList(final String key, final List<?> defaultValue) {
+    public List<Object> getList(final @RUntainted String key, final List<?> defaultValue) {
         return this.getCurrentConfig().getList(key, defaultValue);
     }
 
     @Override
-    public List<Object> getList(final String key) {
+    public List<Object> getList(final @RUntainted String key) {
         return this.getCurrentConfig().getList(key);
     }
 
     @Override
-    public long getLong(final String key, final long defaultValue) {
+    public long getLong(final @RUntainted String key, final long defaultValue) {
         return this.getCurrentConfig().getLong(key, defaultValue);
     }
 
     @Override
-    public Long getLong(final String key, final Long defaultValue) {
+    public Long getLong(final @RUntainted String key, final Long defaultValue) {
         return this.getCurrentConfig().getLong(key, defaultValue);
     }
 
     @Override
-    public long getLong(final String key) {
+    public long getLong(final @RUntainted String key) {
         return this.getCurrentConfig().getLong(key);
     }
 
     @Override
-    public Properties getProperties(final String key) {
+    public Properties getProperties(final @RUntainted String key) {
         return this.getCurrentConfig().getProperties(key);
     }
 
     @Override
-    protected Object getPropertyInternal(final String key) {
+    protected @RUntainted Object getPropertyInternal(final @RUntainted String key) {
         return this.getCurrentConfig().getProperty(key);
     }
 
     @Override
-    public short getShort(final String key, final short defaultValue) {
+    public short getShort(final @RUntainted String key, final short defaultValue) {
         return this.getCurrentConfig().getShort(key, defaultValue);
     }
 
     @Override
-    public Short getShort(final String key, final Short defaultValue) {
+    public Short getShort(final @RUntainted String key, final Short defaultValue) {
         return this.getCurrentConfig().getShort(key, defaultValue);
     }
 
     @Override
-    public short getShort(final String key) {
+    public short getShort(final @RUntainted String key) {
         return this.getCurrentConfig().getShort(key);
     }
 
     @Override
-    public String getString(final String key, final String defaultValue) {
+    public @RUntainted String getString(final @RUntainted String key, final @RUntainted String defaultValue) {
         return this.getCurrentConfig().getString(key, defaultValue);
     }
 
     @Override
-    public String getString(final String key) {
+    public @RUntainted String getString(final @RUntainted String key) {
         return this.getCurrentConfig().getString(key);
     }
 
     @Override
-    public String[] getStringArray(final String key) {
+    public String[] getStringArray(final @RUntainted String key) {
         return this.getCurrentConfig().getStringArray(key);
     }
 
@@ -502,7 +502,7 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    protected void setPropertyInternal(final String key, final Object value) {
+    protected void setPropertyInternal(final @RUntainted String key, final Object value) {
         this.getCurrentConfig().setProperty(key, value);
     }
 
@@ -811,7 +811,7 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
          *
          * @return the at position
          */
-        public String getAt() {
+        public @RUntainted String getAt() {
             return at;
         }
 

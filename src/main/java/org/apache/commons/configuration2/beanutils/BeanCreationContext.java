@@ -69,5 +69,5 @@ public interface BeanCreationContext {
      * @param data the {@code BeanDeclaration} describing the bean
      * @return the bean created based on this declaration
      */
-    Object createBean(BeanDeclaration data);
+    @RUntainted Object createBean(BeanDeclaration data);
 }

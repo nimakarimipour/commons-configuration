@@ -38,10 +38,10 @@ public class SubsetConfiguration extends AbstractConfiguration {
     protected Configuration parent;
 
     /** The prefix used to select the properties. */
-    protected String prefix;
+    protected @RUntainted String prefix;
 
     /** The prefix delimiter */
-    protected String delimiter;
+    protected @RUntainted String delimiter;
 
     /**
      * Create a subset of the specified configuration
@@ -50,7 +50,7 @@ public class SubsetConfiguration extends AbstractConfiguration {
      * @param prefix The prefix used to select the properties
      * @throws IllegalArgumentException if the parent configuration is <b>null</b>
      */
-    public SubsetConfiguration(final Configuration parent, final String prefix) {
+    public SubsetConfiguration(final Configuration parent, final @RUntainted String prefix) {
         this(parent, prefix, null);
     }
 
@@ -62,7 +62,7 @@ public class SubsetConfiguration extends AbstractConfiguration {
      * @param delimiter The prefix delimiter
      * @throws IllegalArgumentException if the parent configuration is <b>null</b>
      */
-    public SubsetConfiguration(final Configuration parent, final String prefix, final String delimiter) {
+    public SubsetConfiguration(final Configuration parent, final @RUntainted String prefix, final @RUntainted String delimiter) {
         if (parent == null) {
             throw new IllegalArgumentException("Parent configuration must not be null!");
         }
@@ -79,7 +79,7 @@ public class SubsetConfiguration extends AbstractConfiguration {
      * @param key The key in the subset.
      * @return the key as to be used by the parent
      */
-    protected String getParentKey(final String key) {
+    protected @RPolyTainted String getParentKey(final @RPolyTainted String key) {
         if (StringUtils.isEmpty(key)) {
             return prefix;
         }
@@ -130,12 +130,12 @@ public class SubsetConfiguration extends AbstractConfiguration {
      *
      * @param prefix the prefix
      */
-    public void setPrefix(final String prefix) {
+    public void setPrefix(final @RUntainted String prefix) {
         this.prefix = prefix;
     }
 
     @Override
-    public Configuration subset(final String prefix) {
+    public Configuration subset(final @RUntainted String prefix) {
         return parent.subset(getParentKey(prefix));
     }
 
@@ -145,12 +145,12 @@ public class SubsetConfiguration extends AbstractConfiguration {
     }
 
     @Override
-    protected boolean containsKeyInternal(final String key) {
+    protected boolean containsKeyInternal(final @RUntainted String key) {
         return parent.containsKey(getParentKey(key));
     }
 
     @Override
-    public void addPropertyDirect(final String key, final Object value) {
+    public void addPropertyDirect(final @RUntainted String key, final Object value) {
         parent.addProperty(getParentKey(key), value);
     }
 
@@ -160,17 +160,17 @@ public class SubsetConfiguration extends AbstractConfiguration {
     }
 
     @Override
-    protected Object getPropertyInternal(final String key) {
+    protected @RUntainted Object getPropertyInternal(final @RUntainted String key) {
         return parent.getProperty(getParentKey(key));
     }
 
     @Override
-    protected Iterator<String> getKeysInternal(final String prefix) {
+    protected @RUntainted Iterator<String> getKeysInternal(final @RUntainted String prefix) {
         return new SubsetIterator(parent.getKeys(getParentKey(prefix)));
     }
 
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         return new SubsetIterator(parent.getKeys(prefix));
     }
 

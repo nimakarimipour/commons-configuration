@@ -37,12 +37,12 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 public class DefaultFileSystem extends FileSystem {
 
     @Override
-    public InputStream getInputStream(final @RUntainted URL url) throws ConfigurationException {
+    public @RUntainted InputStream getInputStream(final @RUntainted URL url) throws ConfigurationException {
         return getInputStream(url, null);
     }
 
     @Override
-    public InputStream getInputStream(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) throws ConfigurationException {
+    public @RUntainted InputStream getInputStream(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) throws ConfigurationException {
         // throw an exception if the target URL is a directory
         final File file = FileLocatorUtils.fileFromURL(url);
         if (file != null && file.isDirectory()) {

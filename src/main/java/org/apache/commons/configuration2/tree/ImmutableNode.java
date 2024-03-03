@@ -49,7 +49,7 @@ public final class ImmutableNode implements Iterable<ImmutableNode> {
     private final String nodeName;
 
     /** The value of this node. */
-    private final Object value;
+    private final @RUntainted Object value;
 
     /** A collection with the child nodes of this node. */
     private final List<ImmutableNode> children;
@@ -83,7 +83,7 @@ public final class ImmutableNode implements Iterable<ImmutableNode> {
      *
      * @return the value of this node
      */
-    public Object getValue() {
+    public @RUntainted Object getValue() {
         return value;
     }
 

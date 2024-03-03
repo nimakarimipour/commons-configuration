@@ -75,7 +75,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  */
 public class MapConfiguration extends AbstractConfiguration implements Cloneable {
     /** The Map decorated by this configuration. */
-    protected Map<String, Object> map;
+    protected Map<@RUntainted String, Object> map;
 
     /** A flag whether trimming of property values should be disabled. */
     private boolean trimmingDisabled;
@@ -86,7 +86,7 @@ public class MapConfiguration extends AbstractConfiguration implements Cloneable
      *
      * @param map the map
      */
-    public MapConfiguration(final Map<String, ?> map) {
+    public MapConfiguration(final Map<@RUntainted String, ?> map) {
         this.map = (Map<String, Object>) map;
     }
 
@@ -108,7 +108,7 @@ public class MapConfiguration extends AbstractConfiguration implements Cloneable
      *
      * @return the map this configuration is based onto
      */
-    public Map<String, Object> getMap() {
+    public Map<@RUntainted String, Object> getMap() {
         return map;
     }
 
@@ -134,17 +134,17 @@ public class MapConfiguration extends AbstractConfiguration implements Cloneable
     }
 
     @Override
-    protected Object getPropertyInternal(final String key) {
+    protected @RUntainted Object getPropertyInternal(final String key) {
         final Object value = map.get(key);
         if (value instanceof String) {
-            final Collection<String> list = getListDelimiterHandler().split((String) value, !isTrimmingDisabled());
+            final Collection<@RUntainted String> list = getListDelimiterHandler().split((String) value, !isTrimmingDisabled());
             return list.size() > 1 ? list : list.iterator().next();
         }
         return value;
     }
 
     @Override
-    protected void addPropertyDirect(final String key, final Object value) {
+    protected void addPropertyDirect(final @RUntainted String key, final Object value) {
         final Object previousValue = getProperty(key);
 
         if (previousValue == null) {
@@ -179,7 +179,7 @@ public class MapConfiguration extends AbstractConfiguration implements Cloneable
     }
 
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         return map.keySet().iterator();
     }
 
@@ -201,7 +201,7 @@ public class MapConfiguration extends AbstractConfiguration implements Cloneable
             final MapConfiguration copy = (MapConfiguration) super.clone();
             // Safe because ConfigurationUtils returns a map of the same types.
             @SuppressWarnings("unchecked")
-            final Map<String, Object> clonedMap = (Map<String, Object>) ConfigurationUtils.clone(map);
+            final Map<@RUntainted String, Object> clonedMap = (Map<String, Object>) ConfigurationUtils.clone(map);
             copy.map = clonedMap;
             copy.cloneInterpolator(this);
             return copy;

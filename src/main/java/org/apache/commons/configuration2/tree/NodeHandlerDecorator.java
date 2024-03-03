@@ -40,7 +40,7 @@ public abstract class NodeHandlerDecorator<T> implements NodeHandler<T> {
     }
 
     @Override
-    public Object getValue(final T node) {
+    public @RUntainted Object getValue(final T node) {
         return getDecoratedNodeHandler().getValue(node);
     }
 

@@ -50,7 +50,7 @@ public class SystemConfiguration extends MapConfiguration {
      * @throws ConfigurationException if an error occurs.
      * @since 1.6
      */
-    public static void setSystemProperties(final String fileName) throws ConfigurationException {
+    public static void setSystemProperties(final @RUntainted String fileName) throws ConfigurationException {
         setSystemProperties(null, fileName);
     }
 
@@ -63,7 +63,7 @@ public class SystemConfiguration extends MapConfiguration {
      * @throws ConfigurationException if an error occurs.
      * @since 1.6
      */
-    public static void setSystemProperties(final @RUntainted String basePath, final String fileName) throws ConfigurationException {
+    public static void setSystemProperties(final @RUntainted String basePath, final @RUntainted String fileName) throws ConfigurationException {
         final FileBasedConfiguration config = fileName.endsWith(".xml") ? new XMLPropertiesConfiguration() : new PropertiesConfiguration();
 
         final FileHandler handler = new FileHandler(config);
@@ -80,7 +80,7 @@ public class SystemConfiguration extends MapConfiguration {
      * @since 1.6
      */
     public static void setSystemProperties(final Configuration systemConfig) {
-        final Iterator<String> iter = systemConfig.getKeys();
+        final Iterator<@RUntainted String> iter = systemConfig.getKeys();
         while (iter.hasNext()) {
             final String key = iter.next();
             final String value = (String) systemConfig.getProperty(key);
@@ -96,7 +96,7 @@ public class SystemConfiguration extends MapConfiguration {
      * system properties concurrently, these changes are not reflected by the iterator returned by this method.
      */
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         return System.getProperties().stringPropertyNames().iterator();
     }
 }

@@ -458,7 +458,7 @@ public class BasicConfigurationBuilder<T extends ImmutableConfiguration> impleme
             }
 
             @Override
-            public String getBeanClassName() {
+            public @RUntainted String getBeanClassName() {
                 return getResultClass().getName();
             }
         };

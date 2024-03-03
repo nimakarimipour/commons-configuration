@@ -72,7 +72,7 @@ public class ConfigurationDynaBean extends ConfigurationMap implements DynaBean 
     }
 
     @Override
-    public void set(final String name, final Object value) {
+    public void set(final @RUntainted String name, final Object value) {
         if (LOG.isTraceEnabled()) {
             LOG.trace("set(" + name + "," + value + ")");
         }
@@ -92,7 +92,7 @@ public class ConfigurationDynaBean extends ConfigurationMap implements DynaBean 
     }
 
     @Override
-    public Object get(final String name) {
+    public Object get(final @RUntainted String name) {
         if (LOG.isTraceEnabled()) {
             LOG.trace("get(" + name + ")");
         }
@@ -118,7 +118,7 @@ public class ConfigurationDynaBean extends ConfigurationMap implements DynaBean 
     }
 
     @Override
-    public boolean contains(final String name, final String key) {
+    public boolean contains(final @RUntainted String name, final @RUntainted String key) {
         final Configuration subset = getConfiguration().subset(name);
         if (subset == null) {
             throw new IllegalArgumentException("Mapped property '" + name + "' does not exist.");
@@ -128,7 +128,7 @@ public class ConfigurationDynaBean extends ConfigurationMap implements DynaBean 
     }
 
     @Override
-    public Object get(final String name, final int index) {
+    public Object get(final @RUntainted String name, final int index) {
         if (!checkIndexedProperty(name)) {
             throw new IllegalArgumentException("Property '" + name + "' is not indexed.");
         }
@@ -138,7 +138,7 @@ public class ConfigurationDynaBean extends ConfigurationMap implements DynaBean 
     }
 
     @Override
-    public Object get(final String name, final String key) {
+    public Object get(final @RUntainted String name, final @RUntainted String key) {
         final Configuration subset = getConfiguration().subset(name);
         if (subset == null) {
             throw new IllegalArgumentException("Mapped property '" + name + "' does not exist.");
@@ -153,13 +153,13 @@ public class ConfigurationDynaBean extends ConfigurationMap implements DynaBean 
     }
 
     @Override
-    public void remove(final String name, final String key) {
+    public void remove(final @RUntainted String name, final @RUntainted String key) {
         final Configuration subset = new SubsetConfiguration(getConfiguration(), name, PROPERTY_DELIMITER);
         subset.setProperty(key, null);
     }
 
     @Override
-    public void set(final String name, final int index, final Object value) {
+    public void set(final @RUntainted String name, final int index, final Object value) {
         if (!checkIndexedProperty(name) && index > 0) {
             throw new IllegalArgumentException("Property '" + name + "' is not indexed.");
         }
@@ -181,7 +181,7 @@ public class ConfigurationDynaBean extends ConfigurationMap implements DynaBean 
     }
 
     @Override
-    public void set(final String name, final String key, final Object value) {
+    public void set(final @RUntainted String name, final @RUntainted String key, final Object value) {
         getConfiguration().setProperty(name + "." + key, value);
     }
 
@@ -193,7 +193,7 @@ public class ConfigurationDynaBean extends ConfigurationMap implements DynaBean 
      * @return a flag whether this is an indexed property
      * @throws IllegalArgumentException if the property does not exist
      */
-    private boolean checkIndexedProperty(final String name) {
+    private boolean checkIndexedProperty(final @RUntainted String name) {
         final Object property = getConfiguration().getProperty(name);
 
         if (property == null) {

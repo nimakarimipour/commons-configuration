@@ -570,7 +570,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public final void addProperty(final String key, final Object value) {
+    public final void addProperty(final @RUntainted String key, final Object value) {
         beginWrite(false);
         try {
             fireEvent(ConfigurationEvent.ADD_PROPERTY, key, value, true);
@@ -589,7 +589,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @param value the new property value
      * @since 2.0
      */
-    protected void addPropertyInternal(final String key, final Object value) {
+    protected void addPropertyInternal(final @RUntainted String key, final Object value) {
         getListDelimiterHandler().parse(value).forEach(obj -> addPropertyDirect(key, obj));
     }
 
@@ -600,7 +600,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @param key key to use for mapping
      * @param value object to store
      */
-    protected abstract void addPropertyDirect(String key, Object value);
+    protected abstract void addPropertyDirect(@RUntainted String key, Object value);
 
     /**
      * interpolate key names to handle ${key} stuff
@@ -609,7 +609,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      *
      * @return returns the key name with the ${key} substituted
      */
-    protected String interpolate(final String base) {
+    protected @RPolyTainted String interpolate(final @RPolyTainted String base) {
         final Object result = interpolate((Object) base);
         return result == null ? null : result.toString();
     }
@@ -621,23 +621,23 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @param value the value to interpolate
      * @return the value with variables substituted
      */
-    protected Object interpolate(final Object value) {
+    protected @RPolyTainted Object interpolate(final @RPolyTainted Object value) {
         final ConfigurationInterpolator ci = getInterpolator();
         return ci != null ? ci.interpolate(value) : value;
     }
 
     @Override
-    public Configuration subset(final String prefix) {
+    public Configuration subset(final @RUntainted String prefix) {
         return new SubsetConfiguration(this, prefix, ".");
     }
 
     @Override
-    public ImmutableConfiguration immutableSubset(final String prefix) {
+    public ImmutableConfiguration immutableSubset(final @RUntainted String prefix) {
         return ConfigurationUtils.unmodifiableConfiguration(subset(prefix));
     }
 
     @Override
-    public final void setProperty(final String key, final Object value) {
+    public final void setProperty(final @RUntainted String key, final Object value) {
         beginWrite(false);
         try {
             fireEvent(ConfigurationEvent.SET_PROPERTY, key, value, true);
@@ -657,7 +657,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @param value the new property value
      * @since 2.0
      */
-    protected void setPropertyInternal(final String key, final Object value) {
+    protected void setPropertyInternal(final @RUntainted String key, final Object value) {
         setDetailEvents(false);
         try {
             clearProperty(key);
@@ -714,7 +714,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
         setDetailEvents(false);
         boolean useIterator = true;
         try {
-            final Iterator<String> it = getKeys();
+            final Iterator<@RUntainted String> it = getKeys();
             while (it.hasNext()) {
                 final String key = it.next();
                 if (useIterator) {
@@ -747,7 +747,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * configuration is updated concurrently.
      */
     @Override
-    public final Iterator<String> getKeys() {
+    public final Iterator<@RUntainted String> getKeys() {
         beginRead(false);
         try {
             return getKeysInternal();
@@ -762,7 +762,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * but not the key {@code dbdriver}.
      */
     @Override
-    public final Iterator<String> getKeys(final String prefix) {
+    public final @RUntainted Iterator<@RUntainted String> getKeys(final @RUntainted String prefix) {
         beginRead(false);
         try {
             return getKeysInternal(prefix);
@@ -778,7 +778,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @return an {@code Iterator} with all property keys in this configuration
      * @since 2.0
      */
-    protected abstract Iterator<String> getKeysInternal();
+    protected abstract @RUntainted Iterator<@RUntainted String> getKeysInternal();
 
     /**
      * Gets an {@code Iterator} with all property keys starting with the specified prefix. This method is called by
@@ -790,7 +790,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @return an {@code Iterator} returning the filtered keys
      * @since 2.0
      */
-    protected Iterator<String> getKeysInternal(final String prefix) {
+    protected @RPolyTainted Iterator<@RPolyTainted String> getKeysInternal(final @RUntainted String prefix) {
         return new PrefixedKeysIterator(getKeysInternal(), prefix);
     }
 
@@ -799,7 +799,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * {@code getPropertyInternal()} method which is called from here.
      */
     @Override
-    public final Object getProperty(final String key) {
+    public final @RUntainted Object getProperty(final @RUntainted String key) {
         beginRead(false);
         try {
             return getPropertyInternal(key);
@@ -816,7 +816,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @return the (raw) value of this property
      * @since 2.0
      */
-    protected abstract Object getPropertyInternal(String key);
+    protected abstract @RUntainted Object getPropertyInternal(@RUntainted String key);
 
     /**
      * {@inheritDoc} This implementation handles synchronization and delegates to {@code isEmptyInternal()}.
@@ -872,7 +872,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * {@inheritDoc} This implementation handles synchronization and delegates to {@code containsKeyInternal()}.
      */
     @Override
-    public final boolean containsKey(final String key) {
+    public final boolean containsKey(final @RUntainted String key) {
         beginRead(false);
         try {
             return containsKeyInternal(key);
@@ -892,7 +892,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     protected abstract boolean containsKeyInternal(@RUntainted String key);
 
     @Override
-    public Properties getProperties(final String key) {
+    public Properties getProperties(final @RUntainted String key) {
         return getProperties(key, null);
     }
 
@@ -908,7 +908,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      *
      * @throws IllegalArgumentException if one of the tokens is malformed (does not contain an equals sign).
      */
-    public Properties getProperties(final String key, final Properties defaults) {
+    public Properties getProperties(final @RUntainted String key, final Properties defaults) {
         /*
          * Grab an array of the tokens for this key.
          */
@@ -936,13 +936,13 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public boolean getBoolean(final String key) {
+    public boolean getBoolean(final @RUntainted String key) {
         final Boolean b = convert(Boolean.class, key, null, true);
         return checkNonNullValue(key, b).booleanValue();
     }
 
     @Override
-    public boolean getBoolean(final String key, final boolean defaultValue) {
+    public boolean getBoolean(final @RUntainted String key, final boolean defaultValue) {
         return getBoolean(key, Boolean.valueOf(defaultValue)).booleanValue();
     }
 
@@ -956,113 +956,113 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @throws ConversionException if the value cannot be converted to a {@code Boolean}
      */
     @Override
-    public Boolean getBoolean(final String key, final Boolean defaultValue) {
+    public Boolean getBoolean(final @RUntainted String key, final Boolean defaultValue) {
         return convert(Boolean.class, key, defaultValue, false);
     }
 
     @Override
-    public byte getByte(final String key) {
+    public byte getByte(final @RUntainted String key) {
         final Byte b = convert(Byte.class, key, null, true);
         return checkNonNullValue(key, b).byteValue();
     }
 
     @Override
-    public byte getByte(final String key, final byte defaultValue) {
+    public byte getByte(final @RUntainted String key, final byte defaultValue) {
         return getByte(key, Byte.valueOf(defaultValue)).byteValue();
     }
 
     @Override
-    public Byte getByte(final String key, final Byte defaultValue) {
+    public Byte getByte(final @RUntainted String key, final Byte defaultValue) {
         return convert(Byte.class, key, defaultValue, false);
     }
 
     @Override
-    public double getDouble(final String key) {
+    public double getDouble(final @RUntainted String key) {
         final Double d = convert(Double.class, key, null, true);
         return checkNonNullValue(key, d).doubleValue();
     }
 
     @Override
-    public double getDouble(final String key, final double defaultValue) {
+    public double getDouble(final @RUntainted String key, final double defaultValue) {
         return getDouble(key, Double.valueOf(defaultValue)).doubleValue();
     }
 
     @Override
-    public Double getDouble(final String key, final Double defaultValue) {
+    public Double getDouble(final @RUntainted String key, final Double defaultValue) {
         return convert(Double.class, key, defaultValue, false);
     }
 
     @Override
-    public Duration getDuration(final String key) {
+    public Duration getDuration(final @RUntainted String key) {
         return checkNonNullValue(key, convert(Duration.class, key, null, true));
     }
 
     @Override
-    public Duration getDuration(final String key, final Duration defaultValue) {
+    public Duration getDuration(final @RUntainted String key, final Duration defaultValue) {
         return convert(Duration.class, key, defaultValue, false);
     }
 
     @Override
-    public float getFloat(final String key) {
+    public float getFloat(final @RUntainted String key) {
         final Float f = convert(Float.class, key, null, true);
         return checkNonNullValue(key, f).floatValue();
     }
 
     @Override
-    public float getFloat(final String key, final float defaultValue) {
+    public float getFloat(final @RUntainted String key, final float defaultValue) {
         return getFloat(key, Float.valueOf(defaultValue)).floatValue();
     }
 
     @Override
-    public Float getFloat(final String key, final Float defaultValue) {
+    public Float getFloat(final @RUntainted String key, final Float defaultValue) {
         return convert(Float.class, key, defaultValue, false);
     }
 
     @Override
-    public int getInt(final String key) {
+    public int getInt(final @RUntainted String key) {
         final Integer i = convert(Integer.class, key, null, true);
         return checkNonNullValue(key, i).intValue();
     }
 
     @Override
-    public int getInt(final String key, final int defaultValue) {
+    public int getInt(final @RUntainted String key, final int defaultValue) {
         return getInteger(key, Integer.valueOf(defaultValue)).intValue();
     }
 
     @Override
-    public Integer getInteger(final String key, final Integer defaultValue) {
+    public Integer getInteger(final @RUntainted String key, final Integer defaultValue) {
         return convert(Integer.class, key, defaultValue, false);
     }
 
     @Override
-    public long getLong(final String key) {
+    public long getLong(final @RUntainted String key) {
         final Long l = convert(Long.class, key, null, true);
         return checkNonNullValue(key, l).longValue();
     }
 
     @Override
-    public long getLong(final String key, final long defaultValue) {
+    public long getLong(final @RUntainted String key, final long defaultValue) {
         return getLong(key, Long.valueOf(defaultValue)).longValue();
     }
 
     @Override
-    public Long getLong(final String key, final Long defaultValue) {
+    public Long getLong(final @RUntainted String key, final Long defaultValue) {
         return convert(Long.class, key, defaultValue, false);
     }
 
     @Override
-    public short getShort(final String key) {
+    public short getShort(final @RUntainted String key) {
         final Short s = convert(Short.class, key, null, true);
         return checkNonNullValue(key, s).shortValue();
     }
 
     @Override
-    public short getShort(final String key, final short defaultValue) {
+    public short getShort(final @RUntainted String key, final short defaultValue) {
         return getShort(key, Short.valueOf(defaultValue)).shortValue();
     }
 
     @Override
-    public Short getShort(final String key, final Short defaultValue) {
+    public Short getShort(final @RUntainted String key, final Short defaultValue) {
         return convert(Short.class, key, defaultValue, false);
     }
 
@@ -1072,12 +1072,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @see #setThrowExceptionOnMissing(boolean)
      */
     @Override
-    public BigDecimal getBigDecimal(final String key) {
+    public BigDecimal getBigDecimal(final @RUntainted String key) {
         return convert(BigDecimal.class, key, null, true);
     }
 
     @Override
-    public BigDecimal getBigDecimal(final String key, final BigDecimal defaultValue) {
+    public BigDecimal getBigDecimal(final @RUntainted String key, final BigDecimal defaultValue) {
         return convert(BigDecimal.class, key, defaultValue, false);
     }
 
@@ -1087,12 +1087,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @see #setThrowExceptionOnMissing(boolean)
      */
     @Override
-    public BigInteger getBigInteger(final String key) {
+    public BigInteger getBigInteger(final @RUntainted String key) {
         return convert(BigInteger.class, key, null, true);
     }
 
     @Override
-    public BigInteger getBigInteger(final String key, final BigInteger defaultValue) {
+    public BigInteger getBigInteger(final @RUntainted String key, final BigInteger defaultValue) {
         return convert(BigInteger.class, key, defaultValue, false);
     }
 
@@ -1102,12 +1102,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @see #setThrowExceptionOnMissing(boolean)
      */
     @Override
-    public String getString(final String key) {
+    public @RUntainted String getString(final @RUntainted String key) {
         return convert(String.class, key, null, true);
     }
 
     @Override
-    public String getString(final String key, final String defaultValue) {
+    public @RUntainted String getString(final @RUntainted String key, final @RUntainted String defaultValue) {
         final String result = convert(String.class, key, null, false);
         return result != null ? result : interpolate(defaultValue);
     }
@@ -1118,7 +1118,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * features like handling of missing keys and interpolation work as expected.
      */
     @Override
-    public String getEncodedString(final String key, final ConfigurationDecoder decoder) {
+    public String getEncodedString(final @RUntainted String key, final ConfigurationDecoder decoder) {
         if (decoder == null) {
             throw new IllegalArgumentException("ConfigurationDecoder must not be null!");
         }
@@ -1135,7 +1135,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @see #setConfigurationDecoder(ConfigurationDecoder)
      */
     @Override
-    public String getEncodedString(final String key) {
+    public String getEncodedString(final @RUntainted String key) {
         final ConfigurationDecoder decoder = getConfigurationDecoder();
         if (decoder == null) {
             throw new IllegalStateException("No default ConfigurationDecoder defined!");
@@ -1156,7 +1156,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @see #setListDelimiterHandler(ListDelimiterHandler)
      */
     @Override
-    public String[] getStringArray(final String key) {
+    public String[] getStringArray(final @RUntainted String key) {
         final String[] result = (String[]) getArray(String.class, key);
         return result == null ? ArrayUtils.EMPTY_STRING_ARRAY : result;
     }
@@ -1167,12 +1167,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @see #getStringArray(String)
      */
     @Override
-    public List<Object> getList(final String key) {
+    public List<Object> getList(final @RUntainted String key) {
         return getList(key, new ArrayList<>());
     }
 
     @Override
-    public List<Object> getList(final String key, final List<?> defaultValue) {
+    public List<Object> getList(final @RUntainted String key, final List<?> defaultValue) {
         final Object value = getProperty(key);
         final List<Object> list;
 
@@ -1201,7 +1201,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public <T> T get(final Class<T> cls, final String key) {
+    public <T> T get(final Class<T> cls, final @RUntainted String key) {
         return convert(cls, key, null, true);
     }
 
@@ -1209,12 +1209,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * {@inheritDoc} This implementation delegates to the {@link ConversionHandler} to perform the actual type conversion.
      */
     @Override
-    public <T> T get(final Class<T> cls, final String key, final T defaultValue) {
+    public <T> T get(final Class<T> cls, final @RUntainted String key, final @RUntainted T defaultValue) {
         return convert(cls, key, defaultValue, false);
     }
 
     @Override
-    public Object getArray(final Class<?> cls, final String key) {
+    public Object getArray(final Class<?> cls, final @RUntainted String key) {
         return getArray(cls, key, null);
     }
 
@@ -1226,12 +1226,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @throws IllegalArgumentException if the default value is not a compatible array
      */
     @Override
-    public Object getArray(final Class<?> cls, final String key, final Object defaultValue) {
+    public Object getArray(final Class<?> cls, final @RUntainted String key, final Object defaultValue) {
         return convertToArray(cls, key, defaultValue);
     }
 
     @Override
-    public <T> List<T> getList(final Class<T> cls, final String key) {
+    public <T> List<T> getList(final Class<T> cls, final @RUntainted String key) {
         return getList(cls, key, null);
     }
 
@@ -1240,7 +1240,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * created {@code ArrayList} is passed in.
      */
     @Override
-    public <T> List<T> getList(final Class<T> cls, final String key, final List<T> defaultValue) {
+    public <T> List<T> getList(final Class<T> cls, final @RUntainted String key, final List<T> defaultValue) {
         final List<T> result = new ArrayList<>();
         if (getCollection(cls, key, result, defaultValue) == null) {
             return null;
@@ -1249,7 +1249,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public <T> Collection<T> getCollection(final Class<T> cls, final String key, final Collection<T> target) {
+    public <T> Collection<T> getCollection(final Class<T> cls, final @RUntainted String key, final Collection<T> target) {
         return getCollection(cls, key, target, null);
     }
 
@@ -1258,7 +1258,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * target collection is provided, an {@code ArrayList} is created.
      */
     @Override
-    public <T> Collection<T> getCollection(final Class<T> cls, final String key, final Collection<T> target, final Collection<T> defaultValue) {
+    public <T> Collection<T> getCollection(final Class<T> cls, final @RUntainted String key, final Collection<T> target, final Collection<T> defaultValue) {
         final Object src = getProperty(key);
         if (src == null) {
             return handleDefaultCollection(target, defaultValue);
@@ -1368,7 +1368,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @param value the value to be encoded
      * @return the encoded value
      */
-    private Object encodeForCopy(final Object value) {
+    private Object encodeForCopy(final @RUntainted Object value) {
         if (value instanceof Collection) {
             return encodeListForCopy((Collection<?>) value);
         }
@@ -1396,7 +1396,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @return the converted value of this property
      * @throws ConversionException if the conversion cannot be performed
      */
-    private <T> T getAndConvertProperty(final Class<T> cls, final String key, final T defaultValue) {
+    private <T> T getAndConvertProperty(final Class<T> cls, final @RUntainted String key, final T defaultValue) {
         final Object value = getProperty(key);
         try {
             return ObjectUtils.defaultIfNull(getConversionHandler().to(value, cls, getInterpolator()), defaultValue);
@@ -1417,7 +1417,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @param throwOnMissing a flag whether an exception should be thrown for a missing value
      * @return the converted value
      */
-    private <T> T convert(final Class<T> cls, final String key, final T defValue, final boolean throwOnMissing) {
+    private <T> @RPolyTainted T convert(final Class<@RPolyTainted T> cls, final @RUntainted String key, final @RPolyTainted T defValue, final boolean throwOnMissing) {
         if (cls.isArray()) {
             return cls.cast(convertToArray(cls.getComponentType(), key, defValue));
         }
@@ -1445,7 +1445,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @return the converted array
      * @throws IllegalArgumentException if the default value is not a compatible array
      */
-    private Object convertToArray(final Class<?> cls, final String key, final Object defaultValue) {
+    private Object convertToArray(final Class<?> cls, final @RUntainted String key, final Object defaultValue) {
         checkDefaultValueArray(cls, defaultValue);
         return ObjectUtils.defaultIfNull(getConversionHandler().toArray(getProperty(key), cls, getInterpolator()), defaultValue);
     }

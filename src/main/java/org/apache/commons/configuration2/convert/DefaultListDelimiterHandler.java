@@ -66,14 +66,14 @@ public class DefaultListDelimiterHandler extends AbstractListDelimiterHandler {
     private static final int BUF_SIZE = 16;
 
     /** Stores the list delimiter character. */
-    private final char delimiter;
+    private final @RUntainted char delimiter;
 
     /**
      * Creates a new instance of {@code DefaultListDelimiterHandler} and sets the list delimiter character.
      *
      * @param listDelimiter the list delimiter character
      */
-    public DefaultListDelimiterHandler(final char listDelimiter) {
+    public DefaultListDelimiterHandler(final @RUntainted char listDelimiter) {
         delimiter = listDelimiter;
     }
 
@@ -82,13 +82,13 @@ public class DefaultListDelimiterHandler extends AbstractListDelimiterHandler {
      *
      * @return the list delimiter character
      */
-    public char getDelimiter() {
+    public @RUntainted char getDelimiter() {
         return delimiter;
     }
 
     @Override
-    public Object escapeList(final List<?> values, final ValueTransformer transformer) {
-        final Object[] escapedValues = new Object[values.size()];
+    public @RUntainted Object escapeList(final List<@RUntainted ?> values, final ValueTransformer transformer) {
+        final @RUntainted Object[] escapedValues = new Object[values.size()];
         int idx = 0;
         for (final Object v : values) {
             escapedValues[idx++] = escape(v, transformer);
@@ -97,7 +97,7 @@ public class DefaultListDelimiterHandler extends AbstractListDelimiterHandler {
     }
 
     @Override
-    protected String escapeString(final String s) {
+    protected @RUntainted String escapeString(final @RUntainted String s) {
         final StringBuilder buf = new StringBuilder(s.length() + BUF_SIZE);
         for (int i = 0; i < s.length(); i++) {
             final char c = s.charAt(i);
@@ -115,8 +115,8 @@ public class DefaultListDelimiterHandler extends AbstractListDelimiterHandler {
      * follows, both the backslash and the following character are output.
      */
     @Override
-    protected Collection<String> splitString(final String s, final boolean trim) {
-        final List<String> list = new LinkedList<>();
+    protected Collection<@RUntainted String> splitString(final String s, final boolean trim) {
+        final List<@RUntainted String> list = new LinkedList<>();
         StringBuilder token = new StringBuilder();
         boolean inEscape = false;
 

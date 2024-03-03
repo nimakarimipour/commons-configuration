@@ -44,7 +44,7 @@ public abstract class AbstractListDelimiterHandler implements ListDelimiterHandl
      * @param iterator the iterator to process
      * @param limit a limit for the number of elements to extract
      */
-    static void flattenIterator(final ListDelimiterHandler handler, final Collection<Object> target, final Iterator<?> iterator, final int limit) {
+    static void flattenIterator(final ListDelimiterHandler handler, final Collection<@RUntainted Object> target, final Iterator<@RUntainted ?> iterator, final int limit) {
         int size = target.size();
         while (size < limit && iterator.hasNext()) {
             target.addAll(handler.flatten(iterator.next(), limit - size));
@@ -58,7 +58,7 @@ public abstract class AbstractListDelimiterHandler implements ListDelimiterHandl
      * so that additional encoding can be performed.
      */
     @Override
-    public Object escape(final Object value, final ValueTransformer transformer) {
+    public @RUntainted Object escape(final @RUntainted Object value, final ValueTransformer transformer) {
         return transformer.transformValue(value instanceof String ? escapeString((String) value) : value);
     }
 
@@ -70,7 +70,7 @@ public abstract class AbstractListDelimiterHandler implements ListDelimiterHandl
      * @param s the string to be escaped (not <b>null</b>)
      * @return the escaped string
      */
-    protected abstract String escapeString(String s);
+    protected abstract @RUntainted String escapeString(@RUntainted String s);
 
     /**
      * Performs the actual work as advertised by the {@code parse()} method. This method delegates to
@@ -79,7 +79,7 @@ public abstract class AbstractListDelimiterHandler implements ListDelimiterHandl
      * @param value the value to be processed
      * @return a &quot;flat&quot; collection containing all primitive values of the passed in object
      */
-    private Collection<?> flatten(final Object value) {
+    private Collection<?> flatten(final @RUntainted Object value) {
         return flatten(value, Integer.MAX_VALUE);
     }
 
@@ -97,7 +97,7 @@ public abstract class AbstractListDelimiterHandler implements ListDelimiterHandl
      * </ul>
      */
     @Override
-    public Iterable<?> parse(final Object value) {
+    public Iterable<?> parse(final @RUntainted Object value) {
         return flatten(value);
     }
 
@@ -106,7 +106,7 @@ public abstract class AbstractListDelimiterHandler implements ListDelimiterHandl
      * collection is returned. Otherwise, this method delegates to {@link #splitString(String, boolean)}.
      */
     @Override
-    public Collection<String> split(final String s, final boolean trim) {
+    public Collection<@RUntainted String> split(final String s, final boolean trim) {
         return s == null ? new ArrayList<>(0) : splitString(s, trim);
     }
 
@@ -118,5 +118,5 @@ public abstract class AbstractListDelimiterHandler implements ListDelimiterHandl
      * @param trim a flag whether the single components have to be trimmed
      * @return a collection with the extracted components of the passed in string
      */
-    protected abstract Collection<String> splitString(String s, boolean trim);
+    protected abstract Collection<@RUntainted String> splitString(String s, boolean trim);
 }

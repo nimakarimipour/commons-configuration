@@ -57,7 +57,7 @@ public class StrictConfigurationComparator implements ConfigurationComparator {
             }
         }
 
-        for (final Iterator<String> keys = b.getKeys(); keys.hasNext();) {
+        for (final Iterator<@RUntainted String> keys = b.getKeys(); keys.hasNext();) {
             final String key = keys.next();
             final Object value = b.getProperty(key);
             if (!value.equals(a.getProperty(key))) {

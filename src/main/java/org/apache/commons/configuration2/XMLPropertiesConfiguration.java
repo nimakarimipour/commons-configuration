@@ -144,7 +144,7 @@ public class XMLPropertiesConfiguration extends BaseConfiguration implements Fil
      * @throws ConfigurationException Error while interpreting the DOM
      * @since 2.0
      */
-    public void load(final Element element) throws ConfigurationException {
+    public void load(final @RUntainted Element element) throws ConfigurationException {
         if (!element.getNodeName().equals("properties")) {
             throw new ConfigurationException(MALFORMED_XML_EXCEPTION);
         }
@@ -180,7 +180,7 @@ public class XMLPropertiesConfiguration extends BaseConfiguration implements Fil
             writer.println("  <comment>" + StringEscapeUtils.escapeXml10(getHeader()) + "</comment>");
         }
 
-        final Iterator<String> keys = getKeys();
+        final Iterator<@RUntainted String> keys = getKeys();
         while (keys.hasNext()) {
             final String key = keys.next();
             final Object value = getProperty(key);
@@ -242,7 +242,7 @@ public class XMLPropertiesConfiguration extends BaseConfiguration implements Fil
             comment.setTextContent(StringEscapeUtils.escapeXml10(getHeader()));
         }
 
-        final Iterator<String> keys = getKeys();
+        final Iterator<@RUntainted String> keys = getKeys();
         while (keys.hasNext()) {
             final String key = keys.next();
             final Object value = getProperty(key);
@@ -301,7 +301,7 @@ public class XMLPropertiesConfiguration extends BaseConfiguration implements Fil
      */
     private class XMLPropertiesHandler extends DefaultHandler {
         /** The key of the current entry being parsed. */
-        private String key;
+        private @RUntainted String key;
 
         /** The value of the current entry being parsed. */
         private StringBuilder value = new StringBuilder();
@@ -313,7 +313,7 @@ public class XMLPropertiesConfiguration extends BaseConfiguration implements Fil
         private boolean inEntryElement;
 
         @Override
-        public void startElement(final String uri, final String localName, final String qName, final Attributes attrs) {
+        public void startElement(final String uri, final String localName, final String qName, final @RUntainted Attributes attrs) {
             if ("comment".equals(qName)) {
                 inCommentElement = true;
             }

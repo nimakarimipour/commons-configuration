@@ -49,7 +49,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     private final HierarchicalConfiguration<ImmutableNode> config;
 
     /** The path to the subtree */
-    private final String path;
+    private final @RUntainted String path;
 
     /** True if the path ends with '/', false otherwise */
     private final boolean trailing;
@@ -63,7 +63,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
      * @param config The Configuration to be wrapped.
      * @param path The base path pattern.
      */
-    public PatternSubtreeConfigurationWrapper(final HierarchicalConfiguration<ImmutableNode> config, final String path) {
+    public PatternSubtreeConfigurationWrapper(final HierarchicalConfiguration<ImmutableNode> config, final @RUntainted String path) {
         this.config = config;
         this.path = path;
         this.trailing = path.endsWith("/");
@@ -71,7 +71,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    protected void addPropertyInternal(final String key, final Object value) {
+    protected void addPropertyInternal(final @RUntainted String key, final Object value) {
         config.addProperty(makePath(key), value);
     }
 
@@ -86,177 +86,177 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    protected boolean containsKeyInternal(final String key) {
+    protected boolean containsKeyInternal(final @RUntainted String key) {
         return config.containsKey(makePath(key));
     }
 
     @Override
-    public BigDecimal getBigDecimal(final String key, final BigDecimal defaultValue) {
+    public BigDecimal getBigDecimal(final @RUntainted String key, final BigDecimal defaultValue) {
         return config.getBigDecimal(makePath(key), defaultValue);
     }
 
     @Override
-    public BigDecimal getBigDecimal(final String key) {
+    public BigDecimal getBigDecimal(final @RUntainted String key) {
         return config.getBigDecimal(makePath(key));
     }
 
     @Override
-    public BigInteger getBigInteger(final String key, final BigInteger defaultValue) {
+    public BigInteger getBigInteger(final @RUntainted String key, final BigInteger defaultValue) {
         return config.getBigInteger(makePath(key), defaultValue);
     }
 
     @Override
-    public BigInteger getBigInteger(final String key) {
+    public BigInteger getBigInteger(final @RUntainted String key) {
         return config.getBigInteger(makePath(key));
     }
 
     @Override
-    public boolean getBoolean(final String key, final boolean defaultValue) {
+    public boolean getBoolean(final @RUntainted String key, final boolean defaultValue) {
         return config.getBoolean(makePath(key), defaultValue);
     }
 
     @Override
-    public Boolean getBoolean(final String key, final Boolean defaultValue) {
+    public Boolean getBoolean(final @RUntainted String key, final Boolean defaultValue) {
         return config.getBoolean(makePath(key), defaultValue);
     }
 
     @Override
-    public boolean getBoolean(final String key) {
+    public boolean getBoolean(final @RUntainted String key) {
         return config.getBoolean(makePath(key));
     }
 
     @Override
-    public byte getByte(final String key, final byte defaultValue) {
+    public byte getByte(final @RUntainted String key, final byte defaultValue) {
         return config.getByte(makePath(key), defaultValue);
     }
 
     @Override
-    public Byte getByte(final String key, final Byte defaultValue) {
+    public Byte getByte(final @RUntainted String key, final Byte defaultValue) {
         return config.getByte(makePath(key), defaultValue);
     }
 
     @Override
-    public byte getByte(final String key) {
+    public byte getByte(final @RUntainted String key) {
         return config.getByte(makePath(key));
     }
 
     @Override
-    public double getDouble(final String key, final double defaultValue) {
+    public double getDouble(final @RUntainted String key, final double defaultValue) {
         return config.getDouble(makePath(key), defaultValue);
     }
 
     @Override
-    public Double getDouble(final String key, final Double defaultValue) {
+    public Double getDouble(final @RUntainted String key, final Double defaultValue) {
         return config.getDouble(makePath(key), defaultValue);
     }
 
     @Override
-    public double getDouble(final String key) {
+    public double getDouble(final @RUntainted String key) {
         return config.getDouble(makePath(key));
     }
 
     @Override
-    public float getFloat(final String key, final float defaultValue) {
+    public float getFloat(final @RUntainted String key, final float defaultValue) {
         return config.getFloat(makePath(key), defaultValue);
     }
 
     @Override
-    public Float getFloat(final String key, final Float defaultValue) {
+    public Float getFloat(final @RUntainted String key, final Float defaultValue) {
         return config.getFloat(makePath(key), defaultValue);
     }
 
     @Override
-    public float getFloat(final String key) {
+    public float getFloat(final @RUntainted String key) {
         return config.getFloat(makePath(key));
     }
 
     @Override
-    public int getInt(final String key, final int defaultValue) {
+    public int getInt(final @RUntainted String key, final int defaultValue) {
         return config.getInt(makePath(key), defaultValue);
     }
 
     @Override
-    public int getInt(final String key) {
+    public int getInt(final @RUntainted String key) {
         return config.getInt(makePath(key));
     }
 
     @Override
-    public Integer getInteger(final String key, final Integer defaultValue) {
+    public Integer getInteger(final @RUntainted String key, final Integer defaultValue) {
         return config.getInteger(makePath(key), defaultValue);
     }
 
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         return config.getKeys(makePath());
     }
 
     @Override
-    protected Iterator<String> getKeysInternal(final String prefix) {
+    protected Iterator<String> getKeysInternal(final @RUntainted String prefix) {
         return config.getKeys(makePath(prefix));
     }
 
     @Override
-    public List<Object> getList(final String key, final List<?> defaultValue) {
+    public List<Object> getList(final @RUntainted String key, final List<?> defaultValue) {
         return config.getList(makePath(key), defaultValue);
     }
 
     @Override
-    public List<Object> getList(final String key) {
+    public List<Object> getList(final @RUntainted String key) {
         return config.getList(makePath(key));
     }
 
     @Override
-    public long getLong(final String key, final long defaultValue) {
+    public long getLong(final @RUntainted String key, final long defaultValue) {
         return config.getLong(makePath(key), defaultValue);
     }
 
     @Override
-    public Long getLong(final String key, final Long defaultValue) {
+    public Long getLong(final @RUntainted String key, final Long defaultValue) {
         return config.getLong(makePath(key), defaultValue);
     }
 
     @Override
-    public long getLong(final String key) {
+    public long getLong(final @RUntainted String key) {
         return config.getLong(makePath(key));
     }
 
     @Override
-    public Properties getProperties(final String key) {
+    public Properties getProperties(final @RUntainted String key) {
         return config.getProperties(makePath(key));
     }
 
     @Override
-    protected Object getPropertyInternal(final String key) {
+    protected @RUntainted Object getPropertyInternal(final @RUntainted String key) {
         return config.getProperty(makePath(key));
     }
 
     @Override
-    public short getShort(final String key, final short defaultValue) {
+    public short getShort(final @RUntainted String key, final short defaultValue) {
         return config.getShort(makePath(key), defaultValue);
     }
 
     @Override
-    public Short getShort(final String key, final Short defaultValue) {
+    public Short getShort(final @RUntainted String key, final Short defaultValue) {
         return config.getShort(makePath(key), defaultValue);
     }
 
     @Override
-    public short getShort(final String key) {
+    public short getShort(final @RUntainted String key) {
         return config.getShort(makePath(key));
     }
 
     @Override
-    public String getString(final String key, final String defaultValue) {
+    public @RUntainted String getString(final @RUntainted String key, final @RUntainted String defaultValue) {
         return config.getString(makePath(key), defaultValue);
     }
 
     @Override
-    public String getString(final String key) {
+    public @RUntainted String getString(final @RUntainted String key) {
         return config.getString(makePath(key));
     }
 
     @Override
-    public String[] getStringArray(final String key) {
+    public String[] getStringArray(final @RUntainted String key) {
         return config.getStringArray(makePath(key));
     }
 
@@ -266,7 +266,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    protected void setPropertyInternal(final String key, final Object value) {
+    protected void setPropertyInternal(final @RUntainted String key, final Object value) {
         getConfig().setProperty(key, value);
     }
 
@@ -364,7 +364,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
         return (BaseHierarchicalConfiguration) config.configurationAt(makePath());
     }
 
-    private String makePath() {
+    private @RUntainted String makePath() {
         final String pathPattern = trailing ? path.substring(0, path.length() - 1) : path;
         return substitute(pathPattern);
     }
@@ -372,7 +372,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     /*
      * Resolve the root expression and then add the item being retrieved. Insert a separator character as required.
      */
-    private String makePath(final String item) {
+    private @RPolyTainted String makePath(final @RPolyTainted String item) {
         final String pathPattern;
         if ((item.isEmpty() || item.startsWith("/")) && trailing) {
             pathPattern = path.substring(0, path.length() - 1);
@@ -391,7 +391,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
      * @param pattern the pattern string
      * @return the string with variables replaced
      */
-    private String substitute(final String pattern) {
+    private @RPolyTainted String substitute(final @RPolyTainted String pattern) {
         return Objects.toString(getInterpolator().interpolate(pattern), null);
     }
 

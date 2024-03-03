@@ -293,8 +293,8 @@ public class DatabaseConfiguration extends AbstractConfiguration {
      * @return the value of this property
      */
     @Override
-    protected Object getPropertyInternal(final String key) {
-        final JdbcOperation<Object> op = new JdbcOperation<Object>(ConfigurationErrorEvent.READ, ConfigurationErrorEvent.READ, key, null) {
+    protected @RUntainted Object getPropertyInternal(final String key) {
+        final JdbcOperation<@RUntainted Object> op = new JdbcOperation<@RUntainted Object>(ConfigurationErrorEvent.READ, ConfigurationErrorEvent.READ, key, null) {
             @Override
             protected Object performOperation() throws SQLException {
                 final List<Object> results = new ArrayList<>();
@@ -362,7 +362,7 @@ public class DatabaseConfiguration extends AbstractConfiguration {
      * @param value the value to be added
      */
     @Override
-    protected void addPropertyInternal(final String key, final Object value) {
+    protected void addPropertyInternal(final @RUntainted String key, final Object value) {
         final ListDelimiterHandler oldHandler = getListDelimiterHandler();
         try {
             // temporarily disable delimiter parsing
@@ -464,8 +464,8 @@ public class DatabaseConfiguration extends AbstractConfiguration {
      * @return an iterator with the contained keys (an empty iterator in case of an error)
      */
     @Override
-    protected Iterator<String> getKeysInternal() {
-        final Collection<String> keys = new ArrayList<>();
+    protected Iterator<@RUntainted String> getKeysInternal() {
+        final Collection<@RUntainted String> keys = new ArrayList<>();
         new JdbcOperation<Collection<String>>(ConfigurationErrorEvent.READ, ConfigurationErrorEvent.READ, null, null) {
             @Override
             protected Collection<String> performOperation() throws SQLException {

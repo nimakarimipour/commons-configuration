@@ -290,7 +290,7 @@ public class CombinedConfiguration extends BaseHierarchicalConfiguration impleme
      * @param name the name of this configuration (can be <b>null</b>)
      * @param at the position of this configuration in the combined tree (can be <b>null</b>)
      */
-    public void addConfiguration(final Configuration config, final String name, final String at) {
+    public void addConfiguration(final Configuration config, final String name, final @RUntainted String at) {
         if (config == null) {
             throw new IllegalArgumentException("Added configuration must not be null!");
         }
@@ -802,7 +802,7 @@ public class CombinedConfiguration extends BaseHierarchicalConfiguration impleme
          * @param n the name
          * @param at the at position
          */
-        public ConfigData(final Configuration config, final String n, final String at) {
+        public ConfigData(final Configuration config, final String n, final @RUntainted String at) {
             configuration = config;
             name = n;
             atPath = parseAt(at);
@@ -832,7 +832,7 @@ public class CombinedConfiguration extends BaseHierarchicalConfiguration impleme
          *
          * @return the at position
          */
-        public String getAt() {
+        public @RUntainted String getAt() {
             return at;
         }
 
@@ -917,7 +917,7 @@ public class CombinedConfiguration extends BaseHierarchicalConfiguration impleme
          * @param at the at string
          * @return a collection with the names of the single components
          */
-        private Collection<String> parseAt(final String at) {
+        private Collection<String> parseAt(final @RUntainted String at) {
             if (StringUtils.isEmpty(at)) {
                 return null;
             }

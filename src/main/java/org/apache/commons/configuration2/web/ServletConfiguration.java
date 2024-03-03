@@ -33,7 +33,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 public class ServletConfiguration extends BaseWebConfiguration {
 
     /** Stores a reference to the wrapped {@code ServletConfig}. */
-    protected ServletConfig config;
+    protected @RUntainted ServletConfig config;
 
     /**
      * Creates a ServletConfiguration using the initialization parameter of the specified servlet.
@@ -54,12 +54,12 @@ public class ServletConfiguration extends BaseWebConfiguration {
     }
 
     @Override
-    protected Object getPropertyInternal(final String key) {
+    protected @RUntainted Object getPropertyInternal(final @RUntainted String key) {
         return handleDelimiters(config.getInitParameter(key));
     }
 
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         // According to the documentation of getInitParameterNames() the
         // enumeration is of type String.
         final Enumeration<String> en = config.getInitParameterNames();

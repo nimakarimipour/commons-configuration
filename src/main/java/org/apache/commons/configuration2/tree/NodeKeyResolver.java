@@ -43,7 +43,7 @@ public interface NodeKeyResolver<T> {
      * @param handler the {@code NodeHandler}
      * @return a list with query results
      */
-    List<QueryResult<T>> resolveKey(T root, String key, NodeHandler<T> handler);
+    List<QueryResult<T>> resolveKey(T root, @RUntainted String key, NodeHandler<T> handler);
 
     /**
      * Performs a query for the specified key on the given root node returning only node results. Some operations require
@@ -66,7 +66,7 @@ public interface NodeKeyResolver<T> {
      * @param handler the {@code NodeHandler}
      * @return a {@code NodeAddData} object to be used for the add operation
      */
-    NodeAddData<T> resolveAddKey(T root, String key, NodeHandler<T> handler);
+    NodeAddData<T> resolveAddKey(T root, @RUntainted String key, NodeHandler<T> handler);
 
     /**
      * Resolves a key for an update operation. Result is a {@code NodeUpdateData} object containing all information for

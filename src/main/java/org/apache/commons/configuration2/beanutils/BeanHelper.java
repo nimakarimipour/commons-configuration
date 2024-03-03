@@ -353,7 +353,7 @@ public final class BeanHelper {
      * @return the new bean
      * @throws ConfigurationRuntimeException if an error occurs
      */
-    public Object createBean(final BeanDeclaration data, final Class<?> defaultClass) {
+    public @RUntainted Object createBean(final BeanDeclaration data, final Class<?> defaultClass) {
         return createBean(data, defaultClass, null);
     }
 
@@ -365,7 +365,7 @@ public final class BeanHelper {
      * @return the new bean
      * @throws ConfigurationRuntimeException if an error occurs
      */
-    public Object createBean(final BeanDeclaration data) {
+    public @RUntainted Object createBean(final BeanDeclaration data) {
         return createBean(data, null);
     }
 
@@ -521,7 +521,7 @@ public final class BeanHelper {
         }
 
         @Override
-        public Object createBean(final BeanDeclaration data) {
+        public @RUntainted Object createBean(final BeanDeclaration data) {
             return beanHelper.createBean(data);
         }
     }

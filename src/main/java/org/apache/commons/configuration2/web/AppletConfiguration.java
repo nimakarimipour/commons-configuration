@@ -30,7 +30,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  */
 public class AppletConfiguration extends BaseWebConfiguration {
     /** Stores the wrapped applet. */
-    protected Applet applet;
+    protected @RUntainted Applet applet;
 
     /**
      * Create an AppletConfiguration using the initialization parameters of the specified Applet.
@@ -42,12 +42,12 @@ public class AppletConfiguration extends BaseWebConfiguration {
     }
 
     @Override
-    protected Object getPropertyInternal(final String key) {
+    protected @RUntainted Object getPropertyInternal(final @RUntainted String key) {
         return handleDelimiters(applet.getParameter(key));
     }
 
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         final String[][] paramsInfo = applet.getParameterInfo();
         final String[] keys = new String[paramsInfo != null ? paramsInfo.length : 0];
         if (paramsInfo != null) {

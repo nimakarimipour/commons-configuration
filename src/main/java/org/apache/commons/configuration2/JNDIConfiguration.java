@@ -108,7 +108,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @param processedCtx a set with the so far processed objects
      * @throws NamingException If JNDI has an issue.
      */
-    private void recursiveGetKeys(final Set<String> keys, final Context context, final String prefix, final Set<Context> processedCtx) throws NamingException {
+    private void recursiveGetKeys(final Set<@RUntainted String> keys, final Context context, final String prefix, final Set<Context> processedCtx) throws NamingException {
         processedCtx.add(context);
         NamingEnumeration<@RUntainted NameClassPair> elements = null;
 
@@ -154,7 +154,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @return an iterator with all keys
      */
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         return getKeysInternal("");
     }
 
@@ -165,7 +165,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @return an iterator with the selected keys
      */
     @Override
-    protected Iterator<String> getKeysInternal(final String prefix) {
+    protected @RUntainted Iterator<@RUntainted String> getKeysInternal(final @RUntainted String prefix) {
         // build the path
         final String[] splitPath = StringUtils.split(prefix, ".");
 
@@ -176,7 +176,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
             final Context context = getContext(path, getBaseContext());
 
             // return all the keys under the context found
-            final Set<String> keys = new HashSet<>();
+            final Set<@RUntainted String> keys = new HashSet<>();
             if (context != null) {
                 recursiveGetKeys(keys, context, prefix, new HashSet<>());
             } else if (containsKey(prefix)) {
@@ -339,7 +339,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @return the value of this property
      */
     @Override
-    protected Object getPropertyInternal(@RUntainted String key) {
+    protected @RUntainted Object getPropertyInternal(@RUntainted String key) {
         if (clearedProperties.contains(key)) {
             return null;
         }

@@ -61,7 +61,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  */
 public class CompositeConfiguration extends AbstractConfiguration implements Cloneable {
     /** List holding all the configuration */
-    private List<Configuration> configList = new LinkedList<>();
+    private List<@RUntainted Configuration> configList = new LinkedList<>();
 
     /**
      * Configuration that holds in memory stuff. Inserted as first so any setProperty() override anything else added.
@@ -265,7 +265,7 @@ public class CompositeConfiguration extends AbstractConfiguration implements Clo
      * @param token The Value to add.
      */
     @Override
-    protected void addPropertyDirect(final String key, final Object token) {
+    protected void addPropertyDirect(final @RUntainted String key, final Object token) {
         inMemoryConfiguration.addProperty(key, token);
     }
 
@@ -277,19 +277,19 @@ public class CompositeConfiguration extends AbstractConfiguration implements Clo
      * @return object associated with the given configuration key.
      */
     @Override
-    protected Object getPropertyInternal(final String key) {
+    protected @RUntainted Object getPropertyInternal(final @RUntainted String key) {
         return configList.stream().filter(config -> config.containsKey(key)).findFirst().map(config -> config.getProperty(key)).orElse(null);
     }
 
     @Override
-    protected Iterator<String> getKeysInternal() {
-        final Set<String> keys = new LinkedHashSet<>();
+    protected Iterator<@RUntainted String> getKeysInternal() {
+        final Set<@RUntainted String> keys = new LinkedHashSet<>();
         configList.forEach(config -> config.getKeys().forEachRemaining(keys::add));
         return keys.iterator();
     }
 
     @Override
-    protected Iterator<String> getKeysInternal(final String key) {
+    protected @RUntainted Iterator<String> getKeysInternal(final @RUntainted String key) {
         final Set<String> keys = new LinkedHashSet<>();
         configList.forEach(config -> config.getKeys(key).forEachRemaining(keys::add));
         return keys.iterator();
@@ -306,12 +306,12 @@ public class CompositeConfiguration extends AbstractConfiguration implements Clo
     }
 
     @Override
-    protected boolean containsKeyInternal(final String key) {
+    protected boolean containsKeyInternal(final @RUntainted String key) {
         return configList.stream().anyMatch(config -> config.containsKey(key));
     }
 
     @Override
-    public List<Object> getList(final String key, final List<?> defaultValue) {
+    public List<Object> getList(final @RUntainted String key, final List<?> defaultValue) {
         final List<Object> list = new ArrayList<>();
 
         // add all elements from the first configuration containing the requested key
@@ -342,7 +342,7 @@ public class CompositeConfiguration extends AbstractConfiguration implements Clo
     }
 
     @Override
-    public String[] getStringArray(final String key) {
+    public String[] getStringArray(final @RUntainted String key) {
         final List<Object> list = getList(key);
 
         // transform property values into strings
@@ -441,7 +441,7 @@ public class CompositeConfiguration extends AbstractConfiguration implements Clo
      * @throws IllegalArgumentException if the source configuration cannot be determined
      * @since 1.5
      */
-    public Configuration getSource(final String key) {
+    public Configuration getSource(final @RUntainted String key) {
         if (key == null) {
             throw new IllegalArgumentException("Key must not be null!");
         }
@@ -480,7 +480,7 @@ public class CompositeConfiguration extends AbstractConfiguration implements Clo
      * @param config the configuration to query
      * @param key the key of the property
      */
-    private void appendListProperty(final List<Object> dest, final Configuration config, final String key) {
+    private void appendListProperty(final List<Object> dest, final Configuration config, final @RUntainted String key) {
         final Object value = interpolate(config.getProperty(key));
         if (value != null) {
             if (value instanceof Collection) {

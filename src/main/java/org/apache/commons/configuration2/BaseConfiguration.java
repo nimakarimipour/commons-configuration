@@ -35,7 +35,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  */
 public class BaseConfiguration extends AbstractConfiguration implements Cloneable {
     /** stores the configuration key-value pairs */
-    private Map<String, Object> store = new LinkedHashMap<>();
+    private Map<@RUntainted String, @RUntainted Object> store = new LinkedHashMap<>();
 
     /**
      * Adds a key/value pair to the map. This routine does no magic morphing. It ensures the keylist is maintained
@@ -44,7 +44,7 @@ public class BaseConfiguration extends AbstractConfiguration implements Cloneabl
      * @param value object to store
      */
     @Override
-    protected void addPropertyDirect(final String key, final Object value) {
+    protected void addPropertyDirect(final @RUntainted String key, final Object value) {
         final Object previousValue = getPropertyInternal(key);
 
         if (previousValue == null) {
@@ -73,7 +73,7 @@ public class BaseConfiguration extends AbstractConfiguration implements Cloneabl
      * @return object associated with the given configuration key.
      */
     @Override
-    protected Object getPropertyInternal(final String key) {
+    protected @RUntainted Object getPropertyInternal(final String key) {
         return store.get(key);
     }
 
@@ -129,7 +129,7 @@ public class BaseConfiguration extends AbstractConfiguration implements Cloneabl
      * @return An Iterator.
      */
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         return store.keySet().iterator();
     }
 
@@ -163,7 +163,7 @@ public class BaseConfiguration extends AbstractConfiguration implements Cloneabl
     private void cloneStore(final BaseConfiguration copy) throws CloneNotSupportedException {
         // This is safe because the type of the map is known
         @SuppressWarnings("unchecked")
-        final Map<String, Object> clonedStore = (Map<String, Object>) ConfigurationUtils.clone(store);
+        final Map<@RUntainted String, Object> clonedStore = (Map<String, Object>) ConfigurationUtils.clone(store);
         copy.store = clonedStore;
 
         // Handle collections in the map; they have to be cloned, too

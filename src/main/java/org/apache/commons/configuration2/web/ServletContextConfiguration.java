@@ -32,7 +32,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  */
 public class ServletContextConfiguration extends BaseWebConfiguration {
     /** Stores the wrapped servlet context. */
-    protected ServletContext context;
+    protected @RUntainted ServletContext context;
 
     /**
      * Create a ServletContextConfiguration using the context of the specified servlet.
@@ -53,12 +53,12 @@ public class ServletContextConfiguration extends BaseWebConfiguration {
     }
 
     @Override
-    protected Object getPropertyInternal(final String key) {
+    protected @RUntainted Object getPropertyInternal(final @RUntainted String key) {
         return handleDelimiters(context.getInitParameter(key));
     }
 
     @Override
-    protected Iterator<String> getKeysInternal() {
+    protected Iterator<@RUntainted String> getKeysInternal() {
         // According to the documentation of getInitParameterNames() the
         // enumeration is of type String.
         final Enumeration<String> en = context.getInitParameterNames();

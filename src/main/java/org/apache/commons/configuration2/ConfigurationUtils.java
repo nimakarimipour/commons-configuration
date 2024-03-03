@@ -111,7 +111,7 @@ public final class ConfigurationUtils {
      * @since 2.2
      */
     public static void dump(final ImmutableConfiguration configuration, final PrintWriter out) {
-        for (final Iterator<String> keys = configuration.getKeys(); keys.hasNext();) {
+        for (final Iterator<@RUntainted String> keys = configuration.getKeys(); keys.hasNext();) {
             final String key = keys.next();
             final Object value = configuration.getProperty(key);
             out.print(key);

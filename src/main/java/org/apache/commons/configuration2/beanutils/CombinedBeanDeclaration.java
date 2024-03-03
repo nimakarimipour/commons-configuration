@@ -48,7 +48,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 public class CombinedBeanDeclaration implements BeanDeclaration {
 
     /** A list with the child declarations. */
-    private final ArrayList<BeanDeclaration> childDeclarations;
+    private final ArrayList<@RUntainted BeanDeclaration> childDeclarations;
 
     /**
      * Constructs a new instance of {@code CombinedBeanDeclaration} and initializes it with the given child declarations.
@@ -56,7 +56,7 @@ public class CombinedBeanDeclaration implements BeanDeclaration {
      * @param decl the child declarations
      * @throws NullPointerException if the array with child declarations is <b>null</b>
      */
-    public CombinedBeanDeclaration(final BeanDeclaration... decl) {
+    public CombinedBeanDeclaration(final @RUntainted BeanDeclaration... decl) {
         childDeclarations = new ArrayList<>(Arrays.asList(decl));
     }
 
@@ -70,7 +70,7 @@ public class CombinedBeanDeclaration implements BeanDeclaration {
         return findFirst(BeanDeclaration::getBeanFactoryName);
     }
 
-    private <T> T findFirst(final Function<? super BeanDeclaration, ? extends T> mapper) {
+    private <T> @RUntainted T findFirst(final Function<? super BeanDeclaration, ? extends T> mapper) {
         return childDeclarations.stream().map(mapper).filter(Objects::nonNull).findFirst().orElse(null);
     }
 
@@ -90,7 +90,7 @@ public class CombinedBeanDeclaration implements BeanDeclaration {
      * <b>null</b>.
      */
     @Override
-    public String getBeanClassName() {
+    public @RUntainted String getBeanClassName() {
         return findFirst(BeanDeclaration::getBeanClassName);
     }
 

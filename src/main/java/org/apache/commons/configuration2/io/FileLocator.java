@@ -57,7 +57,7 @@ public final class FileLocator {
         private @RUntainted String basePath;
 
         /** The encoding. */
-        private String encoding;
+        private @RUntainted String encoding;
 
         /** The file name. */
         private @RUntainted String fileName;
@@ -112,7 +112,7 @@ public final class FileLocator {
          * @param enc the encoding
          * @return a reference to this builder for method chaining
          */
-        public FileLocatorBuilder encoding(final String enc) {
+        public FileLocatorBuilder encoding(final @RUntainted String enc) {
             encoding = enc;
             return this;
         }
@@ -123,7 +123,7 @@ public final class FileLocator {
          * @param name the file name
          * @return a reference to this builder for method chaining
          */
-        public FileLocatorBuilder fileName(final String name) {
+        public FileLocatorBuilder fileName(final @RUntainted String name) {
             fileName = name;
             return this;
         }
@@ -193,7 +193,7 @@ public final class FileLocator {
     private final @RUntainted String basePath;
 
     /** The encoding. */
-    private final String encoding;
+    private final @RUntainted String encoding;
 
     /** The file name. */
     private final @RUntainted String fileName;
@@ -260,7 +260,7 @@ public final class FileLocator {
      *
      * @return the encoding
      */
-    public String getEncoding() {
+    public @RUntainted String getEncoding() {
         return encoding;
     }
 

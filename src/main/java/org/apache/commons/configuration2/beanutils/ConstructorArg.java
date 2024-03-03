@@ -41,7 +41,7 @@ public final class ConstructorArg {
     private final BeanDeclaration beanDeclaration;
 
     /** The value of this constructor argument. */
-    private final Object value;
+    private final @RUntainted Object value;
 
     /** The name of the argument type. */
     private final String typeName;
@@ -53,7 +53,7 @@ public final class ConstructorArg {
      * @param val the value of the argument
      * @param type the type name
      */
-    private ConstructorArg(final BeanDeclaration decl, final Object val, final String type) {
+    private ConstructorArg(final BeanDeclaration decl, final @RUntainted Object val, final String type) {
         beanDeclaration = decl;
         value = val;
         typeName = type;
@@ -105,7 +105,7 @@ public final class ConstructorArg {
      * @param typeName the name of the data type of this argument
      * @return the newly created instance of this class
      */
-    public static ConstructorArg forValue(final Object value, final String typeName) {
+    public static ConstructorArg forValue(final @RUntainted Object value, final String typeName) {
         return new ConstructorArg(null, value, typeName);
     }
 
@@ -139,7 +139,7 @@ public final class ConstructorArg {
      *
      * @return the simple value of this constructor argument
      */
-    public Object getValue() {
+    public @RUntainted Object getValue() {
         return value;
     }
 

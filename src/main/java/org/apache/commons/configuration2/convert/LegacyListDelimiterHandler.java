@@ -23,6 +23,7 @@ import java.util.Iterator;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>
@@ -57,14 +58,14 @@ public class LegacyListDelimiterHandler extends AbstractListDelimiterHandler {
     private static final String QUAD_ESC = DOUBLE_ESC + DOUBLE_ESC;
 
     /** The list delimiter character. */
-    private final char delimiter;
+    private final @RUntainted char delimiter;
 
     /**
      * Creates a new instance of {@code LegacyListDelimiterHandler} and sets the list delimiter character.
      *
      * @param listDelimiter the list delimiter character
      */
-    public LegacyListDelimiterHandler(final char listDelimiter) {
+    public LegacyListDelimiterHandler(final @RUntainted char listDelimiter) {
         delimiter = listDelimiter;
     }
 
@@ -73,7 +74,7 @@ public class LegacyListDelimiterHandler extends AbstractListDelimiterHandler {
      *
      * @return the list delimiter character
      */
-    public char getDelimiter() {
+    public @RUntainted char getDelimiter() {
         return delimiter;
     }
 
@@ -81,7 +82,7 @@ public class LegacyListDelimiterHandler extends AbstractListDelimiterHandler {
      * {@inheritDoc} This implementation performs delimiter escaping for a single value (which is not part of a list).
      */
     @Override
-    public Object escape(final Object value, final ValueTransformer transformer) {
+    public @RUntainted Object escape(final @RUntainted Object value, final ValueTransformer transformer) {
         return escapeValue(value, false, transformer);
     }
 
@@ -90,9 +91,9 @@ public class LegacyListDelimiterHandler extends AbstractListDelimiterHandler {
      * not interpreted as escape character for a following list delimiter.
      */
     @Override
-    public Object escapeList(final List<?> values, final ValueTransformer transformer) {
+    public @RUntainted Object escapeList(final List<?> values, final ValueTransformer transformer) {
         if (!values.isEmpty()) {
-            final Iterator<?> it = values.iterator();
+            final Iterator<@RUntainted ?> it = values.iterator();
             String lastValue = escapeValue(it.next(), true, transformer);
             final StringBuilder buf = new StringBuilder(lastValue);
             while (it.hasNext()) {
@@ -116,12 +117,12 @@ public class LegacyListDelimiterHandler extends AbstractListDelimiterHandler {
      * character if it is not escaped. If the delimiter character is not found, the input is returned unchanged.
      */
     @Override
-    protected Collection<String> splitString(final String s, final boolean trim) {
+    protected Collection<@RUntainted String> splitString(final @RUntainted String s, final boolean trim) {
         if (s.indexOf(getDelimiter()) < 0) {
             return Collections.singleton(s);
         }
 
-        final List<String> list = new ArrayList<>();
+        final List<@RUntainted String> list = new ArrayList<>();
 
         StringBuilder token = new StringBuilder();
         int begin = 0;
@@ -176,7 +177,7 @@ public class LegacyListDelimiterHandler extends AbstractListDelimiterHandler {
      * {@inheritDoc} This is just a dummy implementation. It is never called.
      */
     @Override
-    protected String escapeString(final String s) {
+    protected @RUntainted String escapeString(final String s) {
         return null;
     }
 
@@ -190,7 +191,7 @@ public class LegacyListDelimiterHandler extends AbstractListDelimiterHandler {
      * @param inList a flag whether the value is part of a list
      * @return the value with escaped backslashes as string
      */
-    protected String escapeBackslashs(final Object value, final boolean inList) {
+    protected @RPolyTainted String escapeBackslashs(final @RPolyTainted Object value, final boolean inList) {
         String strValue = String.valueOf(value);
 
         if (inList && strValue.contains(DOUBLE_ESC)) {
@@ -210,7 +211,7 @@ public class LegacyListDelimiterHandler extends AbstractListDelimiterHandler {
      * @param transformer the {@code ValueTransformer}
      * @return the escaped property value
      */
-    protected String escapeValue(final Object value, final boolean inList, final ValueTransformer transformer) {
+    protected @RUntainted String escapeValue(final @RUntainted Object value, final boolean inList, final ValueTransformer transformer) {
         String escapedValue = String.valueOf(transformer.transformValue(escapeBackslashs(value, inList)));
         if (getDelimiter() != 0) {
             escapedValue = StringUtils.replace(escapedValue, String.valueOf(getDelimiter()), ESCAPE + getDelimiter());

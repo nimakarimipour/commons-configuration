@@ -161,7 +161,7 @@ public class PropertyListConfiguration extends BaseHierarchicalConfiguration imp
     }
 
     @Override
-    protected void addPropertyInternal(final String key, final Object value) {
+    protected void addPropertyInternal(final @RUntainted String key, final Object value) {
         if (value instanceof byte[]) {
             addPropertyDirect(key, value);
         } else {
@@ -255,7 +255,7 @@ public class PropertyListConfiguration extends BaseHierarchicalConfiguration imp
 
         if (value instanceof List) {
             out.print("( ");
-            final Iterator<?> it = ((List<?>) value).iterator();
+            final Iterator<@RUntainted ?> it = ((List<?>) value).iterator();
             while (it.hasNext()) {
                 printValue(out, indentLevel + 1, it.next());
                 if (it.hasNext()) {
@@ -283,7 +283,7 @@ public class PropertyListConfiguration extends BaseHierarchicalConfiguration imp
             out.println(padding + "}");
         } else if (value instanceof Map) {
             // display a Map as a dictionary
-            final Map<String, Object> map = transformMap((Map<?, ?>) value);
+            final Map<@RUntainted String, Object> map = transformMap((Map<?, ?>) value);
             printValue(out, indentLevel, new MapConfiguration(map));
         } else if (value instanceof byte[]) {
             out.print("<" + new String(Hex.encodeHex((byte[]) value)) + ">");
@@ -381,7 +381,7 @@ public class PropertyListConfiguration extends BaseHierarchicalConfiguration imp
      * @param src the map to be converted
      * @return the resulting map
      */
-    private static Map<String, Object> transformMap(final Map<?, ?> src) {
+    private static Map<@RUntainted String, Object> transformMap(final Map<?, ?> src) {
         final Map<String, Object> dest = new HashMap<>();
         src.forEach((k, v) -> {
             if (k instanceof String) {

@@ -43,7 +43,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 @Deprecated
 public class SystemPropertiesLookup implements Lookup {
     @Override
-    public Object lookup(final String variable) {
+    public @RUntainted Object lookup(final @RUntainted String variable) {
         return StringLookupFactory.INSTANCE.systemPropertyStringLookup().lookup(variable);
     }
 }

@@ -408,7 +408,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
         /**
          * Characters that need to be escaped when wring a properties file.
          */
-        private static final Map<CharSequence, CharSequence> JUP_CHARS_ESCAPE;
+        private static final @RUntainted Map<CharSequence, CharSequence> JUP_CHARS_ESCAPE;
         static {
             final Map<CharSequence, CharSequence> initialMap = new HashMap<>();
             initialMap.put("\\", "\\\\");
@@ -473,7 +473,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
         private final List<@RUntainted String> commentLines;
 
         /** Stores the name of the last read property. */
-        private String propertyName;
+        private @RUntainted String propertyName;
 
         /** Stores the value of the last read property. */
         private String propertyValue;
@@ -546,7 +546,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the name of the last read property
          * @since 1.3
          */
-        public String getPropertyName() {
+        public @RUntainted String getPropertyName() {
             return propertyName;
         }
 
@@ -579,7 +579,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @param name the name of the current property
          * @since 1.7
          */
-        protected void initPropertyName(final String name) {
+        protected void initPropertyName(final @RUntainted String name) {
             propertyName = unescapePropertyName(name);
         }
 
@@ -686,7 +686,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the unescaped property name
          * @since 2.4
          */
-        protected String unescapePropertyName(final String name) {
+        protected @RPolyTainted String unescapePropertyName(final @RPolyTainted String name) {
             return StringEscapeUtils.unescapeJava(name);
         }
 
@@ -712,7 +712,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
         /**
          * Properties escape map.
          */
-        private static final Map<CharSequence, CharSequence> PROPERTIES_CHARS_ESCAPE;
+        private static final @RUntainted Map<CharSequence, CharSequence> PROPERTIES_CHARS_ESCAPE;
         static {
             final Map<CharSequence, CharSequence> initialMap = new HashMap<>();
             initialMap.put("\\", "\\\\");
@@ -723,7 +723,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * A translator for escaping property values. This translator performs a subset of transformations done by the
          * ESCAPE_JAVA translator from Commons Lang 3.
          */
-        private static final CharSequenceTranslator ESCAPE_PROPERTIES = new AggregateTranslator(new LookupTranslator(PROPERTIES_CHARS_ESCAPE),
+        private static final @RUntainted CharSequenceTranslator ESCAPE_PROPERTIES = new AggregateTranslator(new LookupTranslator(PROPERTIES_CHARS_ESCAPE),
             new LookupTranslator(EntityArrays.JAVA_CTRL_CHARS_ESCAPE), UnicodeEscaper.outsideOf(32, 0x7f));
 
         /**
@@ -933,7 +933,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          *
          * @throws IOException if an I/O error occurs.
          */
-        public void writeProperty(final String key, final Object value) throws IOException {
+        public void writeProperty(final String key, final @RUntainted Object value) throws IOException {
             writeProperty(key, value, false);
         }
 
@@ -947,7 +947,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @throws IOException if an error occurs
          * @since 1.3
          */
-        public void writeProperty(final String key, final Object value, final boolean forceSingleLine) throws IOException {
+        public void writeProperty(final String key, final @RUntainted Object value, final boolean forceSingleLine) throws IOException {
             String v;
 
             if (value instanceof List) {
@@ -1390,7 +1390,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @param seenStack Stack of seen include URLs
      * @throws ConfigurationException if loading fails
      */
-    private void loadIncludeFile(final String fileName, final boolean optional, final Deque<URL> seenStack) throws ConfigurationException {
+    private void loadIncludeFile(final @RUntainted String fileName, final boolean optional, final Deque<URL> seenStack) throws ConfigurationException {
         if (locator == null) {
             throw new ConfigurationException(
                 "Load operation not properly " + "initialized! Do not call read(InputStream) directly," + " but use a FileHandler to load a configuration.");
@@ -1442,7 +1442,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @param fileName the file name
      * @return the URL of the include file or <b>null</b> if it cannot be resolved
      */
-    private @RUntainted URL locateIncludeFile(final @RUntainted String basePath, final String fileName) {
+    private @RUntainted URL locateIncludeFile(final @RUntainted String basePath, final @RUntainted String fileName) {
         final FileLocator includeLocator = FileLocatorUtils.fileLocator(locator).sourceURL(null).basePath(basePath).fileName(fileName).create();
         return FileLocatorUtils.locate(includeLocator);
     }
@@ -1461,12 +1461,12 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @throws ConfigurationException if an error occurs
      * @since 1.3
      */
-    boolean propertyLoaded(final String key, final String value, final Deque<URL> seenStack) throws ConfigurationException {
+    boolean propertyLoaded(final @RUntainted String key, final String value, final Deque<URL> seenStack) throws ConfigurationException {
         final boolean result;
 
         if (StringUtils.isNotEmpty(getInclude()) && key.equalsIgnoreCase(getInclude())) {
             if (isIncludesAllowed()) {
-                final Collection<String> files = getListDelimiterHandler().split(value, true);
+                final Collection<@RUntainted String> files = getListDelimiterHandler().split(value, true);
                 for (final String f : files) {
                     loadIncludeFile(interpolate(f), false, seenStack);
                 }

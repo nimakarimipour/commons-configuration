@@ -60,7 +60,7 @@ public interface ImmutableConfiguration {
      *
      * @return {@code true} if the configuration contains a value for this key, {@code false} otherwise
      */
-    boolean containsKey(String key);
+    boolean containsKey(@RUntainted String key);
 
     /**
      * Gets an object of the specified type associated with the given configuration key. If the key doesn't map to an
@@ -77,7 +77,7 @@ public interface ImmutableConfiguration {
      *         type
      * @since 2.0
      */
-    <T> T get(Class<T> cls, String key);
+    <T> T get(Class<T> cls, @RUntainted String key);
 
     /**
      * Gets an object of the specified type associated with the given configuration key using a default value. If the key
@@ -95,7 +95,7 @@ public interface ImmutableConfiguration {
      *
      * @since 2.0
      */
-    <T> T get(Class<T> cls, String key, T defaultValue);
+    <T> T get(Class<T> cls, @RUntainted String key, @RUntainted T defaultValue);
 
     /**
      * Gets an array of typed objects associated with the given configuration key. If the key doesn't map to an existing
@@ -110,7 +110,7 @@ public interface ImmutableConfiguration {
      *
      * @since 2.0
      */
-    Object getArray(Class<?> cls, String key);
+    Object getArray(Class<?> cls, @RUntainted String key);
 
     /**
      * Gets an array of typed objects associated with the given configuration key. If the key doesn't map to an existing
@@ -131,7 +131,7 @@ public interface ImmutableConfiguration {
      *             for an array of ints use {@code int[] result = config.get(int[].class, "myArrayKey", someDefault);}.
      */
     @Deprecated
-    Object getArray(Class<?> cls, String key, Object defaultValue);
+    Object getArray(Class<?> cls, @RUntainted String key, Object defaultValue);
 
     /**
      * Gets a {@link BigDecimal} associated with the given configuration key.
@@ -139,7 +139,7 @@ public interface ImmutableConfiguration {
      * @param key The configuration key.
      * @return The associated BigDecimal if key is found and has valid format
      */
-    BigDecimal getBigDecimal(String key);
+    BigDecimal getBigDecimal(@RUntainted String key);
 
     /**
      * Gets a {@link BigDecimal} associated with the given configuration key. If the key doesn't map to an existing object,
@@ -150,7 +150,7 @@ public interface ImmutableConfiguration {
      *
      * @return The associated BigDecimal if key is found and has valid format, default value otherwise.
      */
-    BigDecimal getBigDecimal(String key, BigDecimal defaultValue);
+    BigDecimal getBigDecimal(@RUntainted String key, BigDecimal defaultValue);
 
     /**
      * Gets a {@link BigInteger} associated with the given configuration key.
@@ -159,7 +159,7 @@ public interface ImmutableConfiguration {
      *
      * @return The associated BigInteger if key is found and has valid format
      */
-    BigInteger getBigInteger(String key);
+    BigInteger getBigInteger(@RUntainted String key);
 
     /**
      * Gets a {@link BigInteger} associated with the given configuration key. If the key doesn't map to an existing object,
@@ -170,7 +170,7 @@ public interface ImmutableConfiguration {
      *
      * @return The associated BigInteger if key is found and has valid format, default value otherwise.
      */
-    BigInteger getBigInteger(String key, BigInteger defaultValue);
+    BigInteger getBigInteger(@RUntainted String key, BigInteger defaultValue);
 
     /**
      * Gets a boolean associated with the given configuration key.
@@ -180,7 +180,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Boolean.
      */
-    boolean getBoolean(String key);
+    boolean getBoolean(@RUntainted String key);
 
     /**
      * Gets a boolean associated with the given configuration key. If the key doesn't map to an existing object, the default
@@ -192,7 +192,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Boolean.
      */
-    boolean getBoolean(String key, boolean defaultValue);
+    boolean getBoolean(@RUntainted String key, boolean defaultValue);
 
     /**
      * Gets a {@link Boolean} associated with the given configuration key.
@@ -203,7 +203,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Boolean.
      */
-    Boolean getBoolean(String key, Boolean defaultValue);
+    Boolean getBoolean(@RUntainted String key, Boolean defaultValue);
 
     /**
      * Gets a byte associated with the given configuration key.
@@ -213,7 +213,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Byte.
      */
-    byte getByte(String key);
+    byte getByte(@RUntainted String key);
 
     /**
      * Gets a byte associated with the given configuration key. If the key doesn't map to an existing object, the default
@@ -225,7 +225,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Byte.
      */
-    byte getByte(String key, byte defaultValue);
+    byte getByte(@RUntainted String key, byte defaultValue);
 
     /**
      * Gets a {@link Byte} associated with the given configuration key.
@@ -236,7 +236,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Byte.
      */
-    Byte getByte(String key, Byte defaultValue);
+    Byte getByte(@RUntainted String key, Byte defaultValue);
 
     /**
      * Gets a collection of typed objects associated with the given configuration key. This method works like
@@ -250,7 +250,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException if the conversion is not possible
      * @since 2.0
      */
-    <T> Collection<T> getCollection(Class<T> cls, String key, Collection<T> target);
+    <T> Collection<T> getCollection(Class<T> cls, @RUntainted String key, Collection<T> target);
 
     /**
      * Gets a collection of typed objects associated with the given configuration key using the values in the specified
@@ -276,7 +276,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException if the conversion is not possible
      * @since 2.0
      */
-    <T> Collection<T> getCollection(Class<T> cls, String key, Collection<T> target, Collection<T> defaultValue);
+    <T> Collection<T> getCollection(Class<T> cls, @RUntainted String key, Collection<T> target, Collection<T> defaultValue);
 
     /**
      * Gets a double associated with the given configuration key.
@@ -286,7 +286,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Double.
      */
-    double getDouble(String key);
+    double getDouble(@RUntainted String key);
 
     /**
      * Gets a double associated with the given configuration key. If the key doesn't map to an existing object, the default
@@ -298,7 +298,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Double.
      */
-    double getDouble(String key, double defaultValue);
+    double getDouble(@RUntainted String key, double defaultValue);
 
     /**
      * Gets a {@link Double} associated with the given configuration key.
@@ -309,7 +309,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Double.
      */
-    Double getDouble(String key, Double defaultValue);
+    Double getDouble(@RUntainted String key, Double defaultValue);
 
     /**
      * Gets a {@link Duration} associated with the given configuration key.
@@ -320,7 +320,7 @@ public interface ImmutableConfiguration {
      *         Duration.
      * @since 2.8.0
      */
-    default Duration getDuration(final String key) {
+    default Duration getDuration(final @RUntainted String key) {
         final String string = getString(key);
         if (string == null) {
             throw new NoSuchElementException(key);
@@ -338,7 +338,7 @@ public interface ImmutableConfiguration {
      *         Duration.
      * @since 2.8.0
      */
-    default Duration getDuration(final String key, final Duration defaultValue) {
+    default Duration getDuration(final @RUntainted String key, final Duration defaultValue) {
         final Object value = getProperty(key);
         return value == null ? defaultValue : PropertyConverter.toDuration(value);
     }
@@ -352,7 +352,7 @@ public interface ImmutableConfiguration {
      * @param key the configuration key
      * @return the plain string value of the specified encoded property
      */
-    String getEncodedString(String key);
+    String getEncodedString(@RUntainted String key);
 
     /**
      * Gets the value of a string property that is stored in encoded form in this configuration. This method obtains the
@@ -366,7 +366,7 @@ public interface ImmutableConfiguration {
      * @return the plain string value of the specified encoded property
      * @throws IllegalArgumentException if a <b>null</b> decoder is passed
      */
-    String getEncodedString(String key, ConfigurationDecoder decoder);
+    String getEncodedString(@RUntainted String key, ConfigurationDecoder decoder);
 
     /**
      * Gets an enum associated with the given configuration key.
@@ -380,7 +380,7 @@ public interface ImmutableConfiguration {
      *         String.
      * @since 2.8.0
      */
-    default <T extends Enum<T>> T getEnum(final String key, final Class<T> enumType) {
+    default <T extends Enum<T>> T getEnum(final @RUntainted String key, final Class<T> enumType) {
         try {
             return Enum.valueOf(enumType, getString(key));
         } catch (final IllegalArgumentException e) {
@@ -402,7 +402,7 @@ public interface ImmutableConfiguration {
      *         Enum.
      * @since 2.8.0
      */
-    default <T extends Enum<T>> T getEnum(final String key, final Class<T> enumType, final T defaultValue) {
+    default <T extends Enum<T>> T getEnum(final @RUntainted String key, final Class<T> enumType, final T defaultValue) {
         final String strValue = getString(key, null);
         if (strValue == null) {
             return defaultValue;
@@ -422,7 +422,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Float.
      */
-    float getFloat(String key);
+    float getFloat(@RUntainted String key);
 
     /**
      * Gets a float associated with the given configuration key. If the key doesn't map to an existing object, the default
@@ -434,7 +434,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Float.
      */
-    float getFloat(String key, float defaultValue);
+    float getFloat(@RUntainted String key, float defaultValue);
 
     /**
      * Gets a {@link Float} associated with the given configuration key. If the key doesn't map to an existing object, the
@@ -446,7 +446,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Float.
      */
-    Float getFloat(String key, Float defaultValue);
+    Float getFloat(@RUntainted String key, Float defaultValue);
 
     /**
      * Gets a int associated with the given configuration key.
@@ -456,7 +456,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Integer.
      */
-    int getInt(String key);
+    int getInt(@RUntainted String key);
 
     /**
      * Gets a int associated with the given configuration key. If the key doesn't map to an existing object, the default
@@ -468,7 +468,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Integer.
      */
-    int getInt(String key, int defaultValue);
+    int getInt(@RUntainted String key, int defaultValue);
 
     /**
      * Gets an {@link Integer} associated with the given configuration key. If the key doesn't map to an existing object,
@@ -480,7 +480,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Integer.
      */
-    Integer getInteger(String key, Integer defaultValue);
+    Integer getInteger(@RUntainted String key, Integer defaultValue);
 
     /**
      * Gets the list of the keys contained in the configuration. The returned iterator can be used to obtain all defined
@@ -490,7 +490,7 @@ public interface ImmutableConfiguration {
      *
      * @return An Iterator.
      */
-    Iterator<String> getKeys();
+    Iterator<@RUntainted String> getKeys();
 
     /**
      * Gets the list of the keys contained in the configuration that match the specified prefix. For instance, if the
@@ -506,7 +506,7 @@ public interface ImmutableConfiguration {
      * @return An Iterator of keys that match the prefix.
      * @see #getKeys()
      */
-    Iterator<String> getKeys(String prefix);
+    @RUntainted Iterator<@RUntainted String> getKeys(@RUntainted String prefix);
 
     /**
      * Gets a list of typed objects associated with the given configuration key returning a null if the key doesn't map to
@@ -522,7 +522,7 @@ public interface ImmutableConfiguration {
      *
      * @since 2.0
      */
-    <T> List<T> getList(Class<T> cls, String key);
+    <T> List<T> getList(Class<T> cls, @RUntainted String key);
 
     /**
      * Gets a list of typed objects associated with the given configuration key returning the specified default value if the
@@ -542,7 +542,7 @@ public interface ImmutableConfiguration {
      *
      * @since 2.0
      */
-    <T> List<T> getList(Class<T> cls, String key, List<T> defaultValue);
+    <T> List<T> getList(Class<T> cls, @RUntainted String key, List<T> defaultValue);
 
     /**
      * Gets a List of the values associated with the given configuration key. This method is different from the generic
@@ -557,7 +557,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         List.
      */
-    List<Object> getList(String key);
+    List<Object> getList(@RUntainted String key);
 
     /**
      * Gets a List of strings associated with the given configuration key. If the key doesn't map to an existing object, the
@@ -571,7 +571,7 @@ public interface ImmutableConfiguration {
      *         List.
      * @see #getList(Class, String, List)
      */
-    List<Object> getList(String key, List<?> defaultValue);
+    List<Object> getList(@RUntainted String key, List<?> defaultValue);
 
     /**
      * Gets a long associated with the given configuration key.
@@ -581,7 +581,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Long.
      */
-    long getLong(String key);
+    long getLong(@RUntainted String key);
 
     /**
      * Gets a long associated with the given configuration key. If the key doesn't map to an existing object, the default
@@ -594,7 +594,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Long.
      */
-    long getLong(String key, long defaultValue);
+    long getLong(@RUntainted String key, long defaultValue);
 
     /**
      * Gets a {@link Long} associated with the given configuration key. If the key doesn't map to an existing object, the
@@ -607,7 +607,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Long.
      */
-    Long getLong(String key, Long defaultValue);
+    Long getLong(@RUntainted String key, Long defaultValue);
 
     /**
      * Gets a list of properties associated with the given configuration key. This method expects the given key to have an
@@ -621,7 +621,7 @@ public interface ImmutableConfiguration {
      *         String/List.
      * @throws IllegalArgumentException if one of the tokens is malformed (does not contain an equals sign).
      */
-    Properties getProperties(String key);
+    Properties getProperties(@RUntainted String key);
 
     /**
      * Gets a property from the configuration. This is the most basic get method for retrieving values of properties. In a
@@ -635,7 +635,7 @@ public interface ImmutableConfiguration {
      * @return the value to which this configuration maps the specified key, or null if the configuration contains no
      *         mapping for this key.
      */
-    Object getProperty(String key);
+    @RUntainted Object getProperty(@RUntainted String key);
 
     /**
      * Gets a short associated with the given configuration key.
@@ -646,7 +646,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Short.
      */
-    short getShort(String key);
+    short getShort(@RUntainted String key);
 
     /**
      * Gets a short associated with the given configuration key.
@@ -658,7 +658,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Short.
      */
-    short getShort(String key, short defaultValue);
+    short getShort(@RUntainted String key, short defaultValue);
 
     /**
      * Gets a {@link Short} associated with the given configuration key. If the key doesn't map to an existing object, the
@@ -671,7 +671,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         Short.
      */
-    Short getShort(String key, Short defaultValue);
+    Short getShort(@RUntainted String key, Short defaultValue);
 
     /**
      * Gets a string associated with the given configuration key.
@@ -682,7 +682,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         String.
      */
-    String getString(String key);
+    @RUntainted String getString(@RUntainted String key);
 
     /**
      * Gets a string associated with the given configuration key. If the key doesn't map to an existing object, the default
@@ -695,7 +695,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         String.
      */
-    String getString(String key, String defaultValue);
+    @RUntainted String getString(@RUntainted String key, @RUntainted String defaultValue);
 
     /**
      * Gets an array of strings associated with the given configuration key. If the key doesn't map to an existing object an
@@ -707,7 +707,7 @@ public interface ImmutableConfiguration {
      * @throws org.apache.commons.configuration2.ex.ConversionException is thrown if the key maps to an object that is not a
      *         String/List of Strings.
      */
-    String[] getStringArray(String key);
+    String[] getStringArray(@RUntainted String key);
 
     /**
      * Return a decorator immutable Configuration containing every key from the current Configuration that starts with the
@@ -734,7 +734,7 @@ public interface ImmutableConfiguration {
      * @param prefix The prefix used to select the properties.
      * @return a subset immutable configuration
      */
-    ImmutableConfiguration immutableSubset(String prefix);
+    ImmutableConfiguration immutableSubset(@RUntainted String prefix);
 
     /**
      * Checks if the configuration is empty.

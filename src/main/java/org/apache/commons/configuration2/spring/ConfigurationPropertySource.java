@@ -45,7 +45,7 @@ public class ConfigurationPropertySource extends EnumerablePropertySource<Config
     }
 
     @Override
-    public Object getProperty(final String name) {
+    public Object getProperty(final @RUntainted String name) {
         return source.getString(name);
     }
 }

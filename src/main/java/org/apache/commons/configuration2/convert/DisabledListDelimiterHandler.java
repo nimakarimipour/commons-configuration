@@ -49,7 +49,7 @@ public class DisabledListDelimiterHandler extends AbstractListDelimiterHandler {
      * {@inheritDoc} This implementation always throws an {@code UnsupportedOperationException} exception.
      */
     @Override
-    public Object escapeList(final List<?> values, final ValueTransformer transformer) {
+    public @RUntainted Object escapeList(final List<?> values, final ValueTransformer transformer) {
         throw new UnsupportedOperationException("Escaping lists is not supported!");
     }
 
@@ -59,8 +59,8 @@ public class DisabledListDelimiterHandler extends AbstractListDelimiterHandler {
      * extracted from the string. Because no components are extracted nothing is trimmed.)
      */
     @Override
-    protected Collection<String> splitString(final String s, final boolean trim) {
-        final Collection<String> result = new ArrayList<>(1);
+    protected Collection<@RUntainted String> splitString(final String s, final boolean trim) {
+        final Collection<@RUntainted String> result = new ArrayList<>(1);
         result.add(s);
         return result;
     }
@@ -69,7 +69,7 @@ public class DisabledListDelimiterHandler extends AbstractListDelimiterHandler {
      * {@inheritDoc} This implementation returns the passed in string without any changes.
      */
     @Override
-    protected String escapeString(final String s) {
+    protected @RUntainted String escapeString(final @RUntainted String s) {
         return s;
     }
 }

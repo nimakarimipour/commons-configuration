@@ -51,7 +51,7 @@ public class DefaultConfigurationKey {
     private final DefaultExpressionEngine expressionEngine;
 
     /** Holds a buffer with the so far created key. */
-    private final StringBuilder keyBuffer;
+    private final @RUntainted StringBuilder keyBuffer;
 
     /**
      * Creates a new instance of {@code DefaultConfigurationKey} and sets the associated expression engine.
@@ -71,7 +71,7 @@ public class DefaultConfigurationKey {
      * @param key the key to be wrapped
      * @throws IllegalArgumentException if the expression engine is <b>null</b>
      */
-    public DefaultConfigurationKey(final DefaultExpressionEngine engine, final String key) {
+    public DefaultConfigurationKey(final DefaultExpressionEngine engine, final @RUntainted String key) {
         if (engine == null) {
             throw new IllegalArgumentException("Expression engine must not be null!");
         }
@@ -267,7 +267,7 @@ public class DefaultConfigurationKey {
      * @return a string for this object
      */
     @Override
-    public String toString() {
+    public @RUntainted String toString() {
         return keyBuffer.toString();
     }
 
@@ -324,7 +324,7 @@ public class DefaultConfigurationKey {
      * @param key the key
      * @return the key with removed leading property delimiters
      */
-    public String trimLeft(final String key) {
+    public @RPolyTainted String trimLeft(final @RPolyTainted String key) {
         if (key == null) {
             return StringUtils.EMPTY;
         }
@@ -341,7 +341,7 @@ public class DefaultConfigurationKey {
      * @param key the key
      * @return the key with removed trailing property delimiters
      */
-    public String trimRight(final String key) {
+    public @RPolyTainted String trimRight(final @RPolyTainted String key) {
         if (key == null) {
             return StringUtils.EMPTY;
         }
@@ -358,7 +358,7 @@ public class DefaultConfigurationKey {
      * @param key the key
      * @return the key with removed property delimiters
      */
-    public String trim(final String key) {
+    public @RPolyTainted String trim(final @RPolyTainted String key) {
         return trimRight(trimLeft(key));
     }
 

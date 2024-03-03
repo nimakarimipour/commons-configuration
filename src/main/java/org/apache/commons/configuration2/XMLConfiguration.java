@@ -587,7 +587,7 @@ public class XMLConfiguration extends BaseHierarchicalConfiguration implements F
     private ImmutableNode createChildNodeWithValue(final ImmutableNode.Builder parent, final ImmutableNode.Builder child, final Element elem,
         final String value, final boolean trim, final Map<String, String> attrmap, final Map<ImmutableNode, Object> elemRefs) {
         final ImmutableNode addedChildNode;
-        final Collection<String> values;
+        final Collection<@RUntainted String> values;
 
         if (value != null) {
             values = getListDelimiterHandler().split(value, trim);

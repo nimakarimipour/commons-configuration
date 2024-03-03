@@ -47,7 +47,7 @@ public interface NodeHandler<T> {
      * @param node the node
      * @return the value of this node
      */
-    Object getValue(T node);
+    @RUntainted Object getValue(T node);
 
     /**
      * Gets the parent of the specified node.
