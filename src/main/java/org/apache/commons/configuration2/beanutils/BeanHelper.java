@@ -405,7 +405,7 @@ public final class BeanHelper {
      * @throws ConfigurationRuntimeException if the class cannot be determined
      */
     private static Class<?> fetchBeanClass(final BeanDeclaration data, final Class<?> defaultClass, final BeanFactory factory) {
-        final String clsName = data.getBeanClassName();
+        final @RUntainted String clsName = data.getBeanClassName();
         if (clsName != null) {
             try {
                 return loadClass(clsName);
