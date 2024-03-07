@@ -1,0 +1,6 @@
+2024-03-06T21:50:09.666568:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-06T21:50:22.826719:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
+2024-03-06T21:50:36.263557:cd /home/nima/Developer/taint-benchmarks/commons-configuration && ./annotator-command.sh
+
