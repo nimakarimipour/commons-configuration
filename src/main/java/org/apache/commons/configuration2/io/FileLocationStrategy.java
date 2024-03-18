@@ -17,6 +17,7 @@
 package org.apache.commons.configuration2.io;
 
 import java.net.URL;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -54,5 +55,5 @@ public interface FileLocationStrategy {
      * @return a URL pointing to the referenced file if location was successful; <b>null</b> if the file could not be
      *         resolved
      */
-    URL locate(FileSystem fileSystem, FileLocator locator);
+    @RUntainted URL locate(FileSystem fileSystem, FileLocator locator);
 }

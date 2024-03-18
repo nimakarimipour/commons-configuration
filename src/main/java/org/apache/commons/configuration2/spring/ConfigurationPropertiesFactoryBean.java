@@ -28,6 +28,7 @@ import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.core.io.Resource;
 import org.springframework.util.Assert;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -52,7 +53,7 @@ public class ConfigurationPropertiesFactoryBean implements InitializingBean, Fac
     private Configuration[] configurations;
 
     /** Spring resources for loading configurations **/
-    private Resource[] locations;
+    private @RUntainted Resource[] locations;
 
     /** @see org.apache.commons.configuration2.AbstractConfiguration#throwExceptionOnMissing **/
     private boolean throwExceptionOnMissing = true;
@@ -138,7 +139,7 @@ public class ConfigurationPropertiesFactoryBean implements InitializingBean, Fac
      *
      * @param locations resources of configuration files
      */
-    public void setLocations(final Resource... locations) {
+    public void setLocations(final @RUntainted Resource... locations) {
         this.locations = defensiveCopy(locations);
     }
 

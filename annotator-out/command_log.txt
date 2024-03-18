@@ -6,3 +6,789 @@
 
 2023-10-13T15:12:24.286859:cd /home/kdas006/annotation_dataset/commons-configuration && mvn clean compile -Drat.skip=true
 
+2024-03-15T15:38:13.382296298:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:39:05.598399880:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:39:53.571189469:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:40:41.387200064:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:41:28.208542742:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:42:14.630272924:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:43:02.180228980:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:43:49.750697869:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:44:36.476009005:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:45:24.103161304:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:46:12.105172295:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:46:58.886272265:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:47:45.194222181:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:48:31.882639004:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:49:18.864287230:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:50:06.235049968:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:50:53.349422161:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:51:41.457486849:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:52:28.048085030:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:53:15.008345243:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:54:02.031661873:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:54:49.508025728:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:55:36.479580698:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:56:24.206521581:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:57:11.903471963:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:57:59.292987998:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:58:46.947735705:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T15:59:34.206626550:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:00:22.014331476:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:01:10.050427363:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:01:58.095747897:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:02:47.439618871:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:03:35.656422584:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:04:24.549466066:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:05:13.380416003:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:06:00.857677845:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:06:48.114429020:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:07:36.105877486:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:08:24.744401738:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:09:13.691435925:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:10:02.326401233:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:10:51.088306416:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:11:40.625171375:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:12:29.690221936:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:13:19.301104002:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:14:08.039076452:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:14:57.417539929:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:15:48.619146098:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:16:38.508417783:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:17:27.295920637:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:18:16.660698542:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:19:05.023400797:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:19:52.491399959:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:20:42.158460915:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:21:31.112500931:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:22:20.561575918:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:23:09.854305271:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:23:59.472943857:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:24:48.359822848:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:25:36.589725161:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:26:26.300170237:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:27:14.906047913:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:28:03.835285975:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:28:52.466987817:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:29:41.526073700:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:30:30.272357258:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:31:19.721320061:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:32:09.776967885:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:32:59.243533997:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:33:47.403911595:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:34:35.663748251:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:35:24.255591301:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:36:13.536903809:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:37:01.459803093:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:37:49.325234470:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:38:37.301357959:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:39:26.398762454:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:40:14.810480162:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:41:02.749706281:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:41:50.593641262:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:42:39.878128322:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:43:27.176750788:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:44:15.173673016:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:45:03.144623533:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:45:51.481853125:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:46:40.974660588:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:47:29.074054354:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:48:16.972098352:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:49:03.673739567:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:49:51.915241740:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:50:38.683445600:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:51:26.580676459:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:52:14.622491884:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:53:01.790361174:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:53:49.864909624:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:54:37.107622326:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:55:23.528780321:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:56:11.487646932:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:56:59.733977049:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:57:48.060111403:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:58:36.321874357:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T16:59:23.855386695:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:00:11.470751193:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:01:01.440118315:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:01:49.215203456:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:02:35.994506257:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:03:23.797646462:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:04:11.514363790:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:04:59.407114044:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:05:47.096491481:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:06:35.069635559:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:07:23.741452492:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:08:12.211978396:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:08:59.878932223:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:09:47.806330824:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:10:35.300801565:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:11:24.041651540:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:12:12.274204121:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:13:00.389350378:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:13:48.410490465:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:14:37.408850904:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:15:27.022616516:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:16:16.222435870:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:17:03.824990576:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:17:52.111687714:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:18:40.257199219:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:19:29.281167441:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:20:17.768416384:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:21:05.228475601:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:21:53.697921015:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:22:42.652102792:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:23:31.187758572:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:24:20.618466290:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:25:09.094748729:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:25:56.659641680:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:26:45.054141980:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:27:32.331121741:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:28:19.295979830:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:29:07.164782829:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:29:53.775003934:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:30:42.652521126:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:31:31.386771487:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:32:19.633862779:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:33:07.236461144:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:33:55.001823239:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:34:43.214637638:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:35:30.822822307:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:36:18.347190835:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:37:07.282407703:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:37:55.654580539:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:38:43.149311067:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:39:31.071230240:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:40:19.015208919:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:41:07.439295221:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:41:56.419029683:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:42:45.073861739:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:43:33.374956378:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:44:21.921209248:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:45:10.332671056:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:45:58.881983919:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:46:46.641284330:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:47:36.006072188:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:48:24.980169895:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:49:13.988130782:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:50:03.720022995:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:50:51.678395373:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:51:39.737055235:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:52:28.492418860:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:53:18.001690306:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:54:07.958202328:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:54:56.918523583:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:55:45.595854218:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:56:34.541834393:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:57:25.498069983:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:58:15.191658671:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:59:03.274128010:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T17:59:51.926602224:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:00:41.024410956:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:01:29.768232348:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:02:20.431121884:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:03:10.588741451:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:03:59.711033187:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:04:48.164633282:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:05:36.818706801:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:06:24.949472669:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:07:14.585208359:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:08:03.026448180:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:08:52.451886294:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:09:40.644209813:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:10:29.732320762:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:11:17.993545890:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:12:06.268907184:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:12:54.914871778:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:13:44.746067004:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:14:34.052960267:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:15:23.731461716:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:16:13.925024007:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:17:03.018390419:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:17:52.035211431:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:18:41.042497001:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:19:30.408210075:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:20:19.797251487:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:21:09.110913556:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:21:59.088415105:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:22:48.331958643:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:23:37.388926561:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:24:27.413002353:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:25:17.769055942:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:26:06.953641783:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:26:56.574290753:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:27:47.489161514:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:28:37.069371427:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:29:27.042457121:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:30:16.080314724:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:31:05.842134234:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:31:56.153839988:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:32:46.873914666:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:33:36.701173208:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:34:26.495730988:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:35:16.189729847:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:36:07.131773911:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:36:57.859815918:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:37:46.644648205:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:38:36.524393401:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:39:26.524025222:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:40:16.273640838:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:41:06.287822930:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:41:56.581305149:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:42:46.364974838:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:43:34.604987744:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:44:23.307639138:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:45:11.967228440:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:46:01.298641357:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:46:51.914671278:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:47:41.282782811:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:48:30.569235076:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:49:18.879913377:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:50:08.444595278:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:50:57.783134891:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:51:47.054998226:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:52:36.370324034:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:53:25.651269850:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:54:14.687102532:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:55:03.086737634:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:55:52.767571176:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:56:43.008222761:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:57:32.384649275:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:58:21.051604035:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:59:09.930698291:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T18:59:59.410191481:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:00:48.483968432:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:01:39.118076017:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:02:28.542608489:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:03:17.619530667:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:04:06.015174336:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:04:54.446311631:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:05:42.526282428:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:06:32.276447478:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:07:23.075079641:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:08:12.741207334:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:09:01.757466585:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:09:50.544826357:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:10:40.676242151:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:11:31.165853096:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:12:22.477149405:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:13:12.674504840:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:14:02.399807477:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:14:51.582296529:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:15:41.448065024:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:16:32.096380278:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:17:22.890604421:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:18:12.925714607:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:19:01.256573713:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:19:50.099336462:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:20:39.726755237:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:21:30.735822444:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:22:20.053010696:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:23:11.931432444:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:24:02.720488647:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:24:52.276461300:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:25:42.736499936:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:26:33.204190635:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:27:24.354346783:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:28:13.601162739:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:29:02.871537687:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:29:51.790626483:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:30:41.602396062:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:31:31.562338945:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:32:20.999151564:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:33:09.310152528:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:33:57.841396559:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:34:47.109300720:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:35:37.205404534:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:36:26.671767621:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:37:16.367203351:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:38:06.669926950:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:38:56.946145345:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:39:46.500593018:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:40:35.556647884:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:41:24.487444260:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:42:14.299233850:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:43:04.249519314:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:43:53.511701950:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:44:42.312631098:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:45:31.830629756:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:46:21.230918440:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:47:10.779493776:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:48:00.449094433:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:48:49.783390877:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:49:38.650876803:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:50:27.806085759:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:51:17.044512918:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:52:06.490114705:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:52:56.294819729:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:53:45.926315307:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:54:35.104110635:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:55:24.289098414:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:56:14.523697634:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:57:04.190417441:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:57:53.931343573:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:58:44.159113694:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T19:59:33.161633555:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:00:22.906592120:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:01:12.445324935:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:02:02.854840376:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:02:53.929955617:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:03:43.584510377:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:04:32.758290581:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:05:21.764085573:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:06:12.084732409:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:07:03.049450005:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:07:52.666827316:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:08:43.720414602:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:09:34.192508050:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:10:23.816632944:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:11:14.178436726:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:12:04.409731565:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:12:54.177878077:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:13:43.419985921:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:14:32.144735557:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:15:21.282750602:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:16:10.802275051:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:16:58.718634246:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:17:47.359576798:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:18:36.209954465:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:19:24.456469992:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:20:13.378224676:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:21:02.737185329:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:21:52.679943719:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:22:40.906525095:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:23:29.896916845:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:24:18.953057841:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:25:08.456385280:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:25:57.984965825:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:26:47.321974191:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:27:37.761548247:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:28:27.405356744:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:29:16.621736173:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:30:06.039050452:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:30:55.394423555:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:31:43.149111192:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:32:30.613978564:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:33:18.638336637:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:34:06.538344826:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:34:54.158945615:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:35:41.501464204:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:36:28.549866649:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:37:17.471574753:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:38:05.651427625:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:38:53.257053066:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:39:41.158004338:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:40:28.248026979:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:41:16.879876169:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:42:04.838020261:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:42:53.946039169:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:43:41.866759405:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:44:29.287472303:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:45:16.064678226:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:46:03.748373606:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:46:53.134588353:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:47:42.355337332:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:48:30.464347410:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:49:17.445550614:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:50:04.688565599:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:50:52.743139895:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:51:41.418940401:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:52:29.437482338:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:53:18.466138296:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:54:06.223827017:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:54:53.606460947:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:55:41.174026299:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:56:29.503938212:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
+2024-03-15T20:57:18.497937267:cd /home/kdas006/annotation_dataset/commons-configuration && ./annotator-command.sh
+
