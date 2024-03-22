@@ -18,6 +18,7 @@ package org.apache.commons.configuration2;
 
 import java.util.List;
 import org.apache.commons.configuration2.tree.ExpressionEngine;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

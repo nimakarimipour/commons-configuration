@@ -21,6 +21,7 @@ import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Iterator;
 import javax.servlet.FilterConfig;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A configuration wrapper around a {@link FilterConfig}. This configuration is read only, adding or removing a property

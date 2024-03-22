@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.List;
 import org.apache.commons.configuration2.tree.ExpressionEngine;
 import org.apache.commons.configuration2.tree.NodeModelSupport;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
