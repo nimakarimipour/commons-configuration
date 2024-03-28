@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -49,7 +50,7 @@ public interface FileBased {
      * @throws ConfigurationException if a non-I/O related problem occurs, e.g. the data read does not have the expected
      *         format
      */
-    void read(Reader in) throws ConfigurationException, IOException;
+    void read(@RUntainted Reader in) throws ConfigurationException, IOException;
 
     /**
      * Writes the content of this object to the given writer. <strong>Client code should not call this method directly, but

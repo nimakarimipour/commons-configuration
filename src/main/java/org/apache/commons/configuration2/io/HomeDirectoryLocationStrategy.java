@@ -19,6 +19,7 @@ package org.apache.commons.configuration2.io;
 import java.io.File;
 import java.net.URL;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -101,7 +102,7 @@ public class HomeDirectoryLocationStrategy implements FileLocationStrategy {
      * sub directory of the home directory is searched.
      */
     @Override
-    public URL locate(final FileSystem fileSystem, final FileLocator locator) {
+    public @RUntainted URL locate(final FileSystem fileSystem, final FileLocator locator) {
         if (StringUtils.isNotEmpty(locator.getFileName())) {
             final String basePath = fetchBasePath(locator);
             final File file = FileLocatorUtils.constructFile(basePath, locator.getFileName());

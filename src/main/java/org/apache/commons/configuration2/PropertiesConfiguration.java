@@ -50,6 +50,8 @@ import org.apache.commons.text.translate.CharSequenceTranslator;
 import org.apache.commons.text.translate.EntityArrays;
 import org.apache.commons.text.translate.LookupTranslator;
 import org.apache.commons.text.translate.UnicodeEscaper;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * This is the "classic" Properties loader which loads the values from a single or multiple files (which can be chained
@@ -468,7 +470,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
         private static final int IDX_SEPARATOR = 3;
 
         /** Stores the comment lines for the currently processed property. */
-        private final List<String> commentLines;
+        private final List<@RUntainted String> commentLines;
 
         /** Stores the name of the last read property. */
         private String propertyName;
@@ -477,7 +479,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
         private String propertyValue;
 
         /** Stores the property separator of the last read property. */
-        private String propertySeparator = DEFAULT_SEPARATOR;
+        private @RUntainted String propertySeparator = DEFAULT_SEPARATOR;
 
         /**
          * Constructor.
@@ -533,7 +535,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the comment lines for the last property returned by {@code readProperty()}
          * @since 1.3
          */
-        public List<String> getCommentLines() {
+        public List<@RUntainted String> getCommentLines() {
             return commentLines;
         }
 
@@ -555,7 +557,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the separator for the last read property
          * @since 1.7
          */
-        public String getPropertySeparator() {
+        public @RUntainted String getPropertySeparator() {
             return propertySeparator;
         }
 
@@ -740,13 +742,13 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
         private final ListDelimiterHandler delimiterHandler;
 
         /** The separator to be used for the current property. */
-        private String currentSeparator;
+        private @RUntainted String currentSeparator;
 
         /** The global separator. If set, it overrides the current separator. */
-        private String globalSeparator;
+        private @RUntainted String globalSeparator;
 
         /** The line separator. */
-        private String lineSeparator;
+        private @RUntainted String lineSeparator;
 
         /**
          * Creates a new instance of {@code PropertiesWriter}.
@@ -779,7 +781,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the escaped key
          * @since 2.0
          */
-        protected String escapeKey(final String key) {
+        protected @RUntainted String escapeKey(final String key) {
             final StringBuilder newkey = new StringBuilder();
 
             for (int i = 0; i < key.length(); i++) {
@@ -807,7 +809,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the separator to be used
          * @since 1.7
          */
-        protected String fetchSeparator(final String key, final Object value) {
+        protected @RUntainted String fetchSeparator(final String key, final Object value) {
             return getGlobalSeparator() != null ? getGlobalSeparator() : StringUtils.defaultString(getCurrentSeparator());
         }
 
@@ -817,7 +819,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the current property separator
          * @since 1.7
          */
-        public String getCurrentSeparator() {
+        public @RUntainted String getCurrentSeparator() {
             return currentSeparator;
         }
 
@@ -838,7 +840,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the global property separator
          * @since 1.7
          */
-        public String getGlobalSeparator() {
+        public @RUntainted String getGlobalSeparator() {
             return globalSeparator;
         }
 
@@ -848,7 +850,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the line separator
          * @since 1.7
          */
-        public String getLineSeparator() {
+        public @RUntainted String getLineSeparator() {
             return lineSeparator != null ? lineSeparator : LINE_SEPARATOR;
         }
 
@@ -858,7 +860,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @param currentSeparator the current property separator
          * @since 1.7
          */
-        public void setCurrentSeparator(final String currentSeparator) {
+        public void setCurrentSeparator(final @RUntainted String currentSeparator) {
             this.currentSeparator = currentSeparator;
         }
 
@@ -870,7 +872,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @param globalSeparator the global property separator
          * @since 1.7
          */
-        public void setGlobalSeparator(final String globalSeparator) {
+        public void setGlobalSeparator(final @RUntainted String globalSeparator) {
             this.globalSeparator = globalSeparator;
         }
 
@@ -881,7 +883,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @param lineSeparator the line separator to be used
          * @since 1.7
          */
-        public void setLineSeparator(final String lineSeparator) {
+        public void setLineSeparator(final @RUntainted String lineSeparator) {
             this.lineSeparator = lineSeparator;
         }
 
@@ -891,7 +893,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @param comment the comment to write
          * @throws IOException if an I/O error occurs.
          */
-        public void writeComment(final String comment) throws IOException {
+        public void writeComment(final @RUntainted String comment) throws IOException {
             writeln("# " + comment);
         }
 
@@ -902,7 +904,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @throws IOException if an error occurs
          * @since 1.3
          */
-        public void writeln(final String s) throws IOException {
+        public void writeln(final @RUntainted String s) throws IOException {
             if (s != null) {
                 write(s);
             }
@@ -1440,7 +1442,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @param fileName the file name
      * @return the URL of the include file or <b>null</b> if it cannot be resolved
      */
-    private URL locateIncludeFile(final String basePath, final String fileName) {
+    private @RUntainted URL locateIncludeFile(final @RUntainted String basePath, final String fileName) {
         final FileLocator includeLocator = FileLocatorUtils.fileLocator(locator).sourceURL(null).basePath(basePath).fileName(fileName).create();
         return FileLocatorUtils.locate(includeLocator);
     }
@@ -1504,7 +1506,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @param footer the footer comment
      * @since 2.0
      */
-    public void setFooter(final String footer) {
+    public void setFooter(final @RUntainted String footer) {
         beginWrite(false);
         try {
             getLayout().setFooterComment(footer);
@@ -1519,7 +1521,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @param header the header to use
      * @since 1.1
      */
-    public void setHeader(final String header) {
+    public void setHeader(final @RUntainted String header) {
         beginWrite(false);
         try {
             getLayout().setHeaderComment(header);
