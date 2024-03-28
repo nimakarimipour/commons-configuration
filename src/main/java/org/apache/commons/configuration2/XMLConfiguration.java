@@ -64,6 +64,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -799,7 +800,7 @@ public class XMLConfiguration extends BaseHierarchicalConfiguration implements F
      * @throws IOException if an IO error occurs
      */
     @Override
-    public void read(final Reader in) throws ConfigurationException, IOException {
+    public void read(final @RUntainted Reader in) throws ConfigurationException, IOException {
         load(new InputSource(in));
     }
 
@@ -813,7 +814,7 @@ public class XMLConfiguration extends BaseHierarchicalConfiguration implements F
      * @throws IOException if an IO error occurs
      */
     @Override
-    public void read(final InputStream in) throws ConfigurationException, IOException {
+    public void read(final @RUntainted InputStream in) throws ConfigurationException, IOException {
         load(new InputSource(in));
     }
 
@@ -823,7 +824,7 @@ public class XMLConfiguration extends BaseHierarchicalConfiguration implements F
      * @param source the input source
      * @throws ConfigurationException if an error occurs
      */
-    private void load(final InputSource source) throws ConfigurationException {
+    private void load(final @RUntainted InputSource source) throws ConfigurationException {
         if (locator == null) {
             throw new ConfigurationException(
                 "Load operation not properly " + "initialized! Do not call read(InputStream) directly," + " but use a FileHandler to load a configuration.");

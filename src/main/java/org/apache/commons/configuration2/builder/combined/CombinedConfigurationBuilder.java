@@ -57,6 +57,7 @@ import org.apache.commons.configuration2.tree.DefaultExpressionEngineSymbols;
 import org.apache.commons.configuration2.tree.OverrideCombiner;
 import org.apache.commons.configuration2.tree.UnionCombiner;
 import org.xml.sax.EntityResolver;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
