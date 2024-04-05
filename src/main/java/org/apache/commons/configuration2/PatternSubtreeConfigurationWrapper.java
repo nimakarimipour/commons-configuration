@@ -34,6 +34,7 @@ import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.io.FileBased;
 import org.apache.commons.configuration2.tree.ExpressionEngine;
 import org.apache.commons.configuration2.tree.ImmutableNode;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Wraps a BaseHierarchicalConfiguration and allows subtrees to be accessed via a configured path with replaceable
@@ -89,7 +90,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public BigDecimal getBigDecimal(final String key, final BigDecimal defaultValue) {
+    public BigDecimal getBigDecimal(final String key, final @RUntainted BigDecimal defaultValue) {
         return config.getBigDecimal(makePath(key), defaultValue);
     }
 
@@ -99,7 +100,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public BigInteger getBigInteger(final String key, final BigInteger defaultValue) {
+    public BigInteger getBigInteger(final String key, final @RUntainted BigInteger defaultValue) {
         return config.getBigInteger(makePath(key), defaultValue);
     }
 
@@ -109,12 +110,12 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public boolean getBoolean(final String key, final boolean defaultValue) {
+    public boolean getBoolean(final String key, final @RUntainted boolean defaultValue) {
         return config.getBoolean(makePath(key), defaultValue);
     }
 
     @Override
-    public Boolean getBoolean(final String key, final Boolean defaultValue) {
+    public Boolean getBoolean(final String key, final @RUntainted Boolean defaultValue) {
         return config.getBoolean(makePath(key), defaultValue);
     }
 
@@ -124,12 +125,12 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public byte getByte(final String key, final byte defaultValue) {
+    public byte getByte(final String key, final @RUntainted byte defaultValue) {
         return config.getByte(makePath(key), defaultValue);
     }
 
     @Override
-    public Byte getByte(final String key, final Byte defaultValue) {
+    public Byte getByte(final String key, final @RUntainted Byte defaultValue) {
         return config.getByte(makePath(key), defaultValue);
     }
 
@@ -139,12 +140,12 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public double getDouble(final String key, final double defaultValue) {
+    public double getDouble(final String key, final @RUntainted double defaultValue) {
         return config.getDouble(makePath(key), defaultValue);
     }
 
     @Override
-    public Double getDouble(final String key, final Double defaultValue) {
+    public Double getDouble(final String key, final @RUntainted Double defaultValue) {
         return config.getDouble(makePath(key), defaultValue);
     }
 
@@ -154,12 +155,12 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public float getFloat(final String key, final float defaultValue) {
+    public float getFloat(final String key, final @RUntainted float defaultValue) {
         return config.getFloat(makePath(key), defaultValue);
     }
 
     @Override
-    public Float getFloat(final String key, final Float defaultValue) {
+    public Float getFloat(final String key, final @RUntainted Float defaultValue) {
         return config.getFloat(makePath(key), defaultValue);
     }
 
@@ -169,7 +170,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public int getInt(final String key, final int defaultValue) {
+    public int getInt(final String key, final @RUntainted int defaultValue) {
         return config.getInt(makePath(key), defaultValue);
     }
 
@@ -179,7 +180,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public Integer getInteger(final String key, final Integer defaultValue) {
+    public Integer getInteger(final String key, final @RUntainted Integer defaultValue) {
         return config.getInteger(makePath(key), defaultValue);
     }
 
@@ -204,12 +205,12 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public long getLong(final String key, final long defaultValue) {
+    public long getLong(final String key, final @RUntainted long defaultValue) {
         return config.getLong(makePath(key), defaultValue);
     }
 
     @Override
-    public Long getLong(final String key, final Long defaultValue) {
+    public Long getLong(final String key, final @RUntainted Long defaultValue) {
         return config.getLong(makePath(key), defaultValue);
     }
 
@@ -229,12 +230,12 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public short getShort(final String key, final short defaultValue) {
+    public short getShort(final String key, final @RUntainted short defaultValue) {
         return config.getShort(makePath(key), defaultValue);
     }
 
     @Override
-    public Short getShort(final String key, final Short defaultValue) {
+    public Short getShort(final String key, final @RUntainted Short defaultValue) {
         return config.getShort(makePath(key), defaultValue);
     }
 
@@ -249,7 +250,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public String getString(final String key) {
+    public @RUntainted String getString(final String key) {
         return config.getString(makePath(key));
     }
 
@@ -354,7 +355,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public void read(final Reader reader) throws ConfigurationException, IOException {
+    public void read(final @RUntainted Reader reader) throws ConfigurationException, IOException {
         fetchFileBased().read(reader);
     }
 

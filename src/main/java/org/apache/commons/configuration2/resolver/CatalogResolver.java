@@ -32,6 +32,7 @@ import org.apache.xml.resolver.readers.CatalogReader;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Thin wrapper around xml commons CatalogResolver to allow list of catalogs to be provided.
@@ -57,7 +58,7 @@ public class CatalogResolver implements EntityResolver {
     /**
      * The CatalogManager
      */
-    private final CatalogManager manager = new CatalogManager();
+    private final @RUntainted CatalogManager manager = new CatalogManager();
 
     /**
      * The FileSystem in use.
@@ -67,7 +68,7 @@ public class CatalogResolver implements EntityResolver {
     /**
      * The CatalogResolver
      */
-    private org.apache.xml.resolver.tools.CatalogResolver resolver;
+    private org.apache.xml.resolver.tools.@RUntainted CatalogResolver resolver;
 
     /**
      * Stores the logger.
@@ -108,7 +109,7 @@ public class CatalogResolver implements EntityResolver {
      *
      * @param baseDir The base path String.
      */
-    public void setBaseDir(final String baseDir) {
+    public void setBaseDir(final @RUntainted String baseDir) {
         manager.setBaseDir(baseDir);
     }
 
@@ -155,7 +156,7 @@ public class CatalogResolver implements EntityResolver {
      */
     @SuppressWarnings("resource") // InputSource wraps an InputStream.
     @Override
-    public InputSource resolveEntity(final String publicId, final String systemId) throws SAXException {
+    public InputSource resolveEntity(final @RUntainted String publicId, final @RUntainted String systemId) throws SAXException {
         String resolved = getResolver().getResolvedEntity(publicId, systemId);
 
         if (resolved != null) {
@@ -215,7 +216,7 @@ public class CatalogResolver implements EntityResolver {
         this.log = log != null ? log : ConfigurationLogger.newDummyLogger();
     }
 
-    private synchronized org.apache.xml.resolver.tools.CatalogResolver getResolver() {
+    private synchronized org.apache.xml.resolver.tools.@RUntainted CatalogResolver getResolver() {
         if (resolver == null) {
             resolver = new org.apache.xml.resolver.tools.CatalogResolver(manager);
         }
@@ -230,7 +231,7 @@ public class CatalogResolver implements EntityResolver {
      * @param name the file name
      * @return the URL pointing to the file
      */
-    private static URL locate(final FileSystem fs, final String basePath, final String name) {
+    private static @RUntainted URL locate(final FileSystem fs, final @RUntainted String basePath, final @RUntainted String name) {
         return FileLocatorUtils.locate(FileLocatorUtils.fileLocator().fileSystem(fs).basePath(basePath).fileName(name).create());
     }
 
@@ -245,7 +246,7 @@ public class CatalogResolver implements EntityResolver {
         private FileSystem fs;
 
         /** The base directory */
-        private String baseDir = System.getProperty("user.dir");
+        private @RUntainted String baseDir = System.getProperty("user.dir");
 
         /** The object for handling interpolation. */
         private ConfigurationInterpolator interpolator;
@@ -273,7 +274,7 @@ public class CatalogResolver implements EntityResolver {
          *
          * @param baseDir The base directory.
          */
-        public void setBaseDir(final String baseDir) {
+        public void setBaseDir(final @RUntainted String baseDir) {
             if (baseDir != null) {
                 this.baseDir = baseDir;
             }
@@ -284,7 +285,7 @@ public class CatalogResolver implements EntityResolver {
          *
          * @return The base directory.
          */
-        public String getBaseDir() {
+        public @RUntainted String getBaseDir() {
             return this.baseDir;
         }
 
@@ -371,7 +372,7 @@ public class CatalogResolver implements EntityResolver {
             final String base = ((CatalogManager) catalogManager).getBaseDir();
 
             // This is safe because the catalog manager returns a vector of strings.
-            final Vector<String> catalogs = catalogManager.getCatalogFiles();
+            final Vector<@RUntainted String> catalogs = catalogManager.getCatalogFiles();
             if (catalogs != null) {
                 for (int count = 0; count < catalogs.size(); count++) {
                     final String fileName = catalogs.elementAt(count);
@@ -416,7 +417,7 @@ public class CatalogResolver implements EntityResolver {
          * @param fileName The catalog file. May be a full URI String.
          * @throws IOException If an error occurs.
          */
-        public void parseCatalog(final String baseDir, final String fileName) throws IOException {
+        public void parseCatalog(final @RUntainted String baseDir, final @RUntainted String fileName) throws IOException {
             base = locate(fs, baseDir, fileName);
             catalogCwd = base;
             default_override = catalogManager.getPreferPublic();

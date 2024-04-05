@@ -22,6 +22,7 @@ import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.io.FileHandler;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A configuration based on the system properties.
@@ -49,7 +50,7 @@ public class SystemConfiguration extends MapConfiguration {
      * @throws ConfigurationException if an error occurs.
      * @since 1.6
      */
-    public static void setSystemProperties(final String fileName) throws ConfigurationException {
+    public static void setSystemProperties(final @RUntainted String fileName) throws ConfigurationException {
         setSystemProperties(null, fileName);
     }
 
@@ -62,7 +63,7 @@ public class SystemConfiguration extends MapConfiguration {
      * @throws ConfigurationException if an error occurs.
      * @since 1.6
      */
-    public static void setSystemProperties(final String basePath, final String fileName) throws ConfigurationException {
+    public static void setSystemProperties(final @RUntainted String basePath, final @RUntainted String fileName) throws ConfigurationException {
         final FileBasedConfiguration config = fileName.endsWith(".xml") ? new XMLPropertiesConfiguration() : new PropertiesConfiguration();
 
         final FileHandler handler = new FileHandler(config);

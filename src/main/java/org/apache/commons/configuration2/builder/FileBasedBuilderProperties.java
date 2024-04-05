@@ -21,6 +21,7 @@ import java.net.URL;
 import org.apache.commons.configuration2.io.FileLocationStrategy;
 import org.apache.commons.configuration2.io.FileSystem;
 import org.apache.commons.configuration2.io.URLConnectionOptions;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -39,7 +40,7 @@ public interface FileBasedBuilderProperties<T> {
      * @param path the base path
      * @return a reference to this object for method chaining
      */
-    T setBasePath(String path);
+    T setBasePath(@RUntainted String path);
 
     /**
      * Sets the encoding of the associated {@code FileHandler}.
@@ -47,7 +48,7 @@ public interface FileBasedBuilderProperties<T> {
      * @param enc the encoding
      * @return a reference to this object for method chaining
      */
-    T setEncoding(String enc);
+    T setEncoding(@RUntainted String enc);
 
     /**
      * Sets the location of the associated {@code FileHandler} as a {@code File} object.
@@ -55,7 +56,7 @@ public interface FileBasedBuilderProperties<T> {
      * @param file the {@code File} location
      * @return a reference to this object for method chaining
      */
-    T setFile(File file);
+    T setFile(@RUntainted File file);
 
     /**
      * Sets the file name of the associated {@code FileHandler}.
@@ -63,7 +64,7 @@ public interface FileBasedBuilderProperties<T> {
      * @param name the file name
      * @return a reference to this object for method chaining
      */
-    T setFileName(String name);
+    T setFileName(@RUntainted String name);
 
     /**
      * Sets the {@code FileSystem} of the associated {@code FileHandler}.
@@ -87,7 +88,7 @@ public interface FileBasedBuilderProperties<T> {
      * @param path the path location
      * @return a reference to this object for method chaining
      */
-    T setPath(String path);
+    T setPath(@RUntainted String path);
 
     /**
      * Sets the factory for creating {@code ReloadingDetector} objects. With this method a custom factory for reloading
@@ -112,7 +113,7 @@ public interface FileBasedBuilderProperties<T> {
      * @param url the {@code URL} location
      * @return a reference to this object for method chaining
      */
-    T setURL(URL url);
+    T setURL(@RUntainted URL url);
 
     /**
      * Sets the location of the associated {@code FileHandler} as a {@code URL} object.
@@ -122,7 +123,7 @@ public interface FileBasedBuilderProperties<T> {
      * @return a reference to this object for method chaining
      * @since 2.8.0
      */
-    default T setURL(final URL url, final URLConnectionOptions urlConnectionOptions) {
+    default T setURL(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) {
         return setURL(url);
     }
 }

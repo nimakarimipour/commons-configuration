@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Objects;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Carries options and operates on {@link URLConnection}.
@@ -79,7 +80,7 @@ public final class URLConnectionOptions {
      * @param urlConnection the target connection.
      * @return the given connection.
      */
-    public URLConnection apply(final URLConnection urlConnection) {
+    public @RUntainted URLConnection apply(final @RUntainted URLConnection urlConnection) {
         urlConnection.setUseCaches(useCaches);
         urlConnection.setConnectTimeout(connectTimeoutMillis);
         urlConnection.setReadTimeout(readTimeoutMillis);
@@ -147,7 +148,7 @@ public final class URLConnectionOptions {
      * @return A new connection
      * @throws IOException if an I/O exception occurs.
      */
-    public URLConnection openConnection(final URL url) throws IOException {
+    public @RUntainted URLConnection openConnection(final URL url) throws IOException {
         return apply(url.openConnection());
     }
 

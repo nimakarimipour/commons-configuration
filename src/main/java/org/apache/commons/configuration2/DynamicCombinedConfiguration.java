@@ -38,6 +38,7 @@ import org.apache.commons.configuration2.interpol.Lookup;
 import org.apache.commons.configuration2.io.ConfigurationLogger;
 import org.apache.commons.configuration2.tree.ImmutableNode;
 import org.apache.commons.configuration2.tree.NodeCombiner;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -321,7 +322,7 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public BigDecimal getBigDecimal(final String key, final BigDecimal defaultValue) {
+    public BigDecimal getBigDecimal(final String key, final @RUntainted BigDecimal defaultValue) {
         return this.getCurrentConfig().getBigDecimal(key, defaultValue);
     }
 
@@ -331,7 +332,7 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public BigInteger getBigInteger(final String key, final BigInteger defaultValue) {
+    public BigInteger getBigInteger(final String key, final @RUntainted BigInteger defaultValue) {
         return this.getCurrentConfig().getBigInteger(key, defaultValue);
     }
 
@@ -341,12 +342,12 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public boolean getBoolean(final String key, final boolean defaultValue) {
+    public boolean getBoolean(final String key, final @RUntainted boolean defaultValue) {
         return this.getCurrentConfig().getBoolean(key, defaultValue);
     }
 
     @Override
-    public Boolean getBoolean(final String key, final Boolean defaultValue) {
+    public Boolean getBoolean(final String key, final @RUntainted Boolean defaultValue) {
         return this.getCurrentConfig().getBoolean(key, defaultValue);
     }
 
@@ -356,12 +357,12 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public byte getByte(final String key, final byte defaultValue) {
+    public byte getByte(final String key, final @RUntainted byte defaultValue) {
         return this.getCurrentConfig().getByte(key, defaultValue);
     }
 
     @Override
-    public Byte getByte(final String key, final Byte defaultValue) {
+    public Byte getByte(final String key, final @RUntainted Byte defaultValue) {
         return this.getCurrentConfig().getByte(key, defaultValue);
     }
 
@@ -371,12 +372,12 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public double getDouble(final String key, final double defaultValue) {
+    public double getDouble(final String key, final @RUntainted double defaultValue) {
         return this.getCurrentConfig().getDouble(key, defaultValue);
     }
 
     @Override
-    public Double getDouble(final String key, final Double defaultValue) {
+    public Double getDouble(final String key, final @RUntainted Double defaultValue) {
         return this.getCurrentConfig().getDouble(key, defaultValue);
     }
 
@@ -386,12 +387,12 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public float getFloat(final String key, final float defaultValue) {
+    public float getFloat(final String key, final @RUntainted float defaultValue) {
         return this.getCurrentConfig().getFloat(key, defaultValue);
     }
 
     @Override
-    public Float getFloat(final String key, final Float defaultValue) {
+    public Float getFloat(final String key, final @RUntainted Float defaultValue) {
         return this.getCurrentConfig().getFloat(key, defaultValue);
     }
 
@@ -401,7 +402,7 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public int getInt(final String key, final int defaultValue) {
+    public int getInt(final String key, final @RUntainted int defaultValue) {
         return this.getCurrentConfig().getInt(key, defaultValue);
     }
 
@@ -411,7 +412,7 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public Integer getInteger(final String key, final Integer defaultValue) {
+    public Integer getInteger(final String key, final @RUntainted Integer defaultValue) {
         return this.getCurrentConfig().getInteger(key, defaultValue);
     }
 
@@ -436,12 +437,12 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public long getLong(final String key, final long defaultValue) {
+    public long getLong(final String key, final @RUntainted long defaultValue) {
         return this.getCurrentConfig().getLong(key, defaultValue);
     }
 
     @Override
-    public Long getLong(final String key, final Long defaultValue) {
+    public Long getLong(final String key, final @RUntainted Long defaultValue) {
         return this.getCurrentConfig().getLong(key, defaultValue);
     }
 
@@ -461,12 +462,12 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public short getShort(final String key, final short defaultValue) {
+    public short getShort(final String key, final @RUntainted short defaultValue) {
         return this.getCurrentConfig().getShort(key, defaultValue);
     }
 
     @Override
-    public Short getShort(final String key, final Short defaultValue) {
+    public Short getShort(final String key, final @RUntainted Short defaultValue) {
         return this.getCurrentConfig().getShort(key, defaultValue);
     }
 
@@ -481,7 +482,7 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public String getString(final String key) {
+    public @RUntainted String getString(final String key) {
         return this.getCurrentConfig().getString(key);
     }
 

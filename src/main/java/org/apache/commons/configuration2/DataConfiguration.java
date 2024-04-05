@@ -34,6 +34,7 @@ import org.apache.commons.configuration2.convert.DefaultConversionHandler;
 import org.apache.commons.configuration2.ex.ConversionException;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Decorator providing additional getters for any Configuration. This extended Configuration supports more types:
@@ -717,7 +718,7 @@ public class DataConfiguration extends AbstractConfiguration {
      *
      * @throws ConversionException is thrown if the key maps to an object that is not an URI.
      */
-    public URI getURI(final String key, final URI defaultValue) {
+    public URI getURI(final String key, final @RUntainted URI defaultValue) {
         return get(URI.class, key, defaultValue);
     }
 
@@ -797,7 +798,7 @@ public class DataConfiguration extends AbstractConfiguration {
      *
      * @throws ConversionException is thrown if the key maps to an object that is not an URL.
      */
-    public URL getURL(final String key, final URL defaultValue) {
+    public URL getURL(final String key, final @RUntainted URL defaultValue) {
         return get(URL.class, key, defaultValue);
     }
 
@@ -901,7 +902,7 @@ public class DataConfiguration extends AbstractConfiguration {
      *
      * @throws ConversionException is thrown if the key maps to an object that is not a Date.
      */
-    public Date getDate(final String key, final Date defaultValue) {
+    public Date getDate(final String key, final @RUntainted Date defaultValue) {
         return getDate(key, defaultValue, null);
     }
 
@@ -916,7 +917,7 @@ public class DataConfiguration extends AbstractConfiguration {
      *
      * @throws ConversionException is thrown if the key maps to an object that is not a Date.
      */
-    public Date getDate(final String key, final Date defaultValue, final String format) {
+    public Date getDate(final String key, final @RUntainted Date defaultValue, final String format) {
         TEMP_DATE_FORMAT.set(format);
         try {
             return get(Date.class, key, defaultValue);
@@ -1089,7 +1090,7 @@ public class DataConfiguration extends AbstractConfiguration {
      *
      * @throws ConversionException is thrown if the key maps to an object that is not a Calendar.
      */
-    public Calendar getCalendar(final String key, final Calendar defaultValue) {
+    public Calendar getCalendar(final String key, final @RUntainted Calendar defaultValue) {
         return getCalendar(key, defaultValue, null);
     }
 
@@ -1104,7 +1105,7 @@ public class DataConfiguration extends AbstractConfiguration {
      *
      * @throws ConversionException is thrown if the key maps to an object that is not a Calendar.
      */
-    public Calendar getCalendar(final String key, final Calendar defaultValue, final String format) {
+    public Calendar getCalendar(final String key, final @RUntainted Calendar defaultValue, final String format) {
         TEMP_DATE_FORMAT.set(format);
         try {
             return get(Calendar.class, key, defaultValue);
@@ -1276,7 +1277,7 @@ public class DataConfiguration extends AbstractConfiguration {
      *
      * @throws ConversionException is thrown if the key maps to an object that is not a Locale.
      */
-    public Locale getLocale(final String key, final Locale defaultValue) {
+    public Locale getLocale(final String key, final @RUntainted Locale defaultValue) {
         return get(Locale.class, key, defaultValue);
     }
 
@@ -1356,7 +1357,7 @@ public class DataConfiguration extends AbstractConfiguration {
      *
      * @throws ConversionException is thrown if the key maps to an object that is not a Color.
      */
-    public Color getColor(final String key, final Color defaultValue) {
+    public Color getColor(final String key, final @RUntainted Color defaultValue) {
         return get(Color.class, key, defaultValue);
     }
 

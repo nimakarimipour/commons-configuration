@@ -39,6 +39,8 @@ import org.apache.commons.configuration2.sync.NoOpSynchronizer;
 import org.apache.commons.configuration2.sync.Synchronizer;
 import org.apache.commons.configuration2.sync.SynchronizerSupport;
 import org.apache.commons.logging.LogFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>
@@ -273,7 +275,7 @@ public class FileHandler {
      * @return the newly created {@code FileHandler}
      * @see FileLocatorUtils#fromMap(Map)
      */
-    public static FileHandler fromMap(final Map<String, ?> map) {
+    public static FileHandler fromMap(final Map<String, @RUntainted ?> map) {
         return new FileHandler(null, FileLocatorUtils.fromMap(map));
     }
 
@@ -283,7 +285,7 @@ public class FileHandler {
      * @param fileName the string to be normalized
      * @return the normalized file URL
      */
-    private static String normalizeFileURL(String fileName) {
+    private static @RPolyTainted String normalizeFileURL(@RPolyTainted String fileName) {
         if (fileName != null && fileName.startsWith(FILE_SCHEME) && !fileName.startsWith(FILE_SCHEME_SLASH)) {
             fileName = FILE_SCHEME_SLASH + fileName.substring(FILE_SCHEME.length());
         }
@@ -347,7 +349,7 @@ public class FileHandler {
      * @param locator the {@code FileLocator} to copy
      * @return the manipulated {@code FileLocator} with the file name
      */
-    private FileLocator createLocatorWithFileName(final String fileName, final FileLocator locator) {
+    private FileLocator createLocatorWithFileName(final @RUntainted String fileName, final FileLocator locator) {
         return FileLocatorUtils.fileLocator(locator).sourceURL(null).fileName(fileName).create();
     }
 
@@ -405,7 +407,7 @@ public class FileHandler {
      *
      * @return the base path
      */
-    public String getBasePath() {
+    public @RUntainted String getBasePath() {
         final FileLocator locator = getFileLocator();
         if (locator.getBasePath() != null) {
             return locator.getBasePath();
@@ -432,7 +434,7 @@ public class FileHandler {
      *
      * @return the encoding of the associated file
      */
-    public String getEncoding() {
+    public @RUntainted String getEncoding() {
         return getFileLocator().getEncoding();
     }
 
@@ -464,7 +466,7 @@ public class FileHandler {
      *
      * @return the file name
      */
-    public String getFileName() {
+    public @RUntainted String getFileName() {
         final FileLocator locator = getFileLocator();
         if (locator.getFileName() != null) {
             return locator.getFileName();
@@ -517,7 +519,7 @@ public class FileHandler {
      *
      * @return a URL to the associated file; can be <b>null</b> if the location is unspecified
      */
-    public URL getURL() {
+    public @RUntainted URL getURL() {
         final FileLocator locator = getFileLocator();
         return locator.getSourceURL() != null ? locator.getSourceURL() : FileLocatorUtils.locate(locator);
     }
@@ -528,7 +530,7 @@ public class FileHandler {
      *
      * @param url the URL for the locator
      */
-    private void injectFileLocator(final URL url) {
+    private void injectFileLocator(final @RUntainted URL url) {
         if (url == null) {
             injectNullFileLocator();
         } else if (getContent() instanceof FileLocatorAware) {
@@ -574,7 +576,7 @@ public class FileHandler {
      * @param file the file to load
      * @throws ConfigurationException if an error occurs
      */
-    public void load(final File file) throws ConfigurationException {
+    public void load(final @RUntainted File file) throws ConfigurationException {
         final URL url;
         try {
             url = FileLocatorUtils.toURL(file);
@@ -601,7 +603,7 @@ public class FileHandler {
      * @param in the input stream
      * @throws ConfigurationException if an error occurs during the load operation
      */
-    public void load(final InputStream in) throws ConfigurationException {
+    public void load(final @RUntainted InputStream in) throws ConfigurationException {
         load(in, checkContentAndGetLocator());
     }
 
@@ -612,7 +614,7 @@ public class FileHandler {
      * @param locator the current {@code FileLocator}
      * @throws ConfigurationException if an error occurs
      */
-    private void load(final InputStream in, final FileLocator locator) throws ConfigurationException {
+    private void load(final @RUntainted InputStream in, final FileLocator locator) throws ConfigurationException {
         load(in, locator.getEncoding());
     }
 
@@ -624,7 +626,7 @@ public class FileHandler {
      * @param encoding the encoding used, {@code null} to use the default encoding
      * @throws ConfigurationException if an error occurs during the load operation
      */
-    public void load(final InputStream in, final String encoding) throws ConfigurationException {
+    public void load(final @RUntainted InputStream in, final @RUntainted String encoding) throws ConfigurationException {
         loadFromStream(in, encoding, null);
     }
 
@@ -634,7 +636,7 @@ public class FileHandler {
      * @param in the reader
      * @throws ConfigurationException if an error occurs during the load operation
      */
-    public void load(final Reader in) throws ConfigurationException {
+    public void load(final @RUntainted Reader in) throws ConfigurationException {
         checkContent();
         injectNullFileLocator();
         loadFromReader(in);
@@ -648,7 +650,7 @@ public class FileHandler {
      * @param fileName the name of the file to be loaded
      * @throws ConfigurationException if an error occurs
      */
-    public void load(final String fileName) throws ConfigurationException {
+    public void load(final @RUntainted String fileName) throws ConfigurationException {
         load(fileName, checkContentAndGetLocator());
     }
 
@@ -659,7 +661,7 @@ public class FileHandler {
      * @param locator the current {@code FileLocator}
      * @throws ConfigurationException if an error occurs
      */
-    private void load(final String fileName, final FileLocator locator) throws ConfigurationException {
+    private void load(final @RUntainted String fileName, final FileLocator locator) throws ConfigurationException {
         final FileLocator locFileName = createLocatorWithFileName(fileName, locator);
         final URL url = FileLocatorUtils.locateOrThrow(locFileName);
         load(url, locator);
@@ -671,7 +673,7 @@ public class FileHandler {
      * @param url the URL of the file to be loaded
      * @throws ConfigurationException if an error occurs
      */
-    public void load(final URL url) throws ConfigurationException {
+    public void load(final @RUntainted URL url) throws ConfigurationException {
         load(url, checkContentAndGetLocator());
     }
 
@@ -682,7 +684,7 @@ public class FileHandler {
      * @param locator the current {@code FileLocator}
      * @throws ConfigurationException if an error occurs
      */
-    private void load(final URL url, final FileLocator locator) throws ConfigurationException {
+    private void load(final @RUntainted URL url, final FileLocator locator) throws ConfigurationException {
         InputStream in = null;
 
         try {
@@ -705,7 +707,7 @@ public class FileHandler {
      * @param in the reader
      * @throws ConfigurationException if an error occurs
      */
-    private void loadFromReader(final Reader in) throws ConfigurationException {
+    private void loadFromReader(final @RUntainted Reader in) throws ConfigurationException {
         fireLoadingEvent();
         try {
             getContent().read(in);
@@ -724,7 +726,7 @@ public class FileHandler {
      * @param url the URL of the file to be loaded (if known)
      * @throws ConfigurationException if an error occurs
      */
-    private void loadFromStream(final InputStream in, final String encoding, final URL url) throws ConfigurationException {
+    private void loadFromStream(final @RUntainted InputStream in, final @RUntainted String encoding, final @RUntainted URL url) throws ConfigurationException {
         checkContent();
         final SynchronizerSupport syncSupport = fetchSynchronizerSupport();
         syncSupport.lock(LockMode.WRITE);
@@ -748,7 +750,7 @@ public class FileHandler {
      * @param in the input stream
      * @throws ConfigurationException if an error occurs
      */
-    private void loadFromStreamDirectly(final InputStream in) throws ConfigurationException {
+    private void loadFromStreamDirectly(final @RUntainted InputStream in) throws ConfigurationException {
         try {
             ((InputStreamSupport) getContent()).read(in);
         } catch (final IOException e) {
@@ -763,7 +765,7 @@ public class FileHandler {
      * @param encoding the encoding
      * @throws ConfigurationException if an error occurs
      */
-    private void loadFromTransformedStream(final InputStream in, final String encoding) throws ConfigurationException {
+    private void loadFromTransformedStream(final @RUntainted InputStream in, final @RUntainted String encoding) throws ConfigurationException {
         Reader reader = null;
 
         if (encoding != null) {
@@ -856,7 +858,7 @@ public class FileHandler {
      * @param file the target file
      * @throws ConfigurationException if an error occurs during the save operation
      */
-    public void save(final File file) throws ConfigurationException {
+    public void save(final @RUntainted File file) throws ConfigurationException {
         save(file, checkContentAndGetLocator());
     }
 
@@ -867,7 +869,7 @@ public class FileHandler {
      * @param locator the current {@code FileLocator}
      * @throws ConfigurationException if an error occurs during the save operation
      */
-    private void save(final File file, final FileLocator locator) throws ConfigurationException {
+    private void save(final @RUntainted File file, final FileLocator locator) throws ConfigurationException {
         OutputStream out = null;
 
         try {
@@ -938,7 +940,7 @@ public class FileHandler {
      * @param fileName the file name
      * @throws ConfigurationException if an error occurs during the save operation
      */
-    public void save(final String fileName) throws ConfigurationException {
+    public void save(final @RUntainted String fileName) throws ConfigurationException {
         save(fileName, checkContentAndGetLocator());
     }
 
@@ -949,7 +951,7 @@ public class FileHandler {
      * @param locator the current {@code FileLocator}
      * @throws ConfigurationException if an error occurs during the save operation
      */
-    private void save(final String fileName, final FileLocator locator) throws ConfigurationException {
+    private void save(final @RUntainted String fileName, final FileLocator locator) throws ConfigurationException {
         final URL url;
         try {
             url = FileLocatorUtils.getFileSystem(locator).getURL(locator.getBasePath(), fileName);
@@ -970,7 +972,7 @@ public class FileHandler {
      * @param url the URL
      * @throws ConfigurationException if an error occurs during the save operation
      */
-    public void save(final URL url) throws ConfigurationException {
+    public void save(final @RUntainted URL url) throws ConfigurationException {
         save(url, checkContentAndGetLocator());
     }
 
@@ -981,7 +983,7 @@ public class FileHandler {
      * @param locator the {@code FileLocator}
      * @throws ConfigurationException if an error occurs during the save operation
      */
-    private void save(final URL url, final FileLocator locator) throws ConfigurationException {
+    private void save(final @RUntainted URL url, final FileLocator locator) throws ConfigurationException {
         OutputStream out = null;
         try {
             out = FileLocatorUtils.getFileSystem(locator).getOutputStream(url);
@@ -1018,7 +1020,7 @@ public class FileHandler {
      * @param url the URL of the output file if known
      * @throws ConfigurationException if an error occurs
      */
-    private void saveToStream(final OutputStream out, final String encoding, final URL url) throws ConfigurationException {
+    private void saveToStream(final OutputStream out, final String encoding, final @RUntainted URL url) throws ConfigurationException {
         checkContent();
         final SynchronizerSupport syncSupport = fetchSynchronizerSupport();
         syncSupport.lock(LockMode.WRITE);
@@ -1073,7 +1075,7 @@ public class FileHandler {
      *
      * @param basePath the base path.
      */
-    public void setBasePath(final String basePath) {
+    public void setBasePath(final @RUntainted String basePath) {
         final String path = normalizeFileURL(basePath);
         new Updater() {
             @Override
@@ -1090,7 +1092,7 @@ public class FileHandler {
      *
      * @param encoding the encoding of the associated file
      */
-    public void setEncoding(final String encoding) {
+    public void setEncoding(final @RUntainted String encoding) {
         new Updater() {
             @Override
             protected void updateBuilder(final FileLocatorBuilder builder) {
@@ -1105,7 +1107,7 @@ public class FileHandler {
      *
      * @param file the location of the associated file
      */
-    public void setFile(final File file) {
+    public void setFile(final @RUntainted File file) {
         final String fileName = file.getName();
         final String basePath = file.getParentFile() != null ? file.getParentFile().getAbsolutePath() : null;
         new Updater() {
@@ -1138,7 +1140,7 @@ public class FileHandler {
      *
      * @param fileName the name of the file
      */
-    public void setFileName(final String fileName) {
+    public void setFileName(final @RUntainted String fileName) {
         final String name = normalizeFileURL(fileName);
         new Updater() {
             @Override
@@ -1190,7 +1192,7 @@ public class FileHandler {
      *
      * @param path the full path name of the associated file
      */
-    public void setPath(final String path) {
+    public void setPath(final @RUntainted String path) {
         setFile(new File(path));
     }
 
@@ -1201,7 +1203,7 @@ public class FileHandler {
      *
      * @param url the location of the file as URL
      */
-    public void setURL(final URL url) {
+    public void setURL(final @RUntainted URL url) {
         setURL(url, URLConnectionOptions.DEFAULT);
     }
 
@@ -1214,7 +1216,7 @@ public class FileHandler {
      * @param urlConnectionOptions URL connection options
      * @since 2.8.0
      */
-    public void setURL(final URL url, final URLConnectionOptions urlConnectionOptions) {
+    public void setURL(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) {
         new Updater() {
             @Override
             protected void updateBuilder(final FileLocatorBuilder builder) {
