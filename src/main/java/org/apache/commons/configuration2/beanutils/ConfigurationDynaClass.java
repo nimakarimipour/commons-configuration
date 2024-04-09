@@ -26,6 +26,7 @@ import org.apache.commons.beanutils.DynaProperty;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * The {@code ConfigurationDynaClass} dynamically determines properties for a {@code ConfigurationDynaBean} from a
