@@ -19,6 +19,7 @@ package org.apache.commons.configuration2.builder.combined;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.builder.ConfigurationBuilder;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

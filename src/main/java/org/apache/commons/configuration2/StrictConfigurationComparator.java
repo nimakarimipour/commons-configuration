@@ -18,6 +18,7 @@
 package org.apache.commons.configuration2;
 
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Strict comparator for configurations.

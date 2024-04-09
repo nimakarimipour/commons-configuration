@@ -17,6 +17,7 @@
 package org.apache.commons.configuration2.io;
 
 import java.net.URL;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -36,7 +37,7 @@ public class ProvidedURLLocationStrategy implements FileLocationStrategy {
      * {@inheritDoc} This implementation just returns the URL stored in the given {@code FileLocator}.
      */
     @Override
-    public URL locate(final FileSystem fileSystem, final FileLocator locator) {
+    public @RUntainted URL locate(final FileSystem fileSystem, final FileLocator locator) {
         return locator.getSourceURL();
     }
 }

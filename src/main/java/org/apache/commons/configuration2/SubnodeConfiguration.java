@@ -22,6 +22,7 @@ import org.apache.commons.configuration2.tree.InMemoryNodeModelSupport;
 import org.apache.commons.configuration2.tree.NodeModel;
 import org.apache.commons.configuration2.tree.NodeSelector;
 import org.apache.commons.configuration2.tree.TrackedNodeModel;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

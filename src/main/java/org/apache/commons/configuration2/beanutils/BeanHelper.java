@@ -35,6 +35,7 @@ import org.apache.commons.beanutils.WrapDynaBean;
 import org.apache.commons.beanutils.WrapDynaClass;
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
 import org.apache.commons.lang3.ClassUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -377,7 +378,7 @@ public final class BeanHelper {
      * @return the class object for the specified name
      * @throws ClassNotFoundException if the class cannot be loaded
      */
-    static Class<?> loadClass(final String name) throws ClassNotFoundException {
+    static Class<?> loadClass(final @RUntainted String name) throws ClassNotFoundException {
         return ClassUtils.getClass(name);
     }
 
