@@ -18,6 +18,7 @@ package org.apache.commons.configuration2.builder;
 
 import javax.xml.parsers.DocumentBuilder;
 import org.xml.sax.EntityResolver;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

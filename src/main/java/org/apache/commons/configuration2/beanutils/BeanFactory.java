@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 package org.apache.commons.configuration2.beanutils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -48,7 +49,7 @@ public interface BeanFactory {
      * @throws Exception if an error occurs (the helper classes for creating beans will catch this generic exception and
      *         wrap it in a configuration exception)
      */
-    Object createBean(BeanCreationContext bcc) throws Exception;
+    @RUntainted Object createBean(BeanCreationContext bcc) throws Exception;
 
     /**
      * Gets the default bean class of this bean factory. If an implementation here returns a non <b>null</b> value, bean

@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 package org.apache.commons.configuration2.beanutils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -35,7 +36,7 @@ public interface BeanCreationContext {
      *
      * @return the bean class
      */
-    Class<?> getBeanClass();
+    Class<@RUntainted ?> getBeanClass();
 
     /**
      * Gets the {@code BeanDeclaration} with the data for the new bean. This data is used to initialize the bean's

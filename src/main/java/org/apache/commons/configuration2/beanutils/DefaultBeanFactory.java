@@ -24,6 +24,7 @@ import java.util.List;
 import org.apache.commons.configuration2.convert.ConversionHandler;
 import org.apache.commons.configuration2.convert.DefaultConversionHandler;
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -94,7 +95,7 @@ public class DefaultBeanFactory implements BeanFactory {
      * @throws Exception if an error occurs
      */
     @Override
-    public Object createBean(final BeanCreationContext bcc) throws Exception {
+    public @RUntainted Object createBean(final BeanCreationContext bcc) throws Exception {
         final Object result = createBeanInstance(bcc);
         initBeanInstance(result, bcc);
         return result;
@@ -118,8 +119,8 @@ public class DefaultBeanFactory implements BeanFactory {
      * @return the new bean instance
      * @throws Exception if an error occurs
      */
-    protected Object createBeanInstance(final BeanCreationContext bcc) throws Exception {
-        final Constructor<?> ctor = findMatchingConstructor(bcc.getBeanClass(), bcc.getBeanDeclaration());
+    protected @RUntainted Object createBeanInstance(final BeanCreationContext bcc) throws Exception {
+        final Constructor<@RUntainted ?> ctor = findMatchingConstructor(bcc.getBeanClass(), bcc.getBeanDeclaration());
         final Object[] args = fetchConstructorArgs(ctor, bcc);
         return ctor.newInstance(args);
     }

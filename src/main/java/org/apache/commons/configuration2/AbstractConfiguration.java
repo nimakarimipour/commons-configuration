@@ -51,6 +51,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -1443,7 +1444,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @return the converted array
      * @throws IllegalArgumentException if the default value is not a compatible array
      */
-    private Object convertToArray(final Class<?> cls, final String key, final Object defaultValue) {
+    private @RUntainted Object convertToArray(final Class<?> cls, final String key, final Object defaultValue) {
         checkDefaultValueArray(cls, defaultValue);
         return ObjectUtils.defaultIfNull(getConversionHandler().toArray(getProperty(key), cls, getInterpolator()), defaultValue);
     }

@@ -23,6 +23,7 @@ import org.apache.commons.configuration2.event.EventListener;
 import org.apache.commons.configuration2.event.EventListenerList;
 import org.apache.commons.configuration2.event.EventListenerRegistrationData;
 import org.apache.commons.configuration2.event.EventType;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
