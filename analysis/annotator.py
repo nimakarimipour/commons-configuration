@@ -39,9 +39,9 @@ def run_annotator():
     commands += ['-i', 'edu.ucr.Initializer']
     commands += ['-n', 'edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted']
     commands += ['-cn', 'UCRTaint']
-    commands += ["--depth", "10"]
+    commands += ["--depth", "25"]
     # Uncomment to see build output
-    # commands += ['-rboserr']
+#    # commands += ['-rboserr']
     # Comment to inject root at a time
     commands += ['-ch']
     # Uncomment to disable cache
