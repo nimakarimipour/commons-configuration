@@ -20,6 +20,7 @@ import java.util.Collection;
 import org.apache.commons.configuration2.builder.BuilderParameters;
 import org.apache.commons.configuration2.builder.FileBasedBuilderParametersImpl;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -46,7 +47,7 @@ public class FileExtensionConfigurationBuilderProvider extends BaseConfiguration
     private static final char EXT_SEPARATOR = '.';
 
     /** The matching configuration class. */
-    private final String matchingConfigurationClass;
+    private final @RUntainted String matchingConfigurationClass;
 
     /** The file extension. */
     private final String extension;
@@ -67,8 +68,8 @@ public class FileExtensionConfigurationBuilderProvider extends BaseConfiguration
      *        <b>null</b> if no additional parameter objects are needed
      * @throws IllegalArgumentException if a required parameter is missing
      */
-    public FileExtensionConfigurationBuilderProvider(final String bldrCls, final String reloadBldrCls, final String matchingConfigCls,
-        final String defConfigClass, final String ext, final Collection<String> paramCls) {
+    public FileExtensionConfigurationBuilderProvider(final @RUntainted String bldrCls, final @RUntainted String reloadBldrCls, final @RUntainted String matchingConfigCls,
+        final @RUntainted String defConfigClass, final String ext, final Collection<@RUntainted String> paramCls) {
         super(bldrCls, reloadBldrCls, defConfigClass, paramCls);
         if (matchingConfigCls == null) {
             throw new IllegalArgumentException("Matching configuration class must not be null!");
@@ -87,7 +88,7 @@ public class FileExtensionConfigurationBuilderProvider extends BaseConfiguration
      *
      * @return the matching configuration class
      */
-    public String getMatchingConfigurationClass() {
+    public @RUntainted String getMatchingConfigurationClass() {
         return matchingConfigurationClass;
     }
 
@@ -106,7 +107,7 @@ public class FileExtensionConfigurationBuilderProvider extends BaseConfiguration
      * In case of a match, the matching configuration class is selected, otherwise the default one.
      */
     @Override
-    protected String determineConfigurationClass(final ConfigurationDeclaration decl, final Collection<BuilderParameters> params)
+    protected @RUntainted String determineConfigurationClass(final ConfigurationDeclaration decl, final Collection<BuilderParameters> params)
         throws ConfigurationException {
         final String currentExt = extractExtension(fetchCurrentFileName(params));
         return getExtension().equalsIgnoreCase(currentExt) ? getMatchingConfigurationClass() : getConfigurationClass();

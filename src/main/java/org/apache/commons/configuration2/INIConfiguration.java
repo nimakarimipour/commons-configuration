@@ -37,6 +37,8 @@ import org.apache.commons.configuration2.tree.NodeHandler;
 import org.apache.commons.configuration2.tree.NodeHandlerDecorator;
 import org.apache.commons.configuration2.tree.NodeSelector;
 import org.apache.commons.configuration2.tree.TrackedNodeModel;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>

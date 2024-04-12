@@ -18,6 +18,7 @@ package org.apache.commons.configuration2.io;
 
 import java.net.URL;
 import java.util.Objects;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -53,13 +54,13 @@ public final class FileLocator {
      */
     public static final class FileLocatorBuilder {
         /** The base path. */
-        private String basePath;
+        private @RUntainted String basePath;
 
         /** The encoding. */
-        private String encoding;
+        private @RUntainted String encoding;
 
         /** The file name. */
-        private String fileName;
+        private @RUntainted String fileName;
 
         /** The file system. */
         private FileSystem fileSystem;
@@ -68,7 +69,7 @@ public final class FileLocator {
         private FileLocationStrategy locationStrategy;
 
         /** The URL. */
-        private URL sourceURL;
+        private @RUntainted URL sourceURL;
 
         /** The URL connection options. */
         private URLConnectionOptions urlConnectionOptions;
@@ -91,7 +92,7 @@ public final class FileLocator {
          * @param path the base path
          * @return a reference to this builder for method chaining
          */
-        public FileLocatorBuilder basePath(final String path) {
+        public FileLocatorBuilder basePath(final @RUntainted String path) {
             basePath = path;
             return this;
         }
@@ -111,7 +112,7 @@ public final class FileLocator {
          * @param enc the encoding
          * @return a reference to this builder for method chaining
          */
-        public FileLocatorBuilder encoding(final String enc) {
+        public FileLocatorBuilder encoding(final @RUntainted String enc) {
             encoding = enc;
             return this;
         }
@@ -122,7 +123,7 @@ public final class FileLocator {
          * @param name the file name
          * @return a reference to this builder for method chaining
          */
-        public FileLocatorBuilder fileName(final String name) {
+        public FileLocatorBuilder fileName(final @RUntainted String name) {
             fileName = name;
             return this;
         }
@@ -170,7 +171,7 @@ public final class FileLocator {
          * @param url the source URL
          * @return a reference to this builder for method chaining
          */
-        public FileLocatorBuilder sourceURL(final URL url) {
+        public FileLocatorBuilder sourceURL(final @RUntainted URL url) {
             this.sourceURL = url;
             return this;
         }
@@ -189,13 +190,13 @@ public final class FileLocator {
     }
 
     /** The base path. */
-    private final String basePath;
+    private final @RUntainted String basePath;
 
     /** The encoding. */
-    private final String encoding;
+    private final @RUntainted String encoding;
 
     /** The file name. */
-    private final String fileName;
+    private final @RUntainted String fileName;
 
     /** The file system. */
     private final FileSystem fileSystem;
@@ -204,7 +205,7 @@ public final class FileLocator {
     private final FileLocationStrategy locationStrategy;
 
     /** The source URL. */
-    private final URL sourceURL;
+    private final @RUntainted URL sourceURL;
 
     /** The source URL connection options. */
     private final URLConnectionOptions urlConnectionOptions;
@@ -250,7 +251,7 @@ public final class FileLocator {
      *
      * @return the base path
      */
-    public String getBasePath() {
+    public @RUntainted String getBasePath() {
         return basePath;
     }
 
@@ -259,7 +260,7 @@ public final class FileLocator {
      *
      * @return the encoding
      */
-    public String getEncoding() {
+    public @RUntainted String getEncoding() {
         return encoding;
     }
 
@@ -268,7 +269,7 @@ public final class FileLocator {
      *
      * @return the file name
      */
-    public String getFileName() {
+    public @RUntainted String getFileName() {
         return fileName;
     }
 
@@ -298,7 +299,7 @@ public final class FileLocator {
      *
      * @return the source URL
      */
-    public URL getSourceURL() {
+    public @RUntainted URL getSourceURL() {
         return sourceURL;
     }
 

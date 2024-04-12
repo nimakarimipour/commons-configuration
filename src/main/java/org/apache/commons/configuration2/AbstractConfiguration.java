@@ -51,6 +51,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -607,7 +608,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      *
      * @return returns the key name with the ${key} substituted
      */
-    protected String interpolate(final String base) {
+    protected @RUntainted String interpolate(final String base) {
         final Object result = interpolate((Object) base);
         return result == null ? null : result.toString();
     }
@@ -887,7 +888,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @return <b>true</b> if this key is contained in this configuration, <b>false</b> otherwise
      * @since 2.0
      */
-    protected abstract boolean containsKeyInternal(String key);
+    protected abstract boolean containsKeyInternal(@RUntainted String key);
 
     @Override
     public Properties getProperties(final String key) {
@@ -940,7 +941,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public boolean getBoolean(final String key, final boolean defaultValue) {
+    public boolean getBoolean(final String key, final @RUntainted boolean defaultValue) {
         return getBoolean(key, Boolean.valueOf(defaultValue)).booleanValue();
     }
 
@@ -954,7 +955,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @throws ConversionException if the value cannot be converted to a {@code Boolean}
      */
     @Override
-    public Boolean getBoolean(final String key, final Boolean defaultValue) {
+    public Boolean getBoolean(final String key, final @RUntainted Boolean defaultValue) {
         return convert(Boolean.class, key, defaultValue, false);
     }
 
@@ -965,12 +966,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public byte getByte(final String key, final byte defaultValue) {
+    public byte getByte(final String key, final @RUntainted byte defaultValue) {
         return getByte(key, Byte.valueOf(defaultValue)).byteValue();
     }
 
     @Override
-    public Byte getByte(final String key, final Byte defaultValue) {
+    public Byte getByte(final String key, final @RUntainted Byte defaultValue) {
         return convert(Byte.class, key, defaultValue, false);
     }
 
@@ -981,12 +982,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public double getDouble(final String key, final double defaultValue) {
+    public double getDouble(final String key, final @RUntainted double defaultValue) {
         return getDouble(key, Double.valueOf(defaultValue)).doubleValue();
     }
 
     @Override
-    public Double getDouble(final String key, final Double defaultValue) {
+    public Double getDouble(final String key, final @RUntainted Double defaultValue) {
         return convert(Double.class, key, defaultValue, false);
     }
 
@@ -996,7 +997,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public Duration getDuration(final String key, final Duration defaultValue) {
+    public Duration getDuration(final String key, final @RUntainted Duration defaultValue) {
         return convert(Duration.class, key, defaultValue, false);
     }
 
@@ -1007,12 +1008,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public float getFloat(final String key, final float defaultValue) {
+    public float getFloat(final String key, final @RUntainted float defaultValue) {
         return getFloat(key, Float.valueOf(defaultValue)).floatValue();
     }
 
     @Override
-    public Float getFloat(final String key, final Float defaultValue) {
+    public Float getFloat(final String key, final @RUntainted Float defaultValue) {
         return convert(Float.class, key, defaultValue, false);
     }
 
@@ -1023,12 +1024,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public int getInt(final String key, final int defaultValue) {
+    public int getInt(final String key, final @RUntainted int defaultValue) {
         return getInteger(key, Integer.valueOf(defaultValue)).intValue();
     }
 
     @Override
-    public Integer getInteger(final String key, final Integer defaultValue) {
+    public Integer getInteger(final String key, final @RUntainted Integer defaultValue) {
         return convert(Integer.class, key, defaultValue, false);
     }
 
@@ -1039,12 +1040,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public long getLong(final String key, final long defaultValue) {
+    public long getLong(final String key, final @RUntainted long defaultValue) {
         return getLong(key, Long.valueOf(defaultValue)).longValue();
     }
 
     @Override
-    public Long getLong(final String key, final Long defaultValue) {
+    public Long getLong(final String key, final @RUntainted Long defaultValue) {
         return convert(Long.class, key, defaultValue, false);
     }
 
@@ -1055,12 +1056,12 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public short getShort(final String key, final short defaultValue) {
+    public short getShort(final String key, final @RUntainted short defaultValue) {
         return getShort(key, Short.valueOf(defaultValue)).shortValue();
     }
 
     @Override
-    public Short getShort(final String key, final Short defaultValue) {
+    public Short getShort(final String key, final @RUntainted Short defaultValue) {
         return convert(Short.class, key, defaultValue, false);
     }
 
@@ -1075,7 +1076,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public BigDecimal getBigDecimal(final String key, final BigDecimal defaultValue) {
+    public BigDecimal getBigDecimal(final String key, final @RUntainted BigDecimal defaultValue) {
         return convert(BigDecimal.class, key, defaultValue, false);
     }
 
@@ -1090,7 +1091,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public BigInteger getBigInteger(final String key, final BigInteger defaultValue) {
+    public BigInteger getBigInteger(final String key, final @RUntainted BigInteger defaultValue) {
         return convert(BigInteger.class, key, defaultValue, false);
     }
 
@@ -1100,7 +1101,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @see #setThrowExceptionOnMissing(boolean)
      */
     @Override
-    public String getString(final String key) {
+    public @RUntainted String getString(final String key) {
         return convert(String.class, key, null, true);
     }
 
@@ -1207,7 +1208,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * {@inheritDoc} This implementation delegates to the {@link ConversionHandler} to perform the actual type conversion.
      */
     @Override
-    public <T> T get(final Class<T> cls, final String key, final T defaultValue) {
+    public <T> T get(final Class<T> cls, final String key, final @RUntainted T defaultValue) {
         return convert(cls, key, defaultValue, false);
     }
 
@@ -1394,7 +1395,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @return the converted value of this property
      * @throws ConversionException if the conversion cannot be performed
      */
-    private <T> T getAndConvertProperty(final Class<T> cls, final String key, final T defaultValue) {
+    private <T> @RUntainted T getAndConvertProperty(final Class<T> cls, final String key, final T defaultValue) {
         final Object value = getProperty(key);
         try {
             return ObjectUtils.defaultIfNull(getConversionHandler().to(value, cls, getInterpolator()), defaultValue);
@@ -1415,7 +1416,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @param throwOnMissing a flag whether an exception should be thrown for a missing value
      * @return the converted value
      */
-    private <T> T convert(final Class<T> cls, final String key, final T defValue, final boolean throwOnMissing) {
+    private <T> @RUntainted T convert(final Class<T> cls, final String key, final @RUntainted T defValue, final boolean throwOnMissing) {
         if (cls.isArray()) {
             return cls.cast(convertToArray(cls.getComponentType(), key, defValue));
         }

@@ -17,6 +17,7 @@
 package org.apache.commons.configuration2.tree;
 
 import java.util.Collection;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

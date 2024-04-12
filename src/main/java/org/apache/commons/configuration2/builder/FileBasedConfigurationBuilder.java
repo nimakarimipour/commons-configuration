@@ -26,6 +26,7 @@ import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.io.FileHandler;
 import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -51,7 +52,7 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class FileBasedConfigurationBuilder<T extends FileBasedConfiguration> extends BasicConfigurationBuilder<T> {
     /** A map for storing default encodings for specific configuration classes. */
-    private static final Map<Class<?>, String> DEFAULT_ENCODINGS = initializeDefaultEncodings();
+    private static final Map<Class<?>, @RUntainted String> DEFAULT_ENCODINGS = initializeDefaultEncodings();
 
     /** Stores the FileHandler associated with the current configuration. */
     private FileHandler currentFileHandler;
@@ -104,7 +105,7 @@ public class FileBasedConfigurationBuilder<T extends FileBasedConfiguration> ext
      * @param configClass the configuration class in question
      * @return the default encoding for this class (may be <b>null</b>)
      */
-    public static String getDefaultEncoding(final Class<?> configClass) {
+    public static @RUntainted String getDefaultEncoding(final Class<?> configClass) {
         String enc = DEFAULT_ENCODINGS.get(configClass);
         if (enc != null || configClass == null) {
             return enc;
@@ -137,7 +138,7 @@ public class FileBasedConfigurationBuilder<T extends FileBasedConfiguration> ext
      * @param encoding the default encoding for this class
      * @throws IllegalArgumentException if the class is <b>null</b>
      */
-    public static void setDefaultEncoding(final Class<?> configClass, final String encoding) {
+    public static void setDefaultEncoding(final Class<?> configClass, final @RUntainted String encoding) {
         if (configClass == null) {
             throw new IllegalArgumentException("Configuration class must not be null!");
         }
@@ -306,8 +307,8 @@ public class FileBasedConfigurationBuilder<T extends FileBasedConfiguration> ext
      *
      * @return the map with default encodings
      */
-    private static Map<Class<?>, String> initializeDefaultEncodings() {
-        final Map<Class<?>, String> enc = new ConcurrentHashMap<>();
+    private static Map<Class<?>, @RUntainted String> initializeDefaultEncodings() {
+        final Map<Class<?>, @RUntainted String> enc = new ConcurrentHashMap<>();
         enc.put(PropertiesConfiguration.class, PropertiesConfiguration.DEFAULT_ENCODING);
         enc.put(XMLPropertiesConfiguration.class, XMLPropertiesConfiguration.DEFAULT_ENCODING);
         return enc;

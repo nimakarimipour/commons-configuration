@@ -37,6 +37,7 @@ import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.interpol.ConfigurationInterpolator;
 import org.apache.commons.configuration2.interpol.InterpolatorSpecification;
 import org.apache.commons.lang3.concurrent.ConcurrentUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -294,7 +295,7 @@ public class MultiFileConfigurationBuilder<T extends FileBasedConfiguration> ext
      * @return the newly created and initialized builder instance
      * @throws ConfigurationException if an error occurs
      */
-    protected FileBasedConfigurationBuilder<T> createInitializedManagedBuilder(final String fileName, final Map<String, Object> params)
+    protected FileBasedConfigurationBuilder<T> createInitializedManagedBuilder(final @RUntainted String fileName, final Map<String, Object> params)
         throws ConfigurationException {
         final FileBasedConfigurationBuilder<T> managedBuilder = createManagedBuilder(fileName, params);
         managedBuilder.getFileHandler().setFileName(fileName);
@@ -332,7 +333,7 @@ public class MultiFileConfigurationBuilder<T extends FileBasedConfiguration> ext
      * @param multiParams the current builder parameters
      * @return the file name for a managed builder
      */
-    private String fetchFileName(final MultiFileBuilderParametersImpl multiParams) {
+    private @RUntainted String fetchFileName(final MultiFileBuilderParametersImpl multiParams) {
         String fileName;
         final Boolean reentrant = inInterpolation.get();
         if (reentrant != null && reentrant.booleanValue()) {

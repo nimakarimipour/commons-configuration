@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 package org.apache.commons.configuration2.interpol;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -47,5 +48,5 @@ public interface Lookup {
      * @param variable the name of the variable to be resolved
      * @return the value of this variable or <b>null</b>
      */
-    Object lookup(String variable);
+    Object lookup(@RUntainted String variable);
 }
