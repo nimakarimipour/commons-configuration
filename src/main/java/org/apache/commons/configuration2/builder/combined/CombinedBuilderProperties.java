@@ -21,6 +21,7 @@ import org.apache.commons.configuration2.builder.BuilderParameters;
 import org.apache.commons.configuration2.builder.ConfigurationBuilder;
 import org.apache.commons.configuration2.builder.DefaultParametersHandler;
 import org.apache.commons.configuration2.builder.DefaultParametersManager;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -78,7 +79,7 @@ public interface CombinedBuilderProperties<T> {
      * @param path the base path for resolving relative file names
      * @return a reference to this object for method chaining
      */
-    T setBasePath(String path);
+    T setBasePath(@RUntainted String path);
 
     /**
      * Sets the parameters object for the definition configuration builder. This property is evaluated only if the
