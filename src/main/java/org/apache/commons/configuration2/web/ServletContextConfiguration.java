@@ -22,6 +22,7 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import javax.servlet.Servlet;
 import javax.servlet.ServletContext;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A configuration wrapper to read the initialization parameters of a servlet context. This configuration is read only,

@@ -19,6 +19,7 @@ package org.apache.commons.configuration2.io;
 import java.io.IOException;
 import java.io.InputStream;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -44,5 +45,5 @@ public interface InputStreamSupport {
      *         format
      * @throws IOException if an I/O error occurs.
      */
-    void read(InputStream in) throws ConfigurationException, IOException;
+    void read(@RUntainted InputStream in) throws ConfigurationException, IOException;
 }

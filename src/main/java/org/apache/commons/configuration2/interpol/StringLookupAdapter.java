@@ -18,6 +18,7 @@ package org.apache.commons.configuration2.interpol;
 
 import java.util.Objects;
 import org.apache.commons.text.lookup.StringLookup;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Wraps an Apache Commons Text {@link StringLookup} as an Apache Commons Configuration {@link Lookup}.

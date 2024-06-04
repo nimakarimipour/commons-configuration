@@ -39,6 +39,7 @@ import org.apache.commons.vfs2.FileSystemManager;
 import org.apache.commons.vfs2.FileSystemOptions;
 import org.apache.commons.vfs2.VFS;
 import org.apache.commons.vfs2.provider.UriParser;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * FileSystem that uses <a href="https://commons.apache.org/proper/commons-vfs/">Apache Commons VFS</a>.
@@ -71,7 +72,7 @@ public class VFSFileSystem extends DefaultFileSystem {
     }
 
     @Override
-    public String getBasePath(final String path) {
+    public String getBasePath(final @RUntainted String path) {
         if (UriParser.extractScheme(path) == null) {
             return super.getBasePath(path);
         }
@@ -85,7 +86,7 @@ public class VFSFileSystem extends DefaultFileSystem {
     }
 
     @Override
-    public String getFileName(final String path) {
+    public String getFileName(final @RUntainted String path) {
         if (UriParser.extractScheme(path) == null) {
             return super.getFileName(path);
         }
@@ -121,11 +122,11 @@ public class VFSFileSystem extends DefaultFileSystem {
         }
     }
 
-    private FileSystemManager getManager() throws FileSystemException {
+    private @RUntainted FileSystemManager getManager() throws FileSystemException {
         return VFS.getManager();
     }
 
-    private FileSystemOptions getOptions(final String scheme) {
+    private @RUntainted FileSystemOptions getOptions(final String scheme) {
         if (scheme == null) {
             return null;
         }
@@ -185,7 +186,7 @@ public class VFSFileSystem extends DefaultFileSystem {
     }
 
     @Override
-    public String getPath(final File file, final URL url, final String basePath, final String fileName) {
+    public String getPath(final File file, final @RUntainted URL url, final @RUntainted String basePath, final @RUntainted String fileName) {
         if (file != null) {
             return super.getPath(file, url, basePath, fileName);
         }
@@ -214,7 +215,7 @@ public class VFSFileSystem extends DefaultFileSystem {
     }
 
     @Override
-    public URL getURL(final String basePath, final String file) throws MalformedURLException {
+    public @RUntainted URL getURL(final @RUntainted String basePath, final @RUntainted String file) throws MalformedURLException {
         if (basePath != null && UriParser.extractScheme(basePath) == null || basePath == null && UriParser.extractScheme(file) == null) {
             return super.getURL(basePath, file);
         }
@@ -235,7 +236,7 @@ public class VFSFileSystem extends DefaultFileSystem {
     }
 
     @Override
-    public URL locateFromURL(final String basePath, final String fileName) {
+    public @RUntainted URL locateFromURL(final @RUntainted String basePath, final @RUntainted String fileName) {
         final String fileScheme = UriParser.extractScheme(fileName);
 
         // Use DefaultFileSystem if basePath and fileName don't have a scheme.
@@ -270,7 +271,7 @@ public class VFSFileSystem extends DefaultFileSystem {
         }
     }
 
-    private FileName resolveURI(final String path) throws FileSystemException {
+    private @RUntainted FileName resolveURI(final @RUntainted String path) throws FileSystemException {
         return getManager().resolveURI(path);
     }
 
