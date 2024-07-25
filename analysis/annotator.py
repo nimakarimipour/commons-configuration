@@ -41,11 +41,11 @@ def run_annotator():
     commands += ['-cn', 'UCRTaint']
     commands += ["--depth", "25"]
     # Uncomment to see build output
-    # commands += ['-rboserr']
+#    # commands += ['-rboserr']
     # Comment to inject root at a time
     commands += ['-ch']
     # Uncomment to disable cache
-    # commands += ['-dc']
+#    # commands += ['-dc']
     # Uncomment to disable outer loop
     # commands += ['-dol']
     # Uncomment to disable parallel processing
