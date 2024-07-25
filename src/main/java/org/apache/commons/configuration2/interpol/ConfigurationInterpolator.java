@@ -31,6 +31,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Function;
 import org.apache.commons.text.StringSubstitutor;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>
@@ -159,7 +161,7 @@ public class ConfigurationInterpolator {
      * @param strValue the value
      * @return the extracted variable name
      */
-    private static String extractVariableName(final String strValue) {
+    private static @RPolyTainted String extractVariableName(final @RPolyTainted String strValue) {
         return strValue.substring(VAR_START_LENGTH, strValue.length() - VAR_END_LENGTH);
     }
 
@@ -544,7 +546,7 @@ public class ConfigurationInterpolator {
      * @param var the name of the variable whose value is to be looked up which may contain a prefix.
      * @return the value of this variable or <b>null</b> if it cannot be resolved
      */
-    public Object resolve(final String var) {
+    public Object resolve(final @RUntainted String var) {
         if (var == null) {
             return null;
         }
@@ -579,7 +581,7 @@ public class ConfigurationInterpolator {
      * @param strValue the string to be interpolated
      * @return the resolved value or <b>null</b> if resolving failed
      */
-    private Object resolveSingleVariable(final String strValue) {
+    private Object resolveSingleVariable(final @RUntainted String strValue) {
         return resolve(extractVariableName(strValue));
     }
 

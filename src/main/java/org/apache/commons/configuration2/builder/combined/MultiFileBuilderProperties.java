@@ -17,6 +17,7 @@
 package org.apache.commons.configuration2.builder.combined;
 
 import org.apache.commons.configuration2.builder.BuilderParameters;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

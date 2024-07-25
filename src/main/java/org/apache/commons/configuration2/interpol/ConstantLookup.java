@@ -21,6 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -59,7 +60,7 @@ public class ConstantLookup implements Lookup {
      * @return the value of this variable or <b>null</b> if it cannot be resolved
      */
     @Override
-    public Object lookup(final String var) {
+    public Object lookup(final @RUntainted String var) {
         if (var == null) {
             return null;
         }
@@ -93,7 +94,7 @@ public class ConstantLookup implements Lookup {
      * @return the field's value
      * @throws Exception if an error occurs
      */
-    protected Object resolveField(final String className, final String fieldName) throws Exception {
+    protected Object resolveField(final @RUntainted String className, final String fieldName) throws Exception {
         return fetchClass(className).getField(fieldName).get(null);
     }
 
@@ -107,7 +108,7 @@ public class ConstantLookup implements Lookup {
      * @return the corresponding class object
      * @throws ClassNotFoundException if the class cannot be loaded
      */
-    protected Class<?> fetchClass(final String className) throws ClassNotFoundException {
+    protected Class<?> fetchClass(final @RUntainted String className) throws ClassNotFoundException {
         return ClassUtils.getClass(className);
     }
 }

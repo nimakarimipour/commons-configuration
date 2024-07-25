@@ -19,6 +19,7 @@ package org.apache.commons.configuration2.io;
 import java.io.File;
 import java.net.URL;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -39,7 +40,7 @@ public class BasePathLocationStrategy implements FileLocationStrategy {
      * the locator's base path and file name. If this {@code File} exists, its URL is returned.
      */
     @Override
-    public URL locate(final FileSystem fileSystem, final FileLocator locator) {
+    public @RUntainted URL locate(final FileSystem fileSystem, final FileLocator locator) {
         if (StringUtils.isNotEmpty(locator.getFileName())) {
             final File file = FileLocatorUtils.constructFile(locator.getBasePath(), locator.getFileName());
             if (file.isFile()) {

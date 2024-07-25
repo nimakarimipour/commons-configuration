@@ -51,6 +51,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -607,7 +608,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      *
      * @return returns the key name with the ${key} substituted
      */
-    protected String interpolate(final String base) {
+    protected @RUntainted String interpolate(final String base) {
         final Object result = interpolate((Object) base);
         return result == null ? null : result.toString();
     }
@@ -887,7 +888,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @return <b>true</b> if this key is contained in this configuration, <b>false</b> otherwise
      * @since 2.0
      */
-    protected abstract boolean containsKeyInternal(String key);
+    protected abstract boolean containsKeyInternal(@RUntainted String key);
 
     @Override
     public Properties getProperties(final String key) {
