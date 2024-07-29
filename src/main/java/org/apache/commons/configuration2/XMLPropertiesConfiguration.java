@@ -37,6 +37,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This configuration implements the XML properties format introduced in Java 5.0, see
@@ -116,7 +117,7 @@ public class XMLPropertiesConfiguration extends BaseConfiguration implements Fil
     }
 
     @Override
-    public void read(final Reader in) throws ConfigurationException {
+    public void read(final @RUntainted Reader in) throws ConfigurationException {
         final SAXParserFactory factory = SAXParserFactory.newInstance();
         factory.setNamespaceAware(false);
         factory.setValidating(true);
