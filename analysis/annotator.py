@@ -47,7 +47,7 @@ def run_annotator():
     # Uncomment to disable cache
     # commands += ['-dc']
     # Uncomment to disable outer loop
-#     commands += ['-dlo']
+    commands += ['-dlo']
     # Uncomment to disable parallel processing
     commands += ['--disable-parallel-processing']
     subprocess.call(commands)
