@@ -17,6 +17,7 @@
 package org.apache.commons.configuration2.interpol;
 
 import org.apache.commons.text.lookup.StringLookupFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

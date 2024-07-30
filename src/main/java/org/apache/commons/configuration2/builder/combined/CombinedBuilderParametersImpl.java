@@ -29,6 +29,7 @@ import org.apache.commons.configuration2.builder.BuilderParameters;
 import org.apache.commons.configuration2.builder.ConfigurationBuilder;
 import org.apache.commons.configuration2.builder.DefaultParametersHandler;
 import org.apache.commons.configuration2.builder.DefaultParametersManager;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -66,7 +67,7 @@ public class CombinedBuilderParametersImpl extends BasicBuilderParameters implem
     private DefaultParametersManager childDefaultParametersManager;
 
     /** The base path for configuration sources to be loaded. */
-    private String basePath;
+    private @RUntainted String basePath;
 
     /** A flag whether settings should be inherited by child builders. */
     private boolean inheritSettings;
@@ -250,7 +251,7 @@ public class CombinedBuilderParametersImpl extends BasicBuilderParameters implem
      *
      * @return the base path for resolving relative file names
      */
-    public String getBasePath() {
+    public @RUntainted String getBasePath() {
         return basePath;
     }
 
@@ -264,7 +265,7 @@ public class CombinedBuilderParametersImpl extends BasicBuilderParameters implem
      * @return a reference to this object for method chaining
      */
     @Override
-    public CombinedBuilderParametersImpl setBasePath(final String path) {
+    public CombinedBuilderParametersImpl setBasePath(final @RUntainted String path) {
         basePath = path;
         return this;
     }

@@ -43,6 +43,7 @@ import java.util.regex.PatternSyntaxException;
 import org.apache.commons.configuration2.ex.ConversionException;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A utility class to convert the configuration properties into any type.
@@ -91,7 +92,7 @@ public final class PropertyConverter {
      * @return the converted value
      * @throws ConversionException if the value is not compatible with the requested type
      */
-    public static Object to(final Class<?> cls, final Object value, final DefaultConversionHandler convHandler) throws ConversionException {
+    public static Object to(final Class<?> cls, final @RUntainted Object value, final DefaultConversionHandler convHandler) throws ConversionException {
         if (cls.isInstance(value)) {
             return value; // no conversion needed
         }
@@ -397,7 +398,7 @@ public final class PropertyConverter {
      * @throws ConversionException thrown if the value cannot be converted to a File
      * @since 2.3
      */
-    public static File toFile(final Object value) throws ConversionException {
+    public static File toFile(final @RUntainted Object value) throws ConversionException {
         if (value instanceof File) {
             return (File) value;
         }
@@ -418,7 +419,7 @@ public final class PropertyConverter {
      * @throws ConversionException thrown if the value cannot be converted to a Path
      * @since 2.3
      */
-    public static Path toPath(final Object value) throws ConversionException {
+    public static Path toPath(final @RUntainted Object value) throws ConversionException {
         if (value instanceof File) {
             return ((File) value).toPath();
         }
@@ -459,7 +460,7 @@ public final class PropertyConverter {
      * @return the converted value
      * @throws ConversionException thrown if the value cannot be converted to an URL
      */
-    public static URL toURL(final Object value) throws ConversionException {
+    public static URL toURL(final @RUntainted Object value) throws ConversionException {
         if (value instanceof URL) {
             return (URL) value;
         }
