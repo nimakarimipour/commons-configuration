@@ -50,6 +50,7 @@ import org.apache.commons.text.translate.CharSequenceTranslator;
 import org.apache.commons.text.translate.EntityArrays;
 import org.apache.commons.text.translate.LookupTranslator;
 import org.apache.commons.text.translate.UnicodeEscaper;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This is the "classic" Properties loader which loads the values from a single or multiple files (which can be chained
@@ -743,10 +744,10 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
         private String currentSeparator;
 
         /** The global separator. If set, it overrides the current separator. */
-        private String globalSeparator;
+        private @RUntainted String globalSeparator;
 
         /** The line separator. */
-        private String lineSeparator;
+        private @RUntainted String lineSeparator;
 
         /**
          * Creates a new instance of {@code PropertiesWriter}.
@@ -779,7 +780,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the escaped key
          * @since 2.0
          */
-        protected String escapeKey(final String key) {
+        protected @RUntainted String escapeKey(final String key) {
             final StringBuilder newkey = new StringBuilder();
 
             for (int i = 0; i < key.length(); i++) {
@@ -807,7 +808,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the separator to be used
          * @since 1.7
          */
-        protected String fetchSeparator(final String key, final Object value) {
+        protected @RUntainted String fetchSeparator(final String key, final Object value) {
             return getGlobalSeparator() != null ? getGlobalSeparator() : StringUtils.defaultString(getCurrentSeparator());
         }
 
@@ -838,7 +839,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the global property separator
          * @since 1.7
          */
-        public String getGlobalSeparator() {
+        public @RUntainted String getGlobalSeparator() {
             return globalSeparator;
         }
 
@@ -848,7 +849,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @return the line separator
          * @since 1.7
          */
-        public String getLineSeparator() {
+        public @RUntainted String getLineSeparator() {
             return lineSeparator != null ? lineSeparator : LINE_SEPARATOR;
         }
 
@@ -870,7 +871,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @param globalSeparator the global property separator
          * @since 1.7
          */
-        public void setGlobalSeparator(final String globalSeparator) {
+        public void setGlobalSeparator(final @RUntainted String globalSeparator) {
             this.globalSeparator = globalSeparator;
         }
 
@@ -881,7 +882,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @param lineSeparator the line separator to be used
          * @since 1.7
          */
-        public void setLineSeparator(final String lineSeparator) {
+        public void setLineSeparator(final @RUntainted String lineSeparator) {
             this.lineSeparator = lineSeparator;
         }
 
@@ -891,7 +892,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @param comment the comment to write
          * @throws IOException if an I/O error occurs.
          */
-        public void writeComment(final String comment) throws IOException {
+        public void writeComment(final @RUntainted String comment) throws IOException {
             writeln("# " + comment);
         }
 
@@ -902,7 +903,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
          * @throws IOException if an error occurs
          * @since 1.3
          */
-        public void writeln(final String s) throws IOException {
+        public void writeln(final @RUntainted String s) throws IOException {
             if (s != null) {
                 write(s);
             }
@@ -1028,7 +1029,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
     private static final char[] WHITE_SPACE = {' ', '\t', '\f'};
 
     /** Constant for the platform specific line separator. */
-    private static final String LINE_SEPARATOR = System.lineSeparator();
+    private static final @RUntainted String LINE_SEPARATOR = System.lineSeparator();
 
     /** Constant for the radix of hex numbers. */
     private static final int HEX_RADIX = 16;

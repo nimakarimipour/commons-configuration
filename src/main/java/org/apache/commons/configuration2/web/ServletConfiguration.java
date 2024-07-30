@@ -22,6 +22,7 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A configuration wrapper around a {@link ServletConfig}. This configuration is read only, adding or removing a

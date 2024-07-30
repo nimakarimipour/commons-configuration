@@ -19,6 +19,7 @@ package org.apache.commons.configuration2.builder.combined;
 import java.util.Set;
 import org.apache.commons.configuration2.HierarchicalConfiguration;
 import org.apache.commons.configuration2.beanutils.XMLBeanDeclaration;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

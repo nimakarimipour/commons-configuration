@@ -42,7 +42,7 @@ Parser generated successfully.
 [INFO] --- buildnumber:3.1.0:create (default) @ commons-configuration2 ---
 [INFO] Executing: /bin/sh -c cd '/home/nima/Developer/taint-benchmarks/commons-configuration' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /home/nima/Developer/taint-benchmarks/commons-configuration
-[INFO] Storing buildNumber: null at timestamp: 1722321230704
+[INFO] Storing buildNumber: null at timestamp: 1722358785585
 [INFO] Storing scmBranch: nimak/annotator
 [INFO] 
 [INFO] --- resources:3.3.0:resources (default-resources) @ commons-configuration2 ---
@@ -71,7 +71,7 @@ Parser generated successfully.
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR]  Unannotated Code Handling: true, Poly: true, Type Argument: true, Validation: false, Side Effect: false
+[ERROR]  Unannotated Code Handling: false, Poly: true, Type Argument: true, Validation: false, Side Effect: false
 warning: stubs/Files.astub: (line 83,col 8) Parse error. Found "void", expected one of  ";" "@" "class" "enum" "interface" "module" "open" "record"
 warning: stubs/httpservletreq.astub:(line 51,col 5): Wildcard type </*INFERENCE FAILED for:*/ ? extends Object> does not match type in stubs filestubs/httpservletreq.astub: <java.lang.String> while parsing javax.servlet.http.HttpServletRequest
 warning: stubs/tdmljp.astub: (line 30,col 34) Parse error. Found ")", expected one of  "..." "@" "enum" "exports" "module" "open" "opens" "permits" "provides" "record" "requires" "sealed" "strictfp" "to" "transitive" "uses" "with" "yield" <IDENTIFIER>
@@ -173,46 +173,49 @@ Local Variable Optimization: true
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLConfiguration.java:[839,55] error: [argument] incompatible argument for parameter arg0 of DocumentBuilder.parse.
   found   : @RTainted InputSource
   required: @RUntainted InputSource, index: 32
+[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLConfiguration.java:[891,26] error: [argument] incompatible argument for parameter arg0 of DocumentBuilder.parse.
+  found   : @RTainted InputSource
+  required: @RUntainted InputSource, index: 33
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/DatabaseConfiguration.java:[655,53] error: [argument] incompatible argument for parameter arg0 of Connection.prepareStatement.
   found   : @RTainted String
-  required: @RUntainted String, index: 33
+  required: @RUntainted String, index: 34
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[231,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
   found   : @RTainted String
-  required: @RUntainted String, index: 34
+  required: @RUntainted String, index: 35
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[267,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
   found   : @RTainted String
-  required: @RUntainted String, index: 35
+  required: @RUntainted String, index: 36
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ConstantLookup.java:[111,35] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
   found   : @RTainted String
-  required: @RUntainted String, index: 36
+  required: @RUntainted String, index: 37
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[408,28] error: [argument] incompatible argument for parameter arg0 of File constructor.
   found   : @RTainted String
-  required: @RUntainted String, index: 37
+  required: @RUntainted String, index: 38
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[429,29] error: [argument] incompatible argument for parameter arg0 of Paths.get.
   found   : @RTainted String
-  required: @RUntainted String, index: 38
+  required: @RUntainted String, index: 39
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[470,27] error: [argument] incompatible argument for parameter arg0 of URL constructor.
   found   : @RTainted String
-  required: @RUntainted String, index: 39
+  required: @RUntainted String, index: 40
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[218,64] error: [argument] incompatible argument for parameter arg0 of Expression.evaluate.
   found   : @RTainted JexlContext
-  required: @RUntainted JexlContext, index: 40
+  required: @RUntainted JexlContext, index: 41
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[333,59] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
   found   : @RTainted String
-  required: @RUntainted String, index: 41
+  required: @RUntainted String, index: 42
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLPropertiesConfiguration.java:[130,28] error: [argument] incompatible argument for parameter arg0 of XMLReader.parse.
   found   : @RTainted InputSource
-  required: @RUntainted InputSource, index: 42
-[INFO] 42 errors 
+  required: @RUntainted InputSource, index: 43
+[INFO] 43 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  12.632 s
-[INFO] Finished at: 2024-07-29T23:34:02-07:00
+[INFO] Total time:  17.340 s
+[INFO] Finished at: 2024-07-30T10:00:02-07:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project commons-configuration2: Compilation failure: Compilation failure: 
-[ERROR]  Unannotated Code Handling: true, Poly: true, Type Argument: true, Validation: false, Side Effect: false
+[ERROR]  Unannotated Code Handling: false, Poly: true, Type Argument: true, Validation: false, Side Effect: false
 [ERROR] warning: stubs/Files.astub: (line 83,col 8) Parse error. Found "void", expected one of  ";" "@" "class" "enum" "interface" "module" "open" "record"
 [ERROR] warning: stubs/httpservletreq.astub:(line 51,col 5): Wildcard type </*INFERENCE FAILED for:*/ ? extends Object> does not match type in stubs filestubs/httpservletreq.astub: <java.lang.String> while parsing javax.servlet.http.HttpServletRequest
 [ERROR] warning: stubs/tdmljp.astub: (line 30,col 34) Parse error. Found ")", expected one of  "..." "@" "enum" "exports" "module" "open" "opens" "permits" "provides" "record" "requires" "sealed" "strictfp" "to" "transitive" "uses" "with" "yield" <IDENTIFIER>
@@ -314,36 +317,39 @@ Local Variable Optimization: true
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLConfiguration.java:[839,55] error: [argument] incompatible argument for parameter arg0 of DocumentBuilder.parse.
 [ERROR]   found   : @RTainted InputSource
 [ERROR]   required: @RUntainted InputSource, index: 32
+[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLConfiguration.java:[891,26] error: [argument] incompatible argument for parameter arg0 of DocumentBuilder.parse.
+[ERROR]   found   : @RTainted InputSource
+[ERROR]   required: @RUntainted InputSource, index: 33
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/DatabaseConfiguration.java:[655,53] error: [argument] incompatible argument for parameter arg0 of Connection.prepareStatement.
 [ERROR]   found   : @RTainted String
-[ERROR]   required: @RUntainted String, index: 33
+[ERROR]   required: @RUntainted String, index: 34
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[231,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
 [ERROR]   found   : @RTainted String
-[ERROR]   required: @RUntainted String, index: 34
+[ERROR]   required: @RUntainted String, index: 35
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[267,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
 [ERROR]   found   : @RTainted String
-[ERROR]   required: @RUntainted String, index: 35
+[ERROR]   required: @RUntainted String, index: 36
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ConstantLookup.java:[111,35] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
 [ERROR]   found   : @RTainted String
-[ERROR]   required: @RUntainted String, index: 36
+[ERROR]   required: @RUntainted String, index: 37
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[408,28] error: [argument] incompatible argument for parameter arg0 of File constructor.
 [ERROR]   found   : @RTainted String
-[ERROR]   required: @RUntainted String, index: 37
+[ERROR]   required: @RUntainted String, index: 38
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[429,29] error: [argument] incompatible argument for parameter arg0 of Paths.get.
 [ERROR]   found   : @RTainted String
-[ERROR]   required: @RUntainted String, index: 38
+[ERROR]   required: @RUntainted String, index: 39
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[470,27] error: [argument] incompatible argument for parameter arg0 of URL constructor.
 [ERROR]   found   : @RTainted String
-[ERROR]   required: @RUntainted String, index: 39
+[ERROR]   required: @RUntainted String, index: 40
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[218,64] error: [argument] incompatible argument for parameter arg0 of Expression.evaluate.
 [ERROR]   found   : @RTainted JexlContext
-[ERROR]   required: @RUntainted JexlContext, index: 40
+[ERROR]   required: @RUntainted JexlContext, index: 41
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[333,59] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
 [ERROR]   found   : @RTainted String
-[ERROR]   required: @RUntainted String, index: 41
+[ERROR]   required: @RUntainted String, index: 42
 [ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLPropertiesConfiguration.java:[130,28] error: [argument] incompatible argument for parameter arg0 of XMLReader.parse.
 [ERROR]   found   : @RTainted InputSource
-[ERROR]   required: @RUntainted InputSource, index: 42
+[ERROR]   required: @RUntainted InputSource, index: 43
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

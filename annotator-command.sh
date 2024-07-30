@@ -1,4 +1,4 @@
-lib=true
+lib=false
 arg=true
 poly=true
 cf_version="3.42.0"

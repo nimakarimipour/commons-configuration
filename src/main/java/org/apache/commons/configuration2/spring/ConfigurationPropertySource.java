@@ -22,6 +22,7 @@ import java.util.List;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.core.env.EnumerablePropertySource;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Allow use of Apache Commons Configuration Objects as Spring PropertySources
