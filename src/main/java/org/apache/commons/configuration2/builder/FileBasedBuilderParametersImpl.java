@@ -23,6 +23,7 @@ import org.apache.commons.configuration2.io.FileHandler;
 import org.apache.commons.configuration2.io.FileLocationStrategy;
 import org.apache.commons.configuration2.io.FileSystem;
 import org.apache.commons.configuration2.io.URLConnectionOptions;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -211,7 +212,7 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setBasePath(final String path) {
+    public FileBasedBuilderParametersImpl setBasePath(final @RUntainted String path) {
         getFileHandler().setBasePath(path);
         return this;
     }
@@ -223,7 +224,7 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setFile(final File file) {
+    public FileBasedBuilderParametersImpl setFile(final @RUntainted File file) {
         getFileHandler().setFile(file);
         return this;
     }
@@ -247,7 +248,7 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setPath(final String path) {
+    public FileBasedBuilderParametersImpl setPath(final @RUntainted String path) {
         getFileHandler().setPath(path);
         return this;
     }
@@ -265,13 +266,13 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setURL(final URL url) {
+    public FileBasedBuilderParametersImpl setURL(final @RUntainted URL url) {
         getFileHandler().setURL(url);
         return this;
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setURL(final URL url, final URLConnectionOptions urlConnectionOptions) {
+    public FileBasedBuilderParametersImpl setURL(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) {
         getFileHandler().setURL(url, urlConnectionOptions);
         return this;
     }

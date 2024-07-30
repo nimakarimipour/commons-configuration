@@ -57,6 +57,7 @@ import org.apache.commons.configuration2.tree.DefaultExpressionEngineSymbols;
 import org.apache.commons.configuration2.tree.OverrideCombiner;
 import org.apache.commons.configuration2.tree.UnionCombiner;
 import org.xml.sax.EntityResolver;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -722,7 +723,7 @@ public class CombinedConfigurationBuilder extends BasicConfigurationBuilder<Comb
      * @param basePath the base path defined for this builder (may be <b>null</b>)
      * @throws ConfigurationException if an error occurs.
      */
-    protected void initSystemProperties(final HierarchicalConfiguration<?> config, final String basePath) throws ConfigurationException {
+    protected void initSystemProperties(final HierarchicalConfiguration<?> config, final @RUntainted String basePath) throws ConfigurationException {
         final String fileName = config.getString(KEY_SYSTEM_PROPS);
         if (fileName != null) {
             try {
@@ -986,7 +987,7 @@ public class CombinedConfigurationBuilder extends BasicConfigurationBuilder<Comb
      *
      * @return the base path
      */
-    private String getBasePath() {
+    private @RUntainted String getBasePath() {
         return currentXMLParameters.getFileHandler().getBasePath();
     }
 
