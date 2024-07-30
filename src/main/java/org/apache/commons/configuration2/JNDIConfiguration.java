@@ -33,6 +33,7 @@ import javax.naming.NotContextException;
 import org.apache.commons.configuration2.event.ConfigurationErrorEvent;
 import org.apache.commons.configuration2.io.ConfigurationLogger;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This Configuration class allows you to interface with a JNDI datasource. A JNDIConfiguration is read-only, write

@@ -27,6 +27,7 @@ import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -111,7 +112,7 @@ public final class FileLocatorUtils {
      * @param ext the extension of the path
      * @return the extended path
      */
-    static String appendPath(final String path, final String ext) {
+    static @RUntainted String appendPath(final String path, final String ext) {
         final StringBuilder fName = new StringBuilder();
         fName.append(path);
 
@@ -142,7 +143,7 @@ public final class FileLocatorUtils {
      * @param fileName the file name (must not be <b>null</b>)
      * @return the resulting file
      */
-    static File constructFile(final String basePath, final String fileName) {
+    static File constructFile(final String basePath, final @RUntainted String fileName) {
         final File file;
 
         final File absolute = new File(fileName);
@@ -362,7 +363,7 @@ public final class FileLocatorUtils {
      * @param fileName the file name (must not be <b>null</b>)
      * @return the file object (<b>null</b> if no file can be obtained)
      */
-    static File getFile(final String basePath, final String fileName) {
+    static File getFile(final @RUntainted String basePath, final @RUntainted String fileName) {
         // Check if the file name is absolute
         final File f = new File(fileName);
         if (f.isAbsolute()) {
@@ -394,7 +395,7 @@ public final class FileLocatorUtils {
      * @param url the URL from which to extract the file name
      * @return the extracted file name
      */
-    static String getFileName(final URL url) {
+    static @RUntainted String getFileName(final URL url) {
         if (url == null) {
             return null;
         }

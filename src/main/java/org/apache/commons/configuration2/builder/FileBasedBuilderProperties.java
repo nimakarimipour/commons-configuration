@@ -21,6 +21,7 @@ import java.net.URL;
 import org.apache.commons.configuration2.io.FileLocationStrategy;
 import org.apache.commons.configuration2.io.FileSystem;
 import org.apache.commons.configuration2.io.URLConnectionOptions;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -87,7 +88,7 @@ public interface FileBasedBuilderProperties<T> {
      * @param path the path location
      * @return a reference to this object for method chaining
      */
-    T setPath(String path);
+    T setPath(@RUntainted String path);
 
     /**
      * Sets the factory for creating {@code ReloadingDetector} objects. With this method a custom factory for reloading

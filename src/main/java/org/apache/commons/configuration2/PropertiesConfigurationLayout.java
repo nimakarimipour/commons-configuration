@@ -32,6 +32,7 @@ import org.apache.commons.configuration2.event.EventListener;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -115,10 +116,10 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
     private String footerComment;
 
     /** The global separator that will be used for all properties. */
-    private String globalSeparator;
+    private @RUntainted String globalSeparator;
 
     /** The line separator. */
-    private String lineSeparator;
+    private @RUntainted String lineSeparator;
 
     /** A counter for determining nested load calls. */
     private final AtomicInteger loadCounter;
@@ -375,7 +376,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @return the global properties separator
      * @since 1.7
      */
-    public String getGlobalSeparator() {
+    public @RUntainted String getGlobalSeparator() {
         return globalSeparator;
     }
 
@@ -390,7 +391,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param globalSeparator the separator to be used for all properties
      * @since 1.7
      */
-    public void setGlobalSeparator(final String globalSeparator) {
+    public void setGlobalSeparator(final @RUntainted String globalSeparator) {
         this.globalSeparator = globalSeparator;
     }
 
@@ -400,7 +401,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @return the line separator
      * @since 1.7
      */
-    public String getLineSeparator() {
+    public @RUntainted String getLineSeparator() {
         return lineSeparator;
     }
 
@@ -411,7 +412,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param lineSeparator the line separator
      * @since 1.7
      */
-    public void setLineSeparator(final String lineSeparator) {
+    public void setLineSeparator(final @RUntainted String lineSeparator) {
         this.lineSeparator = lineSeparator;
     }
 

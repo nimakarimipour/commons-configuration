@@ -35,6 +35,7 @@ import org.apache.commons.configuration2.sync.Synchronizer;
 import org.apache.commons.configuration2.tree.ExpressionEngine;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Miscellaneous utility methods for configurations.

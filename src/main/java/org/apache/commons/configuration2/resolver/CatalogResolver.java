@@ -32,6 +32,7 @@ import org.apache.xml.resolver.readers.CatalogReader;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Thin wrapper around xml commons CatalogResolver to allow list of catalogs to be provided.

@@ -39,6 +39,8 @@ import org.apache.commons.configuration2.sync.NoOpSynchronizer;
 import org.apache.commons.configuration2.sync.Synchronizer;
 import org.apache.commons.configuration2.sync.SynchronizerSupport;
 import org.apache.commons.logging.LogFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>
@@ -405,7 +407,7 @@ public class FileHandler {
      *
      * @return the base path
      */
-    public String getBasePath() {
+    public @RUntainted String getBasePath() {
         final FileLocator locator = getFileLocator();
         if (locator.getBasePath() != null) {
             return locator.getBasePath();
@@ -464,7 +466,7 @@ public class FileHandler {
      *
      * @return the file name
      */
-    public String getFileName() {
+    public @RUntainted String getFileName() {
         final FileLocator locator = getFileLocator();
         if (locator.getFileName() != null) {
             return locator.getFileName();
@@ -938,7 +940,7 @@ public class FileHandler {
      * @param fileName the file name
      * @throws ConfigurationException if an error occurs during the save operation
      */
-    public void save(final String fileName) throws ConfigurationException {
+    public void save(final @RUntainted String fileName) throws ConfigurationException {
         save(fileName, checkContentAndGetLocator());
     }
 
@@ -949,7 +951,7 @@ public class FileHandler {
      * @param locator the current {@code FileLocator}
      * @throws ConfigurationException if an error occurs during the save operation
      */
-    private void save(final String fileName, final FileLocator locator) throws ConfigurationException {
+    private void save(final @RUntainted String fileName, final FileLocator locator) throws ConfigurationException {
         final URL url;
         try {
             url = FileLocatorUtils.getFileSystem(locator).getURL(locator.getBasePath(), fileName);
@@ -1190,7 +1192,7 @@ public class FileHandler {
      *
      * @param path the full path name of the associated file
      */
-    public void setPath(final String path) {
+    public void setPath(final @RUntainted String path) {
         setFile(new File(path));
     }
 
