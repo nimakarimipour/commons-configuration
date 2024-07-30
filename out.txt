@@ -42,7 +42,7 @@ Parser generated successfully.
 [INFO] --- buildnumber:3.1.0:create (default) @ commons-configuration2 ---
 [INFO] Executing: /bin/sh -c cd '/home/nima/Developer/taint-benchmarks/commons-configuration' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /home/nima/Developer/taint-benchmarks/commons-configuration
-[INFO] Storing buildNumber: null at timestamp: 1722321230704
+[INFO] Storing buildNumber: null at timestamp: 1722328012244
 [INFO] Storing scmBranch: nimak/annotator
 [INFO] 
 [INFO] --- resources:3.3.0:resources (default-resources) @ commons-configuration2 ---
@@ -71,7 +71,7 @@ Parser generated successfully.
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR]  Unannotated Code Handling: true, Poly: true, Type Argument: true, Validation: false, Side Effect: false
+[ERROR]  Unannotated Code Handling: true, Poly: false, Type Argument: true, Validation: false, Side Effect: false
 warning: stubs/Files.astub: (line 83,col 8) Parse error. Found "void", expected one of  ";" "@" "class" "enum" "interface" "module" "open" "record"
 warning: stubs/httpservletreq.astub:(line 51,col 5): Wildcard type </*INFERENCE FAILED for:*/ ? extends Object> does not match type in stubs filestubs/httpservletreq.astub: <java.lang.String> while parsing javax.servlet.http.HttpServletRequest
 warning: stubs/tdmljp.astub: (line 30,col 34) Parse error. Found ")", expected one of  "..." "@" "enum" "exports" "module" "open" "opens" "permits" "provides" "record" "requires" "sealed" "strictfp" "to" "transitive" "uses" "with" "yield" <IDENTIFIER>
@@ -208,11 +208,11 @@ Local Variable Optimization: true
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  12.632 s
-[INFO] Finished at: 2024-07-29T23:34:02-07:00
+[INFO] Total time:  23.151 s
+[INFO] Finished at: 2024-07-30T01:27:13-07:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project commons-configuration2: Compilation failure: Compilation failure: 
-[ERROR]  Unannotated Code Handling: true, Poly: true, Type Argument: true, Validation: false, Side Effect: false
+[ERROR]  Unannotated Code Handling: true, Poly: false, Type Argument: true, Validation: false, Side Effect: false
 [ERROR] warning: stubs/Files.astub: (line 83,col 8) Parse error. Found "void", expected one of  ";" "@" "class" "enum" "interface" "module" "open" "record"
 [ERROR] warning: stubs/httpservletreq.astub:(line 51,col 5): Wildcard type </*INFERENCE FAILED for:*/ ? extends Object> does not match type in stubs filestubs/httpservletreq.astub: <java.lang.String> while parsing javax.servlet.http.HttpServletRequest
 [ERROR] warning: stubs/tdmljp.astub: (line 30,col 34) Parse error. Found ")", expected one of  "..." "@" "enum" "exports" "module" "open" "opens" "permits" "provides" "record" "requires" "sealed" "strictfp" "to" "transitive" "uses" "with" "yield" <IDENTIFIER>

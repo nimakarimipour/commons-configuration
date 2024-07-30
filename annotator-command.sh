@@ -1,6 +1,6 @@
 lib=true
 arg=true
-poly=true
+poly=false
 cf_version="3.42.0"
 ucrt_version="0.3-SNAPSHOT"
 rm -rvf target > /dev/null

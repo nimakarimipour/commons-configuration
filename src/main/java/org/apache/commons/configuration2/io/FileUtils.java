@@ -21,6 +21,7 @@ import java.net.URL;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This class is a subset of org.apache.commons.io.FileUtils, git-svn-id:
@@ -46,7 +47,7 @@ class FileUtils {
      * @param url the file URL to convert, {@code null} returns {@code null}
      * @return the equivalent {@code File} object, or {@code null} if the URL's protocol is not {@code file}
      */
-    public static File toFile(final URL url) {
+    public static File toFile(final @RUntainted URL url) {
         if (url == null || !"file".equalsIgnoreCase(url.getProtocol())) {
             return null;
         }
@@ -65,7 +66,7 @@ class FileUtils {
      * @param url The URL to decode, may be {@code null}.
      * @return The decoded URL or {@code null} if the input was {@code null}.
      */
-    static String decodeUrl(final String url) {
+    static @RUntainted String decodeUrl(final @RUntainted String url) {
         String decoded = url;
         if (url != null && url.indexOf('%') >= 0) {
             final int n = url.length();

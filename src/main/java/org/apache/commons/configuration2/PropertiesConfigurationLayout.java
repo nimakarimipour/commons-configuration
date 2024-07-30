@@ -32,6 +32,7 @@ import org.apache.commons.configuration2.event.EventListener;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -109,16 +110,16 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
     private final Map<String, PropertyLayoutData> layoutData;
 
     /** Stores the header comment. */
-    private String headerComment;
+    private @RUntainted String headerComment;
 
     /** Stores the footer comment. */
-    private String footerComment;
+    private @RUntainted String footerComment;
 
     /** The global separator that will be used for all properties. */
-    private String globalSeparator;
+    private @RUntainted String globalSeparator;
 
     /** The line separator. */
-    private String lineSeparator;
+    private @RUntainted String lineSeparator;
 
     /** A counter for determining nested load calls. */
     private final AtomicInteger loadCounter;
@@ -161,7 +162,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param commentChar determines whether all lines should start with comment characters or not
      * @return the canonical comment for this key (can be <b>null</b>)
      */
-    public String getCanonicalComment(final String key, final boolean commentChar) {
+    public @RUntainted String getCanonicalComment(final String key, final boolean commentChar) {
         return constructCanonicalComment(getComment(key), commentChar);
     }
 
@@ -172,7 +173,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param key the key of the property
      * @return the comment for this key (can be <b>null</b>)
      */
-    public String getComment(final String key) {
+    public @RUntainted String getComment(final String key) {
         return fetchLayoutData(key).getComment();
     }
 
@@ -184,7 +185,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param key the key of the property
      * @param comment the comment for this key (can be <b>null</b>, then the comment will be removed)
      */
-    public void setComment(final String key, final String comment) {
+    public void setComment(final String key, final @RUntainted String comment) {
         fetchLayoutData(key).setComment(comment);
     }
 
@@ -240,7 +241,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param commentChar determines the presence of comment characters
      * @return the header comment (can be <b>null</b>)
      */
-    public String getCanonicalHeaderComment(final boolean commentChar) {
+    public @RUntainted String getCanonicalHeaderComment(final boolean commentChar) {
         return constructCanonicalComment(getHeaderComment(), commentChar);
     }
 
@@ -250,7 +251,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      *
      * @return the header comment (can be <b>null</b>)
      */
-    public String getHeaderComment() {
+    public @RUntainted String getHeaderComment() {
         return headerComment;
     }
 
@@ -259,7 +260,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      *
      * @param comment the comment
      */
-    public void setHeaderComment(final String comment) {
+    public void setHeaderComment(final @RUntainted String comment) {
         headerComment = comment;
     }
 
@@ -272,7 +273,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @see #getCanonicalHeaderComment(boolean)
      * @since 2.0
      */
-    public String getCanonicalFooterCooment(final boolean commentChar) {
+    public @RUntainted String getCanonicalFooterCooment(final boolean commentChar) {
         return constructCanonicalComment(getFooterComment(), commentChar);
     }
 
@@ -283,7 +284,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @return the footer comment (can be <b>null</b>)
      * @since 2.0
      */
-    public String getFooterComment() {
+    public @RUntainted String getFooterComment() {
         return footerComment;
     }
 
@@ -293,7 +294,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param footerComment the footer comment
      * @since 2.0
      */
-    public void setFooterComment(final String footerComment) {
+    public void setFooterComment(final @RUntainted String footerComment) {
         this.footerComment = footerComment;
     }
 
@@ -349,7 +350,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @return the property separator for this property
      * @since 1.7
      */
-    public String getSeparator(final String key) {
+    public @RUntainted String getSeparator(final String key) {
         return fetchLayoutData(key).getSeparator();
     }
 
@@ -365,7 +366,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param sep the separator to be used for this property
      * @since 1.7
      */
-    public void setSeparator(final String key, final String sep) {
+    public void setSeparator(final String key, final @RUntainted String sep) {
         fetchLayoutData(key).setSeparator(sep);
     }
 
@@ -375,7 +376,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @return the global properties separator
      * @since 1.7
      */
-    public String getGlobalSeparator() {
+    public @RUntainted String getGlobalSeparator() {
         return globalSeparator;
     }
 
@@ -390,7 +391,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param globalSeparator the separator to be used for all properties
      * @since 1.7
      */
-    public void setGlobalSeparator(final String globalSeparator) {
+    public void setGlobalSeparator(final @RUntainted String globalSeparator) {
         this.globalSeparator = globalSeparator;
     }
 
@@ -400,7 +401,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @return the line separator
      * @since 1.7
      */
-    public String getLineSeparator() {
+    public @RUntainted String getLineSeparator() {
         return lineSeparator;
     }
 
@@ -411,7 +412,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param lineSeparator the line separator
      * @since 1.7
      */
-    public void setLineSeparator(final String lineSeparator) {
+    public void setLineSeparator(final @RUntainted String lineSeparator) {
         this.lineSeparator = lineSeparator;
     }
 
@@ -586,7 +587,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param comment if <b>true</b>, a comment character will always be enforced; if <b>false</b>, it will be removed
      * @return the trimmed comment
      */
-    static String trimComment(final String s, final boolean comment) {
+    static @RUntainted String trimComment(final @RUntainted String s, final boolean comment) {
         final StringBuilder buf = new StringBuilder(s.length());
         int lastPos = 0;
         int pos;
@@ -645,7 +646,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param to the end index (inclusive)
      * @return the comment string (<b>null</b> if it is undefined)
      */
-    private String extractComment(final List<String> commentLines, final int from, final int to) {
+    private @RUntainted String extractComment(final List<@RUntainted String> commentLines, final int from, final int to) {
         if (to < from) {
             return null;
         }
@@ -666,7 +667,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param commentLines the comment lines
      * @return the index of the next line after the header comment
      */
-    private int checkHeaderComment(final List<String> commentLines) {
+    private int checkHeaderComment(final List<@RUntainted String> commentLines) {
         if (loadCounter.get() == 1 && layoutData.isEmpty()) {
             int index = commentLines.size() - 1;
             // strip comments that belong to first key
@@ -705,7 +706,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param comment the comment to write
      * @throws IOException if an IO error occurs
      */
-    private static void writeComment(final PropertiesConfiguration.PropertiesWriter writer, final String comment) throws IOException {
+    private static void writeComment(final PropertiesConfiguration.PropertiesWriter writer, final @RUntainted String comment) throws IOException {
         if (comment != null) {
             writer.writeln(StringUtils.replace(comment, CR, writer.getLineSeparator()));
         }
@@ -719,7 +720,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      * @param commentChar determines the presence of comment characters
      * @return the canonical comment string (can be <b>null</b>)
      */
-    private static String constructCanonicalComment(final String comment, final boolean commentChar) {
+    private static @RUntainted String constructCanonicalComment(final @RUntainted String comment, final boolean commentChar) {
         return comment == null ? null : trimComment(comment, commentChar);
     }
 
@@ -728,10 +729,10 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
      */
     static class PropertyLayoutData implements Cloneable {
         /** Stores the comment for the property. */
-        private StringBuffer comment;
+        private @RUntainted StringBuffer comment;
 
         /** The separator to be used for this property. */
-        private String separator;
+        private @RUntainted String separator;
 
         /** Stores the number of blank lines before this property. */
         private int blankLines;
@@ -812,7 +813,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
          *
          * @param s the comment to add
          */
-        public void addComment(final String s) {
+        public void addComment(final @RUntainted String s) {
             if (s != null) {
                 if (comment == null) {
                     comment = new StringBuffer(s);
@@ -827,7 +828,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
          *
          * @param s the new comment (can be <b>null</b>)
          */
-        public void setComment(final String s) {
+        public void setComment(final @RUntainted String s) {
             if (s == null) {
                 comment = null;
             } else {
@@ -840,7 +841,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
          *
          * @return the comment (can be <b>null</b>)
          */
-        public String getComment() {
+        public @RUntainted String getComment() {
             return Objects.toString(comment, null);
         }
 
@@ -849,7 +850,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
          *
          * @return the property separator
          */
-        public String getSeparator() {
+        public @RUntainted String getSeparator() {
             return separator;
         }
 
@@ -858,7 +859,7 @@ public class PropertiesConfigurationLayout implements EventListener<Configuratio
          *
          * @param separator the property separator
          */
-        public void setSeparator(final String separator) {
+        public void setSeparator(final @RUntainted String separator) {
             this.separator = separator;
         }
 
