@@ -24,6 +24,8 @@ import java.util.Iterator;
 import java.util.List;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.convert.ListDelimiterHandler;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.io.FileLocator;
@@ -116,7 +118,7 @@ public class XMLPropertiesConfiguration extends BaseConfiguration implements Fil
     }
 
     @Override
-    public void read(final Reader in) throws ConfigurationException {
+    public void read(final @RUntainted Reader in) throws ConfigurationException {
         final SAXParserFactory factory = SAXParserFactory.newInstance();
         factory.setNamespaceAware(false);
         factory.setValidating(true);

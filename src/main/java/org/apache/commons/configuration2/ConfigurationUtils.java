@@ -24,6 +24,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Iterator;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.event.ConfigurationErrorEvent;
 import org.apache.commons.configuration2.event.Event;
 import org.apache.commons.configuration2.event.EventListener;
@@ -417,7 +419,7 @@ public final class ConfigurationUtils {
      * @throws ClassNotFoundException if the class cannot be resolved
      * @since 2.0
      */
-    public static Class<?> loadClass(final String clsName) throws ClassNotFoundException {
+    public static Class<?> loadClass(final @RUntainted String clsName) throws ClassNotFoundException {
         if (LOG.isDebugEnabled()) {
             LOG.debug("Loading class " + clsName);
         }
@@ -444,7 +446,7 @@ public final class ConfigurationUtils {
      * @throws ConfigurationRuntimeException if the class cannot be resolved
      * @since 2.0
      */
-    public static Class<?> loadClassNoEx(final String clsName) {
+    public static Class<?> loadClassNoEx(final @RUntainted String clsName) {
         try {
             return loadClass(clsName);
         } catch (final ClassNotFoundException cnfex) {

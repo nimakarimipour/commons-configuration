@@ -27,6 +27,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.Properties;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.event.Event;
 import org.apache.commons.configuration2.event.EventListener;
 import org.apache.commons.configuration2.event.EventType;
@@ -354,7 +356,7 @@ public class PatternSubtreeConfigurationWrapper extends BaseHierarchicalConfigur
     }
 
     @Override
-    public void read(final Reader reader) throws ConfigurationException, IOException {
+    public void read(final @RUntainted Reader reader) throws ConfigurationException, IOException {
         fetchFileBased().read(reader);
     }
 

@@ -40,6 +40,8 @@ import java.util.Map;
 import java.util.TimeZone;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.configuration2.BaseHierarchicalConfiguration;
 import org.apache.commons.configuration2.FileBasedConfiguration;
@@ -207,7 +209,7 @@ public class XMLPropertyListConfiguration extends BaseHierarchicalConfiguration 
     }
 
     @Override
-    public void read(final Reader in) throws ConfigurationException {
+    public void read(final @RUntainted Reader in) throws ConfigurationException {
         // set up the DTD validation
         final EntityResolver resolver = (publicId, systemId) -> new InputSource(getClass().getClassLoader().getResourceAsStream("PropertyList-1.0.dtd"));
 

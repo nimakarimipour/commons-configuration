@@ -32,6 +32,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicReference;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.io.FileLocator.FileLocatorBuilder;
 import org.apache.commons.configuration2.sync.LockMode;
@@ -634,7 +636,7 @@ public class FileHandler {
      * @param in the reader
      * @throws ConfigurationException if an error occurs during the load operation
      */
-    public void load(final Reader in) throws ConfigurationException {
+    public void load(final @RUntainted Reader in) throws ConfigurationException {
         checkContent();
         injectNullFileLocator();
         loadFromReader(in);
@@ -705,7 +707,7 @@ public class FileHandler {
      * @param in the reader
      * @throws ConfigurationException if an error occurs
      */
-    private void loadFromReader(final Reader in) throws ConfigurationException {
+    private void loadFromReader(final @RUntainted Reader in) throws ConfigurationException {
         fireLoadingEvent();
         try {
             getContent().read(in);

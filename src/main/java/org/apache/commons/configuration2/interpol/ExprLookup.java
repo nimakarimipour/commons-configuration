@@ -18,6 +18,8 @@ package org.apache.commons.configuration2.interpol;
 
 import java.util.ArrayList;
 import java.util.Objects;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
 import org.apache.commons.configuration2.io.ConfigurationLogger;
 import org.apache.commons.jexl2.Expression;
@@ -247,7 +249,7 @@ public class ExprLookup implements Lookup {
      *
      * @return the newly created context
      */
-    private JexlContext createContext() {
+    private @RUntainted JexlContext createContext() {
         final JexlContext ctx = new MapContext();
         initializeContext(ctx);
         return ctx;
@@ -305,7 +307,7 @@ public class ExprLookup implements Lookup {
         public Variable() {
         }
 
-        public Variable(final String name, final Object value) {
+        public Variable(final String name, final @RUntainted Object value) {
             setName(name);
             setValue(value);
         }
@@ -322,7 +324,7 @@ public class ExprLookup implements Lookup {
             return value;
         }
 
-        public void setValue(final Object value) throws ConfigurationRuntimeException {
+        public void setValue(final @RUntainted Object value) throws ConfigurationRuntimeException {
             try {
                 if (!(value instanceof String)) {
                     this.value = value;

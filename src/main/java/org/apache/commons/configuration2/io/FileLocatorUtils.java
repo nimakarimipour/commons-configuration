@@ -22,6 +22,9 @@ import java.net.URI;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Map;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -111,7 +114,7 @@ public final class FileLocatorUtils {
      * @param ext the extension of the path
      * @return the extended path
      */
-    static String appendPath(final String path, final String ext) {
+    static @RPolyTainted String appendPath(final @RPolyTainted String path, final @RPolyTainted String ext) {
         final StringBuilder fName = new StringBuilder();
         fName.append(path);
 
@@ -142,7 +145,7 @@ public final class FileLocatorUtils {
      * @param fileName the file name (must not be <b>null</b>)
      * @return the resulting file
      */
-    static File constructFile(final String basePath, final String fileName) {
+    static File constructFile(final @RUntainted String basePath, final @RUntainted String fileName) {
         final File file;
 
         final File absolute = new File(fileName);
@@ -362,7 +365,7 @@ public final class FileLocatorUtils {
      * @param fileName the file name (must not be <b>null</b>)
      * @return the file object (<b>null</b> if no file can be obtained)
      */
-    static File getFile(final String basePath, final String fileName) {
+    static File getFile(final @RUntainted String basePath, final @RUntainted String fileName) {
         // Check if the file name is absolute
         final File f = new File(fileName);
         if (f.isAbsolute()) {
