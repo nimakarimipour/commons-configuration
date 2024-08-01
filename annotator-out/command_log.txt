@@ -1,8 +1,8 @@
-2023-10-13T15:11:41.966817:cd /home/nima/Developer/taint-benchmarks/commons-configuration && mvn clean compile -Drat.skip=true
+2023-10-13T15:11:41.966817:cd /Users/kknock/RIPLE/taint/summer/commons-configuration && mvn clean compile -Drat.skip=true
 
-2023-10-13T15:11:55.950664:cd /home/nima/Developer/taint-benchmarks/commons-configuration && mvn clean compile -Drat.skip=true
+2023-10-13T15:11:55.950664:cd /Users/kknock/RIPLE/taint/summer/commons-configuration && mvn clean compile -Drat.skip=true
 
-2023-10-13T15:12:10.643238:cd /home/nima/Developer/taint-benchmarks/commons-configuration && mvn clean compile -Drat.skip=true
+2023-10-13T15:12:10.643238:cd /Users/kknock/RIPLE/taint/summer/commons-configuration && mvn clean compile -Drat.skip=true
 
-2023-10-13T15:12:24.286859:cd /home/nima/Developer/taint-benchmarks/commons-configuration && mvn clean compile -Drat.skip=true
+2023-10-13T15:12:24.286859:cd /Users/kknock/RIPLE/taint/summer/commons-configuration && mvn clean compile -Drat.skip=true
 

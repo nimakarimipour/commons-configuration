@@ -21,13 +21,13 @@
 [INFO] 
 [INFO] --- antrun:3.1.0:run (javadoc.resources) @ commons-configuration2 ---
 [INFO] Executing tasks
-[INFO]      [copy] Copying 2 files to /home/nima/Developer/taint-benchmarks/commons-configuration/target/apidocs/META-INF
+[INFO]      [copy] Copying 2 files to /Users/kknock/RIPLE/taint/summer/commons-configuration/target/apidocs/META-INF
 [INFO] Executed tasks
 [INFO] 
 [INFO] --- javacc:2.6:javacc (javacc) @ commons-configuration2 ---
 Java Compiler Compiler Version 5.0 (Parser Generator)
 (type "javacc" with no arguments for help)
-Reading from file /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/javacc/PropertyListParser.jj . . .
+Reading from file /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/javacc/PropertyListParser.jj . . .
 File "TokenMgrError.java" does not exist.  Will create one.
 File "ParseException.java" does not exist.  Will create one.
 File "Token.java" does not exist.  Will create one.
@@ -40,8 +40,8 @@ Parser generated successfully.
 [INFO] Skipping remote resources execution.
 [INFO] 
 [INFO] --- buildnumber:3.1.0:create (default) @ commons-configuration2 ---
-[INFO] Executing: /bin/sh -c cd '/home/nima/Developer/taint-benchmarks/commons-configuration' && 'git' 'rev-parse' '--verify' 'HEAD'
-[INFO] Working directory: /home/nima/Developer/taint-benchmarks/commons-configuration
+[INFO] Executing: /bin/sh -c cd '/Users/kknock/RIPLE/taint/summer/commons-configuration' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/kknock/RIPLE/taint/summer/commons-configuration
 [INFO] Storing buildNumber: null at timestamp: 1722321230704
 [INFO] Storing scmBranch: nimak/annotator
 [INFO] 
@@ -56,16 +56,16 @@ Parser generated successfully.
 [INFO] -------------------------------------------------------------
 [WARNING] COMPILATION WARNING : 
 [INFO] -------------------------------------------------------------
-[WARNING] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/AbstractConfiguration.java:[1158,32] [cast.unsafe] cast from "@RTainted Object" to "@RTainted String @RUntainted []" cannot be statically verified
-[WARNING] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/AbstractConfiguration.java:[1192,33] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
-[WARNING] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/XMLPropertyListConfiguration.java:[182,49] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
-[WARNING] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/XMLPropertyListConfiguration.java:[193,49] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
-[WARNING] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/XMLPropertyListConfiguration.java:[344,65] [cast.unsafe] cast from "@RTainted Object" to "@RTainted byte @RUntainted []" cannot be statically verified
+[WARNING] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/AbstractConfiguration.java:[1158,32] [cast.unsafe] cast from "@RTainted Object" to "@RTainted String @RUntainted []" cannot be statically verified
+[WARNING] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/AbstractConfiguration.java:[1192,33] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/XMLPropertyListConfiguration.java:[182,49] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/XMLPropertyListConfiguration.java:[193,49] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/XMLPropertyListConfiguration.java:[344,65] [cast.unsafe] cast from "@RTainted Object" to "@RTainted byte @RUntainted []" cannot be statically verified
 [WARNING] unknown enum constant When.MAYBE
-[WARNING] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/DefaultConversionHandler.java:[312,27] [cast.unsafe] cast from "@RTainted Object" to "T[ extends @RTainted Object super @RUntainted Void] @RUntainted []" cannot be statically verified
-[WARNING] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/PropertyListConfiguration.java:[288,53] [cast.unsafe] cast from "@RTainted Object" to "@RTainted byte @RUntainted []" cannot be statically verified
-[WARNING] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/DataConfiguration.java:[249,15] [cast.unsafe] cast from "@RTainted Object" to "@RTainted boolean @RUntainted []" cannot be statically verified
-[WARNING] /home/nima/Developer/taint-benchmarks/commons-configuration/target/generated-sources/javacc/org/apache/commons/configuration2/plist/PropertyListParser.java:[544,25] [cast.unsafe] cast from "capture#034[ extends @RTainted Object super @RUntainted Void]" to "@RTainted int @RUntainted []" cannot be statically verified
+[WARNING] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/DefaultConversionHandler.java:[312,27] [cast.unsafe] cast from "@RTainted Object" to "T[ extends @RTainted Object super @RUntainted Void] @RUntainted []" cannot be statically verified
+[WARNING] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/PropertyListConfiguration.java:[288,53] [cast.unsafe] cast from "@RTainted Object" to "@RTainted byte @RUntainted []" cannot be statically verified
+[WARNING] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/DataConfiguration.java:[249,15] [cast.unsafe] cast from "@RTainted Object" to "@RTainted boolean @RUntainted []" cannot be statically verified
+[WARNING] /Users/kknock/RIPLE/taint/summer/commons-configuration/target/generated-sources/javacc/org/apache/commons/configuration2/plist/PropertyListParser.java:[544,25] [cast.unsafe] cast from "capture#034[ extends @RTainted Object super @RUntainted Void]" to "@RTainted int @RUntainted []" cannot be statically verified
 [INFO] 10 warnings 
 [INFO] -------------------------------------------------------------
 [INFO] -------------------------------------------------------------
@@ -76,131 +76,131 @@ warning: stubs/Files.astub: (line 83,col 8) Parse error. Found "void", expected 
 warning: stubs/httpservletreq.astub:(line 51,col 5): Wildcard type </*INFERENCE FAILED for:*/ ? extends Object> does not match type in stubs filestubs/httpservletreq.astub: <java.lang.String> while parsing javax.servlet.http.HttpServletRequest
 warning: stubs/tdmljp.astub: (line 30,col 34) Parse error. Found ")", expected one of  "..." "@" "enum" "exports" "module" "open" "opens" "permits" "provides" "record" "requires" "sealed" "strictfp" "to" "transitive" "uses" "with" "yield" <IDENTIFIER>
 Local Variable Optimization: true
-/home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[907,22] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+/Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[907,22] error: [argument] incompatible argument for parameter arg0 of Writer.write.
   found   : @RTainted String
   required: @RUntainted String, index: 1
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[909,34] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[909,34] error: [argument] incompatible argument for parameter arg0 of Writer.write.
   found   : @RTainted String
   required: @RUntainted String, index: 2
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[970,27] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[970,27] error: [argument] incompatible argument for parameter arg0 of Writer.write.
   found   : @RTainted String
   required: @RUntainted String, index: 3
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[971,32] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[971,32] error: [argument] incompatible argument for parameter arg0 of Writer.write.
   found   : @RTainted String
   required: @RUntainted String, index: 4
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[972,18] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[972,18] error: [argument] incompatible argument for parameter arg0 of Writer.write.
   found   : @RTainted String
   required: @RUntainted String, index: 5
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/beanutils/BeanHelper.java:[381,35] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/beanutils/BeanHelper.java:[381,35] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
   found   : @RTainted String
   required: @RUntainted String, index: 6
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileHandler.java:[1194,25] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileHandler.java:[1194,25] error: [argument] incompatible argument for parameter arg0 of File constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 7
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[152,32] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[152,32] error: [argument] incompatible argument for parameter arg0 of File constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 8
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[160,31] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[160,31] error: [argument] incompatible argument for parameter arg0 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 9
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[162,37] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[162,37] error: [argument] incompatible argument for parameter arg0 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 10
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[163,33] error: [argument] incompatible argument for parameter arg1 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[163,33] error: [argument] incompatible argument for parameter arg1 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 11
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[174,31] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[174,31] error: [argument] incompatible argument for parameter arg0 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 12
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[177,40] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[177,40] error: [argument] incompatible argument for parameter arg0 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 13
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[178,35] error: [argument] incompatible argument for parameter arg1 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[178,35] error: [argument] incompatible argument for parameter arg1 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 14
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[120,53] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[120,53] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
   found   : @RTainted String
   required: @RUntainted String, index: 15
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[220,53] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[220,53] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
   found   : @RTainted String
   required: @RUntainted String, index: 16
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[301,36] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[301,36] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
   found   : @RTainted String
   required: @RUntainted String, index: 17
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[347,43] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[347,43] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
   found   : @RTainted String
   required: @RUntainted String, index: 18
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[379,71] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[379,71] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
   found   : @RTainted String
   required: @RUntainted String, index: 19
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/ConfigurationUtils.java:[428,36] error: [argument] incompatible argument for parameter arg0 of ClassLoader.loadClass.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/ConfigurationUtils.java:[428,36] error: [argument] incompatible argument for parameter arg0 of ClassLoader.loadClass.
   found   : @RTainted String
   required: @RUntainted String, index: 20
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/ConfigurationUtils.java:[434,67] error: [argument] incompatible argument for parameter arg0 of ClassLoader.loadClass.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/ConfigurationUtils.java:[434,67] error: [argument] incompatible argument for parameter arg0 of ClassLoader.loadClass.
   found   : @RTainted String
   required: @RUntainted String, index: 21
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/XMLPropertyListConfiguration.java:[223,40] error: [argument] incompatible argument for parameter arg0 of XMLReader.parse.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/XMLPropertyListConfiguration.java:[223,40] error: [argument] incompatible argument for parameter arg0 of XMLReader.parse.
   found   : @RTainted InputSource
   required: @RUntainted InputSource, index: 22
 [ERROR]   reason: class file for javax.annotation.meta.When not found
-/home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/AbsoluteNameLocationStrategy.java:[43,58] error: [argument] incompatible argument for parameter arg0 of File constructor.
+/Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/AbsoluteNameLocationStrategy.java:[43,58] error: [argument] incompatible argument for parameter arg0 of File constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 23
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[148,39] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[148,39] error: [argument] incompatible argument for parameter arg0 of File constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 24
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[152,38] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[152,38] error: [argument] incompatible argument for parameter arg0 of File constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 25
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[367,32] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[367,32] error: [argument] incompatible argument for parameter arg0 of File constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 26
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[375,34] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[375,34] error: [argument] incompatible argument for parameter arg0 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 27
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[375,45] error: [argument] incompatible argument for parameter arg1 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[375,45] error: [argument] incompatible argument for parameter arg1 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 28
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[378,30] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[378,30] error: [argument] incompatible argument for parameter arg0 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 29
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileUtils.java:[55,24] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileUtils.java:[55,24] error: [argument] incompatible argument for parameter arg0 of File constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 30
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/reloading/FileHandlerReloadingDetector.java:[217,74] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/reloading/FileHandlerReloadingDetector.java:[217,74] error: [argument] incompatible argument for parameter arg0 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 31
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLConfiguration.java:[839,55] error: [argument] incompatible argument for parameter arg0 of DocumentBuilder.parse.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLConfiguration.java:[839,55] error: [argument] incompatible argument for parameter arg0 of DocumentBuilder.parse.
   found   : @RTainted InputSource
   required: @RUntainted InputSource, index: 32
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/DatabaseConfiguration.java:[655,53] error: [argument] incompatible argument for parameter arg0 of Connection.prepareStatement.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/DatabaseConfiguration.java:[655,53] error: [argument] incompatible argument for parameter arg0 of Connection.prepareStatement.
   found   : @RTainted String
   required: @RUntainted String, index: 33
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[231,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[231,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 34
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[267,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[267,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 35
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ConstantLookup.java:[111,35] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ConstantLookup.java:[111,35] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
   found   : @RTainted String
   required: @RUntainted String, index: 36
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[408,28] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[408,28] error: [argument] incompatible argument for parameter arg0 of File constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 37
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[429,29] error: [argument] incompatible argument for parameter arg0 of Paths.get.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[429,29] error: [argument] incompatible argument for parameter arg0 of Paths.get.
   found   : @RTainted String
   required: @RUntainted String, index: 38
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[470,27] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[470,27] error: [argument] incompatible argument for parameter arg0 of URL constructor.
   found   : @RTainted String
   required: @RUntainted String, index: 39
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[218,64] error: [argument] incompatible argument for parameter arg0 of Expression.evaluate.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[218,64] error: [argument] incompatible argument for parameter arg0 of Expression.evaluate.
   found   : @RTainted JexlContext
   required: @RUntainted JexlContext, index: 40
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[333,59] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[333,59] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
   found   : @RTainted String
   required: @RUntainted String, index: 41
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLPropertiesConfiguration.java:[130,28] error: [argument] incompatible argument for parameter arg0 of XMLReader.parse.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLPropertiesConfiguration.java:[130,28] error: [argument] incompatible argument for parameter arg0 of XMLReader.parse.
   found   : @RTainted InputSource
   required: @RUntainted InputSource, index: 42
 [INFO] 42 errors 
@@ -217,131 +217,131 @@ Local Variable Optimization: true
 [ERROR] warning: stubs/httpservletreq.astub:(line 51,col 5): Wildcard type </*INFERENCE FAILED for:*/ ? extends Object> does not match type in stubs filestubs/httpservletreq.astub: <java.lang.String> while parsing javax.servlet.http.HttpServletRequest
 [ERROR] warning: stubs/tdmljp.astub: (line 30,col 34) Parse error. Found ")", expected one of  "..." "@" "enum" "exports" "module" "open" "opens" "permits" "provides" "record" "requires" "sealed" "strictfp" "to" "transitive" "uses" "with" "yield" <IDENTIFIER>
 [ERROR] Local Variable Optimization: true
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[907,22] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[907,22] error: [argument] incompatible argument for parameter arg0 of Writer.write.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 1
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[909,34] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[909,34] error: [argument] incompatible argument for parameter arg0 of Writer.write.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 2
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[970,27] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[970,27] error: [argument] incompatible argument for parameter arg0 of Writer.write.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 3
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[971,32] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[971,32] error: [argument] incompatible argument for parameter arg0 of Writer.write.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 4
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[972,18] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/PropertiesConfiguration.java:[972,18] error: [argument] incompatible argument for parameter arg0 of Writer.write.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 5
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/beanutils/BeanHelper.java:[381,35] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/beanutils/BeanHelper.java:[381,35] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 6
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileHandler.java:[1194,25] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileHandler.java:[1194,25] error: [argument] incompatible argument for parameter arg0 of File constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 7
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[152,32] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[152,32] error: [argument] incompatible argument for parameter arg0 of File constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 8
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[160,31] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[160,31] error: [argument] incompatible argument for parameter arg0 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 9
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[162,37] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[162,37] error: [argument] incompatible argument for parameter arg0 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 10
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[163,33] error: [argument] incompatible argument for parameter arg1 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[163,33] error: [argument] incompatible argument for parameter arg1 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 11
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[174,31] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[174,31] error: [argument] incompatible argument for parameter arg0 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 12
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[177,40] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[177,40] error: [argument] incompatible argument for parameter arg0 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 13
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[178,35] error: [argument] incompatible argument for parameter arg1 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/DefaultFileSystem.java:[178,35] error: [argument] incompatible argument for parameter arg1 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 14
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[120,53] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[120,53] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 15
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[220,53] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[220,53] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 16
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[301,36] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[301,36] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 17
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[347,43] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[347,43] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 18
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[379,71] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/JNDIConfiguration.java:[379,71] error: [argument] incompatible argument for parameter arg0 of Context.lookup.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 19
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/ConfigurationUtils.java:[428,36] error: [argument] incompatible argument for parameter arg0 of ClassLoader.loadClass.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/ConfigurationUtils.java:[428,36] error: [argument] incompatible argument for parameter arg0 of ClassLoader.loadClass.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 20
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/ConfigurationUtils.java:[434,67] error: [argument] incompatible argument for parameter arg0 of ClassLoader.loadClass.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/ConfigurationUtils.java:[434,67] error: [argument] incompatible argument for parameter arg0 of ClassLoader.loadClass.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 21
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/XMLPropertyListConfiguration.java:[223,40] error: [argument] incompatible argument for parameter arg0 of XMLReader.parse.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/plist/XMLPropertyListConfiguration.java:[223,40] error: [argument] incompatible argument for parameter arg0 of XMLReader.parse.
 [ERROR]   found   : @RTainted InputSource
 [ERROR]   required: @RUntainted InputSource, index: 22
 [ERROR]   reason: class file for javax.annotation.meta.When not found
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/AbsoluteNameLocationStrategy.java:[43,58] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/AbsoluteNameLocationStrategy.java:[43,58] error: [argument] incompatible argument for parameter arg0 of File constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 23
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[148,39] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[148,39] error: [argument] incompatible argument for parameter arg0 of File constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 24
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[152,38] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[152,38] error: [argument] incompatible argument for parameter arg0 of File constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 25
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[367,32] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[367,32] error: [argument] incompatible argument for parameter arg0 of File constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 26
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[375,34] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[375,34] error: [argument] incompatible argument for parameter arg0 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 27
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[375,45] error: [argument] incompatible argument for parameter arg1 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[375,45] error: [argument] incompatible argument for parameter arg1 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 28
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[378,30] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileLocatorUtils.java:[378,30] error: [argument] incompatible argument for parameter arg0 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 29
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileUtils.java:[55,24] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/FileUtils.java:[55,24] error: [argument] incompatible argument for parameter arg0 of File constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 30
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/reloading/FileHandlerReloadingDetector.java:[217,74] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/reloading/FileHandlerReloadingDetector.java:[217,74] error: [argument] incompatible argument for parameter arg0 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 31
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLConfiguration.java:[839,55] error: [argument] incompatible argument for parameter arg0 of DocumentBuilder.parse.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLConfiguration.java:[839,55] error: [argument] incompatible argument for parameter arg0 of DocumentBuilder.parse.
 [ERROR]   found   : @RTainted InputSource
 [ERROR]   required: @RUntainted InputSource, index: 32
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/DatabaseConfiguration.java:[655,53] error: [argument] incompatible argument for parameter arg0 of Connection.prepareStatement.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/DatabaseConfiguration.java:[655,53] error: [argument] incompatible argument for parameter arg0 of Connection.prepareStatement.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 33
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[231,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[231,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 34
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[267,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/io/VFSFileSystem.java:[267,44] error: [argument] incompatible argument for parameter arg1 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 35
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ConstantLookup.java:[111,35] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ConstantLookup.java:[111,35] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 36
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[408,28] error: [argument] incompatible argument for parameter arg0 of File constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[408,28] error: [argument] incompatible argument for parameter arg0 of File constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 37
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[429,29] error: [argument] incompatible argument for parameter arg0 of Paths.get.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[429,29] error: [argument] incompatible argument for parameter arg0 of Paths.get.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 38
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[470,27] error: [argument] incompatible argument for parameter arg0 of URL constructor.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/convert/PropertyConverter.java:[470,27] error: [argument] incompatible argument for parameter arg0 of URL constructor.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 39
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[218,64] error: [argument] incompatible argument for parameter arg0 of Expression.evaluate.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[218,64] error: [argument] incompatible argument for parameter arg0 of Expression.evaluate.
 [ERROR]   found   : @RTainted JexlContext
 [ERROR]   required: @RUntainted JexlContext, index: 40
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[333,59] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/interpol/ExprLookup.java:[333,59] error: [argument] incompatible argument for parameter className of ClassUtils.getClass.
 [ERROR]   found   : @RTainted String
 [ERROR]   required: @RUntainted String, index: 41
-[ERROR] /home/nima/Developer/taint-benchmarks/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLPropertiesConfiguration.java:[130,28] error: [argument] incompatible argument for parameter arg0 of XMLReader.parse.
+[ERROR] /Users/kknock/RIPLE/taint/summer/commons-configuration/src/main/java/org/apache/commons/configuration2/XMLPropertiesConfiguration.java:[130,28] error: [argument] incompatible argument for parameter arg0 of XMLReader.parse.
 [ERROR]   found   : @RTainted InputSource
 [ERROR]   required: @RUntainted InputSource, index: 42
 [ERROR] -> [Help 1]
