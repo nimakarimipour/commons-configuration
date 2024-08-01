@@ -27,6 +27,7 @@ import java.net.URLConnection;
 import java.net.URLStreamHandler;
 import java.util.Map;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
@@ -123,11 +124,11 @@ public class VFSFileSystem extends DefaultFileSystem {
         }
     }
 
-    private FileSystemManager getManager() throws FileSystemException {
+    private @RUntainted FileSystemManager getManager() throws FileSystemException {
         return VFS.getManager();
     }
 
-    private FileSystemOptions getOptions(final String scheme) {
+    private @RPolyTainted FileSystemOptions getOptions(final @RPolyTainted String scheme) {
         if (scheme == null) {
             return null;
         }
@@ -272,7 +273,7 @@ public class VFSFileSystem extends DefaultFileSystem {
         }
     }
 
-    private FileName resolveURI(final String path) throws FileSystemException {
+    private @RPolyTainted FileName resolveURI(final @RPolyTainted String path) throws FileSystemException {
         return getManager().resolveURI(path);
     }
 
