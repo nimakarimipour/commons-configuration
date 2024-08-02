@@ -110,7 +110,7 @@ public class CatalogResolver implements EntityResolver {
      *
      * @param baseDir The base path String.
      */
-    public void setBaseDir(final String baseDir) {
+    public void setBaseDir(final @RUntainted String baseDir) {
         manager.setBaseDir(baseDir);
     }
 
