@@ -19,6 +19,8 @@ package org.apache.commons.configuration2.reloading;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.io.FileHandler;
 import org.apache.commons.configuration2.io.FileLocatorUtils;
 
@@ -210,7 +212,7 @@ public class FileHandlerReloadingDetector implements ReloadingDetector {
      * @param url the URL to be converted
      * @return the resulting file or <b>null </b>
      */
-    private static File fileFromURL(final URL url) {
+    private static File fileFromURL(final @RUntainted URL url) {
         if (JAR_PROTOCOL.equals(url.getProtocol())) {
             final String path = url.getPath();
             try {
