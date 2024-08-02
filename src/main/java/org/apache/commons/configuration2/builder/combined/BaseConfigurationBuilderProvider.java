@@ -72,7 +72,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
     private final @RUntainted String configurationClass;
 
     /** A collection with the names of parameter classes. */
-    private final Collection<String> parameterClasses;
+    private final Collection<@RUntainted String> parameterClasses;
 
     /**
      * Creates a new instance of {@code BaseConfigurationBuilderProvider} and initializes all its properties.
@@ -84,7 +84,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      * @param paramCls a collection with the names of parameters classes
      * @throws IllegalArgumentException if a required parameter is missing
      */
-    public BaseConfigurationBuilderProvider(final String bldrCls, final String reloadBldrCls, final @RUntainted String configCls, final Collection<String> paramCls) {
+    public BaseConfigurationBuilderProvider(final String bldrCls, final String reloadBldrCls, final @RUntainted String configCls, final Collection<@RUntainted String> paramCls) {
         if (bldrCls == null) {
             throw new IllegalArgumentException("Builder class must not be null!");
         }
@@ -131,7 +131,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      *
      * @return the parameter classes
      */
-    public Collection<String> getParameterClasses() {
+    public Collection<@RUntainted String> getParameterClasses() {
         return parameterClasses;
     }
 
@@ -289,7 +289,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      * @return the newly created instance
      * @throws Exception if an error occurs
      */
-    private static BuilderParameters createParameterObject(final String paramcls) throws ReflectiveOperationException {
+    private static BuilderParameters createParameterObject(final @RUntainted String paramcls) throws ReflectiveOperationException {
         return (BuilderParameters) ConfigurationUtils.loadClass(paramcls).newInstance();
     }
 
@@ -299,7 +299,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      * @param paramCls the collection with parameter classes passed to the constructor
      * @return the collection to be stored
      */
-    private static Collection<String> initParameterClasses(final Collection<String> paramCls) {
+    private static Collection<@RUntainted String> initParameterClasses(final Collection<@RUntainted String> paramCls) {
         if (paramCls == null) {
             return Collections.emptySet();
         }

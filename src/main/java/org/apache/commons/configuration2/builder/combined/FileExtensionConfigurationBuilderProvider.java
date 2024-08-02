@@ -70,7 +70,7 @@ public class FileExtensionConfigurationBuilderProvider extends BaseConfiguration
      * @throws IllegalArgumentException if a required parameter is missing
      */
     public FileExtensionConfigurationBuilderProvider(final String bldrCls, final String reloadBldrCls, final String matchingConfigCls,
-                                                     final @RUntainted String defConfigClass, final String ext, final Collection<String> paramCls) {
+                                                     final @RUntainted String defConfigClass, final String ext, final Collection<@RUntainted String> paramCls) {
         super(bldrCls, reloadBldrCls, defConfigClass, paramCls);
         if (matchingConfigCls == null) {
             throw new IllegalArgumentException("Matching configuration class must not be null!");

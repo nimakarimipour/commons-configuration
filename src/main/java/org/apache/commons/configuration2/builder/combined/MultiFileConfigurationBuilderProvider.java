@@ -66,7 +66,7 @@ public class MultiFileConfigurationBuilderProvider extends BaseConfigurationBuil
      * @param configCls the name of the managed configuration class
      * @param paramCls the name of the class of the parameters object to configure the managed configuration
      */
-    public MultiFileConfigurationBuilderProvider(final @RUntainted String configCls, final String paramCls) {
+    public MultiFileConfigurationBuilderProvider(final @RUntainted String configCls, final @RUntainted String paramCls) {
         super(BUILDER_CLASS, RELOADING_BUILDER_CLASS, configCls, Arrays.asList(paramCls, PARAM_CLASS));
     }
 
