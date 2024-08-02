@@ -122,7 +122,7 @@ public class Configurations {
      * @param <T> the type of the configuration to be constructed
      * @return the new {@code FileBasedConfigurationBuilder}
      */
-    public <T extends FileBasedConfiguration> FileBasedConfigurationBuilder<T> fileBasedBuilder(final Class<T> configClass, final URL url) {
+    public <T extends FileBasedConfiguration> FileBasedConfigurationBuilder<T> fileBasedBuilder(final Class<T> configClass, final @RUntainted URL url) {
         return createFileBasedBuilder(configClass, fileParams(url));
     }
 
@@ -165,7 +165,7 @@ public class Configurations {
      * @return a {@code FileBasedConfiguration} object initialized from this file
      * @throws ConfigurationException if an error occurred when loading the configuration
      */
-    public <T extends FileBasedConfiguration> T fileBased(final Class<T> configClass, final URL url) throws ConfigurationException {
+    public <T extends FileBasedConfiguration> T fileBased(final Class<T> configClass, final @RUntainted URL url) throws ConfigurationException {
         return fileBasedBuilder(configClass, url).getConfiguration();
     }
 
@@ -221,7 +221,7 @@ public class Configurations {
      * @param url the URL to be loaded
      * @return the newly created {@code FileBasedConfigurationBuilder}
      */
-    public FileBasedConfigurationBuilder<PropertiesConfiguration> propertiesBuilder(final URL url) {
+    public FileBasedConfigurationBuilder<PropertiesConfiguration> propertiesBuilder(final @RUntainted URL url) {
         return fileBasedBuilder(PropertiesConfiguration.class, url);
     }
 
@@ -258,7 +258,7 @@ public class Configurations {
      * @return a {@code PropertiesConfiguration} object initialized from this URL
      * @throws ConfigurationException if an error occurred when loading the configuration
      */
-    public PropertiesConfiguration properties(final URL url) throws ConfigurationException {
+    public PropertiesConfiguration properties(final @RUntainted URL url) throws ConfigurationException {
         return propertiesBuilder(url).getConfiguration();
     }
 
@@ -291,7 +291,7 @@ public class Configurations {
      * @param url the URL to be loaded
      * @return the newly created {@code FileBasedConfigurationBuilder}
      */
-    public FileBasedConfigurationBuilder<XMLConfiguration> xmlBuilder(final URL url) {
+    public FileBasedConfigurationBuilder<XMLConfiguration> xmlBuilder(final @RUntainted URL url) {
         return fileBasedBuilder(XMLConfiguration.class, url);
     }
 
@@ -327,7 +327,7 @@ public class Configurations {
      * @return a {@code XMLConfiguration} object initialized from this file
      * @throws ConfigurationException if an error occurred when loading the configuration
      */
-    public XMLConfiguration xml(final URL url) throws ConfigurationException {
+    public XMLConfiguration xml(final @RUntainted URL url) throws ConfigurationException {
         return xmlBuilder(url).getConfiguration();
     }
 
@@ -360,7 +360,7 @@ public class Configurations {
      * @param url the URL to be loaded
      * @return the newly created {@code FileBasedConfigurationBuilder}
      */
-    public FileBasedConfigurationBuilder<INIConfiguration> iniBuilder(final URL url) {
+    public FileBasedConfigurationBuilder<INIConfiguration> iniBuilder(final @RUntainted URL url) {
         return fileBasedBuilder(INIConfiguration.class, url);
     }
 
@@ -396,7 +396,7 @@ public class Configurations {
      * @return a {@code INIConfiguration} object initialized from this file
      * @throws ConfigurationException if an error occurred when loading the configuration
      */
-    public INIConfiguration ini(final URL url) throws ConfigurationException {
+    public INIConfiguration ini(final @RUntainted URL url) throws ConfigurationException {
         return iniBuilder(url).getConfiguration();
     }
 

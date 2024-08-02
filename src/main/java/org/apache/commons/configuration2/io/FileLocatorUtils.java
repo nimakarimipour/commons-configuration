@@ -189,7 +189,7 @@ public final class FileLocatorUtils {
      * @param url the URL
      * @return the fully initialized {@code FileLocator}
      */
-    private static FileLocator createFullyInitializedLocatorFromURL(final FileLocator src, final URL url) {
+    private static FileLocator createFullyInitializedLocatorFromURL(final FileLocator src, final @RUntainted URL url) {
         final FileLocator.FileLocatorBuilder fileLocatorBuilder = fileLocator(src);
         if (src.getSourceURL() == null) {
             fileLocatorBuilder.sourceURL(url);
