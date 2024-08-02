@@ -209,7 +209,7 @@ public final class FileLocatorUtils {
      * @param url the URL
      * @return the resulting file object
      */
-    public static File fileFromURL(final URL url) {
+    public static File fileFromURL(final @RUntainted URL url) {
         return FileUtils.toFile(url);
     }
 

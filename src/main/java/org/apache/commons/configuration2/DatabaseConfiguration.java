@@ -28,6 +28,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import javax.sql.DataSource;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.convert.DisabledListDelimiterHandler;
 import org.apache.commons.configuration2.convert.ListDelimiterHandler;
 import org.apache.commons.configuration2.event.ConfigurationErrorEvent;
@@ -132,13 +134,13 @@ public class DatabaseConfiguration extends AbstractConfiguration {
     private DataSource dataSource;
 
     /** The configurationName of the table containing the configurations. */
-    private String table;
+    private @RUntainted String table;
 
     /** The column containing the configurationName of the configuration. */
     private String configurationNameColumn;
 
     /** The column containing the keys. */
-    private String keyColumn;
+    private @RUntainted String keyColumn;
 
     /** The column containing the values. */
     private String valueColumn;
@@ -189,7 +191,7 @@ public class DatabaseConfiguration extends AbstractConfiguration {
      *
      * @param table the table name
      */
-    public void setTable(final String table) {
+    public void setTable(final @RUntainted String table) {
         this.table = table;
     }
 
@@ -216,7 +218,7 @@ public class DatabaseConfiguration extends AbstractConfiguration {
      *
      * @return the name of the key column
      */
-    public String getKeyColumn() {
+    public @RUntainted String getKeyColumn() {
         return keyColumn;
     }
 
@@ -225,7 +227,7 @@ public class DatabaseConfiguration extends AbstractConfiguration {
      *
      * @param keyColumn the name of the key column
      */
-    public void setKeyColumn(final String keyColumn) {
+    public void setKeyColumn(final @RUntainted String keyColumn) {
         this.keyColumn = keyColumn;
     }
 
@@ -642,7 +644,7 @@ public class DatabaseConfiguration extends AbstractConfiguration {
          * @return the prepared statement object
          * @throws SQLException if an SQL error occurs
          */
-        protected PreparedStatement createStatement(final String sql, final boolean nameCol) throws SQLException {
+        protected PreparedStatement createStatement(final @RUntainted String sql, final boolean nameCol) throws SQLException {
             final String statement;
             if (nameCol && configurationNameColumn != null) {
                 final StringBuilder buf = new StringBuilder(sql);
@@ -666,7 +668,7 @@ public class DatabaseConfiguration extends AbstractConfiguration {
          * @return the initialized statement object
          * @throws SQLException if an SQL error occurs
          */
-        protected PreparedStatement initStatement(final String sql, final boolean nameCol, final Object... params) throws SQLException {
+        protected PreparedStatement initStatement(final @RUntainted String sql, final boolean nameCol, final Object... params) throws SQLException {
             final PreparedStatement ps = createStatement(sql, nameCol);
 
             int idx = 1;
@@ -690,7 +692,7 @@ public class DatabaseConfiguration extends AbstractConfiguration {
          * @return the {@code ResultSet} produced by the query
          * @throws SQLException if an SQL error occurs
          */
-        protected ResultSet openResultSet(final String sql, final boolean nameCol, final Object... params) throws SQLException {
+        protected ResultSet openResultSet(final @RUntainted String sql, final boolean nameCol, final Object... params) throws SQLException {
             return resultSet = initStatement(sql, nameCol, params).executeQuery();
         }
 

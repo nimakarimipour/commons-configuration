@@ -48,7 +48,7 @@ public abstract class FileSystem {
         return this.optionsProvider;
     }
 
-    public abstract InputStream getInputStream(URL url) throws ConfigurationException;
+    public abstract InputStream getInputStream(@RUntainted URL url) throws ConfigurationException;
 
     /**
      * Not abstract for binary compatibility.
@@ -60,7 +60,7 @@ public abstract class FileSystem {
      *
      * @since 2.8.0
      */
-    public InputStream getInputStream(final URL url, final URLConnectionOptions urlConnectionOptions) throws ConfigurationException {
+    public InputStream getInputStream(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) throws ConfigurationException {
         return getInputStream(url);
     }
 
@@ -76,7 +76,7 @@ public abstract class FileSystem {
 
     public abstract OutputStream getOutputStream(File file) throws ConfigurationException;
 
-    public abstract OutputStream getOutputStream(URL url) throws ConfigurationException;
+    public abstract OutputStream getOutputStream(@RUntainted URL url) throws ConfigurationException;
 
     public abstract String getPath(File file, URL url, @RUntainted String basePath, @RUntainted String fileName);
 

@@ -38,12 +38,12 @@ import org.apache.commons.configuration2.ex.ConfigurationException;
 public class DefaultFileSystem extends FileSystem {
 
     @Override
-    public InputStream getInputStream(final URL url) throws ConfigurationException {
+    public InputStream getInputStream(final @RUntainted URL url) throws ConfigurationException {
         return getInputStream(url, null);
     }
 
     @Override
-    public InputStream getInputStream(final URL url, final URLConnectionOptions urlConnectionOptions) throws ConfigurationException {
+    public InputStream getInputStream(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) throws ConfigurationException {
         // throw an exception if the target URL is a directory
         final File file = FileLocatorUtils.fileFromURL(url);
         if (file != null && file.isDirectory()) {
@@ -58,7 +58,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public OutputStream getOutputStream(final URL url) throws ConfigurationException {
+    public OutputStream getOutputStream(final @RUntainted URL url) throws ConfigurationException {
         // file URLs have to be converted to Files since FileURLConnection is
         // read only (http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4191800)
         final File file = FileLocatorUtils.fileFromURL(url);
