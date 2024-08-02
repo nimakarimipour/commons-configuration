@@ -43,7 +43,7 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class JNDIConfiguration extends AbstractConfiguration {
     /** The prefix of the context. */
-    private String prefix;
+    private @RUntainted String prefix;
 
     /** The initial JNDI context. */
     private Context context;
@@ -71,7 +71,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      *
      * @throws NamingException thrown if an error occurs when initializing the default context
      */
-    public JNDIConfiguration(final String prefix) throws NamingException {
+    public JNDIConfiguration(final @RUntainted String prefix) throws NamingException {
         this(new InitialContext(), prefix);
     }
 
@@ -91,7 +91,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @param context the initial context
      * @param prefix the prefix
      */
-    public JNDIConfiguration(final Context context, final String prefix) {
+    public JNDIConfiguration(final Context context, final @RUntainted String prefix) {
         this.context = context;
         this.prefix = prefix;
         initLogger(new ConfigurationLogger(JNDIConfiguration.class));
@@ -293,7 +293,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @return a flag whether this key is stored in this configuration
      */
     @Override
-    protected boolean containsKeyInternal(String key) {
+    protected boolean containsKeyInternal(@RUntainted String key) {
         if (clearedProperties.contains(key)) {
             return false;
         }
@@ -316,7 +316,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      *
      * @return the prefix
      */
-    public String getPrefix() {
+    public @RUntainted String getPrefix() {
         return prefix;
     }
 
@@ -325,7 +325,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      *
      * @param prefix The prefix to set
      */
-    public void setPrefix(final String prefix) {
+    public void setPrefix(final @RUntainted String prefix) {
         this.prefix = prefix;
 
         // clear the previous baseContext

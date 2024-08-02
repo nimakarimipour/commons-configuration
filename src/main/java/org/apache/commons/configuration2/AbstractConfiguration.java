@@ -31,6 +31,8 @@ import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.convert.ConversionHandler;
 import org.apache.commons.configuration2.convert.DefaultConversionHandler;
 import org.apache.commons.configuration2.convert.DisabledListDelimiterHandler;
@@ -887,7 +889,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
      * @return <b>true</b> if this key is contained in this configuration, <b>false</b> otherwise
      * @since 2.0
      */
-    protected abstract boolean containsKeyInternal(String key);
+    protected abstract boolean containsKeyInternal(@RUntainted String key);
 
     @Override
     public Properties getProperties(final String key) {
