@@ -16,6 +16,8 @@
  */
 package org.apache.commons.configuration2.beanutils;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -89,7 +91,7 @@ public class CombinedBeanDeclaration implements BeanDeclaration {
      * <b>null</b>.
      */
     @Override
-    public String getBeanClassName() {
+    public @RUntainted String getBeanClassName() {
         return findFirst(BeanDeclaration::getBeanClassName);
     }
 

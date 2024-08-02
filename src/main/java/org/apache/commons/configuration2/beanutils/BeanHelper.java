@@ -26,6 +26,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.beanutils.BeanUtilsBean;
 import org.apache.commons.beanutils.ConvertUtilsBean;
 import org.apache.commons.beanutils.DynaBean;
@@ -377,7 +379,7 @@ public final class BeanHelper {
      * @return the class object for the specified name
      * @throws ClassNotFoundException if the class cannot be loaded
      */
-    static Class<?> loadClass(final String name) throws ClassNotFoundException {
+    static Class<?> loadClass(final @RUntainted String name) throws ClassNotFoundException {
         return ClassUtils.getClass(name);
     }
 

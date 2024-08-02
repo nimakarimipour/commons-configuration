@@ -20,6 +20,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.ConfigurationUtils;
 import org.apache.commons.configuration2.ImmutableConfiguration;
 import org.apache.commons.configuration2.Initializable;
@@ -457,7 +459,7 @@ public class BasicConfigurationBuilder<T extends ImmutableConfiguration> impleme
             }
 
             @Override
-            public String getBeanClassName() {
+            public @RUntainted String getBeanClassName() {
                 return getResultClass().getName();
             }
         };

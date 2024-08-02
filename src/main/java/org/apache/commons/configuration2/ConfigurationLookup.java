@@ -16,6 +16,7 @@
  */
 package org.apache.commons.configuration2;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.interpol.Lookup;
 
 /**
@@ -62,7 +63,7 @@ public class ConfigurationLookup implements Lookup {
      * directly returned. Note that this may be a complex object, e.g. a collection or an array.
      */
     @Override
-    public Object lookup(final String variable) {
+    public Object lookup(final @RUntainted String variable) {
         return getConfiguration().getProperty(variable);
     }
 }

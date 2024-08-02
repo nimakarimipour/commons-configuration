@@ -1107,7 +1107,7 @@ public abstract class AbstractConfiguration extends BaseEventSource implements C
     }
 
     @Override
-    public String getString(final String key, final String defaultValue) {
+    public @RUntainted String getString(final String key, final String defaultValue) {
         final String result = convert(String.class, key, null, false);
         return result != null ? result : interpolate(defaultValue);
     }

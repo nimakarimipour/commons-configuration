@@ -29,6 +29,8 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.event.BaseEventSource;
 import org.apache.commons.configuration2.event.Event;
 import org.apache.commons.configuration2.event.EventListener;
@@ -476,7 +478,7 @@ public class DynamicCombinedConfiguration extends CombinedConfiguration {
     }
 
     @Override
-    public String getString(final String key, final String defaultValue) {
+    public @RUntainted String getString(final String key, final String defaultValue) {
         return this.getCurrentConfig().getString(key, defaultValue);
     }
 

@@ -1192,7 +1192,7 @@ public class FileHandler {
      *
      * @param path the full path name of the associated file
      */
-    public void setPath(final String path) {
+    public void setPath(final @RUntainted String path) {
         setFile(new File(path));
     }
 

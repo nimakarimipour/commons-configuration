@@ -25,6 +25,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.BaseHierarchicalConfiguration;
 import org.apache.commons.configuration2.HierarchicalConfiguration;
 import org.apache.commons.configuration2.ex.ConfigurationRuntimeException;
@@ -280,7 +282,7 @@ public class XMLBeanDeclaration implements BeanDeclaration {
      * @return the name of the bean's class
      */
     @Override
-    public String getBeanClassName() {
+    public @RUntainted String getBeanClassName() {
         return getConfiguration().getString(ATTR_BEAN_CLASS, getDefaultBeanClassName());
     }
 

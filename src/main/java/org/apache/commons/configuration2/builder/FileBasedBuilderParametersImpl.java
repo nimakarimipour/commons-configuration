@@ -19,6 +19,8 @@ package org.apache.commons.configuration2.builder;
 import java.io.File;
 import java.net.URL;
 import java.util.Map;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.io.FileHandler;
 import org.apache.commons.configuration2.io.FileLocationStrategy;
 import org.apache.commons.configuration2.io.FileSystem;
@@ -247,7 +249,7 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setPath(final String path) {
+    public FileBasedBuilderParametersImpl setPath(final @RUntainted String path) {
         getFileHandler().setPath(path);
         return this;
     }

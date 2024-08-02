@@ -16,6 +16,8 @@
  */
 package org.apache.commons.configuration2.interpol;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+
 /**
  * <p>
  * Definition of an interface for looking up variables during interpolation.
@@ -47,5 +49,5 @@ public interface Lookup {
      * @param variable the name of the variable to be resolved
      * @return the value of this variable or <b>null</b>
      */
-    Object lookup(String variable);
+    Object lookup(@RUntainted String variable);
 }
