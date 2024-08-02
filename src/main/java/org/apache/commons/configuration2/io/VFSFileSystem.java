@@ -217,7 +217,7 @@ public class VFSFileSystem extends DefaultFileSystem {
     }
 
     @Override
-    public URL getURL(final @RUntainted String basePath, final @RUntainted String file) throws MalformedURLException {
+    public @RUntainted URL getURL(final @RUntainted String basePath, final @RUntainted String file) throws MalformedURLException {
         if (basePath != null && UriParser.extractScheme(basePath) == null || basePath == null && UriParser.extractScheme(file) == null) {
             return super.getURL(basePath, file);
         }
@@ -238,7 +238,7 @@ public class VFSFileSystem extends DefaultFileSystem {
     }
 
     @Override
-    public URL locateFromURL(final @RUntainted String basePath, final @RUntainted String fileName) {
+    public @RUntainted URL locateFromURL(final @RUntainted String basePath, final @RUntainted String fileName) {
         final String fileScheme = UriParser.extractScheme(fileName);
 
         // Use DefaultFileSystem if basePath and fileName don't have a scheme.

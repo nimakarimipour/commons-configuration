@@ -150,7 +150,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public URL getURL(final @RUntainted String basePath, final @RUntainted String file) throws MalformedURLException {
+    public @RUntainted URL getURL(final @RUntainted String basePath, final @RUntainted String file) throws MalformedURLException {
         final File f = new File(file);
         // already absolute?
         if (f.isAbsolute()) {
@@ -169,7 +169,7 @@ public class DefaultFileSystem extends FileSystem {
     }
 
     @Override
-    public URL locateFromURL(final @RUntainted String basePath, final @RUntainted String fileName) {
+    public @RUntainted URL locateFromURL(final @RUntainted String basePath, final @RUntainted String fileName) {
         try {
             final URL url;
             if (basePath == null) {

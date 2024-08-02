@@ -145,7 +145,7 @@ public final class FileLocatorUtils {
      * @param fileName the file name (must not be <b>null</b>)
      * @return the resulting file
      */
-    static File constructFile(final @RUntainted String basePath, final @RUntainted String fileName) {
+    static @RUntainted File constructFile(final @RUntainted String basePath, final @RUntainted String fileName) {
         final File file;
 
         final File absolute = new File(fileName);
@@ -164,7 +164,7 @@ public final class FileLocatorUtils {
      * @param file the file to be converted
      * @return the resulting URL or <b>null</b>
      */
-    static URL convertFileToURL(final File file) {
+    static @RPolyTainted URL convertFileToURL(final @RPolyTainted File file) {
         return convertURIToURL(file.toURI());
     }
 
@@ -174,7 +174,7 @@ public final class FileLocatorUtils {
      * @param uri the URI to be converted
      * @return the resulting URL or <b>null</b>
      */
-    static URL convertURIToURL(final URI uri) {
+    static @RPolyTainted URL convertURIToURL(final @RPolyTainted URI uri) {
         try {
             return uri.toURL();
         } catch (final MalformedURLException e) {
@@ -321,7 +321,7 @@ public final class FileLocatorUtils {
      * @param resourceName the name of the resource
      * @return the URL to the found resource or <b>null</b> if the resource cannot be found
      */
-    static URL getClasspathResource(final String resourceName) {
+    static @RPolyTainted URL getClasspathResource(final @RPolyTainted String resourceName) {
         URL url = null;
         // attempt to load from the context classpath
         final ClassLoader loader = Thread.currentThread().getContextClassLoader();
@@ -488,7 +488,7 @@ public final class FileLocatorUtils {
      * @return the URL pointing to the referenced file or <b>null</b> if the {@code FileLocator} could not be resolved
      * @see #DEFAULT_LOCATION_STRATEGY
      */
-    public static URL locate(final FileLocator locator) {
+    public static @RUntainted URL locate(final FileLocator locator) {
         if (locator == null) {
             return null;
         }
@@ -546,7 +546,7 @@ public final class FileLocatorUtils {
      * @throws MalformedURLException If the file protocol handler is not found (should not happen) or if an error occurred
      *         while constructing the URL
      */
-    static URL toURL(final File file) throws MalformedURLException {
+    static @RPolyTainted URL toURL(final @RPolyTainted File file) throws MalformedURLException {
         return file.toURI().toURL();
     }
 

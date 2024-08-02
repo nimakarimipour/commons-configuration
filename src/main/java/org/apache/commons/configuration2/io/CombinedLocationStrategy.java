@@ -16,6 +16,8 @@
  */
 package org.apache.commons.configuration2.io;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -76,7 +78,7 @@ public class CombinedLocationStrategy implements FileLocationStrategy {
      * {@inheritDoc} This implementation tries to locate the file by delegating to the managed sub strategies.
      */
     @Override
-    public URL locate(final FileSystem fileSystem, final FileLocator locator) {
+    public @RUntainted URL locate(final FileSystem fileSystem, final FileLocator locator) {
         for (final FileLocationStrategy sub : getSubStrategies()) {
             final URL url = sub.locate(fileSystem, locator);
             if (url != null) {

@@ -70,7 +70,7 @@ public final class FileLocator {
         private FileLocationStrategy locationStrategy;
 
         /** The URL. */
-        private URL sourceURL;
+        private @RUntainted URL sourceURL;
 
         /** The URL connection options. */
         private URLConnectionOptions urlConnectionOptions;
@@ -206,7 +206,7 @@ public final class FileLocator {
     private final FileLocationStrategy locationStrategy;
 
     /** The source URL. */
-    private final URL sourceURL;
+    private final @RUntainted URL sourceURL;
 
     /** The source URL connection options. */
     private final URLConnectionOptions urlConnectionOptions;
@@ -300,7 +300,7 @@ public final class FileLocator {
      *
      * @return the source URL
      */
-    public URL getSourceURL() {
+    public @RUntainted URL getSourceURL() {
         return sourceURL;
     }
 

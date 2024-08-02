@@ -18,6 +18,8 @@ package org.apache.commons.configuration2.io;
 
 import java.io.File;
 import java.net.URL;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -38,7 +40,7 @@ public class AbsoluteNameLocationStrategy implements FileLocationStrategy {
      * results in an absolute file name pointing to an existing file, the corresponding URL is returned.
      */
     @Override
-    public URL locate(final FileSystem fileSystem, final FileLocator locator) {
+    public @RUntainted URL locate(final FileSystem fileSystem, final FileLocator locator) {
         if (StringUtils.isNotEmpty(locator.getFileName())) {
             final File file = new File(locator.getFileName());
             if (file.isAbsolute() && file.exists()) {

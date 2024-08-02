@@ -80,9 +80,9 @@ public abstract class FileSystem {
 
     public abstract String getPath(File file, URL url, @RUntainted String basePath, @RUntainted String fileName);
 
-    public abstract URL getURL(@RUntainted String basePath, @RUntainted String fileName) throws MalformedURLException;
+    public abstract @RUntainted URL getURL(@RUntainted String basePath, @RUntainted String fileName) throws MalformedURLException;
 
-    public abstract URL locateFromURL(@RUntainted String basePath, @RUntainted String fileName);
+    public abstract @RUntainted URL locateFromURL(@RUntainted String basePath, @RUntainted String fileName);
 
     /**
      * Set the FileOptionsProvider

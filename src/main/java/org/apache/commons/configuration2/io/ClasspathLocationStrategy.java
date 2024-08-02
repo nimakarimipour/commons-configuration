@@ -17,6 +17,8 @@
 package org.apache.commons.configuration2.io;
 
 import java.net.URL;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -35,7 +37,7 @@ public class ClasspathLocationStrategy implements FileLocationStrategy {
      * {@inheritDoc} This implementation looks up the locator's file name as a resource on the class path.
      */
     @Override
-    public URL locate(final FileSystem fileSystem, final FileLocator locator) {
+    public @RUntainted URL locate(final FileSystem fileSystem, final FileLocator locator) {
         return StringUtils.isEmpty(locator.getFileName()) ? null : FileLocatorUtils.getClasspathResource(locator.getFileName());
     }
 }
