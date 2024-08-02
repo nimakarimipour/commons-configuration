@@ -30,6 +30,8 @@ import javax.naming.NameNotFoundException;
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
 import javax.naming.NotContextException;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.event.ConfigurationErrorEvent;
 import org.apache.commons.configuration2.io.ConfigurationLogger;
 import org.apache.commons.lang3.StringUtils;
@@ -47,7 +49,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
     private Context context;
 
     /** The base JNDI context. */
-    private Context baseContext;
+    private @RUntainted Context baseContext;
 
     /** The Set of keys that have been virtually cleared. */
     private final Set<String> clearedProperties = new HashSet<>();
@@ -106,9 +108,9 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @param processedCtx a set with the so far processed objects
      * @throws NamingException If JNDI has an issue.
      */
-    private void recursiveGetKeys(final Set<String> keys, final Context context, final String prefix, final Set<Context> processedCtx) throws NamingException {
+    private void recursiveGetKeys(final Set<String> keys, final @RUntainted Context context, final String prefix, final Set<Context> processedCtx) throws NamingException {
         processedCtx.add(context);
-        NamingEnumeration<NameClassPair> elements = null;
+        NamingEnumeration<@RUntainted NameClassPair> elements = null;
 
         try {
             elements = context.list("");
@@ -201,7 +203,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @return The context at that key's location in the JNDI tree, or null if not found
      * @throws NamingException if JNDI has an issue
      */
-    private Context getContext(final List<String> path, final Context context) throws NamingException {
+    private @RUntainted Context getContext(final List<String> path, final @RUntainted Context context) throws NamingException {
         // return the current context if the path is empty
         if (path == null || path.isEmpty()) {
             return context;
@@ -210,7 +212,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
         final String key = path.get(0);
 
         // search a context matching the key in the context's elements
-        NamingEnumeration<NameClassPair> elements = null;
+        NamingEnumeration<@RUntainted NameClassPair> elements = null;
 
         try {
             elements = context.list("");
@@ -374,7 +376,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @return the base context
      * @throws NamingException if an error occurs
      */
-    public Context getBaseContext() throws NamingException {
+    public @RUntainted Context getBaseContext() throws NamingException {
         if (baseContext == null) {
             baseContext = (Context) getContext().lookup(prefix == null ? "" : prefix);
         }
