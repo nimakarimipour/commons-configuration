@@ -504,7 +504,7 @@ public final class FileLocatorUtils {
      * @return the URL pointing to the referenced file
      * @throws ConfigurationException if the file cannot be resolved
      */
-    public static URL locateOrThrow(final FileLocator locator) throws ConfigurationException {
+    public static @RUntainted URL locateOrThrow(final FileLocator locator) throws ConfigurationException {
         final URL url = locate(locator);
         if (url == null) {
             throw new ConfigurationException("Could not locate: " + locator);

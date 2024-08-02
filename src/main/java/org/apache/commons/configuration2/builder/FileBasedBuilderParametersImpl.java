@@ -267,13 +267,13 @@ public class FileBasedBuilderParametersImpl extends BasicBuilderParameters imple
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setURL(final URL url) {
+    public FileBasedBuilderParametersImpl setURL(final @RUntainted URL url) {
         getFileHandler().setURL(url);
         return this;
     }
 
     @Override
-    public FileBasedBuilderParametersImpl setURL(final URL url, final URLConnectionOptions urlConnectionOptions) {
+    public FileBasedBuilderParametersImpl setURL(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) {
         getFileHandler().setURL(url, urlConnectionOptions);
         return this;
     }

@@ -172,7 +172,7 @@ public final class FileLocator {
          * @param url the source URL
          * @return a reference to this builder for method chaining
          */
-        public FileLocatorBuilder sourceURL(final URL url) {
+        public FileLocatorBuilder sourceURL(final @RUntainted URL url) {
             this.sourceURL = url;
             return this;
         }

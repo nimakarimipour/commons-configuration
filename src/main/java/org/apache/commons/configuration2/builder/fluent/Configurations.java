@@ -18,6 +18,8 @@ package org.apache.commons.configuration2.builder.fluent;
 
 import java.io.File;
 import java.net.URL;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.CombinedConfiguration;
 import org.apache.commons.configuration2.FileBasedConfiguration;
 import org.apache.commons.configuration2.INIConfiguration;
@@ -427,7 +429,7 @@ public class Configurations {
      * @param url the URL to be loaded
      * @return the newly created {@code CombinedConfigurationBuilder}
      */
-    public CombinedConfigurationBuilder combinedBuilder(final URL url) {
+    public CombinedConfigurationBuilder combinedBuilder(final @RUntainted URL url) {
         return new CombinedConfigurationBuilder().configure(fileParams(url));
     }
 
@@ -464,7 +466,7 @@ public class Configurations {
      * @return a {@code CombinedConfiguration} object initialized from this URL
      * @throws ConfigurationException if an error occurred when loading the configuration
      */
-    public CombinedConfiguration combined(final URL url) throws ConfigurationException {
+    public CombinedConfiguration combined(final @RUntainted URL url) throws ConfigurationException {
         return combinedBuilder(url).getConfiguration();
     }
 
@@ -531,7 +533,7 @@ public class Configurations {
      * @param url the URL to be loaded
      * @return the initialized parameters object
      */
-    private FileBasedBuilderParameters fileParams(final URL url) {
+    private FileBasedBuilderParameters fileParams(final @RUntainted URL url) {
         return fileParams().setURL(url);
     }
 

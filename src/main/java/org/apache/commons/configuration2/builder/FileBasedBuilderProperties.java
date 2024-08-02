@@ -114,7 +114,7 @@ public interface FileBasedBuilderProperties<T> {
      * @param url the {@code URL} location
      * @return a reference to this object for method chaining
      */
-    T setURL(URL url);
+    T setURL(@RUntainted URL url);
 
     /**
      * Sets the location of the associated {@code FileHandler} as a {@code URL} object.
@@ -124,7 +124,7 @@ public interface FileBasedBuilderProperties<T> {
      * @return a reference to this object for method chaining
      * @since 2.8.0
      */
-    default T setURL(final URL url, final URLConnectionOptions urlConnectionOptions) {
+    default T setURL(final @RUntainted URL url, final URLConnectionOptions urlConnectionOptions) {
         return setURL(url);
     }
 }
