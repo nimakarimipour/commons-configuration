@@ -262,7 +262,7 @@ public final class FileLocatorUtils {
         if (map != null) {
             builder.basePath((String) map.get(PROP_BASE_PATH)).encoding((String) map.get(PROP_ENCODING)).fileName((String) map.get(PROP_FILE_NAME))
                 .fileSystem((FileSystem) map.get(PROP_FILE_SYSTEM)).locationStrategy((FileLocationStrategy) map.get(PROP_STRATEGY))
-                .sourceURL((URL) map.get(PROP_SOURCE_URL));
+                .sourceURL((@RUntainted URL) map.get(PROP_SOURCE_URL));
         }
         return builder.create();
     }
