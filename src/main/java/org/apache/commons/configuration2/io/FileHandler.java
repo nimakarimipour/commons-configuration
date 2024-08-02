@@ -519,7 +519,7 @@ public class FileHandler {
      *
      * @return a URL to the associated file; can be <b>null</b> if the location is unspecified
      */
-    public URL getURL() {
+    public @RUntainted URL getURL() {
         final FileLocator locator = getFileLocator();
         return locator.getSourceURL() != null ? locator.getSourceURL() : FileLocatorUtils.locate(locator);
     }
