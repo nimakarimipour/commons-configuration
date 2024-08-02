@@ -17,6 +17,8 @@
 package org.apache.commons.configuration2.builder.combined;
 
 import java.util.Arrays;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.ConfigurationUtils;
 import org.apache.commons.configuration2.HierarchicalConfiguration;
@@ -64,7 +66,7 @@ public class MultiFileConfigurationBuilderProvider extends BaseConfigurationBuil
      * @param configCls the name of the managed configuration class
      * @param paramCls the name of the class of the parameters object to configure the managed configuration
      */
-    public MultiFileConfigurationBuilderProvider(final String configCls, final String paramCls) {
+    public MultiFileConfigurationBuilderProvider(final @RUntainted String configCls, final String paramCls) {
         super(BUILDER_CLASS, RELOADING_BUILDER_CLASS, configCls, Arrays.asList(paramCls, PARAM_CLASS));
     }
 

@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.ConfigurationUtils;
 import org.apache.commons.configuration2.builder.BasicConfigurationBuilder;
@@ -67,7 +69,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
     private final String reloadingBuilderClass;
 
     /** Stores the name of the configuration class to be created. */
-    private final String configurationClass;
+    private final @RUntainted String configurationClass;
 
     /** A collection with the names of parameter classes. */
     private final Collection<String> parameterClasses;
@@ -82,7 +84,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      * @param paramCls a collection with the names of parameters classes
      * @throws IllegalArgumentException if a required parameter is missing
      */
-    public BaseConfigurationBuilderProvider(final String bldrCls, final String reloadBldrCls, final String configCls, final Collection<String> paramCls) {
+    public BaseConfigurationBuilderProvider(final String bldrCls, final String reloadBldrCls, final @RUntainted String configCls, final Collection<String> paramCls) {
         if (bldrCls == null) {
             throw new IllegalArgumentException("Builder class must not be null!");
         }
@@ -120,7 +122,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      *
      * @return the configuration class
      */
-    public String getConfigurationClass() {
+    public @RUntainted String getConfigurationClass() {
         return configurationClass;
     }
 

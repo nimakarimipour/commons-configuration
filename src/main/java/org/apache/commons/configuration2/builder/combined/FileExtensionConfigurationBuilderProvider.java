@@ -17,6 +17,8 @@
 package org.apache.commons.configuration2.builder.combined;
 
 import java.util.Collection;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.builder.BuilderParameters;
 import org.apache.commons.configuration2.builder.FileBasedBuilderParametersImpl;
 import org.apache.commons.configuration2.ex.ConfigurationException;
@@ -68,7 +70,7 @@ public class FileExtensionConfigurationBuilderProvider extends BaseConfiguration
      * @throws IllegalArgumentException if a required parameter is missing
      */
     public FileExtensionConfigurationBuilderProvider(final String bldrCls, final String reloadBldrCls, final String matchingConfigCls,
-        final String defConfigClass, final String ext, final Collection<String> paramCls) {
+                                                     final @RUntainted String defConfigClass, final String ext, final Collection<String> paramCls) {
         super(bldrCls, reloadBldrCls, defConfigClass, paramCls);
         if (matchingConfigCls == null) {
             throw new IllegalArgumentException("Matching configuration class must not be null!");
