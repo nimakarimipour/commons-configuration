@@ -19,6 +19,8 @@ package org.apache.commons.configuration2.spring;
 
 import java.util.Properties;
 import java.util.stream.Stream;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.configuration2.CompositeConfiguration;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.ConfigurationConverter;
@@ -52,7 +54,7 @@ public class ConfigurationPropertiesFactoryBean implements InitializingBean, Fac
     private Configuration[] configurations;
 
     /** Spring resources for loading configurations **/
-    private Resource[] locations;
+    private @RUntainted Resource[] locations;
 
     /** @see org.apache.commons.configuration2.AbstractConfiguration#throwExceptionOnMissing **/
     private boolean throwExceptionOnMissing = true;
@@ -128,7 +130,7 @@ public class ConfigurationPropertiesFactoryBean implements InitializingBean, Fac
         this.configurations = defensiveCopy(configurations);
     }
 
-    public Resource[] getLocations() {
+    public @RUntainted Resource[] getLocations() {
         return defensiveCopy(locations);
     }
 
@@ -138,7 +140,7 @@ public class ConfigurationPropertiesFactoryBean implements InitializingBean, Fac
      *
      * @param locations resources of configuration files
      */
-    public void setLocations(final Resource... locations) {
+    public void setLocations(final @RUntainted Resource... locations) {
         this.locations = defensiveCopy(locations);
     }
 
