@@ -972,7 +972,7 @@ public class FileHandler {
      * @param url the URL
      * @throws ConfigurationException if an error occurs during the save operation
      */
-    public void save(final URL url) throws ConfigurationException {
+    public void save(final @RUntainted URL url) throws ConfigurationException {
         save(url, checkContentAndGetLocator());
     }
 
@@ -983,7 +983,7 @@ public class FileHandler {
      * @param locator the {@code FileLocator}
      * @throws ConfigurationException if an error occurs during the save operation
      */
-    private void save(final URL url, final FileLocator locator) throws ConfigurationException {
+    private void save(final @RUntainted URL url, final FileLocator locator) throws ConfigurationException {
         OutputStream out = null;
         try {
             out = FileLocatorUtils.getFileSystem(locator).getOutputStream(url);
