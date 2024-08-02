@@ -63,10 +63,10 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
     private static final Class<?>[] CTOR_PARAM_TYPES = {Class.class, Map.class, Boolean.TYPE};
 
     /** The name of the builder class. */
-    private final String builderClass;
+    private final @RUntainted String builderClass;
 
     /** The name of a builder class with reloading support. */
-    private final String reloadingBuilderClass;
+    private final @RUntainted String reloadingBuilderClass;
 
     /** Stores the name of the configuration class to be created. */
     private final @RUntainted String configurationClass;
@@ -84,7 +84,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      * @param paramCls a collection with the names of parameters classes
      * @throws IllegalArgumentException if a required parameter is missing
      */
-    public BaseConfigurationBuilderProvider(final String bldrCls, final String reloadBldrCls, final @RUntainted String configCls, final Collection<@RUntainted String> paramCls) {
+    public BaseConfigurationBuilderProvider(final @RUntainted String bldrCls, final @RUntainted String reloadBldrCls, final @RUntainted String configCls, final Collection<@RUntainted String> paramCls) {
         if (bldrCls == null) {
             throw new IllegalArgumentException("Builder class must not be null!");
         }
@@ -103,7 +103,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      *
      * @return the builder class
      */
-    public String getBuilderClass() {
+    public @RUntainted String getBuilderClass() {
         return builderClass;
     }
 
@@ -113,7 +113,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      *
      * @return the reloading builder class
      */
-    public String getReloadingBuilderClass() {
+    public @RUntainted String getReloadingBuilderClass() {
         return reloadingBuilderClass;
     }
 
@@ -256,7 +256,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      * @return the name of the builder class
      * @throws ConfigurationException if the builder class cannot be determined
      */
-    protected String determineBuilderClass(final ConfigurationDeclaration decl) throws ConfigurationException {
+    protected @RUntainted String determineBuilderClass(final ConfigurationDeclaration decl) throws ConfigurationException {
         if (decl.isReload()) {
             if (getReloadingBuilderClass() == null) {
                 throw new ConfigurationException("No support for reloading for builder class " + getBuilderClass());
@@ -277,7 +277,7 @@ public class BaseConfigurationBuilderProvider implements ConfigurationBuilderPro
      * @return the name of the builder's result configuration class
      * @throws ConfigurationException if an error occurs
      */
-    protected String determineConfigurationClass(final ConfigurationDeclaration decl, final Collection<BuilderParameters> params)
+    protected @RUntainted String determineConfigurationClass(final ConfigurationDeclaration decl, final Collection<BuilderParameters> params)
         throws ConfigurationException {
         return getConfigurationClass();
     }
