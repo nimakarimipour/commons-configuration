@@ -299,7 +299,7 @@ public final class FileLocatorUtils {
      * @param url the URL from which to extract the path
      * @return the path component of the passed in URL
      */
-    static String getBasePath(final URL url) {
+    static @RPolyTainted String getBasePath(final @RPolyTainted URL url) {
         if (url == null) {
             return null;
         }
@@ -397,7 +397,7 @@ public final class FileLocatorUtils {
      * @param url the URL from which to extract the file name
      * @return the extracted file name
      */
-    static String getFileName(final URL url) {
+    static @RPolyTainted String getFileName(final @RPolyTainted URL url) {
         if (url == null) {
             return null;
         }

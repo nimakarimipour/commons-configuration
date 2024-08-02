@@ -407,7 +407,7 @@ public class FileHandler {
      *
      * @return the base path
      */
-    public String getBasePath() {
+    public @RUntainted String getBasePath() {
         final FileLocator locator = getFileLocator();
         if (locator.getBasePath() != null) {
             return locator.getBasePath();
@@ -466,7 +466,7 @@ public class FileHandler {
      *
      * @return the file name
      */
-    public String getFileName() {
+    public @RUntainted String getFileName() {
         final FileLocator locator = getFileLocator();
         if (locator.getFileName() != null) {
             return locator.getFileName();
