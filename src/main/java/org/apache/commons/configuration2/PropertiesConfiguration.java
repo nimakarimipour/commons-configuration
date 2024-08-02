@@ -1443,7 +1443,7 @@ public class PropertiesConfiguration extends BaseConfiguration implements FileBa
      * @param fileName the file name
      * @return the URL of the include file or <b>null</b> if it cannot be resolved
      */
-    private URL locateIncludeFile(final String basePath, final String fileName) {
+    private @RUntainted URL locateIncludeFile(final String basePath, final String fileName) {
         final FileLocator includeLocator = FileLocatorUtils.fileLocator(locator).sourceURL(null).basePath(basePath).fileName(fileName).create();
         return FileLocatorUtils.locate(includeLocator);
     }
