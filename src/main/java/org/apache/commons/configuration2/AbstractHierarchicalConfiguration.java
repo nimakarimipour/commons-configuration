@@ -42,6 +42,7 @@ import org.apache.commons.configuration2.tree.NodeModel;
 import org.apache.commons.configuration2.tree.NodeTreeWalker;
 import org.apache.commons.configuration2.tree.NodeUpdateData;
 import org.apache.commons.configuration2.tree.QueryResult;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

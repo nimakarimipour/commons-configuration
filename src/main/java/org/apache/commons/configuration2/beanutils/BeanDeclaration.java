@@ -18,6 +18,7 @@ package org.apache.commons.configuration2.beanutils;
 
 import java.util.Collection;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

@@ -33,6 +33,7 @@ import javax.naming.NotContextException;
 import org.apache.commons.configuration2.event.ConfigurationErrorEvent;
 import org.apache.commons.configuration2.io.ConfigurationLogger;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This Configuration class allows you to interface with a JNDI datasource. A JNDIConfiguration is read-only, write
@@ -41,13 +42,13 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class JNDIConfiguration extends AbstractConfiguration {
     /** The prefix of the context. */
-    private String prefix;
+    private @RUntainted String prefix;
 
     /** The initial JNDI context. */
     private Context context;
 
     /** The base JNDI context. */
-    private Context baseContext;
+    private @RUntainted Context baseContext;
 
     /** The Set of keys that have been virtually cleared. */
     private final Set<String> clearedProperties = new HashSet<>();
@@ -69,7 +70,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      *
      * @throws NamingException thrown if an error occurs when initializing the default context
      */
-    public JNDIConfiguration(final String prefix) throws NamingException {
+    public JNDIConfiguration(final @RUntainted String prefix) throws NamingException {
         this(new InitialContext(), prefix);
     }
 
@@ -89,7 +90,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @param context the initial context
      * @param prefix the prefix
      */
-    public JNDIConfiguration(final Context context, final String prefix) {
+    public JNDIConfiguration(final Context context, final @RUntainted String prefix) {
         this.context = context;
         this.prefix = prefix;
         initLogger(new ConfigurationLogger(JNDIConfiguration.class));
@@ -106,9 +107,9 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @param processedCtx a set with the so far processed objects
      * @throws NamingException If JNDI has an issue.
      */
-    private void recursiveGetKeys(final Set<String> keys, final Context context, final String prefix, final Set<Context> processedCtx) throws NamingException {
+    private void recursiveGetKeys(final Set<String> keys, final @RUntainted Context context, final String prefix, final Set<Context> processedCtx) throws NamingException {
         processedCtx.add(context);
-        NamingEnumeration<NameClassPair> elements = null;
+        NamingEnumeration<@RUntainted NameClassPair> elements = null;
 
         try {
             elements = context.list("");
@@ -201,7 +202,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @return The context at that key's location in the JNDI tree, or null if not found
      * @throws NamingException if JNDI has an issue
      */
-    private Context getContext(final List<String> path, final Context context) throws NamingException {
+    private @RUntainted Context getContext(final List<String> path, final @RUntainted Context context) throws NamingException {
         // return the current context if the path is empty
         if (path == null || path.isEmpty()) {
             return context;
@@ -210,7 +211,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
         final String key = path.get(0);
 
         // search a context matching the key in the context's elements
-        NamingEnumeration<NameClassPair> elements = null;
+        NamingEnumeration<@RUntainted NameClassPair> elements = null;
 
         try {
             elements = context.list("");
@@ -291,7 +292,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @return a flag whether this key is stored in this configuration
      */
     @Override
-    protected boolean containsKeyInternal(String key) {
+    protected boolean containsKeyInternal(@RUntainted String key) {
         if (clearedProperties.contains(key)) {
             return false;
         }
@@ -323,7 +324,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      *
      * @param prefix The prefix to set
      */
-    public void setPrefix(final String prefix) {
+    public void setPrefix(final @RUntainted String prefix) {
         this.prefix = prefix;
 
         // clear the previous baseContext
@@ -337,7 +338,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @return the value of this property
      */
     @Override
-    protected Object getPropertyInternal(String key) {
+    protected Object getPropertyInternal(@RUntainted String key) {
         if (clearedProperties.contains(key)) {
             return null;
         }
@@ -374,7 +375,7 @@ public class JNDIConfiguration extends AbstractConfiguration {
      * @return the base context
      * @throws NamingException if an error occurs
      */
-    public Context getBaseContext() throws NamingException {
+    public @RUntainted Context getBaseContext() throws NamingException {
         if (baseContext == null) {
             baseContext = (Context) getContext().lookup(prefix == null ? "" : prefix);
         }

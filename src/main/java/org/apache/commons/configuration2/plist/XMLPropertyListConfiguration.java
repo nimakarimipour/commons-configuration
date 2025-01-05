@@ -59,6 +59,7 @@ import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Property list file (plist) in XML FORMAT as used by Mac OS X (http://www.apple.com/DTDs/PropertyList-1.0.dtd). This
@@ -207,7 +208,7 @@ public class XMLPropertyListConfiguration extends BaseHierarchicalConfiguration 
     }
 
     @Override
-    public void read(final Reader in) throws ConfigurationException {
+    public void read(final @RUntainted Reader in) throws ConfigurationException {
         // set up the DTD validation
         final EntityResolver resolver = (publicId, systemId) -> new InputSource(getClass().getClassLoader().getResourceAsStream("PropertyList-1.0.dtd"));
 
