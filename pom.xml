@@ -880,6 +880,7 @@
                 <arg>-AenableLibraryCheck=${env.ANNOTATOR_LIBRARY}</arg>
                 <arg>-AenablePolyTaintInference=${env.ANNOTATOR_POLY}</arg>
                 <arg>-AenableTypeArgumentInference=${env.ANNOTATOR_TYPE_ARG}</arg>
+		<arg>-AenableSideEffect</arg>
                 <arg>-AenableSerialization</arg>
                 <arg>-AserializationConfigPath=/home/nima/Developer/taint-benchmarks/commons-configuration/annotator-out/checker.xml</arg>
                 <arg>-XDcompilePolicy=simple</arg>
