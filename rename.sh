@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Adjusting paths"
 # Define the old and new paths
-OLD_PATH="/home/kdas006/annotation_dataset/commons-configuration"
+OLD_PATH="/home/nima/Desktop/taint-docker/table4/annotator/commons-configuration"
 NEW_PATH="$(cd "$(dirname "$0")" && pwd)"
 
 # Get absolute path of the running script
